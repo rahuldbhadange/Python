@@ -1,0 +1,66 @@
+2019-06-04 14:57:26,383 WARNING [ioticlabs.dt.common.util] {MainThread} No logging configuration specified
+
+
+2019-06-04 14:57:27,594 INFO [IoticAgent.IOT.Client] {MainThread} Core version: 0.6.9
+
+2019-06-04 14:57:27,595 INFO [IoticAgent.IOT.Client] {MainThread} IOT version: 0.6.9
+
+
+2019-06-04 14:57:27,595 INFO [IoticAgent.Core.Client] {MainThread} ubjson version: 0.13.0 (extension enabled)
+
+
+2019-06-04 14:57:27,607 INFO [ioticlabs.dt.api.event.registry] {MainThread} Loaded 19 event types
+
+
+
+2019-06-04 14:57:27,772 WARNING [connexion.options] {MainThread} The swagger_ui directory could not be found.
+
+
+
+    Please install connexion with extra install: pip install connexion[swagger-ui]
+    or provide the path to your local installation by passing swagger_path=<your path>
+
+2019-06-04 14:57:27,773 WARNING [connexion.options] {MainThread} The swagger_ui directory could not be found.
+    Please install connexion with extra install: pip install connexion[swagger-ui]
+    or provide the path to your local installation by passing swagger_path=<your path>
+
+ * Serving Flask app "rrps.dt.follower.rest_follower.app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+
+
+2019-06-04 14:57:27,921 INFO [werkzeug] {MainThread}  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+
+
+
+
+
+2019-06-04 14:57:27,980 ERROR [IoticAgent.Core.AmqpLink] {amqplink_send} ssl.SSLError Bad Certificate?
+
+
+
+
+2019-06-04 14:57:28,136 WARNING [IoticAgent.Core.AmqpLink] {bg_9fb1ab1ccdab280246029b0f6253f7b5} AmqpLink Failed to star
+t.  Giving up.
+
+2019-06-04 14:57:28,216 WARNING [IoticAgent.ThingRunner] {bg_9fb1ab1ccdab280246029b0f6253f7b5} LinkException/IOTSyncTime
+out caught, will retry on_startup
+
+
+
+
+2019-06-04 14:57:43,534 ERROR [IoticAgent.Core.AmqpLink] {amqplink_send} ssl.SSLError Bad Certificate?
+
+
+
+
+
+
+2019-06-04 14:57:43,738 WARNING [IoticAgent.Core.AmqpLink] {bg_9fb1ab1ccdab280246029b0f6253f7b5} AmqpLink Failed to star
+t.  Giving up.
+
+
+2019-06-04 14:57:43,845 WARNING [IoticAgent.ThingRunner] {bg_9fb1ab1ccdab280246029b0f6253f7b5} LinkException/IOTSyncTime
+out caught, will retry on_startup

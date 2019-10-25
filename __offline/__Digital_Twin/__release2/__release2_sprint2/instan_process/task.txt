@@ -1,0 +1,27 @@
+As as system admin I want integrators deployed to DMZ Windows VMs to not rely on custom code and local filesystem for asset tracking.  
+The digital twin includes an asset cache which should be used.
+
+
+An example usage of the item_cache.
+
+
+
+- See file: rrps/python/rrps.dt.api.fielddata/rrps/dt/api/fielddata/integrator/__init__.py
+
+- Line 16 ... import get_cache
+- Line 116 ... self.__cache from config
+- - The cache can use local sqlite3, azure cosmosdb, aws dynamodb etc transparently
+- Line 121 & 126 ... start & stop
+- Line 175 onwards ... See use of self.__cache
+
+
+
+
+
+An example of the bad asset cache
+
+- See file: rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+
+- Line 39 ... Path to local FS directory
+- Line 158--200 ... function(s) _has_asset_data_changed_for, __compute_data_hash, _cache_asset_data_for
+- - Complicated custom code to use filesystem

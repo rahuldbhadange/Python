@@ -1,0 +1,13 @@
+git fetch origin
+
+git checkout -b machine_learning origin/machine_learning
+
+git merge master
+
+git checkout master
+
+git merge --no-ff machine_learning
+
+git pull
+
+git push origin master

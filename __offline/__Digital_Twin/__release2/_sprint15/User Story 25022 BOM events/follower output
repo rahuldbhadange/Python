@@ -1,0 +1,2858 @@
+ * Serving Flask app "rrps.dt.follower.rest_follower.app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+
+
+
+
+asset_id
+ 1000015
+
+
+
+
+rqst_data
+
+{'Valfr': '20190805142607'}
+
+
+
+
+
+
+
+asset_id
+ 1000015
+
+
+
+
+rqst_data
+
+{'Valfr': '20190805142614'}
+
+
+
+
+payload
+
+[{'Crtim': 1518425601,
+  'InRecno': '',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104878',
+  'Uptim': 1518425676,
+  'Valfr': 1518425529,
+  'Valto': 1518425667}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4335,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:54:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1518425676,
+  'InRecno': '051MYoXO7jY3{aivGzagYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908721,
+  'Valfr': 1518425667,
+  'Valto': 1519908717}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY3{aivGzagYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4336,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908721,
+  'InRecno': '051MYoXO7jY7gUfL1tlgYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908743,
+  'Valfr': 1519908717,
+  'Valto': 1519908740}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gUfL1tlgYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4337,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:23+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908743,
+  'InRecno': '051MYoXO7jY7gUmgju4gYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910569,
+  'Valfr': 1519908740,
+  'Valto': 1519910555}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gUmgju4gYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4338,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:22:49+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910569,
+  'InRecno': '051MYoXO7jY7gdH2GU5gYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910586,
+  'Valfr': 1519910555,
+  'Valto': 1519910583}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gdH2GU5gYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4339,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:23:06+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910586,
+  'InRecno': '051MYoXO7jY7gdLWN1DgYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991558,
+  'Valfr': 1519910583,
+  'Valto': 1519991553}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gdLWN1DgYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4340,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:52:38+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}HruQqEkG',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1518425601,
+  'Valfr': 1459951086,
+  'Valto': 1518425529}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-04-06',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7kM{}}HruQqEkG',
+              'MaterialNumber': ''}],
+ 'Seq': 4341,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:53:21+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}PXdttEkG',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1459951086,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-06',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYoXO7kM{}}PXdttEkG',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4342,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Pl9c0',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYqhc7kM{vWd52Pl9c0',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4343,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z19c0',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z19c0',
+              'MaterialNumber': ''}],
+ 'Seq': 4344,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z79c0',
+  'Maktx': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+  'Matnr': 'A001061/33E',
+  'Sernr': '000000000526104875',
+  'Uptim': 1559917459,
+  'Valfr': 1454425731,
+  'Valto': 1559917420}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z79c0',
+              'MaterialNumber': 'A001061/33E'}],
+ 'Seq': 4345,
+ 'Source': 'SapBoM',
+ 'Ts': '2019-06-07T14:24:19+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52ZNfc0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': 1460020345,
+  'Valfr': 1454425731,
+  'Valto': 1460020312}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM{vWd52ZNfc0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4346,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:12:25+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Zofc0',
+  'Maktx': 'STRAINER',
+  'Matnr': 'X00020254',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951286,
+  'Valfr': 1454425731,
+  'Valto': 1459951205}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'STRAINER',
+              'IBaseRecord': '051MYqhc7kM{vWd52Zofc0',
+              'MaterialNumber': 'X00020254'}],
+ 'Seq': 4347,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T14:01:26+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1460020345,
+  'InRecno': '051MYqhc7kM}b1hfgLrfc0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': 1460020656,
+  'Valfr': 1460020312,
+  'Valto': 1460020641}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-04-07',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM}b1hfgLrfc0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4348,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:17:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1460020656,
+  'InRecno': '051MYqhc7kM}b36CFGR9c0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1460020641,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-07',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM}b36CFGR9c0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4349,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:17:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519991558,
+  'InRecno': '051MYqhc7kY7mWN{RScwMm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991581,
+  'Valfr': 1519991553,
+  'Valto': 1519991577}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-02',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYqhc7kY7mWN{RScwMm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4350,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519991581,
+  'InRecno': '051MYqhc7kY7mWUSOt4wMm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1519991577,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2018-03-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kY7mWUSOt4wMm',
+              'MaterialNumber': ''}],
+ 'Seq': 4351,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1559917459,
+  'InRecno': '051Ma4RC7jcYfVq4dD}H5m',
+  'Maktx': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+  'Matnr': 'A001061/33E',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1559917420,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2019-06-07',
+              'Description': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+              'IBaseRecord': '051Ma4RC7jcYfVq4dD}H5m',
+              'MaterialNumber': 'A001061/33E'}],
+ 'Seq': 4352,
+ 'Source': 'SapBoM',
+ 'Ts': '2019-06-07T14:24:19+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1518425601,
+  'InRecno': '',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104878',
+  'Uptim': 1518425676,
+  'Valfr': 1518425529,
+  'Valto': 1518425667}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4353,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:54:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1518425676,
+  'InRecno': '051MYoXO7jY3{aivGzagYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908721,
+  'Valfr': 1518425667,
+  'Valto': 1519908717}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY3{aivGzagYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4354,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908721,
+  'InRecno': '051MYoXO7jY7gUfL1tlgYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908743,
+  'Valfr': 1519908717,
+  'Valto': 1519908740}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gUfL1tlgYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4355,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:23+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908743,
+  'InRecno': '051MYoXO7jY7gUmgju4gYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910569,
+  'Valfr': 1519908740,
+  'Valto': 1519910555}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gUmgju4gYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4356,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:22:49+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910569,
+  'InRecno': '051MYoXO7jY7gdH2GU5gYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910586,
+  'Valfr': 1519910555,
+  'Valto': 1519910583}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gdH2GU5gYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4357,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:23:06+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910586,
+  'InRecno': '051MYoXO7jY7gdLWN1DgYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991558,
+  'Valfr': 1519910583,
+  'Valto': 1519991553}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gdLWN1DgYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4358,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:52:38+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}HruQqEkG',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1518425601,
+  'Valfr': 1459951086,
+  'Valto': 1518425529}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-04-06',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7kM{}}HruQqEkG',
+              'MaterialNumber': ''}],
+ 'Seq': 4359,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:53:21+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}PXdttEkG',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1459951086,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-06',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYoXO7kM{}}PXdttEkG',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4360,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Pl9c0',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYqhc7kM{vWd52Pl9c0',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4361,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Abdes': 'Active',
+  'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Astate': 'YC40',
+  'Clmno': '500440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '2015-12-20',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000121',
+  'Clmty': 'YCIF',
+  'DocLink': 'http://www.google.de',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0002',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5ie9Vxcqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0002',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000122',
+  'Clmty': 'YCIF',
+  'DocLink': '',
+  'Equnr': '000000000010000018',
+  'HPntext': 'Text',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiGkBla4Rdqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0004',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetSerialNumber': '4711-011',
+  'AssetType': 'ENG',
+  'Astate': 'YC70',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000200000081',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetSerialNumber': '4711-011',
+  'AssetType': 'ENG',
+  'Astate': 'YC20',
+  'Clmno': '000440000132',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000200000081',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''}]
+
+
+
+
+payload
+
+[{'Crtim': 1518425601,
+  'InRecno': '',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104878',
+  'Uptim': 1518425676,
+  'Valfr': 1518425529,
+  'Valto': 1518425667}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4363,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:54:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1518425676,
+  'InRecno': '051MYoXO7jY3{aivGzagYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908721,
+  'Valfr': 1518425667,
+  'Valto': 1519908717}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY3{aivGzagYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4364,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908721,
+  'InRecno': '051MYoXO7jY7gUfL1tlgYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908743,
+  'Valfr': 1519908717,
+  'Valto': 1519908740}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gUfL1tlgYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4365,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:23+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908743,
+  'InRecno': '051MYoXO7jY7gUmgju4gYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910569,
+  'Valfr': 1519908740,
+  'Valto': 1519910555}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gUmgju4gYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4366,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:22:49+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910569,
+  'InRecno': '051MYoXO7jY7gdH2GU5gYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910586,
+  'Valfr': 1519910555,
+  'Valto': 1519910583}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gdH2GU5gYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4367,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:23:06+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910586,
+  'InRecno': '051MYoXO7jY7gdLWN1DgYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991558,
+  'Valfr': 1519910583,
+  'Valto': 1519991553}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gdLWN1DgYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4368,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:52:38+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}HruQqEkG',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1518425601,
+  'Valfr': 1459951086,
+  'Valto': 1518425529}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-04-06',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7kM{}}HruQqEkG',
+              'MaterialNumber': ''}],
+ 'Seq': 4369,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:53:21+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}PXdttEkG',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1459951086,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-06',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYoXO7kM{}}PXdttEkG',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4370,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Pl9c0',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYqhc7kM{vWd52Pl9c0',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4371,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z19c0',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z19c0',
+              'MaterialNumber': ''}],
+ 'Seq': 4372,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z79c0',
+  'Maktx': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+  'Matnr': 'A001061/33E',
+  'Sernr': '000000000526104875',
+  'Uptim': 1559917459,
+  'Valfr': 1454425731,
+  'Valto': 1559917420}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z79c0',
+              'MaterialNumber': 'A001061/33E'}],
+ 'Seq': 4373,
+ 'Source': 'SapBoM',
+ 'Ts': '2019-06-07T14:24:19+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52ZNfc0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': 1460020345,
+  'Valfr': 1454425731,
+  'Valto': 1460020312}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM{vWd52ZNfc0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4374,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:12:25+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Zofc0',
+  'Maktx': 'STRAINER',
+  'Matnr': 'X00020254',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951286,
+  'Valfr': 1454425731,
+  'Valto': 1459951205}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'STRAINER',
+              'IBaseRecord': '051MYqhc7kM{vWd52Zofc0',
+              'MaterialNumber': 'X00020254'}],
+ 'Seq': 4375,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T14:01:26+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1460020345,
+  'InRecno': '051MYqhc7kM}b1hfgLrfc0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': 1460020656,
+  'Valfr': 1460020312,
+  'Valto': 1460020641}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-04-07',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM}b1hfgLrfc0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4376,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:17:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1460020656,
+  'InRecno': '051MYqhc7kM}b36CFGR9c0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1460020641,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-07',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM}b36CFGR9c0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4377,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:17:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519991558,
+  'InRecno': '051MYqhc7kY7mWN{RScwMm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991581,
+  'Valfr': 1519991553,
+  'Valto': 1519991577}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-02',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYqhc7kY7mWN{RScwMm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4378,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519991581,
+  'InRecno': '051MYqhc7kY7mWUSOt4wMm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1519991577,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2018-03-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kY7mWUSOt4wMm',
+              'MaterialNumber': ''}],
+ 'Seq': 4379,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1559917459,
+  'InRecno': '051Ma4RC7jcYfVq4dD}H5m',
+  'Maktx': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+  'Matnr': 'A001061/33E',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1559917420,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2019-06-07',
+              'Description': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+              'IBaseRecord': '051Ma4RC7jcYfVq4dD}H5m',
+              'MaterialNumber': 'A001061/33E'}],
+ 'Seq': 4380,
+ 'Source': 'SapBoM',
+ 'Ts': '2019-06-07T14:24:19+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+
+
+
+asset_id
+ 1000015
+
+
+
+
+rqst_data
+
+{'Valfr': '20190805142620'}
+
+
+
+
+payload
+
+[{'Crtim': 1518425601,
+  'InRecno': '',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104878',
+  'Uptim': 1518425676,
+  'Valfr': 1518425529,
+  'Valto': 1518425667}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4381,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:54:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1518425676,
+  'InRecno': '051MYoXO7jY3{aivGzagYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908721,
+  'Valfr': 1518425667,
+  'Valto': 1519908717}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY3{aivGzagYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4382,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908721,
+  'InRecno': '051MYoXO7jY7gUfL1tlgYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908743,
+  'Valfr': 1519908717,
+  'Valto': 1519908740}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gUfL1tlgYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4383,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:23+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908743,
+  'InRecno': '051MYoXO7jY7gUmgju4gYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910569,
+  'Valfr': 1519908740,
+  'Valto': 1519910555}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gUmgju4gYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4384,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:22:49+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910569,
+  'InRecno': '051MYoXO7jY7gdH2GU5gYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910586,
+  'Valfr': 1519910555,
+  'Valto': 1519910583}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gdH2GU5gYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4385,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:23:06+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910586,
+  'InRecno': '051MYoXO7jY7gdLWN1DgYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991558,
+  'Valfr': 1519910583,
+  'Valto': 1519991553}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gdLWN1DgYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4386,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:52:38+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}HruQqEkG',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1518425601,
+  'Valfr': 1459951086,
+  'Valto': 1518425529}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-04-06',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7kM{}}HruQqEkG',
+              'MaterialNumber': ''}],
+ 'Seq': 4387,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:53:21+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+
+
+
+asset_id
+ 1000015
+
+
+
+
+rqst_data
+
+{'Valfr': '20190805142631'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}PXdttEkG',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1459951086,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-06',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYoXO7kM{}}PXdttEkG',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4388,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Pl9c0',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYqhc7kM{vWd52Pl9c0',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4389,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z19c0',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z19c0',
+              'MaterialNumber': ''}],
+ 'Seq': 4390,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z79c0',
+  'Maktx': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+  'Matnr': 'A001061/33E',
+  'Sernr': '000000000526104875',
+  'Uptim': 1559917459,
+  'Valfr': 1454425731,
+  'Valto': 1559917420}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z79c0',
+              'MaterialNumber': 'A001061/33E'}],
+ 'Seq': 4391,
+ 'Source': 'SapBoM',
+ 'Ts': '2019-06-07T14:24:19+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52ZNfc0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': 1460020345,
+  'Valfr': 1454425731,
+  'Valto': 1460020312}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM{vWd52ZNfc0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4392,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:12:25+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Zofc0',
+  'Maktx': 'STRAINER',
+  'Matnr': 'X00020254',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951286,
+  'Valfr': 1454425731,
+  'Valto': 1459951205}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'STRAINER',
+              'IBaseRecord': '051MYqhc7kM{vWd52Zofc0',
+              'MaterialNumber': 'X00020254'}],
+ 'Seq': 4393,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T14:01:26+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1460020345,
+  'InRecno': '051MYqhc7kM}b1hfgLrfc0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': 1460020656,
+  'Valfr': 1460020312,
+  'Valto': 1460020641}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-04-07',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM}b1hfgLrfc0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4394,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:17:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1460020656,
+  'InRecno': '051MYqhc7kM}b36CFGR9c0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1460020641,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-07',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM}b36CFGR9c0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4395,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:17:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Abdes': 'Active',
+  'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Astate': 'YC40',
+  'Clmno': '300440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '2013-12-20',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000121',
+  'Clmty': 'YCIF',
+  'DocLink': 'http://www.google.de',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0002',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5ie9Vxcqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0002',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000122',
+  'Clmty': 'YCIF',
+  'DocLink': '',
+  'Equnr': '000000000010000018',
+  'HPntext': 'Text',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiGkBla4Rdqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0004',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetSerialNumber': '4711-011',
+  'AssetType': 'ENG',
+  'Astate': 'YC70',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000200000081',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetSerialNumber': '4711-011',
+  'AssetType': 'ENG',
+  'Astate': 'YC20',
+  'Clmno': '000440000132',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000200000081',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''}]
+
+
+
+
+payload
+
+[{'Crtim': 1519991558,
+  'InRecno': '051MYqhc7kY7mWN{RScwMm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991581,
+  'Valfr': 1519991553,
+  'Valto': 1519991577}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-02',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYqhc7kY7mWN{RScwMm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4397,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519991581,
+  'InRecno': '051MYqhc7kY7mWUSOt4wMm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1519991577,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2018-03-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kY7mWUSOt4wMm',
+              'MaterialNumber': ''}],
+ 'Seq': 4398,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1559917459,
+  'InRecno': '051Ma4RC7jcYfVq4dD}H5m',
+  'Maktx': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+  'Matnr': 'A001061/33E',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1559917420,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2019-06-07',
+              'Description': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+              'IBaseRecord': '051Ma4RC7jcYfVq4dD}H5m',
+              'MaterialNumber': 'A001061/33E'}],
+ 'Seq': 4399,
+ 'Source': 'SapBoM',
+ 'Ts': '2019-06-07T14:24:19+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+
+
+
+asset_id
+ 1000015
+
+
+
+
+rqst_data
+
+{'Valfr': '20190805142639'}
+
+
+
+
+payload
+
+[{'Crtim': 1518425601,
+  'InRecno': '',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104878',
+  'Uptim': 1518425676,
+  'Valfr': 1518425529,
+  'Valto': 1518425667}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4400,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:54:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1518425676,
+  'InRecno': '051MYoXO7jY3{aivGzagYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908721,
+  'Valfr': 1518425667,
+  'Valto': 1519908717}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-02-12',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY3{aivGzagYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4401,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908721,
+  'InRecno': '051MYoXO7jY7gUfL1tlgYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519908743,
+  'Valfr': 1519908717,
+  'Valto': 1519908740}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gUfL1tlgYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4402,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T12:52:23+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519908743,
+  'InRecno': '051MYoXO7jY7gUmgju4gYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910569,
+  'Valfr': 1519908740,
+  'Valto': 1519910555}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gUmgju4gYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4403,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:22:49+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910569,
+  'InRecno': '051MYoXO7jY7gdH2GU5gYm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519910586,
+  'Valfr': 1519910555,
+  'Valto': 1519910583}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYoXO7jY7gdH2GU5gYm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4404,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-01T13:23:06+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519910586,
+  'InRecno': '051MYoXO7jY7gdLWN1DgYm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991558,
+  'Valfr': 1519910583,
+  'Valto': 1519991553}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-01',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7jY7gdLWN1DgYm',
+              'MaterialNumber': ''}],
+ 'Seq': 4405,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:52:38+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}HruQqEkG',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1518425601,
+  'Valfr': 1459951086,
+  'Valto': 1518425529}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-04-06',
+              'Description': '',
+              'IBaseRecord': '051MYoXO7kM{}}HruQqEkG',
+              'MaterialNumber': ''}],
+ 'Seq': 4406,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-02-12T08:53:21+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459951135,
+  'InRecno': '051MYoXO7kM{}}PXdttEkG',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1459951086,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-06',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYoXO7kM{}}PXdttEkG',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4407,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Pl9c0',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYqhc7kM{vWd52Pl9c0',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4408,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z19c0',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z19c0',
+              'MaterialNumber': ''}],
+ 'Seq': 4409,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z79c0',
+  'Maktx': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+  'Matnr': 'A001061/33E',
+  'Sernr': '000000000526104875',
+  'Uptim': 1559917459,
+  'Valfr': 1454425731,
+  'Valto': 1559917420}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z79c0',
+              'MaterialNumber': 'A001061/33E'}],
+ 'Seq': 4410,
+ 'Source': 'SapBoM',
+ 'Ts': '2019-06-07T14:24:19+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52ZNfc0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': 1460020345,
+  'Valfr': 1454425731,
+  'Valto': 1460020312}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM{vWd52ZNfc0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4411,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:12:25+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Zofc0',
+  'Maktx': 'STRAINER',
+  'Matnr': 'X00020254',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951286,
+  'Valfr': 1454425731,
+  'Valto': 1459951205}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'STRAINER',
+              'IBaseRecord': '051MYqhc7kM{vWd52Zofc0',
+              'MaterialNumber': 'X00020254'}],
+ 'Seq': 4412,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T14:01:26+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1460020345,
+  'InRecno': '051MYqhc7kM}b1hfgLrfc0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': 1460020656,
+  'Valfr': 1460020312,
+  'Valto': 1460020641}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-04-07',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM}b1hfgLrfc0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4413,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:17:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1460020656,
+  'InRecno': '051MYqhc7kM}b36CFGR9c0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1460020641,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-07',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM}b36CFGR9c0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4414,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:17:36+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519991558,
+  'InRecno': '051MYqhc7kY7mWN{RScwMm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991581,
+  'Valfr': 1519991553,
+  'Valto': 1519991577}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-02',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYqhc7kY7mWN{RScwMm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 4415,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1519991581,
+  'InRecno': '051MYqhc7kY7mWUSOt4wMm',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1519991577,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2018-03-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kY7mWUSOt4wMm',
+              'MaterialNumber': ''}],
+ 'Seq': 4416,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+
+payload
+
+[{'Crtim': 1559917459,
+  'InRecno': '051Ma4RC7jcYfVq4dD}H5m',
+  'Maktx': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+  'Matnr': 'A001061/33E',
+  'Sernr': '000000000526104875',
+  'Uptim': None,
+  'Valfr': 1559917420,
+  'Valto': None}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2019-06-07',
+              'Description': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+              'IBaseRecord': '051Ma4RC7jcYfVq4dD}H5m',
+              'MaterialNumber': 'A001061/33E'}],
+ 'Seq': 4417,
+ 'Source': 'SapBoM',
+ 'Ts': '2019-06-07T14:24:19+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+

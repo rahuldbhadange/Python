@@ -1,0 +1,193 @@
+
+payload
+
+[{'Crtim': 1519991558,
+  'InRecno': '051MYqhc7kY7mWN{RScwMm',
+  'Maktx': 'DIESEL ENGINE',
+  'Matnr': '12V4000G23',
+  'Sernr': '000000000526104875',
+  'Uptim': 1519991581,
+  'Valfr': 1519991553,
+  'Valto': 1519991577}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2018-03-02',
+              'Description': 'DIESEL ENGINE',
+              'IBaseRecord': '051MYqhc7kY7mWN{RScwMm',
+              'MaterialNumber': '12V4000G23'}],
+ 'Seq': 3585,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofRemoval': '2018-03-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kY7mWUSOt4wMm',
+              'MaterialNumber': ''}],
+ 'Seq': 3586,
+ 'Source': 'SapBoM',
+ 'Ts': '2018-03-02T11:53:01+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Installation',
+ 'Details': [{'DateofInstallation': '2016-04-06',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYoXO7kM{}}PXdttEkG',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4084,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+2019-08-05 10:56:24,880 ERROR [rrps.dt.follower.rest_follower.views.RiverOfNewsView] {ioticlabs.dt.api.follower.__do_cal
+lback} RiverOfNewsView on_event called
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Pl9c0',
+  'Maktx': 'OIL PUMP',
+  'Matnr': 'XS526180.00006',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'OIL PUMP',
+              'IBaseRecord': '051MYqhc7kM{vWd52Pl9c0',
+              'MaterialNumber': 'XS526180.00006'}],
+ 'Seq': 4085,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+2019-08-05 10:56:25,893 ERROR [rrps.dt.follower.rest_follower.views.RiverOfNewsView] {ioticlabs.dt.api.follower.__do_cal
+lback} RiverOfNewsView on_event called
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z19c0',
+  'Maktx': '',
+  'Matnr': '',
+  'Sernr': '000000000526104875',
+  'Uptim': 1459951135,
+  'Valfr': 1454425731,
+  'Valto': 1459951086}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': '',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z19c0',
+              'MaterialNumber': ''}],
+ 'Seq': 4086,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-06T13:58:55+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+2019-08-05 10:56:26,501 ERROR [rrps.dt.follower.rest_follower.views.RiverOfNewsView] {ioticlabs.dt.api.follower.__do_cal
+lback} RiverOfNewsView on_event called
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52Z79c0',
+  'Maktx': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+  'Matnr': 'A001061/33E',
+  'Sernr': '000000000526104875',
+  'Uptim': 1559917459,
+  'Valfr': 1454425731,
+  'Valto': 1559917420}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'FLUIDS/LUBRICANTS    FOR ENGINE',
+              'IBaseRecord': '051MYqhc7kM{vWd52Z79c0',
+              'MaterialNumber': 'A001061/33E'}],
+ 'Seq': 4087,
+ 'Source': 'SapBoM',
+ 'Ts': '2019-06-07T14:24:19+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+
+
+
+2019-08-05 10:56:27,411 ERROR [rrps.dt.follower.rest_follower.views.RiverOfNewsView] {ioticlabs.dt.api.follower.__do_cal
+lback} RiverOfNewsView on_event called
+
+payload
+
+[{'Crtim': 1459862064,
+  'InRecno': '051MYqhc7kM{vWd52ZNfc0',
+  'Maktx': 'PLATE',
+  'Matnr': '000.00899',
+  'Sernr': '000000000526104875',
+  'Uptim': 1460020345,
+  'Valfr': 1454425731,
+  'Valto': 1460020312}]
+
+
+
+
+data_to_save
+
+{'Attachments': [],
+ 'Description': 'BoM event: Removal',
+ 'Details': [{'DateofRemoval': '2016-02-02',
+              'Description': 'PLATE',
+              'IBaseRecord': '051MYqhc7kM{vWd52ZNfc0',
+              'MaterialNumber': '000.00899'}],
+ 'Seq': 4088,
+ 'Source': 'SapBoM',
+ 'Ts': '2016-04-07T09:12:25+00:00',
+ 'Type': 'SapBomIBaseChanges',
+ 'asset_id': '1000015'}
+

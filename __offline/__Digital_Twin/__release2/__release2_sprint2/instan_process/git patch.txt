@@ -1,0 +1,39 @@
+OK so first you should run like:   git stash    this will hide your changes.    
+
+Then you can use "git reset" to wipe the top commit off the log.    
+reset is dangerous.  
+If your changes are not saved the stuff can be lost.    
+
+git reset --hard HEAD~1     to remove the top commit.    
+
+Then git am --ignore-whitespace 0001...   
+And then:   
+
+git stash pop   to get your changes back
+
+
+
+
+git status
+
+
+git diff
+
+
+git stash
+
+
+git am --ignore-whitespace ./dt/patch/0001-sapmaster::::
+
+
+git am --abort
+
+
+git reset --hard HEAD~1
+
+
+git add -u -p
+
+
+
+/tmp/SAPEquipmentHistoryIntegrator_cache

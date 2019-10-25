@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: rrps.dt.follower.example
+Version: 0.1.2
+Summary: ACME Corporation example follower
+Home-page: https://acme-corp.nowhere
+Author: Acme Corporation
+Author-email: info@acme-corp.nowhere
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

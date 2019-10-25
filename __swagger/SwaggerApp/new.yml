@@ -1,0 +1,138 @@
+swagger: '2.0'
+# openapi: '3.0.0'
+info:
+  description: 'description'
+  version: 'version'
+  title: 'title'
+  contact:
+    email: 'jamesbond_007@mifive.com'
+host: 'localhost:8080'
+basePath: '/swagger'
+# schemes:
+#   - 'https'
+#   - 'http'
+paths:
+  /name:
+    get:
+      summary: "fetching data from mongoDB"
+      description: "description GET"
+      operationId: "_view_function"
+      consumes:
+        - "application/json"
+        - "application/text"
+      produces:
+        - "application/json"
+        - "application/xml"
+      # parameters:
+        # - in: "path"
+          # name: "path"
+          # description: "Returns data"
+      #  required: true
+      #  type: "string"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'new'
+  /name/{name}/{location}:
+#  /name:
+    post:
+      summary: "adding data in mongoDB like 'name' and 'location'"
+      description: "description POST"
+      operationId: "_add_function"
+      consumes:
+        - "application/json"
+        - "application/text"
+        - "multipart/form-data"
+      produces:
+        - "application/json"
+        - "application/xml"
+      parameters:
+      # - in: "path"
+      #   name: "body"
+      #   type: "string"
+      - name: "name"
+        in: "path"
+        description: "Updated name of the person"
+        required: True
+        type: "string"
+      - name: "location"
+        in: "path"
+        description: "Updated location of the person"
+        required: True
+        type: "string"
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+        405:
+          description: "Invalid input"
+        500:
+          description: 'INTERNAL SERVER ERROR'
+      x-swagger-router-controller: 'new'
+#  /app_delete:
+  /name/{name}:
+    delete:
+      summary: "deleting data from mongoDB"
+      description: "description DELETE"
+      operationId: "_delete_function"
+      produces:
+        - "application/xml"
+        - "application/json"
+      parameters:
+        - in: "path"
+          name: "name"
+          description: "name of the person to be deleted"
+          required: True
+          type: "string"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'total'
+  /update/{mobile_no}/{pan_no}:
+    put:
+      summary: "updating data of mongoBd"
+      description: "description PUT"
+      operationId: "_update_function"
+      consumes:
+        - "application/json"
+        - "application/text"
+      produces:
+        - "application/json"
+        - "application/xml"
+      parameter:
+      - in: "path"
+        name: "mobile_no"
+        required: True
+        type: "string"
+        # example: 8600003771
+      - in: "path"
+        name: "pan_no"
+        description: "Updated pan_no of the person"
+        required: True
+        type: "string"
+        # example: "AYHPK4348P"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: '__Flask.SwaggerApp.total'

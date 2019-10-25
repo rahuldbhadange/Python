@@ -1,0 +1,32 @@
+{
+        "__metadata": {
+          "id": "https://defnsv2123.fn2.mtufn.com:8002/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/DocListSet(Equnr='000000000010000018',Instid='FOL35000000000004EXT43000000000377')",
+          "uri": "https://defnsv2123.fn2.mtufn.com:8002/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/DocListSet(Equnr='000000000010000018',Instid='FOL35000000000004EXT43000000000377')",
+          "type": "Y_DIGITAL_TWIN_SRV.DocList"
+        },
+        "Equnr": "000000000010000018",
+        "Instid": "FOL35000000000004EXT43000000000377",
+        "Docnam": "MITTEILUNG",
+        "Docdes": "test",
+        "Docla": "DE",
+        "Crdat": "\/Date(1540944000000)\/",
+        "Chdat": "\/Date(1541376000000)\/",
+        "FileExt": "txt"
+      },
+
+
+{
+        "__metadata" : {
+          "id" : "https://defnsv2123.fn2.mtufn.com:8002/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EquiHistSet(Sernr='',Equnr='',Obknr=3202,Docnr='0182000010')",
+          "uri" : "https://defnsv2123.fn2.mtufn.com:8002/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EquiHistSet(Sernr='',Equnr='',Obknr=3202,Docnr='0182000010')",
+          "type" : "Y_DIGITAL_TWIN_SRV.EquiHist"
+        },
+        "Sernr" : "",
+        "Equnr" : "1000018",
+        "Obknr" : 3202,
+        "Docnr" : "0182000010",
+        "Docitm" : "",
+        "Datum" : "\/Date(1362614400000)\/",
+        "Doctype" : "DELI",
+        "Ktext" : ""
+      }

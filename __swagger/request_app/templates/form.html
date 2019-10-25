@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Admission Form {% endblock %}
+
+{% block content %}
+
+{{ super() }}
+
+<h1>Please fill out the form</h1>
+
+<h2> </h2>
+
+<h2> </h2>
+
+<form method="POST" action="swagger/home/{name}/{location}">
+    Name: <input type = "text" name="name" autocomplete="on">
+    Location: <input type = "text" name="location" autocomplete="on">
+    E-mail: <input type = "email" name="email" autocomplete="on">
+    <input type = "submit" value="Submit">
+
+</form>
+
+<h2> </h2>
+
+<img src="{{ url_for('static', filename= 'images/Penguins.jpg') }}">
+
+{% include "include.html" %}
+
+{% endblock %}

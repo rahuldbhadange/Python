@@ -1,0 +1,62 @@
+2019-07-19 10:16:27,638 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-19 10:16:27,804 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-19 10:16:27,965 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+
+
+
+<pymongo.cursor.Cursor object at 0x04392A10>
+
+
+
+264425
+
+
+ <class 'str'>
+
+
+
+
+
+ <class 'bytes'>
+7163
+
+
+
+<Response 7146 bytes [200 OK]>
+
+
+
+2019-07-19 10:16:31,022 INFO [werkzeug] {Thread-2} 127.0.0.1 - - [19/Jul/2019 10:16:31] "GET /ron/1000015 HTTP/1.1" 200
+-
+2019-07-19 10:16:32,479 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-19 10:16:32,641 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-19 10:16:32,641 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-19 10:16:32,806 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-19 10:16:32,967 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-07-19 10:16:37,490 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-19 10:16:37,655 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-19 10:16:37,656 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-19 10:16:37,819 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-19 10:16:37,982 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-07-19 10:16:42,496 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-19 10:16:42,657 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-19 10:16:42,658 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-19 10:16:42,887 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-19 10:16:43,047 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-07-19 10:16:47,500 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-19 10:16:47,662 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-19 10:16:47,662 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-19 10:16:47,904 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-19 10:16:48,065 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-07-19 10:16:52,510 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-19 10:16:52,672 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)

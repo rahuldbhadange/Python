@@ -1,0 +1,32 @@
+git am --ignore-whitespace
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~
+$ cd digital.git/
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev)
+$ git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0001-Map-engine-serial-number-instead-of-equipment-number.patch
+Applying: Map engine serial number instead of equipment number to the Engine field
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev)
+$ git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0002-rrps-Fix-Dockerfiles-and-READMEs-for-testing.patch
+Applying: rrps/ Fix Dockerfiles and READMEs for testing
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev)
+$ git checkout -b dev-temp
+Switched to a new branch 'dev-temp'
+M       rrps/python/rrps.dt.events/README.md
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0003-Allow-to-run-sapmasterdata-static-checks-on-Windows.patch
+Applying: Allow to run sapmasterdata static checks on Windows
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0004-rrps.dt.integrator.sapequipmenthistory-General-impro.patch
+Applying: rrps.dt.integrator.sapequipmenthistory - General improvements: - mock data moved from cfg to data folder - bomgar section is now sap in integrator.cfg.yml - added several try/except blocks when reading dictionaries - namedtuple is now used for endpoint-specific config options - static_tests warnings reduced - proper indentation - Docker command updated in README - cache data is now under tmp/SAPEquipmentHistoryIntegrator_cache
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0005-Development-quickstart.patch
+Applying: Development quickstart
+
+

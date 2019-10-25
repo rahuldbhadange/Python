@@ -1,0 +1,9 @@
+http://docs.python-requests.org/en/master/api/#requests.Response.raise_for_statustry: requests... except HTTPError:raise_for_status
+1. Copy sapmasterdata -> sapguaranty   
+2. Put Guaranty sample in your mock server.  
+3. create a new event in rrps.dt.events for Guaranty data 
+
+
+
+
+997e16f9947d5d1e59839439859aff34e149d93d

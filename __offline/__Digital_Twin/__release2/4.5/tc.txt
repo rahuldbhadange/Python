@@ -1,0 +1,89 @@
+2019-03-21 15:42:33,220 INFO [IoticAgent.IOT.Thing] {MainThread} __sub(foc=feed, gpid="3d17e23b58f587dbbc5886006bafb687"
+, callback=None) [lid=My_SysthesiserWeather_Thing]
+2019-03-21 15:42:33,221 INFO [IoticAgent.IOT.Thing] {MainThread} __sub(foc=feed, gpid="3d17e23b58f587dbbc5886006bafb687"
+, callback=None) [lid=My_SysthesiserWeather_Thing]
+would send WeatherInfoSet event {'time': '2019-03-21T12:00:00Z', 'feels': 13.0, 'gust': 7.0, 'humid': 75.0, 'temp': 14.0
+, 'visib': 'GO', 'winddir': 'W', 'windspd': 4.0, 'uv': 2.0, 'type': '7', 'prob': '4', 'label': 'Weather Forecast for: EY
+E (PETERBOROUGH), ENGLAND'}
+
+
+
+
+
+
+
+2019-03-21 19:04:28,461 INFO [IoticAgent.IOT.Thing] {MainThread} __sub(foc=feed, gpid="3d17e23b58f587dbbc5886006bafb687"
+, callback=None) [lid=My_SysthesiserWeather_Thing]
+2019-03-21 19:04:28,461 INFO [IoticAgent.IOT.Thing] {MainThread} __sub(foc=feed, gpid="3d17e23b58f587dbbc5886006bafb687"
+, callback=None) [lid=My_SysthesiserWeather_Thing]
+would send WeatherInfoSet event {
+    "time": "2019-03-21T15:00:00Z",
+    "FeelsLikeTemperature": 15.0,
+    "WindGust": 7.0,
+    "Humidity": 69.0,
+    "Temperature": 15.0,
+    "Visibility": "VG",
+    "WindDirection": "W",
+    "WindSpeed": 4.0,
+    "MaxUVIndex": 1.0,
+    "WeatherType": "7",
+    "PrecipitationProbability": "5",
+    "label": "Weather Forecast for: EYE (PETERBOROUGH), ENGLAND"
+}
+
+
+would send WeatherInfoSet event {
+    "time": "2019-03-21T15:00:00Z",
+    "FeelsLikeTemperature": 15.0,
+    "WindGust": 7.0,
+    "Humidity": 69.0,
+    "Temperature": 15.0,
+    "Visibility": "VG",
+    "WindDirection": "W",
+    "WindSpeed": 4.0,
+    "MaxUVIndex": 1.0,
+    "WeatherType": "metoffice forecast",
+    "PrecipitationProbability": "5",
+    "WeatherTime": "2019-03-21 19:42:43.020117",
+    "WeatherName": "EYE (PETERBOROUGH), ENGLAND"
+}
+
+
+
+
+
+
+2019-03-21 20:17:48,484 ERROR [ioticlabs.dt.api.integrator] {watcher} Discovery/update failure
+2019-03-21 20:17:49,203 INFO [ioticlabs.dt.api.integrator] {watcher} Finished
+2019-03-21 20:17:49,203 INFO [ioticlabs.dt.api.follower] {watcher} Finished
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\ioticlabs\dt\api\int
+egrator\__init__.py", line 227, in publish_event
+    asset = self.__assets[event.asset]
+KeyError: '1000020'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\Scripts\rrps-dt-synthesiser-weather-sc
+ript.py", line 11, in <module>
+    load_entry_point('rrps.dt.synthesiser.weather', 'console_scripts', 'rrps-dt-synthesiser-weather')()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\rrps\dt\synthesiser\weather\__main__.py", l
+ine 71, in main
+    follower.run()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\IoticAgent\ThingRunn
+er.py", line 83, in run
+    self.__run()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\IoticAgent\ThingRunn
+er.py", line 104, in __run
+    if self.__handle_exception(ctx):
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\IoticAgent\ThingRunn
+er.py", line 98, in __run
+    self.main()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\rrps\dt\synthesiser\weather\impl.py", line
+59, in main
+    self.__integrator.publish_event(WeatherInfoSet(asset, time=Time, data=__event_object))
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\ioticlabs\dt\api\int
+egrator\__init__.py", line 229, in publish_event
+    raise AssetUnknown(event.asset) from ex
+ioticlabs.dt.api.integrator.AssetUnknown: 1000020

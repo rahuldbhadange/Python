@@ -1,0 +1,299 @@
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:23:24,829 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:23:24,830 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:23:25,015 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:23:29,595 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:23:29,771 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:23:29,771 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:23:29,772 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:23:29,956 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:23:34,601 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:23:34,777 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:23:34,778 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:23:34,778 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:23:34,962 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:23:39,608 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:23:39,714 INFO [rrps.dt.integrator.sapequipmenthistory.impl] {ThreadPoolExecutor-0_0} New T2 req for 10000
+15 - SapDOCSDOK(b'{"equnr": "000000000200000081", "document_type": "PPM"}')
+2019-07-04 16:23:39,790 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:23:39,790 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:23:39,790 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:23:39,973 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:23:40,878 ERROR [rrps.dt.integrator.sapequipmenthistory.impl] {ThreadPoolExecutor-0_0} <function SAPEquipm
+entHistoryIntegrator.__process_t2 at 0x03D069C0> failed
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapequipmenthistory\rrps\dt\integrator\sapequipmenth
+istory\impl.py", line 130, in __process_t2
+    self.__t2_do_test_document_req(request)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapequipmenthistory\rrps\dt\integrator\sapequipmenth
+istory\impl.py", line 252, in __t2_do_test_document_req
+    self.__integrator_t2_test_respond(result, request)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapequipmenthistory\rrps\dt\integrator\sapequipmenth
+istory\impl.py", line 170, in __integrator_t2_test_respond
+    request, mime, json.dumps(response_data).encode('a2b_base64'))
+LookupError: unknown encoding: a2b_base64
+2019-07-04 16:23:44,611 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:23:44,788 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:23:44,788 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:23:44,788 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:23:44,971 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:23:48,560 ERROR [rrps.dt.integrator.sapequipmenthistory.impl] {MainThread} Endpoint response failed: 404
+2019-07-04 16:23:49,580 ERROR [rrps.dt.integrator.sapequipmenthistory.impl] {MainThread} Endpoint response failed: 404
+2019-07-04 16:23:49,618 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:23:49,796 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:23:49,797 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:23:49,797 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:23:49,982 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:23:50,608 ERROR [rrps.dt.integrator.sapequipmenthistory.impl] {MainThread} Endpoint response failed: 404
+2019-07-04 16:23:54,629 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:23:54,808 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:23:54,808 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:23:54,808 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:23:54,993 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:23:59,638 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:23:59,819 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:23:59,819 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:23:59,819 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:00,004 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:04,640 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:04,817 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:04,817 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:04,817 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:05,003 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:09,654 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:09,831 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:09,831 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:09,832 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:10,016 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:14,657 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:14,833 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:14,834 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:14,834 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:15,018 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:19,664 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:19,840 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:19,840 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:19,841 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:20,024 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:24,669 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:24,846 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:24,846 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:24,846 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:25,028 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:29,677 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:29,853 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:29,853 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:29,853 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:30,035 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:34,687 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:34,863 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:34,863 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:34,864 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:35,045 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:39,692 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:39,869 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:39,869 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:39,869 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:40,052 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:44,701 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:44,879 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:44,880 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:44,880 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:45,061 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:46,197 INFO [rrps.dt.integrator.sapequipmenthistory.impl] {ThreadPoolExecutor-0_0} New T2 req for 10000
+15 - SapDOCSDOK(b'{"equnr": "000000000200000081", "document_type": "PPM"}')
+2019-07-04 16:24:47,223 ERROR [rrps.dt.integrator.sapequipmenthistory.impl] {ThreadPoolExecutor-0_0} <function SAPEquipm
+entHistoryIntegrator.__process_t2 at 0x03D069C0> failed
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapequipmenthistory\rrps\dt\integrator\sapequipmenth
+istory\impl.py", line 130, in __process_t2
+    self.__t2_do_test_document_req(request)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapequipmenthistory\rrps\dt\integrator\sapequipmenth
+istory\impl.py", line 252, in __t2_do_test_document_req
+    self.__integrator_t2_test_respond(result, request)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapequipmenthistory\rrps\dt\integrator\sapequipmenth
+istory\impl.py", line 170, in __integrator_t2_test_respond
+    request, mime, json.dumps(response_data).encode('utf-8'))
+LookupError: unknown encoding: a2b_base64
+2019-07-04 16:24:49,709 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:24:49,886 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:24:49,886 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:24:49,886 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:24:50,070 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:24:52,883 INFO [rrps.dt.integrator.sapequipmenthistory.impl] {MainThread} Shutdown
+2019-07-04 16:24:52,883 INFO [ioticlabs.dt.api.integrator] {watcher} Finished
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapequipmenthistory>rrps-dt-integrator-sapequipmen
+thistory cfg\integrator.cfg.yml cfg\agent.ini
+2019-07-04 16:24:58,986 WARNING [ioticlabs.dt.common.util] {MainThread} No logging configuration specified
+2019-07-04 16:24:59,005 INFO [IoticAgent.IOT.Client] {MainThread} Core version: 0.6.9
+2019-07-04 16:24:59,006 INFO [IoticAgent.IOT.Client] {MainThread} IOT version: 0.6.9
+2019-07-04 16:24:59,006 INFO [IoticAgent.Core.Client] {MainThread} ubjson version: 0.13.0 (extension enabled)
+2019-07-04 16:24:59,020 INFO [ioticlabs.dt.api.event.registry] {MainThread} Loaded 19 event types
+2019-07-04 16:25:02,388 INFO [IoticAgent.Core.Client] {MainThread} QAPI version: 1.2.1
+2019-07-04 16:25:02,390 INFO [rrps.dt.integrator.sapequipmenthistory.impl] {MainThread} Startup
+2019-07-04 16:25:02,392 INFO [IoticAgent.IOT.Client] {MainThread} create_thing(lid="sapequipmenthistory")
+2019-07-04 16:25:02,750 INFO [ioticlabs.dt.api.integrator] {MainThread} Type2 provider will be enabled
+2019-07-04 16:25:02,750 INFO [IoticAgent.IOT.Thing] {MainThread} create_control(pid="t2_req", control_cb=<bound method I
+ntegrator.__cb_t2_req of <ioticlabs.dt.api.integrator.Integrator object at 0x03D0F650>>) [lid=sapequipmenthistory]
+2019-07-04 16:25:04,232 INFO [ioticlabs.dt.api.integrator] {watcher} Started
+2019-07-04 16:25:04,232 INFO [rrps.dt.integrator.sapequipmenthistory.impl] {MainThread} Running
+2019-07-04 16:25:04,233 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:04,409 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:04,410 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:04,411 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:04,594 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:04,769 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="46547929ab8afc2f5202b0cac880d4e
+f", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:04,769 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:04,770 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="46547929ab8afc2f5202b0cac880d4e
+f", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:04,770 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:04,944 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="9d58e85290cc04668bc4385d948b365
+9", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:04,945 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="9d58e85290cc04668bc4385d948b365
+9", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:04,946 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="0c794c88435ddc88b437304d44f9497
+4", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:04,947 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="0c794c88435ddc88b437304d44f9497
+4", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:05,119 INFO [ioticlabs.dt.api.integrator] {iworker_0} Added asset 1000020
+2019-07-04 16:25:05,119 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="848bb1bd450e5644d7c50f2fd2dc27d
+4", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:05,120 INFO [rrps.dt.integrator.sapequipmenthistory.impl] {ioticlabs.dt.api.integrator.__do_callback} A
+sset created: 1000020
+2019-07-04 16:25:05,120 INFO [ioticlabs.dt.api.integrator] {iworker_1} Added asset 1000021
+2019-07-04 16:25:05,120 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="848bb1bd450e5644d7c50f2fd2dc27d
+4", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:05,122 INFO [rrps.dt.integrator.sapequipmenthistory.impl] {ioticlabs.dt.api.integrator.__do_callback} A
+sset created: 1000021
+2019-07-04 16:25:05,292 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="c9ed7a0da3f668904584e5d7512fdd9
+2", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:05,292 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="c9ed7a0da3f668904584e5d7512fdd9
+2", callback=None) [lid=sapequipmenthistory]
+2019-07-04 16:25:05,464 INFO [ioticlabs.dt.api.integrator] {iworker_0} Added asset 1000015
+2019-07-04 16:25:05,465 INFO [rrps.dt.integrator.sapequipmenthistory.impl] {ioticlabs.dt.api.integrator.__do_callback} A
+sset created: 1000015
+2019-07-04 16:25:09,243 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:09,419 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:09,419 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:09,419 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:09,601 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:14,249 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:16,749 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:16,749 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:16,750 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:17,029 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:19,256 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:19,438 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:19,439 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:19,439 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:19,629 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:24,265 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:24,447 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:24,447 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:24,447 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:24,637 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:29,266 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:29,442 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:29,443 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:29,443 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:29,627 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:34,272 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:34,448 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:34,448 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:34,448 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:34,631 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:37,066 INFO [rrps.dt.integrator.sapequipmenthistory.impl] {ThreadPoolExecutor-0_0} New T2 req for 10000
+15 - SapDOCSDOK(b'{"equnr": "000000000200000081", "document_type": "PPM"}')
+2019-07-04 16:25:38,236 INFO [IoticAgent.IOT.RemotePoint] {ThreadPoolExecutor-0_0} ask() [subid=f3c29554bb30ad5fce568386
+673a4671]
+
+request
+ T2Request(asset_id='1000015', uref='gAAAAABdHds1w9BYCWXkFcDFNspEhso3mrao-ndOawDWy6i5AU23aSmEoy9uXtHS8NpsSxwHnFLSYXmjStH
+MV-odEzA_Bkuxy4ajoIAEGuDrC6vfyTXg44vgqQ6oNCrRr3kvNnuLmrq-', type_='SapDOCSDOK', cb_guid='c9ed7a0da3f668904584e5d7512fdd9
+2', data=b'{"equnr": "000000000200000081", "document_type": "PPM"}')
+
+mime
+ image/tiff
+
+value
+ kopie (8) von test.tif
+2019-07-04 16:25:39,287 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:39,464 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:39,465 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:39,465 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:40,151 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:44,288 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:44,464 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:44,465 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:44,465 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:44,648 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:49,301 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:49,478 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:49,478 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:49,479 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:49,662 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-07-04 16:25:54,308 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-04 16:25:56,813 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-04 16:25:56,814 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-07-04 16:25:56,814 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-07-04 16:25:57,001 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]

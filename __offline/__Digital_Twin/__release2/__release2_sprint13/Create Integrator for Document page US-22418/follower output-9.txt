@@ -1,0 +1,52 @@
+2019-07-03 20:14:01,090 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-03 20:14:01,266 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-03 20:14:01,266 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-03 20:14:01,452 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-03 20:14:01,628 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-07-03 20:14:06,101 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-03 20:14:06,287 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-03 20:14:06,287 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-03 20:14:06,477 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-03 20:14:06,652 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+
+
+iterator
+ <generator object FollowerDataHandler.request_sap_document_type at 0x048DBEF0>
+
+
+
+
+
+asset_data
+ {'_id': ObjectId('5cf657f7a98a29cb5dea0db0'), 'Ts': '2019-05-02T00:00:00+00:00', 'Material': '12V2000C10', 'System': '1
+000015', 'Region': '', 'MotorMaterial': 'R16V4000G83', 'Model': 'R16V4000G83 REMAN ENGINE', 'Engine': '4711-001', 'Custo
+mer': 'Land Badenwürtenberg (0022111236)', 'ConnectivityDeviceNum': 'No Data From Source', 'TrainName': 'No Data From So
+urce', 'asset_id': '1000015', 'source': 'sapmasterdata', 'offset': 712, 'FSV': '1.2', 'EngineEquipmentNumber': '00000000
+0200000082', 'EquipmentNumber': '000000000200000081'}
+
+
+asset_id
+ 1000015
+
+
+Equnr
+ 000000000200000081
+
+
+document_type
+ PPM
+2019-07-03 20:14:10,971 INFO [IoticAgent.IOT.RemotePoint] {Thread-5} tell(timeout=10) [subid=3529834305a41614a5b0f113b79
+aad04]
+2019-07-03 20:14:11,110 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-03 20:14:11,295 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-03 20:14:11,296 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-03 20:14:11,498 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-03 20:14:11,674 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-07-03 20:14:11,682 ERROR [rrps.dt.follower.rest_follower.controllers.default_controller] {Thread-5} T2 request not
+handled by provider

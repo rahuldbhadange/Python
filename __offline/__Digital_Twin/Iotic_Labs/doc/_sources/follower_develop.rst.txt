@@ -1,0 +1,237 @@
+.. _Follower_develop:
+
+Develop your follower
+=======================
+
+A :term:`Follower` is an instance of a :term:`ThingRunner` so it has the standard "lifecycle" methods of any ThingRunner:
+
+#. *on_startup()* - called on initialisation. Call self.__follower.start() here.
+#. *main()* - called after initialisation. Any loop code goes in here, e.g.
+
+   ::
+
+     while not self.wait_for_shutdown(<loop_time>):
+
+#. *on_shutdown()* called after the main has returned. Perform any cleanup and shutdown task in here.
+
+
+Followers also inherit from FollowerCallbacks and have to implement that interface. See
+:ref:`Implementing the Callbacks <follower_callbacks>` below.
+
+To process individual events, Followers also inherit from `NamedEventMixin`. This inheritance allows the Follower
+to have callback functions with names that match the event names. These named callbacks will called automatically whenever an
+event of the same name is received.
+
+The full class definition is as follows:
+
+::
+
+    class FollowerExample(NamedEventMixin, FollowerCallbacks, ThingRunner):
+
+
+
+Follower API
+------------
+
+The follower API is described :ref:`here <api_follower>`
+
+API object and methods
+----------------------
+
+The Follower API object should be instantiated in your `__init__()` function. Pass it the follower config, your Iotic
+client and your self reference so that it can call your callbacks
+
+In the *__init__()* method, instantiate your API object, passing:
+
+#. The integrator config
+#. Your Iotic Client
+#. Your self pointer - to allow it to call your callbacks
+
+::
+
+    self.__follower = Follower(config['follower'], self.client, self)
+
+In the `on_startup()` method, start the follower running.
+
+::
+
+    def on_startup(self):
+        self.__follower.start()
+
+
+Finally, in your *on_shutdown()* method, call stop() on the Follower API object
+
+::
+
+
+    def on_shutdown(self, exc_info):
+        log.debug('Shutdown')
+        self.__follower.stop()
+
+
+.. _follower_callbacks:
+
+Implementing the Callbacks
+--------------------------
+
+Asset creation and deletion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Exactly the same as an Integrator, there are 2 callbacks for asset creation and asset deletion. They are
+
+#. *on_asset_created()*
+#. *on_asset_deleted()*
+
+*on_asset_created()* is called by the Follower API object on start up, once per asset that it has discovered and then once every time a new asset is created and discovered.
+In the method, save the assets known to you.
+
+*on_asset_deleted()* is called by the Follower API object once per asset that it has discovered has been deleted.
+In the method, remove the asset from any lists of known assets that you have maintained.
+
+Event Handling
+~~~~~~~~~~~~~~
+
+Additionally to asset creation and deletion, a follower has to handle events from the :term:`Twin`.  There are 2 callbacks
+
+
+#. `on_event(event)` : This is called whenever an Event has published by the twin. All events, of any type, are routed to here.
+   if you use the NamedEventMixin, then there's no need to implement this function as you'll be dealing with events by name
+
+#. on_event_internal(event)
+   Override to handle internal events (see api.event.internal).
+
+
+Dealing with Named Events
+-------------------------
+
+Most likely, your Follower will want to deal with different events using separate code. The way to do this is to
+inherit from `NamedEventMixin` and then implement callbacks with names of the form:
+
+::
+
+    do_<EVENT_TYPE_LOWERCASE>(self, event):
+
+In the callback, handle the event and then, once you have finished, call `ack_event()` on the Follower API object to
+tell it that you've finished with that event.
+
+For example, if you had a "new document has been created" event call `newdocset`, then your function would be
+
+::
+
+    do_newdocset(self, event):
+       # handle the event
+       self.__handle_newdocset(event)
+       # acknowledge that you've handled it.
+       self.__follower.ack_event(event)
+
+In the cases where there's not a callback that matches the event name, there's a `on_event_unmatched()` function.
+
+::
+
+    def on_event_unmatched(self, event):
+        log.info(
+            '[%s] #%d %s (from %s) @ %s (sys: %s)\n%s', event.asset, event.offset, event.name(), event.source,
+            event.time, event.systime, pformat(event.data)
+        )
+        # Indicate that event has been processed. If asset has been deleted in the mean time, this will be a no-op.
+        self.__follower.ack_event(event)
+
+
+Type 2 specifics
+----------------
+
+:note:
+    Type 2 requests have to be specifically enabled in your Follower config. See :ref:`here <t2_config_follower>`
+
+A :term:`Type 2 request <Type2request>` is a request for data sent by you as a Follower to the twin. The request may
+be handled in a streaming way, so you should expect to have returned to you a number of tuples of (mime, data). In the
+case of a small dataset, that might only be one, but you should code for the eventuality that there might be lots.
+
+The basic function is `t2_request`. In the example, it's sending an `AcmecorpExampleReq` request for that asset
+with the data being the name of the pdf that it wants. It gets returned the tuples of mime and chunk.
+
+::
+
+    for mime, chunk in self.__follower.t2_request(
+            asset, 'AcmecorpExampleReq', data='small.pdf'.encode('utf8'), timeout=10
+    ):
+        # handle the chunk.
+        self.__handle_chunk(chunk)
+
+Type 2 exceptions
+~~~~~~~~~~~~~~~~~
+
+There are many exceptions that could be raised by a type 2 request, so it's best to call the `t2_request()` function
+in a try/except block.
+
+The exceptions are documented :ref:`here <t2_exceptions_Follower>`
+
+Example
+*******
+
+::
+
+    try:
+        for mime, chunk in self.__follower.t2_request(
+                asset, 'AcmecorpExampleReq', data='small.pdf'.encode('utf8'), timeout=10
+        ):
+            self.__handle_chunk(chunk)
+    except AssetUnknown:
+        log.warning('T2 - Asset %s no longer known, ignoring', asset)
+    except T2ResponseException as ex:
+        if ex.reason == T2ReqFailureReason.REQ_UNHANDLED:
+            log.error('T2 request not handled by provider')
+        elif ex.reason == T2ReqFailureReason.RESOURCE_UNKNOWN:
+            log.error('Data not available for given request and asset')
+        else:
+            log.error('T2 failed - reason: %s', ex.reason)
+    except T2Unavailable:
+        log.critical('T2 functionality not enabled in follower')
+    except T2Timeout:
+        log.error('T2 request timed out')
+    except:
+        log.exception('Other T2 failure')
+    else:
+        # it was ok
+        self.__whatever()
+
+
+Static testing
+--------------
+
+Your follower should be tested for static errors using, in the acme example case:
+
+::
+
+    cd example/dt/acmecorp.dt.follower.example
+
+    # For linux
+    ./static_tests.sh
+
+    # For windows
+    static_tests.cmd
+
+
+Working on the package
+----------------------
+
+Do this if you are actively working on the AVRO schema a the moment package with -e so you can modify the source in your tree
+
+in example/dt/acmecorp.dt.events, run
+
+::
+
+   pip -e . -f ../../../deps  # <= this to pick up the common packages from Iotic
+
+
+Building the package
+--------------------
+
+For the integrator to include the package with your events:
+
+in example/dt/acmecorp.dt.events, run
+
+::
+
+   python3 setup.py -q check -mrs
+   python3 setup.py -q sdist -d ../dist    # Notice path to dist dir should exist.

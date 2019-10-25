@@ -1,0 +1,18 @@
+[?2/?8/?2019 3:37 PM]  Tim Churchard:  
+1 sec I'll check 
+I think the equnr_endpoint & sernr_endpoint do not need user/pass.  They are like a public lookup function (but internal to RR) 
+ 
+
+
+[?2/?8/?2019 3:38 PM]  Tim Churchard:  
+Ah interesting 
+Ok, put a comment on the PR after you have pushed the branch so we remember to check it 
+*Or a comment in the code/config 
+ 
+
+[?2/?8/?2019 3:42 PM]  Tim Churchard:  
+Oh and remember 6 hours from now I will be on holiday.  Lorenzo & Fabio are the best contacts while I'm away.  They have a list of tasks to give you 
+Then I'm back 25th Feb 
+ 
+
+:) Yep hopefully the tasks will be interesting.  They will be more challenging than the current ones.  Fabio has a plan for unit testing + mocking of some classes.   And also there are some new RR APIs that need integrators (and extensions to existing integrators). 

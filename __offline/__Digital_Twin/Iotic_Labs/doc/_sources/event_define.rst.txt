@@ -1,0 +1,137 @@
+.. _event_define:
+
+Event Definition
+================
+
+Avro Definition
+---------------
+
+The events for your integrator are defined using the Avro syntax. Using this approach allows for the contents of the events
+to be defined in a way that both the integrator (which fills in the contents) and the follower (which uses the contents)
+can agree. It also allows for the inputs to be checked so that the integrator can't fill the event with invalid
+data and for versioning of the contents.
+
+All events inherit from the base class :ref:`AssetEvent <api_events>`.
+
+Let's look at the example event in a bit more detail. The example use case is for a Bill of Materials (BoM), i.e. a list of parts for a manufactured assembly. The parts can themselves be made of parts in a recursive arrangement.
+
+Imports and class definition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    from ioticlabs.dt.api.event.base import AssetEvent, field    # <-- Imports
+
+
+    class BomBuiltSet(AssetEvent):    # <-- Define your class & write a docstring
+        """Combined Bill of materials (as-built) for powerpack (aggergat) and engine (motor) - set."""
+
+Default version method
+~~~~~~~~~~~~~~~~~~~~~~
+
+This should return the default version number for the definition in the dictionary returned by the `_known_versions` method.
+
+::
+
+    @classmethod
+    def _default_version(cls):
+        return 1     # <-- return the version number
+
+
+Known version method
+~~~~~~~~~~~~~~~~~~~~~~
+
+In this method, return a dictionary keyed by version number. In the "value" part, return the avro definition for the event's contents
+
+::
+
+    @classmethod
+    def _known_versions(cls):
+        return {                           # <-- return the dict keyed by version number
+            1: {                           # <-- version 1 of the contents
+                'type': 'array',           # <-- the example has and 'array' of...
+                'items': {                 # <-- 'items', each one of which is of...
+                    'type': 'record',      # <-- 'type' 'record', i.e. a collection of fields and...
+                    'name': 'BomPart',     # <-- is called 'BomPart'
+
+Then we go on to define the fields that make up the record...
+
+::
+
+                    'fields': [            # <-- define the array of field elements
+                                           # <-- Each field has a name, type and 'doc' (description)
+                        field('Material', 'string', doc='Material number'),
+                        field('Serial', 'long', doc='Serial number'),
+                        field('PartName', 'string', doc='Name of part'),
+                        # ...etc...
+
+As this is a recursive example (i.e. the parts of the BoM can be made of parts themselves) we define a `Children` field for each record which is an array of `BomPart`\ s
+
+::
+
+                         field('Children', {'type': 'array', 'items': 'BomPart'})
+
+
+
+Versioning Events
+-----------------
+
+All Events are built as Python Packages and, as such require a version number. This is useful to any follower that might want to
+use the events as they will know that they will understand the layout of the data in the events from a particular version
+
+In the setup.py in the root directory of the event definitition, for example in :
+*example/dt/acmecorp.dt.events/setup.py*
+
+::
+
+    setup(
+        name='acmecorp.dt.events',
+        description='ACME Corporation dt event definitions',
+        version='0.1.0',   # <- Set your version here
+        author='Acme Corporation',
+        author_email='info@acme-corp.nowhere',
+        url='https://acme-corp.nowhere',
+        packages=find_packages(),
+        zip_safe=True,
+        python_requires='>=3.6',
+        install_requires=[
+            'ioticlabs.dt.api>=0.1.0,<0.2',
+        ]
+    )
+
+
+Validating Events
+-----------------
+
+Events can be validated for errors such as duplicate field names using the script
+
+::
+
+    ioticlabs-dt-event-cli check -v acmecorp.dt.events
+
+This is also called as part of the *static_tests.sh* script, which you should also run to check your Python.
+
+
+Working on the package
+----------------------
+
+Do this if you are actively working on the AVRO schema a the moment package with -e so you can modify the source in your tree
+
+in example/dt/acmecorp.dt.events, run
+
+::
+
+   pip -e . -f ../../../deps  # <= this to pick up the common packages from Iotic
+
+
+Building the package
+--------------------
+
+For the integrator to include the package with your events:
+
+in example/dt/acmecorp.dt.events, run
+
+::
+
+   python3 setup.py -q check -mrs
+   python3 setup.py -q sdist -d ../dist    # Notice path to dist dir should exist.

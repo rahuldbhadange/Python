@@ -1,0 +1,13 @@
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.follower.rest_follower>rrps-dt-follower-rest_follower cfg\fol
+lower.log.yml cfg\follower.ini
+2019-06-04 16:17:11,675 WARNING [ioticlabs.dt.common.util] {MainThread} No logging configuration specified
+Traceback (most recent call last):
+  File "C:\Users\HBD2KOR\envs\rrpsdev\Scripts\rrps-dt-follower-rest_follower-script.py", line 11, in <module>
+    load_entry_point('rrps.dt.follower.rest-follower', 'console_scripts', 'rrps-dt-follower-rest_follower')()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.follower.rest_follower\rrps\dt\follower\rest_follower\__main__.
+py", line 68, in main
+    app.main(config, agent)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.follower.rest_follower\rrps\dt\follower\rest_follower\app.py",
+line 53, in main
+    connection_string = config['rest_follower']['cache_db']['connection_string']
+KeyError: 'rest_follower'

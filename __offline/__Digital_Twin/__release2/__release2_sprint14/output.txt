@@ -1,0 +1,33 @@
+="None", limit=50, offset=50, reduced=True)
+2019-07-18 18:54:07,969 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-18 18:54:08,135 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-18 18:54:08,298 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+
+
+
+<pymongo.cursor.Cursor object at 0x04506550>
+
+
+
+264425
+
+
+ <class 'str'>
+
+
+
+
+
+ <class 'bytes'>
+7163
+
+
+
+<Response 7146 bytes [200 OK]>
+
+
+
+2019-07-18 18:54:09,457 INFO [werkzeug] {Thread-2} 127.0.0.1 - - [18/Jul/2019 18:54:09] "GET /ron/1000015 HTTP/1.1" 200
+-
+2019-07-18 18:54:12,815 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)

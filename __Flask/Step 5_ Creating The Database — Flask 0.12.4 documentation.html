@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0065)http://flask.pocoo.org/docs/0.12/tutorial/dbinit/#tutorial-dbinit -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Step 5: Creating The Database — Flask 0.12.4 documentation</title>
+    <link rel="stylesheet" href="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/flask.css" type="text/css">
+    <link rel="stylesheet" href="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/pygments.css" type="text/css">
+    <script type="text/javascript" src="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/documentation_options.js.download"></script>
+    <script type="text/javascript" src="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/jquery.js.download"></script>
+    <script type="text/javascript" src="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/underscore.js.download"></script>
+    <script type="text/javascript" src="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/doctools.js.download"></script>
+    <link rel="shortcut icon" href="http://flask.pocoo.org/docs/0.12/_static/flask-favicon.ico">
+    <link rel="index" title="Index" href="http://flask.pocoo.org/docs/0.12/genindex/">
+    <link rel="search" title="Search" href="http://flask.pocoo.org/docs/0.12/search/">
+    <link rel="next" title="Step 6: The View Functions" href="http://flask.pocoo.org/docs/0.12/tutorial/views/">
+    <link rel="prev" title="Step 4: Database Connections" href="http://flask.pocoo.org/docs/0.12/tutorial/dbcon/">
+    <link rel="canonical" href="http://flask.pocoo.org/docs/0.12/tutorial/dbinit/">
+  <script>DOCUMENTATION_OPTIONS.URL_ROOT = '../../';</script>
+   
+  <script id="_carbonads_projs" type="text/javascript" src="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/CKYIE277.json"></script></head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="http://flask.pocoo.org/docs/0.12/genindex/" title="General Index" accesskey="I">index</a></li>
+        <li class="right">
+          <a href="http://flask.pocoo.org/docs/0.12/py-modindex/" title="Python Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="http://flask.pocoo.org/docs/0.12/tutorial/views/" title="Step 6: The View Functions" accesskey="N">next</a> |</li>
+        <li class="right">
+          <a href="http://flask.pocoo.org/docs/0.12/tutorial/dbcon/" title="Step 4: Database Connections" accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="http://flask.pocoo.org/docs/0.12/">Flask 0.12.4 documentation</a> »</li>
+          <li class="nav-item nav-item-1"><a href="http://flask.pocoo.org/docs/0.12/tutorial/" accesskey="U">Tutorial</a> »</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+    <p class="version-warning"><strong>Warning: </strong> This is an old version. The latest stable version is <a href="http://flask.pocoo.org/docs/1.0/tutorial/dbinit/">Flask 1.0</a>.</p>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="step-5-creating-the-database">
+<span id="tutorial-dbinit"></span><h1>Step 5: Creating The Database<a class="headerlink" href="http://flask.pocoo.org/docs/0.12/tutorial/dbinit/#step-5-creating-the-database" title="Permalink to this headline">¶</a></h1>
+<p>As outlined earlier, Flaskr is a database powered application, and more
+precisely, it is an application powered by a relational database system.  Such
+systems need a schema that tells them how to store that information.
+Before starting the server for the first time, it’s important to create
+that schema.</p>
+<p>Such a schema can be created by piping the <code class="docutils literal notranslate"><span class="pre">schema.sql</span></code> file into the
+<cite>sqlite3</cite> command as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqlite3</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">flaskr</span><span class="o">.</span><span class="n">db</span> <span class="o">&lt;</span> <span class="n">schema</span><span class="o">.</span><span class="n">sql</span>
+</pre></div>
+</div>
+<p>The downside of this is that it requires the <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> command to be
+installed, which is not necessarily the case on every system.  This also
+requires that you provide the path to the database, which can introduce
+errors.  It’s a good idea to add a function that initializes the database
+for you, to the application.</p>
+<p>To do this, you can create a function and hook it into a <strong class="command">flask</strong>
+command that initializes the database.  For now just take a look at the
+code segment below.  A good place to add this function, and command, is
+just below the <cite>connect_db</cite> function in <code class="file docutils literal notranslate"><span class="pre">flaskr.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">init_db</span><span class="p">():</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">open_resource</span><span class="p">(</span><span class="s1">'schema.sql'</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">cli</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="s1">'initdb'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">initdb_command</span><span class="p">():</span>
+    <span class="sd">"""Initializes the database."""</span>
+    <span class="n">init_db</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Initialized the database.'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">app.cli.command()</span></code> decorator registers a new command with the
+<strong class="command">flask</strong> script.  When the command executes, Flask will automatically
+create an application context which is bound to the right application.
+Within the function, you can then access <a class="reference internal" href="http://flask.pocoo.org/docs/0.12/api/#flask.g" title="flask.g"><code class="xref py py-attr docutils literal notranslate"><span class="pre">flask.g</span></code></a> and other things as
+you might expect.  When the script ends, the application context tears down
+and the database connection is released.</p>
+<p>You will want to keep an actual function around that initializes the database,
+though, so that we can easily create databases in unit tests later on.  (For
+more information see <a class="reference internal" href="http://flask.pocoo.org/docs/0.12/testing/#testing"><span class="std std-ref">Testing Flask Applications</span></a>.)</p>
+<p>The <a class="reference internal" href="http://flask.pocoo.org/docs/0.12/api/#flask.Flask.open_resource" title="flask.Flask.open_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">open_resource()</span></code></a> method of the application object
+is a convenient helper function that will open a resource that the
+application provides.  This function opens a file from the resource
+location (the <code class="file docutils literal notranslate"><span class="pre">flaskr/flaskr</span></code> folder) and allows you to read from it.
+It is used in this example to execute a script on the database connection.</p>
+<p>The connection object provided by SQLite can give you a cursor object.
+On that cursor, there is a method to execute a complete script.  Finally, you
+only have to commit the changes.  SQLite3 and other transactional
+databases will not commit unless you explicitly tell it to.</p>
+<p>Now, it is possible to create a database with the <strong class="command">flask</strong> script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flask</span> <span class="n">initdb</span>
+<span class="n">Initialized</span> <span class="n">the</span> <span class="n">database</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="admonition-troubleshooting admonition">
+<p class="first admonition-title">Troubleshooting</p>
+<p class="last">If you get an exception later on stating that a table cannot be found, check
+that you did execute the <code class="docutils literal notranslate"><span class="pre">initdb</span></code> command and that your table names are
+correct (singular vs. plural, for example).</p>
+</div>
+<p>Continue with <a class="reference internal" href="http://flask.pocoo.org/docs/0.12/tutorial/views/#tutorial-views"><span class="std std-ref">Step 6: The View Functions</span></a></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="http://flask.pocoo.org/docs/0.12/">
+              <img class="logo" src="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/flask.png" alt="Logo">
+            </a></p><h3>Navigation</h3>
+<ul>
+  <li><a href="http://flask.pocoo.org/docs/0.12/">Overview</a>
+    <ul>
+      <li><a href="http://flask.pocoo.org/docs/0.12/tutorial/">Tutorial</a>
+        <ul>
+          <li>Previous: <a href="http://flask.pocoo.org/docs/0.12/tutorial/dbcon/" title="previous chapter">Step 4: Database Connections</a>
+          </li><li>Next: <a href="http://flask.pocoo.org/docs/0.12/tutorial/views/" title="next chapter">Step 6: The View Functions</a></li></ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  <h3>Versions</h3>
+  <ul class="versions">
+    
+      <li><a href="http://flask.pocoo.org/docs/dev/tutorial/dbinit/">Development</a>
+    
+    
+      <span class="note">(unstable)</span>
+    
+  
+    
+      </li><li><a href="http://flask.pocoo.org/docs/1.0/tutorial/dbinit/">Flask 1.0</a>
+    
+    
+      <span class="note">(stable)</span>
+    
+  
+    
+      </li><li><a href="http://flask.pocoo.org/docs/0.12/tutorial/dbinit/" class="current">Flask 0.12</a>
+    
+    
+  </li></ul>
+
+  <div class="carbon_ads">
+    <script async="" src="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/carbon.js.download" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QMCWADLKJNF6YLYKQMCWBIE23WCWSD4Z3JCWBIKK3YC6SI4KJKC6BIP2Q7CVYDTK3EHJNCLSIZ?segment=placement:pocooorg;" class="carbon-img" target="_blank" rel="noopener"><img src="./Step 5_ Creating The Database — Flask 0.12.4 documentation_files/1525189943-38523.png" alt="" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QMCWADLKJNF6YLYKQMCWBIE23WCWSD4Z3JCWBIKK3YC6SI4KJKC6BIP2Q7CVYDTK3EHJNCLSIZ?segment=placement:pocooorg;" class="carbon-text" target="_blank" rel="noopener">Limited time offer: Get 10 free Adobe Stock images.</a></span><a href="http://carbonads.net/?utm_source=pocooorg&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a></span></div>
+  </div>
+
+<div id="searchbox" style="" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="http://flask.pocoo.org/docs/0.12/search/" method="get">
+      <input type="text" name="q">
+      <input type="submit" value="Go">
+      <input type="hidden" name="check_keywords" value="yes">
+      <input type="hidden" name="area" value="default">
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        © Copyright 2010 Pallets Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+    </div>
+  
+</body></html>

@@ -1,0 +1,87 @@
+---
+# Copyright (c) 2018 Rolls-Royce Power Systems AG. All rights reserved.
+
+# Configuration specific to Sap Warranty Recall Integrator
+
+config:
+
+  sap:
+    equnr_endpoint: https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/WTYRCLSet?$filter=Equnr%20eq%20{asset_id}&$format=json
+    sernr_endpoint: http://localhost:5000/sapwarrantyrecall-mock-data
+    usr: username
+    pwd: password
+    timeout: 60
+
+  use_mock_data: 0
+  loop_time: 5
+  data-cache: ./cfg/tmpdata/data-cache
+
+
+# Sap Warranty Recall Integrator (core) configuration.
+
+integrator:
+
+  # Event source name as included in published events. Should NOT be changed once set!
+  source: sapwarrantyrecall
+
+  # How many threads to reserve for performing asynchronous tasks such as event publishing and asset updates. Not
+  # applicable in synchronous even publishing case.
+  # workers: 1
+
+  # Metadata applicable to integrator Iotic Thing (all optional apart from lid)
+  thing:
+    lid: sapwarrantyrecall
+    # label:
+    # description:
+    # tags: []
+
+
+  asset:
+    # If specified, keep track of which assets have had field data things created previously to avoid additional Iotic
+    # Space calls
+    cache:
+      # How to persist. If none are specified, an in-memory only cache will be used
+      method:
+        # memory: {}
+        json:
+          path: data/assets.json
+          # How often (in seconds) to write to output file
+
+    event:
+      # List of modules to load event definitions from. Only event types registered this way can be published. Each name
+      # must be an absolute module name in Python search path. Note: Internal built-in/virtual event types are always
+      # loaded.
+      modules:
+        - rrps.dt.events
+
+    # Event publishing timeout in seconds (applicable ONLY when confirmation has been requested both in sync and async
+    # cases). Should be high enough to allow for digital twin to respond as otherwise risk publishing the same event
+    # mutiple times. (default will be used if not specified)
+    publish:
+      timeout: 10
+
+    # Search criteria for finding assets (required)
+    discovery:
+      # One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)
+      # text:
+      # One of public, local or localOwn (default). Public is NOT recommended as one could, despite specified filter,
+      # end up pushing events to a completely unknown thing/point!
+      # scope:
+      # How often to poll for new assets, in seconds
+      interval: 5
+
+      filter:
+        label:
+          # Expected asset thing label. This is a standard Python regular expression and should be contained within
+          # '^' and '$'. Defined groups are ignored and this parameter is optional.
+          # thing_regex:
+          # Expected label for event production related control. (defaults will be used if not specified).
+          # control:
+
+        tags:
+          # Expected unique tag containing asset id. This is a standard Python regular expression and should be
+          # contained within '^' and '$' and define one group (containing asset id). (default will be used if not
+          # specified)
+          # unique_regex:
+          # Expected static tags for each asset
+          # thing: []

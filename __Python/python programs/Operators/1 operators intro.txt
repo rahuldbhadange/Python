@@ -1,0 +1,12 @@
+operators in python
+1.Arithmetic----->+,-,*,/,%,//,**
+2.Relaional-------> >,<,>=,<=,==,!=
+3.Logical--------->and , or , not,
+4.Assignment(short-hand)operators: +=,-=,*=,/=,%=
+5.special operators
+  1.Identity operators
+    i.is 
+    ii.is not
+  2.membership operators
+     i.in
+     ii.not in

@@ -1,0 +1,18 @@
+.. _api_events:
+
+Events API
+==========
+
+The history of a Digital Twin is built from events produced by Integrators;
+these events are declared in a Python package and their base class is `AssetEvent` ...
+
+API reference
+-------------
+
+.. py:module:: ioticlabs.dt.api.event.base
+
+AssetEvent
+**********
+
+.. autoclass:: AssetEvent
+   :members:

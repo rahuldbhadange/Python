@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\Core\AmqpLink.py", line 384, in __send_run
+    host=self.__host) as conn,\
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\third\amqp\connection.py", line 167, in __init__
+    host, connect_timeout, operation_timeout, ssl
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\third\amqp\connection.py", line 189, in Transport
+    return create_transport(host, connect_timeout, operation_timeout, ssl)
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\third\amqp\transport.py", line 330, in create_transport
+    return SSLTransport(host, connect_timeout, operation_timeout, ssl)
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\third\amqp\transport.py", line 223, in __init__
+    host, connect_timeout, operation_timeout
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\third\amqp\transport.py", line 95, in __init__
+    self._setup_transport()
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\third\amqp\transport.py", line 232, in _setup_transport
+    server_hostname=self.hostname)
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\ssl.py", line 412, in wrap_socket
+    session=session
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\ssl.py", line 853, in _create
+    self.do_handshake()
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\ssl.py", line 1117, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1051)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\Core\Client.py", line 457, in start
+    self.__amqplink.start()
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\Core\AmqpLink.py", line 158, in start
+    raise_from(LinkException('Send thread failure'), self.__send_exc)
+  File "<string>", line 2, in raise_from
+IoticAgent.Core.Exceptions.LinkException: Send thread failure
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Iotic_Labs\py-application-examples-master\agent_tutorial_code\getting_started\1_its_alive.py", line 45, in <module>
+    with IOT.Client(config="Getting_Started.ini") as client:  # ADD OWN CONFIG .ini HERE
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\IOT\Client.py", line 191, in __enter__
+    return self.start()
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\IOT\Client.py", line 187, in start
+    self.__client.start()
+  File "C:\Users\HBD2KOR\AppData\Local\Programs\Python\Python37-32\lib\site-packages\IoticAgent\Core\Client.py", line 460, in start
+    raise_from(LinkException("Core.AmqpLink: Failed to connect"), exc)
+  File "<string>", line 2, in raise_from
+IoticAgent.Core.Exceptions.LinkException: Core.AmqpLink: Failed to connect
+>>> 

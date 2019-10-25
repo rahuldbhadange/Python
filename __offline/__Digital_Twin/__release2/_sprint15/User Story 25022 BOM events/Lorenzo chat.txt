@@ -1,0 +1,865 @@
+[?8/?6/?2019 2:02 PM]  
+Good Morning Lorenzo 
+ 
+[?8/?6/?2019 2:10 PM]  Lorenzo Paris:  
+Hi Rahul. Sorry I was on a meeting and I'm having a new meeting in 10 mins 
+ 
+[?8/?6/?2019 2:10 PM]  Lorenzo Paris:  
+How are you ? 
+ 
+[?8/?6/?2019 2:11 PM]  
+I'm doing good, thank you
+ 
+[?8/?6/?2019 2:11 PM]  
+Have you got any clue about T2 response ?
+ 
+[?8/?6/?2019 2:13 PM]  Lorenzo Paris:  
+Actually not, today I'm going to ask someone about it because otherwise I cannot help you with this issue 
+ 
+[?8/?6/?2019 2:14 PM]  Lorenzo Paris:  
+In any case would yuou mind to push all the code on your branch in VSTS ? So that I can have a look at it 
+ 
+[?8/?6/?2019 2:14 PM]  
+I can do that
+ 
+[?8/?6/?2019 2:14 PM]  Lorenzo Paris:  
+Maybe the problem is elsewhere 
+ 
+[?8/?6/?2019 2:15 PM]  Lorenzo Paris:  
+Thank you Rahul 
+ 
+[?8/?6/?2019 2:15 PM]  
+Okay, I will do that
+ 
+[?8/?6/?2019 2:29 PM]  
+Hey Lorenzo
+ 
+[?8/?6/?2019 2:29 PM]  
+I have push the code, please have a look
+ 
+[?8/?6/?2019 2:49 PM]  Lorenzo Paris:  
+Sure, thank you 
+ 
+[?8/?6/?2019 3:41 PM]  Lorenzo Paris:  
+Hi Rahul. I'm looking at your code. Could you please send me all the output you get before getting {"code":"failed requesting BOM"} 
+ 
+[?8/?6/?2019 3:42 PM]  
+I was checking from the first, I'm getting the same error
+ 
+[?8/?6/?2019 3:42 PM]  
+I have not got any response other than that
+ 
+[?8/?6/?2019 3:42 PM]  Lorenzo Paris:  
+So that is your first output ? 
+ 
+[?8/?6/?2019 3:42 PM]  
+Before and after changes
+ 
+[?8/?6/?2019 3:43 PM]  
+same response {"code":"failed requesting BOM","description":""} 
+ 
+[?8/?6/?2019 3:43 PM]  Lorenzo Paris:  
+You don't get any log.info() message ? 
+ 
+[?8/?6/?2019 3:43 PM]  
+No 
+ 
+[?8/?6/?2019 3:44 PM]  
+The above one only
+ 
+[?8/?6/?2019 3:44 PM]  
+With respect to this : http://localhost:8080/engine-bom-as-maintained/1000015 
+ 
+[?8/?6/?2019 3:46 PM]  Lorenzo Paris:  
+Could you try to change the integrator.log.yml of the sapbomasbuit so that you can receive info messages ? 
+ 
+[?8/?6/?2019 3:46 PM]  Lorenzo Paris:  
+By looking at your code it seems to be set to DEBUG 
+ 
+[?8/?6/?2019 3:49 PM]  
+sure, could you suggest the change ?
+ 
+[?8/?6/?2019 3:49 PM]  Lorenzo Paris:  
+The error seems to be from line 190 to 194 of impl.py 
+ 
+[?8/?6/?2019 3:50 PM]  Lorenzo Paris:  
+In fact when you do "requests.get(endpoint..." and check for the status of the response, you get that the status code is not found 
+ 
+[?8/?6/?2019 3:51 PM]  Lorenzo Paris:  
+At line 194 there's the method to make the message {"code":"failed requesting BOM","description":""} appear 
+ 
+[?8/?6/?2019 3:52 PM]  Lorenzo Paris:  
+impl.py of sapbomasbuilt 
+ 
+[?8/?6/?2019 3:53 PM]  Lorenzo Paris:  
+To this regard, there is surely an error in either the endpoint as per line 184, or either usr or pwd as per lines 185-186 
+ 
+[?8/?6/?2019 3:56 PM]  Lorenzo Paris:  
+I think I get the error 
+ 
+[?8/?6/?2019 3:57 PM]  Lorenzo Paris:  
+I m going to tell you the errors in VSTS if you agree 
+ 
+[?8/?6/?2019 3:58 PM]  
+Actually Line numbers are not matching with the mine ? 
+ 
+[?8/?6/?2019 3:59 PM]  Lorenzo Paris:  
+mmh. Ok Have a look on VSTS 
+ 
+[?8/?6/?2019 3:59 PM]  
+Okay,
+ 
+[?8/?6/?2019 4:00 PM]  
+Can you please share the link ?
+ 
+[?8/?6/?2019 4:00 PM]  Lorenzo Paris:  
+Yes. I'm writing the messages on the commit you pushed yesterday and then I'll share the link 
+ 
+[?8/?6/?2019 4:01 PM]  
+I have push the new code , hour back 
+ 
+[?8/?6/?2019 4:01 PM]  Lorenzo Paris:  
+Yes, I'm leaving messages in there 
+ 
+[?8/?6/?2019 4:02 PM]  Lorenzo Paris:  
+Would you mind to have a call and I share my screen ? 
+ 
+[?8/?6/?2019 4:02 PM]  Lorenzo Paris:  
+I think it's easier 
+ 
+[?8/?6/?2019 4:02 PM]  
+Sure
+ 
+[?8/?6/?2019 4:03 PM]  Lorenzo Paris:  
+Can you do it on Zoom ? 
+ 
+[?8/?6/?2019 4:04 PM]  Lorenzo Paris:  
+At the room where we take our standup 
+ 
+[?8/?6/?2019 4:04 PM]  
+Yeah we can do it 
+ 
+[?8/?6/?2019 4:04 PM]  Lorenzo Paris:  
+Cool 
+ 
+[?8/?6/?2019 4:04 PM]  Lorenzo Paris:  
+Ok join the zoom room 
+ 
+[?8/?6/?2019 4:25 PM]  
+I have changed the sutff ?
+ 
+[?8/?6/?2019 4:25 PM]  
+Where we will get the message exactly ?
+ 
+[?8/?6/?2019 4:26 PM]  Lorenzo Paris:  
+Are you talking about the logging messages ? 
+ 
+[?8/?6/?2019 4:26 PM]  
+yeah exactly
+ 
+[?8/?6/?2019 4:27 PM]  Lorenzo Paris:  
+Within the output, so if you changed the logging from DEBUG to INFO, you will get some extra messages before receiving the error 
+ 
+[?8/?6/?2019 4:32 PM]  
+At cmd or url response ?
+ 
+[?8/?6/?2019 4:32 PM]  Lorenzo Paris:  
+in the shell 
+ 
+[?8/?6/?2019 4:36 PM]  Lorenzo Paris:  
+Otherwise (instead of using logging messages) try with simple print() 
+ 
+[?8/?6/?2019 4:37 PM]  Lorenzo Paris:  
+I think what you should check is the "valid_from" parameter if it is in the right format 
+ 
+[?8/?6/?2019 4:38 PM]  Lorenzo Paris:  
+For the latter you could add a print message like "print(valid_from)" after the following block:
+try:
+            valid_from = decoded['Valfr']
+        except KeyError:
+            log.warning('Valfr not in request')
+            self.__integrator_t2_respond_error(request)
+            return 
+ 
+[?8/?6/?2019 4:39 PM]  Lorenzo Paris:  
+Also, add a print message for the "response" variable to see if it is correctly constructed 
+ 
+[?8/?6/?2019 4:39 PM]  
+ohh okay
+ 
+[?8/?6/?2019 4:40 PM]  Lorenzo Paris:  
+You can do the latter through "print(endpoint)" after "endpoint = self.__sap_config_info.bom_endp_maint.format(asset_id=asset_id, valid_from=valid_from)" 
+ 
+[?8/?6/?2019 4:42 PM]  
+# for IntegratorCallbacks
+def on_t2_request(self, request):
+    print("\n\n", request, "\n\n")
+    self.__req_pool.submit(self.__process_t2, request)
+
+# Wrap since run via thread pool without handling return/exception
+@log_exceptions(log)
+def __process_t2(self, request):
+    log.info('New T2 req for %s - %s(%r)', request.asset_id, request.type_, request.data)
+
+    print("\n\n", request.asset_id, request.type_, request.data, "\n\n")
+
+    if request.type_ == T2_REQUEST_SAP_BOMASMAINT:
+        log.warning('Ignoring unknown request type %s', request.type_)
+        # return
+        self.__t2_do_bommaint(request) 
+ 
+[?8/?6/?2019 4:43 PM]  
+This code is not executing 
+ 
+[?8/?6/?2019 4:45 PM]  
+# for IntegratorCallbacks
+def on_t2_request(self, request):
+    print("\n\n", request, "\n\n")
+    self.__req_pool.submit(self.__process_t2, request)
+
+# Wrap since run via thread pool without handling return/exception
+@log_exceptions(log)
+def __process_t2(self, request):
+    log.info('New T2 req for %s - %s(%r)', request.asset_id, request.type_, request.data)
+
+    print("\n\n", request.asset_id, request.type_, request.data, "\n\n")
+
+    if request.type_ != T2_REQUEST_SAP_BOMASMAINT:
+        log.warning('Ignoring unknown request type %s', request.type_)
+        return
+    self.__t2_do_bommaint(request) 
+ 
+[?8/?6/?2019 4:45 PM]  
+not working
+ 
+[?8/?6/?2019 4:47 PM]  
+This is follower response : rqst_data
+
+ {'Valfr': '20190806164716'} 
+ 
+[?8/?6/?2019 4:48 PM]  
+Integrator not receiving the T2 request, this is what I think
+ 
+[?8/?6/?2019 4:50 PM]  Lorenzo Paris:  
+So you don't get the messages in the print() for both "on_t2_request" and "__process_t2" ? 
+ 
+[?8/?6/?2019 4:51 PM]  
+no 
+ 
+[?8/?6/?2019 4:51 PM]  
+i'm not getting
+ 
+[?8/?6/?2019 4:51 PM]  Lorenzo Paris:  
+ok 
+ 
+[?8/?6/?2019 4:52 PM]  
+What do you think ?
+ 
+[?8/?6/?2019 4:55 PM]  Lorenzo Paris:  
+Rahul I'm currently on a meeting. I've also asked another person who is more expert on t2_request. So hopefully I'll provide the answer in a while 
+ 
+[?8/?6/?2019 4:55 PM]  
+Sure
+ 
+[?8/?6/?2019 6:51 PM]  Lorenzo Paris:  
+Hi Rahul. I received your message. I'm having a call with someone to solve the issue of the t2 requests 
+ 
+[?8/?6/?2019 6:55 PM]  
+Actually Muthu and sean discussed, came to the conclusion that we can build the ROn event first
+ 
+[?8/?6/?2019 6:55 PM]  
+that's why I have raised the PR
+ 
+[?8/?6/?2019 6:56 PM]  Lorenzo Paris:  
+Ok, but the problem with the t2 requests is still there, right ? 
+ 
+[?8/?6/?2019 6:59 PM]  
+yes, so they decided to build without T2 request for the sake of UI guys
+ 
+[?8/?6/?2019 7:00 PM]  Lorenzo Paris:  
+Yes 
+ 
+[?8/?6/?2019 7:00 PM]  
+And asked to work on T2 request after deployment
+ 
+[?8/?6/?2019 7:00 PM]  Lorenzo Paris:  
+Ok, that's fine then 
+ 
+[?8/?6/?2019 7:00 PM]  
+So UI guys will start their work\integration
+ 
+[?8/?6/?2019 7:00 PM]  
+Tell me one thing
+ 
+[?8/?6/?2019 7:02 PM]  
+So I have push the code, removing T2 request part from (bom_view\__init__\impl), 
+
+ 
+[?8/?6/?2019 7:02 PM]  Lorenzo Paris:  
+In any case Fabio will come back tomorrow, so he'll have a look at it too 
+ 
+[?8/?6/?2019 7:02 PM]  
+At what ??
+ 
+[?8/?6/?2019 7:03 PM]  
+RON events or T2 request ??
+ 
+[?8/?6/?2019 7:03 PM]  Lorenzo Paris:  
+At your code and also the Muthu's. I think he'll be a second reviewer 
+ 
+[?8/?6/?2019 7:03 PM]  Lorenzo Paris:  
+The Pull Requests 
+ 
+[?8/?6/?2019 7:03 PM]  
+I have push the code, removing T2 request part from (bom_view\__init__\impl),  
+ 
+[?8/?6/?2019 7:04 PM]  
+you are the only reviewer 
+ 
+[?8/?6/?2019 7:04 PM]  Lorenzo Paris:  
+For now I'm the only reviewer 
+ 
+[?8/?6/?2019 7:05 PM]  
+Yeah, we have raised PR only for you to review
+ 
+[?8/?6/?2019 7:05 PM]  Lorenzo Paris:  
+I have to hear from him if he wants to review the code, as well 
+ 
+[?8/?6/?2019 7:05 PM]  Lorenzo Paris:  
+But today I'll have a first review 
+ 
+[?8/?6/?2019 7:06 PM]  
+Who Fabio ???
+ 
+[?8/?6/?2019 7:06 PM]  Lorenzo Paris:  
+YES 
+ 
+[?8/?6/?2019 7:07 PM]  
+What about deployment then??
+
+ 
+[?8/?6/?2019 7:07 PM]  
+for both RON as well as service history??
+ 
+[?8/?6/?2019 7:07 PM]  Lorenzo Paris:  
+Yes 
+ 
+[?8/?6/?2019 7:08 PM]  
+When you will deploy ?
+ 
+[?8/?6/?2019 7:09 PM]  Lorenzo Paris:  
+I don't know yet 
+ 
+[?8/?6/?2019 7:10 PM]  
+Can you please speak to Fabio ?
+ 
+[?8/?6/?2019 7:16 PM]  Lorenzo Paris:  
+Fabio is not available today. The only thing I can do is to check the PR and in case merge the code on VSTS 
+ 
+[?8/?6/?2019 7:17 PM]  
+okay
+ 
+[?8/?6/?2019 7:18 PM]  
+I will wait for the comments then 
+ 
+[?8/?6/?2019 7:51 PM]  
+How can we remove ini files and  deps/ioticlabs.dt.api-0.1.15.tar.gz 
+ 
+[?8/?6/?2019 7:53 PM]  Lorenzo Paris:  
+I'll tell you as soon as I finish the review 
+ 
+[?8/?6/?2019 7:53 PM]  
+Okay
+ 
+[?8/?6/?2019 8:07 PM]  Lorenzo Paris:  
+Rahul I have a question 
+ 
+[?8/?6/?2019 8:08 PM]  
+Yes please
+ 
+[?8/?6/?2019 8:08 PM]  Lorenzo Paris:  
+in the fields of SapBomAsIbaseChangeSet events there is 'Sernr' 
+ 
+[?8/?6/?2019 8:09 PM]  Lorenzo Paris:  
+I'm talking about the rrps.dt.event __init__ file 
+ 
+[?8/?6/?2019 8:10 PM]  Lorenzo Paris:  
+By looking at the user story this field doesn't seem to be included. Is it something that Fabio or someone else told you to include anyway ? 
+ 
+[?8/?6/?2019 8:13 PM]  
+As I remember Nobody told me specifically about "Sernr" but I don't remober that I have included it.
+If you can recall, Fabio has made some changes (at time of follower issue)
+ 
+[?8/?6/?2019 8:14 PM]  Lorenzo Paris:  
+Ok thank you. I will leave it for now 
+ 
+[?8/?6/?2019 8:14 PM]  
+wait
+ 
+[?8/?6/?2019 8:16 PM]  
+I have checked the previous code, I have included it (field('Sernr', 'string', doc='IB: Serial numbers')) but later on fabio updated it as (field('Sernr', 'string', doc='The aggregate serial number.'), )
+ 
+[?8/?6/?2019 8:17 PM]  
+If he have not deleted it then I guess, it meant to be there. What do you think ? rest up to you .
+ 
+[?8/?6/?2019 8:18 PM]  Lorenzo Paris:  
+Yes he probably wants it to be there 
+ 
+[?8/?6/?2019 8:18 PM]  
+yeah I think so
+ 
+[?8/?6/?2019 8:19 PM]  Lorenzo Paris:  
+Anyway I talked to Mark and he said that Fabio will make a second review and merge the code 
+ 
+[?8/?6/?2019 8:19 PM]  
+ohh
+ 
+[?8/?6/?2019 8:19 PM]  
+Is your review completed ?
+ 
+[?8/?6/?2019 8:19 PM]  Lorenzo Paris:  
+Not yet 
+ 
+[?8/?6/?2019 8:19 PM]  
+okay I will wait
+ 
+[?8/?6/?2019 8:22 PM]  Lorenzo Paris:  
+When do you have to leave for today ? 
+ 
+[?8/?6/?2019 8:24 PM]  
+It is time actually but I have to finish it, so I will wait
+ 
+[?8/?6/?2019 8:27 PM]  
+I'm going for dinner, will be back in 20 min
+ 
+[?8/?6/?2019 8:27 PM]  Lorenzo Paris:  
+Sure 
+ 
+[?8/?6/?2019 8:37 PM]  Lorenzo Paris:  
+Ok Rahul. You can proceed with the small changes commented on VSTS. 
+ 
+[?8/?6/?2019 8:39 PM]  Lorenzo Paris:  
+To remove the ini file and other file from the commit, you have to something like:
+git reset HEAD path/to/unwanted_file 
+ 
+[?8/?6/?2019 8:40 PM]  Lorenzo Paris:  
+You have to do it before the commit command with the new changes 
+ 
+[?8/?6/?2019 8:41 PM]  Lorenzo Paris:  
+Once you've made those changes I'll approve the PR, but as I said the code has to be deployed by Fabio, and therefore I think tomorrow 
+ 
+[?8/?6/?2019 8:56 PM]  
+okay I'm checking
+ 
+[?8/?6/?2019 9:05 PM]  Lorenzo Paris:  
+Let me know when you push the code 
+ 
+[?8/?6/?2019 9:05 PM]  
+No Title 
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-bom_events)
+$ git reset HEAD path/to/unwanted_file
+Unstaged changes after reset:
+M       rrps/python/rrps.dt.events/rrps/dt/events/t2defs.py
+M       rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/controllers/default_controller.py
+M       rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/follower.py
+M       rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/swagger/swagger.yaml
+M       rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/RiverOfNewsView.py
+M       rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/integrator.cfg.yml
+M       rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/integrator.log.yml
+M       rrps/python/rrps.dt.integrator.sapbomasbuilt/data/assets.json
+M       rrps/python/rrps.dt.integrator.sapbomasbuilt/rrps/dt/integrator/sapbomasbuilt/impl.py
+M       rrps/python/rrps.dt.integrator.sapequipmenthistory/rrps/dt/integrator/sapequipmenthistory/impl.py
+M       rrps/python/rrps.dt.integrator.talendtimdocument/cfg/integrator.cfg.yml
+M       rrps/python/rrps.dt.mockdataapi/data/sapbomasbuilt/aschange/1000015.json
+M       rrps/python/rrps.dt.mockdataapi/rrps/dt/mockdataapi/mock_app_server.py 
+ 
+[?8/?6/?2019 9:05 PM]  
+This is output of the git reset HEAD path/to/unwanted_file  
+ 
+[?8/?6/?2019 9:06 PM]  
+Fabio only removed return statement from follower.py
+ 
+[?8/?6/?2019 9:06 PM]  Lorenzo Paris:  
+Rahul you had to replace "path/to/unwanted_file" with the path of the files you don't need. In that case the ini files and the .tar.gz file 
+ 
+[?8/?6/?2019 9:06 PM]  Lorenzo Paris:  
+Ok 
+ 
+[?8/?6/?2019 9:07 PM]  
+I'm sorry
+ 
+[?8/?6/?2019 9:07 PM]  Lorenzo Paris:  
+It's all right 
+ 
+[?8/?6/?2019 9:08 PM]  Lorenzo Paris:  
+Let me know if you have any other issue 
+ 
+[?8/?6/?2019 9:10 PM]  
+Done
+ 
+[?8/?6/?2019 9:10 PM]  
+How can we cross check
+ 
+[?8/?6/?2019 9:10 PM]  
+$ git reset HEAD rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/rahul-int-1.ini                                                                                
+ 
+[?8/?6/?2019 9:12 PM]  Lorenzo Paris:  
+Yes it seems ok. You should also add /rrps/python/rrps.dt.follower.rest_follower/cfg/rahul-fol.ini and /deps/ioticlabs.dt.api-0.1.15.tar.gz after that one 
+ 
+[?8/?6/?2019 9:13 PM]  
+done with both
+ 
+[?8/?6/?2019 9:13 PM]  
+Can we cross check this ?? How we will be sure that this is removed ?
+
+ 
+[?8/?6/?2019 9:14 PM]  Lorenzo Paris:  
+you should do "git status" and see which files are included 
+ 
+[?8/?6/?2019 9:14 PM]  Lorenzo Paris:  
+The files included should be in green colour 
+ 
+[?8/?6/?2019 9:15 PM]  
+yeah I can see files which are included are in green and above are in red as deleted
+ 
+[?8/?6/?2019 9:17 PM]  Lorenzo Paris:  
+Okay, if you're happy with the files in green you can push the code (the files included should be the only one you've made the latest changes) 
+ 
+[?8/?6/?2019 9:17 PM]  Lorenzo Paris:  
+If you're unsure or worried about something we can make a call 
+ 
+[?8/?6/?2019 9:18 PM]  
+I think I'm good
+ 
+[?8/?6/?2019 9:18 PM]  
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-bom_events)
+$ git status
+On branch dev-rahul-bom_events
+Your branch is up to date with 'origin/dev-rahul-bom_events'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   rrps/python/rrps.dt.follower.rest_follower/cfg/follower.cfg.yml
+        modified:   rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/RiverOfNewsView.py
+        modified:   rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/integrator.cfg.yml
+        modified:   rrps/python/rrps.dt.integrator.sapbomasbuilt/rrps/dt/integrator/sapbomasbuilt/impl.py
+ 
+ 
+[?8/?6/?2019 9:20 PM]  
+I have made the changed as per comment and have push the code.
+ 
+[?8/?6/?2019 9:20 PM]  Lorenzo Paris:  
+Cool, I'll have a look right now 
+ 
+[?8/?6/?2019 9:20 PM]  
+okay
+ 
+[?8/?6/?2019 9:20 PM]  
+Let me know
+ 
+[?8/?6/?2019 9:24 PM]  Lorenzo Paris:  
+Rahul the code is Ok now, but I have to ask you to run some git commands because otherwise there are some conflicts with other files 
+ 
+[?8/?6/?2019 9:24 PM]  
+sure
+ 
+[?8/?6/?2019 9:24 PM]  Lorenzo Paris:  
+You should run:
+git fetch && rebase 
+ 
+[?8/?6/?2019 9:25 PM]  Lorenzo Paris:  
+sorry. it's 
+git fetch && git rebase 
+ 
+[?8/?6/?2019 9:25 PM]  
+together ?? 
+ 
+[?8/?6/?2019 9:26 PM]  Lorenzo Paris:  
+that command 
+ 
+[?8/?6/?2019 9:26 PM]  Lorenzo Paris:  
+If you are unable to do it because you are in Windows, then run "git rebase" first and "git rebase" later 
+ 
+[?8/?6/?2019 9:26 PM]  Lorenzo Paris:  
+"git fetch" first 
+ 
+[?8/?6/?2019 9:27 PM]  
+can not rebase
+ 
+[?8/?6/?2019 9:27 PM]  
+unstage changes
+ 
+[?8/?6/?2019 9:28 PM]  Lorenzo Paris:  
+Do you mind if we make a quick call on Zoom and you share your screen? (if you can't don't worry) 
+ 
+[?8/?6/?2019 9:29 PM]  
+yes of course
+ 
+[?8/?6/?2019 9:29 PM]  
+same id ?
+ 
+[?8/?6/?2019 9:29 PM]  Lorenzo Paris:  
+Yes 
+ 
+[?8/?6/?2019 9:29 PM]  
+i'm on
+ 
+[?8/?7/?2019 1:46 PM]  
+Hello Lorenz
+ 
+[?8/?7/?2019 1:46 PM]  
+I have push the code for the unit test - dev-rahul-unit_tests 
+ 
+[?8/?7/?2019 1:46 PM]  
+Can you please have a look ?
+ 
+[?8/?7/?2019 1:47 PM]  
+I have implemented in two different ways, please let me know
+ 
+[?8/?7/?2019 1:47 PM]  
+https://mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic/pushes?itemVersion=GBdev-rahul-unit_tests 
+ 
+[?8/?7/?2019 2:08 PM]  Lorenzo Paris:  
+Thank you Rahul. I'll have a look 
+ 
+[?8/?7/?2019 3:26 PM]  Lorenzo Paris:  
+Rahul I found the error in your unit test 
+ 
+[?8/?7/?2019 3:26 PM]  
+ohh
+ 
+[?8/?7/?2019 3:26 PM]  
+What is it ?
+ 
+[?8/?7/?2019 3:27 PM]  Lorenzo Paris:  
+at line 17, if the event has asset_id = 123 (like you wrote), when you call app_client.open(....) at line 104 you have to put the same asset id 
+ 
+[?8/?7/?2019 3:28 PM]  Lorenzo Paris:  
+instead you wrote 123 for the event and 1234 at line 104 
+ 
+[?8/?7/?2019 3:28 PM]  Lorenzo Paris:  
+Also, at line 104, instead of calling the endpoint "engine-bom-as-maintained", use "ron" 
+ 
+[?8/?7/?2019 3:29 PM]  Lorenzo Paris:  
+and therefore line 104 will be "IbaseChanges = app_client.open("/ron/123").json" 
+ 
+[?8/?7/?2019 3:30 PM]  
+Thanks I have changed it now
+ 
+[?8/?7/?2019 3:31 PM]  Lorenzo Paris:  
+After line 104 you can use "print(IbaseChanges)" so that you can see what the results are 
+ 
+[?8/?7/?2019 3:31 PM]  Lorenzo Paris:  
+And you can continue your debugging (I can't do it for you) 
+ 
+[?8/?7/?2019 3:32 PM]  Lorenzo Paris:  
+Let me know if at least "print(IbaseChanges)" prints something so that you can continue your debugging 
+ 
+[?8/?7/?2019 3:35 PM]  
+Yes it is printing the results
+ 
+[?8/?7/?2019 3:36 PM]  
+But tell me which is the correct approach  
+ 
+[?8/?7/?2019 3:36 PM]  
+First one or second one ??
+ 
+[?8/?7/?2019 3:37 PM]  Lorenzo Paris:  
+About what ? 
+ 
+[?8/?7/?2019 3:38 PM]  
+I have implemented in two different way of handling the IbaseChanges results 
+ 
+[?8/?7/?2019 3:38 PM]  
+Which one is correct?
+ 
+[?8/?7/?2019 3:45 PM]  Lorenzo Paris:  
+You mean the first part and the second part of the same file ? 
+ 
+[?8/?7/?2019 3:46 PM]  Lorenzo Paris:  
+Well it depends on the output that you receive. As I said print the results and see which one is the right one. I can't do debugging for you 
+ 
+[?8/?7/?2019 3:51 PM]  
+No issue 
+ 
+[?8/?7/?2019 3:51 PM]  
+Thank you for your response
+ 
+[?8/?7/?2019 4:21 PM]  
+If the test passed, why it is not printing result ??
+ 
+[?8/?7/?2019 4:22 PM]  Lorenzo Paris:  
+Because the prints work only when there's some problem 
+ 
+[?8/?7/?2019 4:23 PM]  Lorenzo Paris:  
+If the test passes the prints don't work 
+ 
+[?8/?7/?2019 4:23 PM]  
+Okay
+ 
+[?8/?7/?2019 4:23 PM]  
+What is the percentage thing on the right side of the test result ??
+ 
+[?8/?7/?2019 4:23 PM]  Lorenzo Paris:  
+So if you still want to use the prints, you can check some dictionary on a wrong way 
+ 
+[?8/?7/?2019 5:10 PM]  
+Hello Lorenzo
+ 
+[?8/?7/?2019 5:10 PM]  
+Test case for IbaseChanges are looking good
+ 
+[?8/?7/?2019 5:11 PM]  
+I can push the code, can you please verify ??
+ 
+[?8/?7/?2019 5:14 PM]  Lorenzo Paris:  
+Ok push it 
+ 
+[?8/?7/?2019 5:14 PM]  
+Okay
+ 
+[?8/?7/?2019 5:15 PM]  
+I have push the code
+ 
+[?8/?7/?2019 5:15 PM]  
+Please have a look at it
+ 
+[?8/?7/?2019 5:15 PM]  Lorenzo Paris:  
+Rahul just for you to know, now I'm going to have some lunch, and today I'm leaving at 3PM (UK time) 
+ 
+[?8/?7/?2019 5:15 PM]  
+okay
+ 
+[?8/?7/?2019 5:16 PM]  
+If the code is good then I will raise the PR immediately 
+ 
+[?8/?7/?2019 5:17 PM]  Lorenzo Paris:  
+Yes, it's fine 
+ 
+[?8/?7/?2019 5:17 PM]  
+Please let me know once you done with the verification 
+ 
+[?8/?7/?2019 6:00 PM]  
+Hi Lorenzo
+ 
+[?8/?7/?2019 6:00 PM]  Lorenzo Paris:  
+Hi Rahul 
+ 
+[?8/?7/?2019 6:00 PM]  
+Is it working fine - test ??
+ 
+[?8/?7/?2019 6:00 PM]  Lorenzo Paris:  
+I was on lunch. I'll test it righ now 
+ 
+[?8/?7/?2019 6:01 PM]  
+Okay
+ 
+[?8/?7/?2019 6:01 PM]  
+No issues, please let me know
+ 
+[?8/?7/?2019 6:11 PM]  Lorenzo Paris:  
+Rahul the unit test is fine 
+ 
+[?8/?7/?2019 6:11 PM]  
+okay
+ 
+[?8/?7/?2019 6:11 PM]  
+shall I raise a PR ?
+ 
+[?8/?7/?2019 6:13 PM]  Lorenzo Paris:  
+I think it's better to have this unit test within the other PR 
+ 
+[?8/?7/?2019 6:13 PM]  Lorenzo Paris:  
+instead of creating a PR just for the unit test 
+ 
+[?8/?7/?2019 6:13 PM]  
+ within the other PR  ?? Means ??
+ 
+[?8/?7/?2019 6:13 PM]  Lorenzo Paris:  
+The one you raised yesterday 
+ 
+[?8/?7/?2019 6:14 PM]  
+How can we do that now ?? I have created new branch.
+ 
+[?8/?7/?2019 6:16 PM]  Lorenzo Paris:  
+It's not difficult. 
+ 
+[?8/?7/?2019 6:16 PM]  Lorenzo Paris:  
+Do yuo want me to write the list of command in here, or you prefer a call on Zoom ? 
+ 
+[?8/?7/?2019 6:17 PM]  
+What ever you are comfortable with 
+ 
+[?8/?7/?2019 6:18 PM]  Lorenzo Paris:  
+Ok, let's try with the list of commands. If you get an error then we'll have a call 
+ 
+[?8/?7/?2019 6:19 PM]  
+Sure
+ 
+[?8/?7/?2019 6:19 PM]  Lorenzo Paris:  
+You can go on the branch of your PR: git checkout dev-rahul-bom_events 
+ 
+[?8/?7/?2019 6:19 PM]  
+ok
+ 
+[?8/?7/?2019 6:20 PM]  
+done
+ 
+[?8/?7/?2019 6:20 PM]  Lorenzo Paris:  
+Then fetch and rebase through: git fetch && git rebase 
+ 
+[?8/?7/?2019 6:20 PM]  
+k
+ 
+[?8/?7/?2019 6:21 PM]  
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-bom_events)
+$ git rebase
+First, rewinding head to replay your work on top of it...
+Fast-forwarded dev-rahul-bom_events to refs/remotes/origin/dev-rahul-bom_events. 
+ 
+[?8/?7/?2019 6:21 PM]  
+rebase error
+ 
+[?8/?7/?2019 6:21 PM]  Lorenzo Paris:  
+Ok, let me see if I can do it myself 
+ 
+[?8/?7/?2019 6:22 PM]  
+Why ?? any issue ??
+ 
+[?8/?7/?2019 6:22 PM]  Lorenzo Paris:  
+I have to check and see what is wrong. Maybe I can also fix the conflicts appearing on VSTS 
+ 
+[?8/?7/?2019 6:23 PM]  
+ohhh
+ 
+[?8/?7/?2019 6:23 PM]  
+okay
+ 
+[?8/?7/?2019 6:37 PM]  Lorenzo Paris:  
+Ok Rahul. The test is now with the PR, but I couldn't remove the conflict within the follower.py. I'll wait for Fabio about it 
+ 
+[?8/?7/?2019 6:37 PM]  
+Okay no issues
+ 
+[?8/?7/?2019 6:38 PM]  
+Can I see that? Can please share the link ?
+ 
+[?8/?7/?2019 6:39 PM]  
+No issues. I have seen it.
+ 
+[?8/?8/?2019 1:36 PM]  
+Hey Lorenzo
+ 
+[?8/?8/?2019 1:39 PM]  
+Have you got a chance to speak to Fabio regarding T2 request ?
+ 
+[?8/?8/?2019 1:47 PM]  
+Hey Lorenzo 
+ 
+[?8/?8/?2019 1:56 PM]  Lorenzo Paris:  
+Hi Rahul 
+ 
+[?8/?8/?2019 1:58 PM]  
+Have you got a chance to speak to Fabio regarding T2 request ? 
+ 

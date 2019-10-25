@@ -1,0 +1,712 @@
+[?3/?8/?2019 5:55 PM]  
+I Have made the changes, and push into 14374and also I have raised PR.
+ 
+[?3/?11/?2019 2:21 PM]  
+Hi Tim
+ 
+[?3/?11/?2019 2:40 PM]  
+Hi Tim
+ 
+[?3/?11/?2019 2:41 PM]  Tim Churchard:  
+Hi Rahul, how's it going? 
+ 
+[?3/?11/?2019 2:41 PM]  
+All good
+ 
+[?3/?11/?2019 2:41 PM]  
+Need to set up call for Weather task
+ 
+[?3/?11/?2019 2:42 PM]  Tim Churchard:  
+Ok yes, I've got the Iotic standup call in 20mins so I'll find out if the location event is available.  (Ben was working on it.  He hoped to have a PR by Friday.) 
+ 
+[?3/?11/?2019 2:43 PM]  Tim Churchard:  
+I'll ask Fabio now 
+ 
+[?3/?11/?2019 2:43 PM]  
+Sure
+ 
+[?3/?11/?2019 2:56 PM]  Tim Churchard:  
+Heyy, I'm about to join the iotic call.  Can you talk to Muthu to reproduce his rest_follower setup?  You will need to install mongodb.  And the pip env' is slightly tricky.  And there is some config to change.  (And you'll need another agent if you want to run at the same time as Muthu) 
+ 
+[?3/?11/?2019 2:57 PM]  
+Actually, Muthu haven't came today
+ 
+[?3/?11/?2019 2:57 PM]  Tim Churchard:  
+Ok no problem, I can get you some stuff to work on.  But you will have to do that rest_follower setup eventually 
+ 
+[?3/?11/?2019 2:58 PM]  
+sure
+ 
+[?3/?11/?2019 3:24 PM]  Tim Churchard:  
+OK lets have a call in 10min or so, just direct you & me.  I can get you started.  Ben will raise his PR today and VT will review 
+ 
+[?3/?11/?2019 3:24 PM]  Tim Churchard:  
+I can get you started with some slightly interesting stuff 
+ 
+[?3/?11/?2019 3:40 PM]  
+sure
+ 
+[?3/?11/?2019 3:42 PM]  Tim Churchard:  
+Ok so this is the first task: 
+ 
+[?3/?11/?2019 3:42 PM]  Tim Churchard:  
+- Create a new package called like rrps.dt.synthesiser.weather
+- - Follow the digital twin root README 'How to / A simple follower'
+- - Copy the example follower to be called rrps.dt.synthesiser.weather 
+ 
+[?3/?11/?2019 3:43 PM]  Tim Churchard:  
+And then if you goto this link:  https://dev-rr.iotic-labs.com/map/  And find England.  You'll notice that I've added >1000 Weather forecasts to the map.  You will be able to find these with space search. 
+ 
+[?3/?11/?2019 3:44 PM]  Tim Churchard:  
+The second task is to update your new synthesiser to find nearby weather and show the data. 
+ 
+[?3/?11/?2019 3:44 PM]  
+I will follow the things
+ 
+[?3/?11/?2019 3:44 PM]  Tim Churchard:  
+Then when Ben's PR is accepted your follower should see some new information in the field data events for asset location.  You will have to find the nearest weather and publish a new twin event with that info inside. 
+ 
+[?3/?11/?2019 3:45 PM]  Tim Churchard:  
+Ok cool, I think following the steps in the README will take atleast a few hours.  Can you let me know when you've done it? 
+ 
+[?3/?11/?2019 3:46 PM]  Tim Churchard:  
+I'll send you some code to help with the weather searching 
+ 
+[?3/?11/?2019 3:46 PM]  
+sure Tim
+ 
+[?3/?11/?2019 3:59 PM]  
+I have checked out to new branch (dev-rahul-15617) and working on this
+ 
+[?3/?11/?2019 3:59 PM]  Tim Churchard:  
+Ok, based off the dev branch? 
+ 
+[?3/?11/?2019 4:00 PM]  
+Actually I have just used "git checkout -b dev-rahul-15617 "
+ 
+[?3/?11/?2019 4:01 PM]  Tim Churchard:  
+Ok cool, if you have not made any changes yet you can run:   git reset --hard azure/dev   to reset the branch to dev branch state 
+ 
+[?3/?11/?2019 4:01 PM]  
+okay tim
+ 
+[?3/?11/?2019 4:02 PM]  
+done
+"git reset --hard origin/dev                                                                     
+HEAD is now at 1fa5da0 Integrators static_tests linked to recommended flake8 and pylint config fil
+e                                                                                                  "
+ 
+[?3/?11/?2019 4:03 PM]  Tim Churchard:  
+Ok cool 
+ 
+[?3/?11/?2019 4:03 PM]  
+thanks
+ 
+[?3/?11/?2019 4:58 PM]  
+The "README" changes are done
+ 
+[?3/?11/?2019 4:59 PM]  
+Do I ned to change impl/class name too
+ 
+[?3/?11/?2019 5:00 PM]  Tim Churchard:  
+Hey OK cool, you've made all the changes so you're ready to run the synthesiser? 
+ 
+[?3/?11/?2019 5:00 PM]  Tim Churchard:  
+It should print out events it receives from the twin 
+ 
+[?3/?11/?2019 5:01 PM]  Tim Churchard:  
+If you change the cfg/integrator.cfg.yml to use memory store instead of json it will be easier to test (since it will replay all events every time rather than just new ones if it finds a cache) 
+ 
+[?3/?11/?2019 5:01 PM]  
+I have tried...but not running
+ 
+[?3/?11/?2019 5:02 PM]  Tim Churchard:  
+Ok what is the error? 
+ 
+[?3/?11/?2019 5:03 PM]  
+ module not found
+ 
+[?3/?11/?2019 5:04 PM]  
+I think we will have to change code too
+ 
+[?3/?11/?2019 5:04 PM]  
+main+impl
+ 
+[?3/?11/?2019 5:04 PM]  Tim Churchard:  
+Ok you need to rename the directories (and edit setup.py too) 
+ 
+[?3/?11/?2019 5:04 PM]  
+setup.py done
+ 
+[?3/?11/?2019 5:05 PM]  Tim Churchard:  
+The readme instruction are to make a follower but your job will be slightly harder because you're renaming to synthesiser 
+ 
+[?3/?11/?2019 5:05 PM]  Tim Churchard:  
+Ok do you have an agent?  I think you can use this one: 
+ 
+[?3/?11/?2019 5:05 PM]  Tim Churchard:  
+[agent]
+name = follower
+host = broker-dev-rr.iotic-labs.com:5671
+epid = 25311dbac5b062342771463295d60e1d
+passwd = z4kDykUvaOMzIyPE7H8AgV6KCgDsvDxC
+token = 79c97c06d0156406379350277ca019a1c42efd93a79e84e2dd6e1af3beeeb2af 
+ 
+[?3/?11/?2019 5:05 PM]  Tim Churchard:  
+You will need to make a file like cfg/follower.ini and specify it on the command line when you run the program 
+ 
+[?3/?11/?2019 5:06 PM]  Tim Churchard:  
+For setup.py check the entry_points command=module 
+ 
+[?3/?11/?2019 5:06 PM]  
+Agent I'm having the same
+ 
+[?3/?11/?2019 5:06 PM]  Tim Churchard:  
+Ok cool 
+ 
+[?3/?11/?2019 5:07 PM]  
+entry_points done
+ 
+[?3/?11/?2019 5:07 PM]  
+'console_scripts': [
+    'rrps-dt-synthesiser-weather = rrps.dt.synthesiser.weather.__main__:main' 
+ 
+[?3/?11/?2019 5:08 PM]  Tim Churchard:  
+Ok yes looks good.  I guess you need to rename the dirs so rrps.dt.synthesiser.weather.__main__ exists 
+ 
+[?3/?11/?2019 5:09 PM]  
+I have copied main from "README" and past it in the same
+ 
+[?3/?11/?2019 5:09 PM]  Tim Churchard:  
+Ok does the synthesiser appear in the pip list? 
+ 
+[?3/?11/?2019 5:10 PM]  
+yes...0.1.2
+ 
+[?3/?11/?2019 5:11 PM]  Tim Churchard:  
+Ok with location in the final column? 
+ 
+[?3/?11/?2019 5:12 PM]  
+yes...location is there
+ 
+[?3/?11/?2019 5:13 PM]  Tim Churchard:  
+Ok so the synthesiser is installed in development mode.  That is good.  You can try renaming/editing code until pip can find the module 
+ 
+[?3/?11/?2019 5:14 PM]  
+talking about main and impl?
+ 
+[?3/?11/?2019 5:14 PM]  Tim Churchard:  
+Yep 
+ 
+[?3/?11/?2019 5:14 PM]  
+cool
+ 
+[?3/?11/?2019 6:46 PM]  
+It's running now.
+I think its print out the event
+ 
+[?3/?11/?2019 6:47 PM]  Tim Churchard:  
+Awesome, can you copy & paste me some of the output? 
+ 
+[?3/?11/?2019 6:48 PM]  
+cool
+ 
+[?3/?11/?2019 6:50 PM]  
+No Title 
+ rweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} [1000015] #137 SapEquipmentHistoryMaintenanceContrac
+tSet (from SapDOC) @ 2015-02-05 18:30:00 (sys: None)
+{'Datum': 1423180800000,
+ 'Docitm': '00001',
+ 'Docnr': '4151000319',
+ 'Doctype': 'MAIN',
+ 'Documents': [{'Chdat': 1541376000000,
+                'Crdat': 1540944000000,
+                'Docdes': 'test',
+                'Docla': 'DE',
+                'Docnam': 'MITTEILUNG',
+                'Equnr': '000000000010000018',
+                'FileExt': 'txt',
+                'Instid': 'FOL35000000000004EXT43000000000377'},
+               {'Chdat': 1541462400000,
+                'Crdat': 1541462400000,
+                'Docdes': 'tests',
+                'Docla': 'DE',
+                'Docnam': 'MITTEILUNG',
+                'Equnr': '000000000010000018',
+                'FileExt': 'xls',
+                'Instid': 'FOL35000000000004EXT43000000000411'}],
+ 'Equnr': '',
+ 'Ktext': '',
+ 'Obknr': 7401,
+ 'Sernr': ''}
+2019-03-11 18:45:24,573 INFO [rrps.dt.follower.synthesiserweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} [1000015] #138 SapEquipmentHistoryMaintenanceContrac
+tSet (from SapDOC) @ 2018-10-09 18:30:00 (sys: None)
+{'Datum': 1539129600000,
+ 'Docitm': '00001',
+ 'Docnr': '4703900333',
+ 'Doctype': 'MAIN',
+ 'Documents': [{'Chdat': 1541376000000,
+                'Crdat': 1540944000000,
+                'Docdes': 'test',
+                'Docla': 'DE',
+                'Docnam': 'MITTEILUNG',
+                'Equnr': '000000000010000018',
+                'FileExt': 'txt',
+                'Instid': 'FOL35000000000004EXT43000000000377'},
+               {'Chdat': 1541462400000,
+                'Crdat': 1541462400000,
+                'Docdes': 'tests',
+                'Docla': 'DE',
+                'Docnam': 'MITTEILUNG',
+                'Equnr': '000000000010000018',
+                'FileExt': 'xls',
+                'Instid': 'FOL35000000000004EXT43000000000411'}],
+ 'Equnr': '',
+ 'Ktext': '',
+ 'Obknr': 14517,
+ 'Sernr': ''}
+2019-03-11 18:45:24,575 INFO [rrps.dt.follower.synthesiserweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} Internal: <IntTwinEofReplay v1 ('1000020'@136)>
+2019-03-11 18:45:24,645 INFO [rrps.dt.follower.synthesiserweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} [1000015] #139 SapMasterDataSet (from sapmasterdata)
+ @ 2017-09-07 23:00:00 (sys: None)
+{'Datab': 1504828800000,
+ 'Datbi': 253402214400000,
+ 'EqunrAgg': '000000000200000081',
+ 'EqunrEng': '000000000200000082',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MaktxEng': 'R16V4000G83 REMAN ENGINE',
+ 'MatnrAgg': '12V2000C10',
+ 'MatnrEng': 'R16V4000G83',
+ 'Name1': 'Land Badenwürtenberg',
+ 'SernrAgg': 'SER-00123',
+ 'SernrEng': '4711-001',
+ 'Yybau': '030'}
+2019-03-11 18:45:24,645 INFO [ioticlabs.dt.api.follower] {tp-1} Replay finished for
+ 1000015 @ 139
+2019-03-11 18:45:24,647 INFO [rrps.dt.follower.synthesiserweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} Internal: <IntTwinEofReplay v1 ('1000015'@139)>
+2019-03-11 18:45:24,728 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c
+", lang="None", location="None", unit="None", limit=200, offset=200, reduced=True)
+2019-03-11 18:45:28,960 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c
+", lang="None", location="None", unit="None", limit=200, offset=0, reduced=True)
+2019-03-11 18:45:29,128 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="13
+430192f1ed82cccb4b8eee679ef06f"]
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.follower.synthesiserweat
+her> 
+ 
+[?3/?11/?2019 6:50 PM]  Tim Churchard:  
+Anyway well done, that follower is good.   Next you need some code that does a search for the nearest weather.  You could develop it outside of the follower in just like test.py and later merge it in.  Take a template like this: https://github.com/Iotic-Labs/py-application-examples/blob/master/agent_tutorial_code/getting_started/5.1_follow_feed.py -- And add a search for coordinates in England (EG 52.427809,-0.327829 
+ 
+[?3/?11/?2019 6:50 PM]  Tim Churchard:  
+Awesome yes!  You're getting events 
+ 
+[?3/?11/?2019 6:51 PM]  Tim Churchard:  
+There are only ~1k weather things in dev-rr.  (Compared to >6k in production) but still there are lots in England so finding the closest will take a little work.  I guess search with a small radius and search again expanding the radius until you find it? 
+ 
+[?3/?11/?2019 6:52 PM]  
+"If you change the cfg/integrator.cfg.yml to use memory store instead of json it will be easier to test (since it will replay all events every time rather than just new ones if it finds a cache)  "
+
+I haven't done this...still using json I guess
+ 
+[?3/?11/?2019 6:53 PM]  
+test.py in same package?
+ 
+[?3/?11/?2019 6:53 PM]  Tim Churchard:  
+Ok, its probably safe to use a cache.  You're testing new events.  (And Ben hasn't finished his PR so there are none in the system anyway) 
+ 
+[?3/?11/?2019 6:54 PM]  Tim Churchard:  
+test.py can be anywhere.  Use your follower.ini to connect to iotic space.  Once you're happy with the logic of finding the nearest weather and showing the data then you can merge it into your follower 
+ 
+[?3/?11/?2019 6:55 PM]  
+great...cool
+ 
+[?3/?11/?2019 7:38 PM]  
+Hi Tim,
+ I think follow feed need to follow your "weather thing" for that I need guid but I can't access the guid for (Weather Forecast for: KETTERING, ENGLAND )
+ 
+[?3/?11/?2019 7:39 PM]  Tim Churchard:  
+Hey yes you have to search to get guid.  1 sec for example 
+ 
+[?3/?11/?2019 7:41 PM]  Tim Churchard:  
+Checkout the search function, docs here: https://iotic-labs.github.io/py-IoticAgent/IOT/Client.m.html#IoticAgent.IOT.Client.Client.search -- You see it returns a dict, the outer key is thing-guid.  You need the point guid.  You might have to use describe on the point guid to work out which one is the forecast and which one is a further forecast (eg 24hours) 
+ 
+[?3/?11/?2019 7:41 PM]  Tim Churchard:  
+describe docs: https://iotic-labs.github.io/py-IoticAgent/IOT/Client.m.html#IoticAgent.IOT.Client.Client.describe 
+ 
+[?3/?11/?2019 7:42 PM]  Tim Churchard:  
+And then to get the recent data you'll have to 'follow' the point.  And then get recent.  And finally you should remove the subscription since you can only have a limited number at one time 
+ 
+[?3/?11/?2019 8:19 PM]  
+Tim I'm still working on it
+ 
+[?3/?11/?2019 8:20 PM]  
+Can you please tell me at what time we can schedule a meeting tomorrow? 
+ 
+[?3/?11/?2019 8:21 PM]  
+You can message me I will send request in tomorrow  morning 
+ 
+[?3/?11/?2019 8:22 PM]  
+It's late now, I will be leaving... will continue in morning
+ 
+[?3/?11/?2019 8:26 PM]  
+I will leave for the day...see yaa 
+ 
+[?3/?12/?2019 12:29 PM]  Tim Churchard:  
+Good Morning Rahul.  Its 07:00 in the UK.  I've just started work.  I need to stop at 14:30 today.  Anyway, would you still like a call?  What about?  I have the iotic standup call at 09:30 apart from that I'm fairly free. 
+ 
+[?3/?8/?2019 5:55 PM]  
+I Have made the changes, and push into 14374and also I have raised PR.
+ 
+[?3/?11/?2019 2:21 PM]  
+Hi Tim
+ 
+[?3/?11/?2019 2:40 PM]  
+Hi Tim
+ 
+[?3/?11/?2019 2:41 PM]  Tim Churchard:  
+Hi Rahul, how's it going? 
+ 
+[?3/?11/?2019 2:41 PM]  
+All good
+ 
+[?3/?11/?2019 2:41 PM]  
+Need to set up call for Weather task
+ 
+[?3/?11/?2019 2:42 PM]  Tim Churchard:  
+Ok yes, I've got the Iotic standup call in 20mins so I'll find out if the location event is available.  (Ben was working on it.  He hoped to have a PR by Friday.) 
+ 
+[?3/?11/?2019 2:43 PM]  Tim Churchard:  
+I'll ask Fabio now 
+ 
+[?3/?11/?2019 2:43 PM]  
+Sure
+ 
+[?3/?11/?2019 2:56 PM]  Tim Churchard:  
+Heyy, I'm about to join the iotic call.  Can you talk to Muthu to reproduce his rest_follower setup?  You will need to install mongodb.  And the pip env' is slightly tricky.  And there is some config to change.  (And you'll need another agent if you want to run at the same time as Muthu) 
+ 
+[?3/?11/?2019 2:57 PM]  
+Actually, Muthu haven't came today
+ 
+[?3/?11/?2019 2:57 PM]  Tim Churchard:  
+Ok no problem, I can get you some stuff to work on.  But you will have to do that rest_follower setup eventually 
+ 
+[?3/?11/?2019 2:58 PM]  
+sure
+ 
+[?3/?11/?2019 3:24 PM]  Tim Churchard:  
+OK lets have a call in 10min or so, just direct you & me.  I can get you started.  Ben will raise his PR today and VT will review 
+ 
+[?3/?11/?2019 3:24 PM]  Tim Churchard:  
+I can get you started with some slightly interesting stuff 
+ 
+[?3/?11/?2019 3:40 PM]  
+sure
+ 
+[?3/?11/?2019 3:42 PM]  Tim Churchard:  
+Ok so this is the first task: 
+ 
+[?3/?11/?2019 3:42 PM]  Tim Churchard:  
+- Create a new package called like rrps.dt.synthesiser.weather
+- - Follow the digital twin root README 'How to / A simple follower'
+- - Copy the example follower to be called rrps.dt.synthesiser.weather 
+ 
+[?3/?11/?2019 3:43 PM]  Tim Churchard:  
+And then if you goto this link:  https://dev-rr.iotic-labs.com/map/  And find England.  You'll notice that I've added >1000 Weather forecasts to the map.  You will be able to find these with space search. 
+ 
+[?3/?11/?2019 3:44 PM]  Tim Churchard:  
+The second task is to update your new synthesiser to find nearby weather and show the data. 
+ 
+[?3/?11/?2019 3:44 PM]  
+I will follow the things
+ 
+[?3/?11/?2019 3:44 PM]  Tim Churchard:  
+Then when Ben's PR is accepted your follower should see some new information in the field data events for asset location.  You will have to find the nearest weather and publish a new twin event with that info inside. 
+ 
+[?3/?11/?2019 3:45 PM]  Tim Churchard:  
+Ok cool, I think following the steps in the README will take atleast a few hours.  Can you let me know when you've done it? 
+ 
+[?3/?11/?2019 3:46 PM]  Tim Churchard:  
+I'll send you some code to help with the weather searching 
+ 
+[?3/?11/?2019 3:46 PM]  
+sure Tim
+ 
+[?3/?11/?2019 3:59 PM]  
+I have checked out to new branch (dev-rahul-15617) and working on this
+ 
+[?3/?11/?2019 3:59 PM]  Tim Churchard:  
+Ok, based off the dev branch? 
+ 
+[?3/?11/?2019 4:00 PM]  
+Actually I have just used "git checkout -b dev-rahul-15617 "
+ 
+[?3/?11/?2019 4:01 PM]  Tim Churchard:  
+Ok cool, if you have not made any changes yet you can run:   git reset --hard azure/dev   to reset the branch to dev branch state 
+ 
+[?3/?11/?2019 4:01 PM]  
+okay tim
+ 
+[?3/?11/?2019 4:02 PM]  
+done
+"git reset --hard origin/dev                                                                     
+HEAD is now at 1fa5da0 Integrators static_tests linked to recommended flake8 and pylint config fil
+e                                                                                                  "
+ 
+[?3/?11/?2019 4:03 PM]  Tim Churchard:  
+Ok cool 
+ 
+[?3/?11/?2019 4:03 PM]  
+thanks
+ 
+[?3/?11/?2019 4:58 PM]  
+The "README" changes are done
+ 
+[?3/?11/?2019 4:59 PM]  
+Do I ned to change impl/class name too
+ 
+[?3/?11/?2019 5:00 PM]  Tim Churchard:  
+Hey OK cool, you've made all the changes so you're ready to run the synthesiser? 
+ 
+[?3/?11/?2019 5:00 PM]  Tim Churchard:  
+It should print out events it receives from the twin 
+ 
+[?3/?11/?2019 5:01 PM]  Tim Churchard:  
+If you change the cfg/integrator.cfg.yml to use memory store instead of json it will be easier to test (since it will replay all events every time rather than just new ones if it finds a cache) 
+ 
+[?3/?11/?2019 5:01 PM]  
+I have tried...but not running
+ 
+[?3/?11/?2019 5:02 PM]  Tim Churchard:  
+Ok what is the error? 
+ 
+[?3/?11/?2019 5:03 PM]  
+ module not found
+ 
+[?3/?11/?2019 5:04 PM]  
+I think we will have to change code too
+ 
+[?3/?11/?2019 5:04 PM]  
+main+impl
+ 
+[?3/?11/?2019 5:04 PM]  Tim Churchard:  
+Ok you need to rename the directories (and edit setup.py too) 
+ 
+[?3/?11/?2019 5:04 PM]  
+setup.py done
+ 
+[?3/?11/?2019 5:05 PM]  Tim Churchard:  
+The readme instruction are to make a follower but your job will be slightly harder because you're renaming to synthesiser 
+ 
+[?3/?11/?2019 5:05 PM]  Tim Churchard:  
+Ok do you have an agent?  I think you can use this one: 
+ 
+
+[agent]
+name = follower
+host = broker-dev-rr.iotic-labs.com:5671
+epid = 25311dbac5b062342771463295d60e1d
+passwd = z4kDykUvaOMzIyPE7H8AgV6KCgDsvDxC
+token = 79c97c06d0156406379350277ca019a1c42efd93a79e84e2dd6e1af3beeeb2af 
+
+You will need to make a file like cfg/follower.ini and specify it on the command line when you run the program 
+
+For setup.py check the entry_points command=module 
+
+Agent I'm having the same
+
+Ok cool 
+
+entry_points done
+
+'console_scripts': [
+    'rrps-dt-synthesiser-weather = rrps.dt.synthesiser.weather.__main__:main' 
+
+Ok yes looks good.  I guess you need to rename the dirs so rrps.dt.synthesiser.weather.__main__ exists 
+
+I have copied main from "README" and past it in the same
+
+Ok does the synthesiser appear in the pip list? 
+
+yes...0.1.2
+
+Ok with location in the final column? 
+
+yes...location is there
+
+Ok so the synthesiser is installed in development mode.  That is good.  You can try renaming/editing code until pip can find the module 
+
+talking about main and impl?
+
+Yep 
+
+cool
+
+It's running now.
+I think its print out the event
+
+Awesome, can you copy & paste me some of the output? 
+
+cool
+
+ rweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} [1000015] #137 SapEquipmentHistoryMaintenanceContrac
+tSet (from SapDOC) @ 2015-02-05 18:30:00 (sys: None)
+{'Datum': 1423180800000,
+ 'Docitm': '00001',
+ 'Docnr': '4151000319',
+ 'Doctype': 'MAIN',
+ 'Documents': [{'Chdat': 1541376000000,
+                'Crdat': 1540944000000,
+                'Docdes': 'test',
+                'Docla': 'DE',
+                'Docnam': 'MITTEILUNG',
+                'Equnr': '000000000010000018',
+                'FileExt': 'txt',
+                'Instid': 'FOL35000000000004EXT43000000000377'},
+               {'Chdat': 1541462400000,
+                'Crdat': 1541462400000,
+                'Docdes': 'tests',
+                'Docla': 'DE',
+                'Docnam': 'MITTEILUNG',
+                'Equnr': '000000000010000018',
+                'FileExt': 'xls',
+                'Instid': 'FOL35000000000004EXT43000000000411'}],
+ 'Equnr': '',
+ 'Ktext': '',
+ 'Obknr': 7401,
+ 'Sernr': ''}
+2019-03-11 18:45:24,573 INFO [rrps.dt.follower.synthesiserweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} [1000015] #138 SapEquipmentHistoryMaintenanceContrac
+tSet (from SapDOC) @ 2018-10-09 18:30:00 (sys: None)
+{'Datum': 1539129600000,
+ 'Docitm': '00001',
+ 'Docnr': '4703900333',
+ 'Doctype': 'MAIN',
+ 'Documents': [{'Chdat': 1541376000000,
+                'Crdat': 1540944000000,
+                'Docdes': 'test',
+                'Docla': 'DE',
+                'Docnam': 'MITTEILUNG',
+                'Equnr': '000000000010000018',
+                'FileExt': 'txt',
+                'Instid': 'FOL35000000000004EXT43000000000377'},
+               {'Chdat': 1541462400000,
+                'Crdat': 1541462400000,
+                'Docdes': 'tests',
+                'Docla': 'DE',
+                'Docnam': 'MITTEILUNG',
+                'Equnr': '000000000010000018',
+                'FileExt': 'xls',
+                'Instid': 'FOL35000000000004EXT43000000000411'}],
+ 'Equnr': '',
+ 'Ktext': '',
+ 'Obknr': 14517,
+ 'Sernr': ''}
+2019-03-11 18:45:24,575 INFO [rrps.dt.follower.synthesiserweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} Internal: <IntTwinEofReplay v1 ('1000020'@136)>
+2019-03-11 18:45:24,645 INFO [rrps.dt.follower.synthesiserweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} [1000015] #139 SapMasterDataSet (from sapmasterdata)
+ @ 2017-09-07 23:00:00 (sys: None)
+{'Datab': 1504828800000,
+ 'Datbi': 253402214400000,
+ 'EqunrAgg': '000000000200000081',
+ 'EqunrEng': '000000000200000082',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MaktxEng': 'R16V4000G83 REMAN ENGINE',
+ 'MatnrAgg': '12V2000C10',
+ 'MatnrEng': 'R16V4000G83',
+ 'Name1': 'Land Badenwürtenberg',
+ 'SernrAgg': 'SER-00123',
+ 'SernrEng': '4711-001',
+ 'Yybau': '030'}
+2019-03-11 18:45:24,645 INFO [ioticlabs.dt.api.follower] {tp-1} Replay finished for
+ 1000015 @ 139
+2019-03-11 18:45:24,647 INFO [rrps.dt.follower.synthesiserweather.impl] {ioticlabs.
+dt.api.follower.__do_callback} Internal: <IntTwinEofReplay v1 ('1000015'@139)>
+2019-03-11 18:45:24,728 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c
+", lang="None", location="None", unit="None", limit=200, offset=200, reduced=True)
+2019-03-11 18:45:28,960 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c
+", lang="None", location="None", unit="None", limit=200, offset=0, reduced=True)
+2019-03-11 18:45:29,128 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="13
+430192f1ed82cccb4b8eee679ef06f"]
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.follower.synthesiserweat
+her> 
+
+Anyway well done, that follower is good.   Next you need some code that does a search for the nearest weather.  You could develop it outside of the follower in just like test.py and later merge it in.  Take a template like this: https://github.com/Iotic-Labs/py-application-examples/blob/master/agent_tutorial_code/getting_started/5.1_follow_feed.py -- And add a search for coordinates in England (EG 52.427809,-0.327829 
+
+Awesome yes!  You're getting events 
+
+There are only ~1k weather things in dev-rr.  (Compared to >6k in production) but still there are lots in England so finding the closest will take a little work.  I guess search with a small radius and search again expanding the radius until you find it? 
+
+"If you change the cfg/integrator.cfg.yml to use memory store instead of json it will be easier to test (since it will replay all events every time rather than just new ones if it finds a cache)  "
+
+I haven't done this...still using json I guess
+
+test.py in same package?
+[?3/?11/?2019 6:53 PM]  Tim Churchard:  
+Ok, its probably safe to use a cache.  You're testing new events.  (And Ben hasn't finished his PR so there are none in the system anyway) 
+ 
+[?3/?11/?2019 6:54 PM]  Tim Churchard:  
+test.py can be anywhere.  Use your follower.ini to connect to iotic space.  Once you're happy with the logic of finding the nearest weather and showing the data then you can merge it into your follower 
+ 
+[?3/?11/?2019 6:55 PM]  
+great...cool
+ 
+[?3/?11/?2019 7:38 PM]  
+Hi Tim,
+ I think follow feed need to follow your "weather thing" for that I need guid but I can't access the guid for (Weather Forecast for: KETTERING, ENGLAND )
+ 
+[?3/?11/?2019 7:39 PM]  Tim Churchard:  
+Hey yes you have to search to get guid.  1 sec for example 
+ 
+[?3/?11/?2019 7:41 PM]  Tim Churchard:  
+Checkout the search function, docs here: https://iotic-labs.github.io/py-IoticAgent/IOT/Client.m.html#IoticAgent.IOT.Client.Client.search -- You see it returns a dict, the outer key is thing-guid.  You need the point guid.  You might have to use describe on the point guid to work out which one is the forecast and which one is a further forecast (eg 24hours) 
+ 
+[?3/?11/?2019 7:41 PM]  Tim Churchard:  
+describe docs: https://iotic-labs.github.io/py-IoticAgent/IOT/Client.m.html#IoticAgent.IOT.Client.Client.describe 
+ 
+[?3/?11/?2019 7:42 PM]  Tim Churchard:  
+And then to get the recent data you'll have to 'follow' the point.  And then get recent.  And finally you should remove the subscription since you can only have a limited number at one time 
+ 
+[?3/?11/?2019 8:19 PM]  
+Tim I'm still working on it
+ 
+
+Can you please tell me at what time we can schedule a meeting tomorrow? 
+
+You can message me I will send request in tomorrow  morning 
+
+It's late now, I will be leaving... will continue in morning
+
+I will leave for the day...see yaa 
+[?3/?12/?2019 12:29 PM]  Tim Churchard:  
+Good Morning Rahul.  Its 07:00 in the UK.  I've just started work.  I need to stop at 14:30 today.  Anyway, would you still like a call?  What about?  I have the iotic standup call at 09:30 apart from that I'm fairly free. 
+ 
+[?3/?12/?2019 1:16 PM]  
+Actually Muthu is on leave. So better we can set up call for tomorrow. 
+ 
+ 
+[?3/?12/?2019 1:16 PM]  Tim Churchard:  
+Ok cool 
+ 
+[?3/?12/?2019 1:17 PM]  
+I'm working on search and describe thing 
+ 
+[?3/?12/?2019 1:18 PM]  
+Can you please create a task in VSTS for this.
+
+ 
+[?3/?12/?2019 1:18 PM]  Tim Churchard:  
+Ok I'll check VSTS.  There is probably a task already 
+ 
+[?3/?12/?2019 1:20 PM]  Tim Churchard:  
+I think 15619 ( https://mtuds.visualstudio.com/Project%20Gemini/_workitems/edit/15619 ) is the story that covers making the synthesiser. 
+ 
+[?3/?12/?2019 1:27 PM]  
+okay
+ 

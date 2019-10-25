@@ -1,0 +1,35 @@
+swagger: "3.0"
+info:
+  description: "This is a sample server."
+  version: "1.0.0"
+  title: "Swagger Application"
+summary: "summary DELETE"
+description: "description DELETE"
+operationId: "_delete_function"
+produces:
+- "application/xml"
+- "application/json"
+parameters:
+- in: "path"
+  name: "path"
+  description: "Accepts a input 'name' to delete"
+  schema:
+    - type: "object"
+    properties:
+    - name: "name"
+#      in: "formData"
+      description: "name of the person to be deleted"
+      required: True
+      type: "string"
+responses:
+  405:
+    description: "Invalid input"
+  200:
+    description: 'successful operation'
+  400:
+    description: 'Invalid ID supplied'
+#  404:
+#    description: 'Id not found'
+x-swagger-router-controller: '__Flask.SwaggerApp.swagger_python_flask_app'
+
+

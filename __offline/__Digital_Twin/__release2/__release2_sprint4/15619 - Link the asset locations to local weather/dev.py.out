@@ -1,0 +1,91 @@
+results {
+    "5fc26d3479d7d044394f0ebccfc30109": {
+        "long": -0.2804,
+        "points": {
+            "004351f1b222dc0695ea90e50cbd7ba3": {
+                "matches": 5.8079224,
+                "type": "Feed",
+                "label": "Current weather info",
+                "storesRecent": true
+            }
+        },
+        "matches": 5.8079224,
+        "owner": "d2273a3cbbd894cde0eeb5ac5ba79919",
+        "label": "Weather Forecast for: SAWTRY, ENGLAND",
+        "lat": 52.4339
+    }
+}
+thing_guid "5fc26d3479d7d044394f0ebccfc30109"
+thing_data {
+    "long": -0.2804,
+    "points": {
+        "004351f1b222dc0695ea90e50cbd7ba3": {
+            "matches": 5.8079224,
+            "type": "Feed",
+            "label": "Current weather info",
+            "storesRecent": true
+        }
+    },
+    "matches": 5.8079224,
+    "owner": "d2273a3cbbd894cde0eeb5ac5ba79919",
+    "label": "Weather Forecast for: SAWTRY, ENGLAND",
+    "lat": 52.4339
+}
+point_guid "5fc26d3479d7d044394f0ebccfc30109"
+point_data {
+    "long": -0.2804,
+    "points": {
+        "004351f1b222dc0695ea90e50cbd7ba3": {
+            "matches": 5.8079224,
+            "type": "Feed",
+            "label": "Current weather info",
+            "storesRecent": true
+        }
+    },
+    "matches": 5.8079224,
+    "owner": "d2273a3cbbd894cde0eeb5ac5ba79919",
+    "label": "Weather Forecast for: SAWTRY, ENGLAND",
+    "lat": 52.4339
+}
+descr {
+    "type": "Entity",
+    "meta": {
+        "points": [
+            {
+                "storesRecent": true,
+                "label": "Current weather info",
+                "type": "Feed",
+                "guid": "004351f1b222dc0695ea90e50cbd7ba3"
+            },
+            {
+                "storesRecent": true,
+                "label": "Forecast info in 6h",
+                "type": "Feed",
+                "guid": "cb5f788ad18f83233e15baa754a0f3ed"
+            },
+            {
+                "storesRecent": true,
+                "label": "Forecast info in 24h",
+                "type": "Feed",
+                "guid": "ff7ccdc0981b996767f0d9a89dd37c5e"
+            },
+            {
+                "storesRecent": true,
+                "label": "Forecast info in 3h",
+                "type": "Feed",
+                "guid": "b1af6aa8fdcdf2ddf0fdc514f6b25c56"
+            }
+        ],
+        "lat": 52.4339,
+        "comment": "3-hourly Met Office Forecast. SAWTRY, ENGLAND. Contains public sector information licensed under the Open Government Licence.",
+        "tags": [
+            "cat_weather",
+            "forecast",
+            "metoffice",
+            "weather"
+        ],
+        "parent": "d2273a3cbbd894cde0eeb5ac5ba79919",
+        "label": "Weather Forecast for: SAWTRY, ENGLAND",
+        "long": -0.2804
+    }
+}

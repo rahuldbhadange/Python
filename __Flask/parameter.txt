@@ -1,0 +1,22 @@
+Common available operators:
+
+any: used to filter on to many relationships
+between: used to filter a field between two values
+endswith: check if field ends with a string
+eq: check if field is equal to something
+ge: check if field is greater than or equal to something
+gt: check if field is greater than to something
+has: used to filter on to one relationships
+ilike: check if field contains a string (case insensitive)
+in_: check if field is in a list of values
+is_: check if field is a value
+isnot: check if field is not a value
+like: check if field contains a string
+le: check if field is less than or equal to something
+lt: check if field is less than to something
+match: check if field match against a string or pattern
+ne: check if field is not equal to something
+notilike: check if field does not contains a string (case insensitive)
+notin_: check if field is not in a list of values
+notlike: check if field does not contains a string
+startswith: check if field starts with a string

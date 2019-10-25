@@ -1,0 +1,320 @@
+py", line 80, in main
+    self.__process_master_data()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\rrps\dt\integrator\sapmasterdata\impl.
+py", line 338, in __process_master_data
+    self.__integrator.publish_event(event, retry=True)
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\integrator\__init__.py", line 243, in publish_e
+vent
+    self.__registry.encode_into(event, template)
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\event\registry.py", line 266, in encode_into
+    raise EncodeDecodeError(name, event.version) from ex
+ioticlabs.dt.api.event.exceptions.EncodeDecodeError
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>rrps-dt-integrator-sapmasterdata cfg
+\integrator.cfg.yml cfg\agent.ini
+2019-06-20 16:52:52,751 WARNING [ioticlabs.dt.common.util] {MainThread} No logging configuration specified
+2019-06-20 16:52:52,768 INFO [IoticAgent.IOT.Client] {MainThread} Core version: 0.6.9
+2019-06-20 16:52:52,768 INFO [IoticAgent.IOT.Client] {MainThread} IOT version: 0.6.9
+2019-06-20 16:52:52,769 INFO [IoticAgent.Core.Client] {MainThread} ubjson version: 0.13.0 (extension enabled)
+2019-06-20 16:52:52,779 INFO [ioticlabs.dt.api.event.registry] {MainThread} Loaded 19 event types
+2019-06-20 16:52:55,754 INFO [IoticAgent.Core.Client] {MainThread} QAPI version: 1.2.1
+2019-06-20 16:52:55,757 INFO [IoticAgent.IOT.Client] {MainThread} create_thing(lid="sapmasterdata")
+2019-06-20 16:52:55,915 INFO [ioticlabs.dt.api.integrator] {watcher} Started
+2019-06-20 16:52:55,916 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-20 16:52:56,078 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-20 16:52:56,080 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-20 16:52:56,080 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-20 16:52:56,247 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-20 16:52:56,411 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="848bb1bd450e5644d7c50f2fd2dc27d
+4", callback=None) [lid=sapmasterdata]
+2019-06-20 16:52:56,411 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapmasterdata]
+2019-06-20 16:52:56,412 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="848bb1bd450e5644d7c50f2fd2dc27d
+4", callback=None) [lid=sapmasterdata]
+2019-06-20 16:52:56,412 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapmasterdata]
+2019-06-20 16:52:56,572 INFO [ioticlabs.dt.api.integrator] {iworker_1} Added asset 1000015
+2019-06-20 16:52:56,573 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="46547929ab8afc2f5202b0cac880d4e
+f", callback=None) [lid=sapmasterdata]
+2019-06-20 16:52:56,574 INFO [ioticlabs.dt.api.integrator] {iworker_0} Added asset 1000021
+2019-06-20 16:52:56,574 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="46547929ab8afc2f5202b0cac880d4e
+f", callback=None) [lid=sapmasterdata]
+2019-06-20 16:52:56,732 INFO [ioticlabs.dt.api.integrator] {iworker_1} Added asset 1000020
+2019-06-20 16:53:00,923 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000015
+2019-06-20 16:53:00,923 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000015
+2019-06-20 16:53:00,930 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-20 16:53:01,093 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-20 16:53:01,093 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-20 16:53:01,093 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-20 16:53:01,263 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-20 16:53:01,954 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000015
+event_data['Datbi']   0000-00-00
+event_data['Datab']   2018-10-31
+{'Datab': 1540924200000,
+ 'Datbi': None,
+ 'Eqart': 'SYS',
+ 'EquiPartSet': {'__deferred': {'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('
+000000000200000082')/EquiPartSet"}},
+ 'EqunrAgg': '000000000200000081',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MatnrAgg': '12V2000C10',
+ 'Name1': 'Land Badenw�rtenberg',
+ 'SernrAgg': '1000015',
+ 'Vkbur': '0101',
+ 'Yybau': '030',
+ 'Yyerz': '10V1600A50',
+ '__metadata': {'id': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('00000000020000008
+2')",
+                'type': 'Y_DIGITAL_TWIN_SRV.EQUI01',
+                'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('0000000002000000
+82')"}}
+2019-06-20 16:53:02,995 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ 4711-001
+engine_data['Datbi']   2018-10-31
+engine_data['Datab']   0000-00-00
+2019-06-20 16:53:04,036 ERROR [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Could not parse time response for eng
+ine_serial 4711-001
+2019-06-20 16:53:04,036 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000015
+2019-06-20 16:53:04,037 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Publish event for 1000015
+{'Datab': 1540924200000,
+ 'Datbi': None,
+ 'Eqart': 'SYS',
+ 'EquiPartSet': {'__deferred': {'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('
+000000000200000082')/EquiPartSet"}},
+ 'EqunrAgg': '000000000200000081',
+ 'EqunrEng': '000000000200000082',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MaktxEng': 'R16V4000G83 REMAN ENGINE',
+ 'MatnrAgg': '12V2000C10',
+ 'MatnrEng': 'R16V4000G83',
+ 'Name1': 'Land Badenw�rtenberg',
+ 'SernrAgg': '1000015',
+ 'SernrEng': '4711-001',
+ 'Vkbur': '0101',
+ 'Yybau': '030',
+ 'Yyerz': '10V1600A50',
+ '__metadata': {'id': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('00000000020000008
+2')",
+                'type': 'Y_DIGITAL_TWIN_SRV.EQUI01',
+                'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('0000000002000000
+82')"}}
+SapMasterDataSet('1000015', source=None, time=datetime.datetime(2018, 10, 30, 18, 30), systime=None, offset=-1, version=
+1, data=...)
+2019-06-20 16:53:05,139 INFO [ioticlabs.dt.api.integrator] {watcher} Finished
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\event\registry.py", line 264, in encode_into
+    avro_schemaless_writer(output, schema, event.data)
+  File "fastavro\_write.pyx", line 755, in fastavro._write.schemaless_writer
+  File "fastavro\_write.pyx", line 543, in fastavro._write.write_data
+  File "fastavro\_write.pyx", line 480, in fastavro._write.write_record
+  File "fastavro\_write.pyx", line 541, in fastavro._write.write_data
+  File "fastavro\_write.pyx", line 444, in fastavro._write.write_union
+ValueError: None (type <class 'NoneType'>) do not match [{'logicalType': 'date', 'type': 'long'}]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HBD2KOR\envs\rrpsdev\Scripts\rrps-dt-integrator-sapmasterdata-script.py", line 11, in <module>
+    load_entry_point('rrps.dt.integrator.sapmasterdata', 'console_scripts', 'rrps-dt-integrator-sapmasterdata')()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\rrps\dt\integrator\sapmasterdata\__mai
+n__.py", line 9, in main
+    main_run('RRPS SAP Master Data Integrator', SAPMasterDataIntegrator)
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\rrps\dt\common\__init__.py", line 90, in main_run
+    integrator.run()
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\IoticAgent\ThingRunner.py", line 83, in run
+    self.__run()
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\IoticAgent\ThingRunner.py", line 104, in __run
+    if self.__handle_exception(ctx):
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\IoticAgent\ThingRunner.py", line 98, in __run
+    self.main()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\rrps\dt\integrator\sapmasterdata\impl.
+py", line 80, in main
+    self.__process_master_data()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\rrps\dt\integrator\sapmasterdata\impl.
+py", line 338, in __process_master_data
+    self.__integrator.publish_event(event, retry=True)
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\integrator\__init__.py", line 243, in publish_e
+vent
+    self.__registry.encode_into(event, template)
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\event\registry.py", line 266, in encode_into
+    raise EncodeDecodeError(name, event.version) from ex
+ioticlabs.dt.api.event.exceptions.EncodeDecodeError
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>rrps-dt-integrator-sapmasterdata cfg
+\integrator.cfg.yml cfg\agent.ini
+2019-06-20 16:54:34,032 WARNING [ioticlabs.dt.common.util] {MainThread} No logging configuration specified
+2019-06-20 16:54:34,049 INFO [IoticAgent.IOT.Client] {MainThread} Core version: 0.6.9
+2019-06-20 16:54:34,049 INFO [IoticAgent.IOT.Client] {MainThread} IOT version: 0.6.9
+2019-06-20 16:54:34,050 INFO [IoticAgent.Core.Client] {MainThread} ubjson version: 0.13.0 (extension enabled)
+2019-06-20 16:54:34,060 INFO [ioticlabs.dt.api.event.registry] {MainThread} Loaded 19 event types
+2019-06-20 16:54:36,945 INFO [IoticAgent.Core.Client] {MainThread} QAPI version: 1.2.1
+2019-06-20 16:54:36,948 INFO [IoticAgent.IOT.Client] {MainThread} create_thing(lid="sapmasterdata")
+2019-06-20 16:54:37,097 INFO [ioticlabs.dt.api.integrator] {watcher} Started
+2019-06-20 16:54:37,097 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-20 16:54:37,251 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-20 16:54:37,252 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-20 16:54:37,253 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-20 16:54:37,412 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-20 16:54:37,566 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="46547929ab8afc2f5202b0cac880d4e
+f", callback=None) [lid=sapmasterdata]
+2019-06-20 16:54:37,566 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="848bb1bd450e5644d7c50f2fd2dc27d
+4", callback=None) [lid=sapmasterdata]
+2019-06-20 16:54:37,567 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="46547929ab8afc2f5202b0cac880d4e
+f", callback=None) [lid=sapmasterdata]
+2019-06-20 16:54:37,568 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="848bb1bd450e5644d7c50f2fd2dc27d
+4", callback=None) [lid=sapmasterdata]
+2019-06-20 16:54:37,722 INFO [ioticlabs.dt.api.integrator] {iworker_1} Added asset 1000015
+2019-06-20 16:54:37,723 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapmasterdata]
+2019-06-20 16:54:37,723 INFO [ioticlabs.dt.api.integrator] {iworker_0} Added asset 1000020
+2019-06-20 16:54:37,723 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapmasterdata]
+2019-06-20 16:54:37,874 INFO [ioticlabs.dt.api.integrator] {iworker_1} Added asset 1000021
+2019-06-20 16:54:42,112 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000020
+2019-06-20 16:54:42,112 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000020
+2019-06-20 16:54:42,118 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-20 16:54:42,272 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-20 16:54:42,272 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-20 16:54:42,272 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-20 16:54:42,497 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-20 16:54:43,134 ERROR [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial 404 Client Erro
+r: NOT FOUND for url: http://localhost:5000/sapmasterdata/hierarchy/1000020 with asset_id: 1000020
+2019-06-20 16:54:43,135 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000020
+2019-06-20 16:54:44,153 ERROR [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data 404 Client Err
+or: NOT FOUND for url: http://localhost:5000/sapmasterdata/master/1000020 with asset_id: 1000020
+2019-06-20 16:54:44,154 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ None
+2019-06-20 16:54:45,185 ERROR [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data 404 Client Error:
+ NOT FOUND for url: http://localhost:5000/sapmasterdata/master/None with engine_serial: None
+2019-06-20 16:54:45,186 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000015
+2019-06-20 16:54:45,186 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000015
+2019-06-20 16:54:46,206 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000015
+2019-06-20 16:54:47,128 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+event_data['Datbi']   2018-10-31
+event_data['Datab']   2018-10-31
+{'Datab': 1540924200000,
+ 'Datbi': 1540924200000,
+ 'Eqart': 'SYS',
+ 'EquiPartSet': {'__deferred': {'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('
+000000000200000082')/EquiPartSet"}},
+ 'EqunrAgg': '000000000200000081',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MatnrAgg': '12V2000C10',
+ 'Name1': 'Land Badenw�rtenberg',
+ 'SernrAgg': '1000015',
+ 'Vkbur': '0101',
+ 'Yybau': '030',
+ 'Yyerz': '10V1600A50',
+ '__metadata': {'id': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('00000000020000008
+2')",
+                'type': 'Y_DIGITAL_TWIN_SRV.EQUI01',
+                'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('0000000002000000
+82')"}}
+2019-06-20 16:54:47,231 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ 4711-001
+2019-06-20 16:54:47,281 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-20 16:54:47,281 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-20 16:54:47,282 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-20 16:54:47,445 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+engine_data['Datbi']   2018-10-31
+engine_data['Datab']   2018-10-31
+2019-06-20 16:54:48,251 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000015
+2019-06-20 16:54:48,252 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Publish event for 1000015
+{'Datab': 1540924200000,
+ 'Datbi': 1540924200000,
+ 'Eqart': 'SYS',
+ 'EquiPartSet': {'__deferred': {'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('
+000000000200000082')/EquiPartSet"}},
+ 'EqunrAgg': '000000000200000081',
+ 'EqunrEng': '000000000200000082',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MaktxEng': 'R16V4000G83 REMAN ENGINE',
+ 'MatnrAgg': '12V2000C10',
+ 'MatnrEng': 'R16V4000G83',
+ 'Name1': 'Land Badenw�rtenberg',
+ 'SernrAgg': '1000015',
+ 'SernrEng': '4711-001',
+ 'Vkbur': '0101',
+ 'Yybau': '030',
+ 'Yyerz': '10V1600A50',
+ '__metadata': {'id': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('00000000020000008
+2')",
+                'type': 'Y_DIGITAL_TWIN_SRV.EQUI01',
+                'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('0000000002000000
+82')"}}
+SapMasterDataSet('1000015', source=None, time=datetime.datetime(2018, 10, 30, 18, 30), systime=None, offset=-1, version=
+1, data=...)
+
+
+
+2019-06-20 16:54:48,259 INFO [IoticAgent.IOT.RemotePoint] {MainThread} tell(timeout=10) [subid=59c59aa461a6aabd61d73437c
+a14761f]
+
+2019-06-20 16:54:50,977 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Cache asset for: 1000015
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2019-06-20 16:54:50,978 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000021
+2019-06-20 16:54:50,979 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000021
+2019-06-20 16:54:51,992 ERROR [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial 404 Client Erro
+r: NOT FOUND for url: http://localhost:5000/sapmasterdata/hierarchy/1000021 with asset_id: 1000021
+2019-06-20 16:54:51,993 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000021
+2019-06-20 16:54:52,140 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-20 16:54:52,294 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-20 16:54:52,294 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-20 16:54:52,295 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-20 16:54:52,457 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-20 16:54:53,015 ERROR [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data 404 Client Err
+or: NOT FOUND for url: http://localhost:5000/sapmasterdata/master/1000021 with asset_id: 1000021
+2019-06-20 16:54:53,016 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ None
+2019-06-20 16:54:54,041 ERROR [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data 404 Client Error:
+ NOT FOUND for url: http://localhost:5000/sapmasterdata/master/None with engine_serial: None
+2019-06-20 16:54:57,154 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-20 16:54:57,307 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-20 16:54:57,308 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-20 16:54:57,308 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-20 16:54:57,472 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-20 16:54:59,049 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000020
+2019-06-20 16:54:59,049 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000020

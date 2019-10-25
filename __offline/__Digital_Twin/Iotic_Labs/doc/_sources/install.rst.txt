@@ -1,0 +1,138 @@
+.. _install:
+
+Installation
+============
+
+Set up your python enviroment
+-----------------------------
+
+In the root directory, setup your python virtual environment "venv" and activate it. You should see (my-venv) at the
+beginning of every command prompt
+
+::
+
+    python3 -mvenv my-venv
+    . ./my-venv/bin/activate
+
+Then update your pip installation...
+
+::
+
+    pip install -U pip
+
+... and install docutils
+
+::
+
+    pip install docutils
+
+Set up your python enviroment (Windows)
+---------------------------------------
+
+The Microsoft build tools are required.
+1. Download from here: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017
+2. Install from the command line:
+
+::
+
+    vs_buildtools.exe --norestart --nocache --installPath C:\BuildTools --add Microsoft.VisualStudio.Workload.VCTools;includeRecommended --add Microsoft.VisualStudio.Component.Windows81SDK --add Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81
+
+Using cmd.exe in the root of the git repository, setup your python virtual environment "venv".
+
+::
+
+    python -m venv my-venv
+    my-venv\Scripts\activate
+
+Then update your pip installation...
+
+::
+
+    python -m pip install -U pip setuptools
+
+... and install docutils
+
+::
+
+    pip install docutils
+
+
+Download or clone the source
+----------------------------
+
+The best place to start is by looking at the Examples directory.
+
+This is available from
+
+::
+
+    example/
+
+
+Examples file-structure
+-----------------------
+This is a cut-down version of the file structure of the examples to show you where the important files are and where to put your code and config
+
+::
+
+    /example/dt                                       # <-- route of the example digital twins
+        /acmecorp.dt.events
+            /acmecorp/dt/events/__init__.py           # <-- event definitions in here
+        /acmecorp.dt.follower.example
+            /acmecorp/dt/follower/example/impl.py     # <-- follower implementation in here
+            /cfg/follower.cfg.yml                     # <-- follower config in here
+            /cfg/follower.log.yml                     # <-- follower *logging* config in here
+        /acmecorp.dt.integrator.example
+            /acmecorp/dt/integrator/example/impl.py   # <-- integrator implementation in here
+            /cfg/integrator.cfg.yml                   # <-- integrator config in here
+            /cfg/integrator.log.yml                   # <-- integrator *logging* config in here
+
+
+Copy the complete directory `example/dt` structure to another place the same route directory, replacing:
+
+* `example/dt` with your company, e.g. `newco/dt`
+* `acmecorp` with your company e.g. `newco`
+* `example` in the `dt.follower.example` or `dt.integrator.example` with the function of the code, e.g. `maintenance`
+* `example` in the `/follower/example` or `/integrator/example` with the function of the code, e.g. `maintenance`
+
+You should end up with something like this...
+
+::
+
+    /newco/dt                                         # <-- route of the example digital twins
+        /newco.dt.events
+            /newco/dt/events/__init__.py              # <-- event definitions in here
+        /newco.dt.follower.maintenance
+            /newco/dt/follower/maintenance/impl.py    # <-- follower implementation in here
+            /cfg/follower.cfg.yml                     # <-- follower config in here
+            /cfg/follower.log.yml                     # <-- follower *logging* config in here
+        /newco.dt.integrator.maintenance
+            /newco/dt/integrator/maintenance/impl.py  # <-- integrator implementation in here
+            /cfg/integrator.cfg.yml                   # <-- integrator config in here
+            /cfg/integrator.log.yml                   # <-- integrator *logging* config in here
+
+
+Packages
+========
+
+ioticlabs.dt.common
+-------------------
+
+Functionality, templates and defaults shared amongst provider, API & runner packages.
+
+ioticlabs.dt.provider
+---------------------
+
+Implements integrator, follower and T2 routing concepts using Iotic Space primitives. Only used for implementing DT runners.
+
+Note: The name of this module is not to be confused with the term "T2 provider", which is an integrator that can service at least one T2 request. Instead "Provider" in this package's context refers to its ability to represent assets etc. but without offering a runtime or the ability to dynamically determine what assets to create/delete. (That in turn is the responsibility of ioticlabs.dt.runner.)
+
+ioticlabs.dt.runner
+-------------------
+
+Exposes ioticlabs.dt.provider implementations as a service, currently with a fixed asset list.
+
+ioticlabs.dt.api
+----------------
+
+Provides APIs and callbacks to implement specific followers, integrators or T2 providers. Asset discovery is automated.

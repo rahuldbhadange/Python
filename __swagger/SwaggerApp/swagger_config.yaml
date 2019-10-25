@@ -1,0 +1,135 @@
+swagger: '3.0'
+info:
+  description: "This is a sample server."
+#  version: "1.0.0"
+  title: "Swagger Basics"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "rahuldbhadange@gmail.com"
+#  license:
+#    name: "Apache 2.0"
+#    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: 'http://127.0.0.1:8080'
+basePath: '/void'
+schemes:
+  - 'https'
+  - 'http'
+paths:
+  /hello/{ID}:
+    get:
+#      tags:
+#        - "test"
+      operationId: "_view_function"
+      summary: "Finds by id"
+      description: "Multiple status values can be provided with comma separated strings"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "status"
+        in: "query"
+        description: "Status values that need to be considered for filter"
+        required: true
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "available"
+          - "pending"
+          - "sold"
+          default: "available"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Pet"
+        400:
+          description: "Invalid status value"
+      x-swagger-router-controller: '__Flask.SwaggerApp.swagger_python_flask_app'
+  /hello:
+    post:
+      operationId: "_add_function"
+      summary: "Add a new"
+      description: ""
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+#      - in: "body"
+#        name: "body"
+#        description: "Pet object that needs to be added to the store"
+#        required: true
+#        schema:
+#          $ref: "#/definitions/Pet"
+#      properties:
+      x1:
+        type: "string"
+#          format: "int64"
+        example: 'Rahul'
+      x2:
+        type: "string"
+#          format: "int64"
+        example: 'Bengaluru'
+      responses:
+        405:
+          description: "Invalid input"
+#      security:
+#        - test_auth:
+#            - "write:test"
+#            - "read:test"
+      x-swagger-router-controller: '__Flask.SwaggerApp.swagger_python_flask_app'
+    put:
+      operationId: "_update_function"
+      summary: "Update an existing"
+      description: ""
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Pet object that needs to be added to the store"
+        required: true
+        schema:
+          $ref: "#/definitions/Pet"
+      responses:
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Pet not found"
+        405:
+          description: "Validation exception"
+      x-swagger-router-controller: '__Flask.SwaggerApp.swagger_python_flask_app'
+    delete:
+      summary: "Deletes"
+      description: ""
+      operationId: "deletePet"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "api_key"
+        in: "header"
+        required: false
+        type: "string"
+      - name: "petId"
+        in: "path"
+        description: "Pet id to delete"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Pet not found"
+      x-swagger-router-controller: '__Flask.SwaggerApp.swagger_python_flask_app'

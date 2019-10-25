@@ -1,0 +1,238 @@
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapwarrantyrecall>rrps-dt-integrator-sapwarrantyre
+call cfg\integrator.cfg.yml cfg\agent.ini
+2019-06-21 14:32:56,157 WARNING [ioticlabs.dt.common.util] {MainThread} No logging configuration specified
+2019-06-21 14:32:56,174 INFO [IoticAgent.IOT.Client] {MainThread} Core version: 0.6.9
+2019-06-21 14:32:56,174 INFO [IoticAgent.IOT.Client] {MainThread} IOT version: 0.6.9
+2019-06-21 14:32:56,175 INFO [IoticAgent.Core.Client] {MainThread} ubjson version: 0.13.0 (extension enabled)
+2019-06-21 14:32:56,186 INFO [ioticlabs.dt.api.event.registry] {MainThread} Loaded 19 event types
+2019-06-21 14:32:59,138 INFO [IoticAgent.Core.Client] {MainThread} QAPI version: 1.2.1
+2019-06-21 14:32:59,141 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Sap Warranty Recall Integrator Sta
+rtup
+2019-06-21 14:32:59,142 INFO [IoticAgent.IOT.Client] {MainThread} create_thing(lid="sapwarrantyrecall")
+2019-06-21 14:32:59,300 INFO [ioticlabs.dt.api.integrator] {watcher} Started
+2019-06-21 14:32:59,300 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Sap Warranty Recall Integrator Run
+ning
+2019-06-21 14:32:59,300 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-21 14:32:59,301 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Processing Sap Warranty Recalls
+2019-06-21 14:32:59,463 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-21 14:32:59,464 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-21 14:32:59,464 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-21 14:32:59,631 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-21 14:32:59,795 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="848bb1bd450e5644d7c50f2fd2dc27d
+4", callback=None) [lid=sapwarrantyrecall]
+2019-06-21 14:32:59,795 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="46547929ab8afc2f5202b0cac880d4e
+f", callback=None) [lid=sapwarrantyrecall]
+2019-06-21 14:32:59,796 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="848bb1bd450e5644d7c50f2fd2dc27d
+4", callback=None) [lid=sapwarrantyrecall]
+2019-06-21 14:32:59,797 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="46547929ab8afc2f5202b0cac880d4e
+f", callback=None) [lid=sapwarrantyrecall]
+2019-06-21 14:32:59,956 INFO [ioticlabs.dt.api.integrator] {iworker_1} Added asset 1000015
+2019-06-21 14:32:59,957 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapwarrantyrecall]
+2019-06-21 14:32:59,957 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {ioticlabs.dt.api.integrator.__do_callback} Ass
+et created: 1000015
+2019-06-21 14:32:59,958 INFO [ioticlabs.dt.api.integrator] {iworker_0} Added asset 1000020
+2019-06-21 14:32:59,958 INFO [IoticAgent.IOT.Thing] {iworker_1} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapwarrantyrecall]
+2019-06-21 14:32:59,959 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {ioticlabs.dt.api.integrator.__do_callback} Ass
+et created: 1000020
+2019-06-21 14:33:00,115 INFO [ioticlabs.dt.api.integrator] {iworker_1} Added asset 1000021
+2019-06-21 14:33:00,116 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {ioticlabs.dt.api.integrator.__do_callback} Ass
+et created: 1000021
+2019-06-21 14:33:04,297 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+
+2019-06-21 14:33:04,311 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Processing Sap Warranty Recalls
+
+2019-06-21 14:33:04,311 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Get Sap Warranty Recall data for:
+1000015
+
+2019-06-21 14:33:04,312 WARNING [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Swapping asset_id 1000015 for t
+est id 5242454668
+
+2019-06-21 14:33:04,313 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Get the Engine Serial Number for a
+sset_id: 1000015
+
+'http://localhost:5000/sapwarrantyrecall/hierarchy/1000015'
+
+2019-06-21 14:33:04,459 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+
+2019-06-21 14:33:04,459 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-21 14:33:04,460 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-21 14:33:04,628 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+
+'000000000200000081'
+
+'4711-011'
+
+2019-06-21 14:33:05,343 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Get the Aggregate Data for asset_i
+d: 1000015
+
+'http://localhost:5000/sapwarrantyrecall/master/1000015'
+
+2019-06-21 14:33:06,372 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Get the Engine Data for engine_ser
+ial: 4711-011
+
+'http://localhost:5000/sapwarrantyrecall/master/4711-011'
+
+2019-06-21 14:33:07,398 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Checking asset cache for: 1000015
+
+[{'Abdes': 'Active',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '2018-12-31',
+  'Yyroopen': '2018-12-31',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000121',
+  'Clmty': 'YCIF',
+  'DocLink': 'http://www.google.de',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0002',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5ie9Vxcqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0002',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000122',
+  'Clmty': 'YCIF',
+  'DocLink': '',
+  'Equnr': '000000000010000018',
+  'HPntext': 'Text',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiGkBla4Rdqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0004',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetType': 'ENG',
+  'Astate': 'YC20',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000200000081',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetType': 'ENG',
+  'Astate': 'YC20',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000200000081',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''}]
+
+
+SapWarrantyRecallSet('1000015', source=None, time=None, systime=None, offset=-1, version=2, data=...)
+
+
+2019-06-21 14:33:07,410 INFO [IoticAgent.IOT.RemotePoint] {MainThread} tell(timeout=10) [subid=6817a8d05dbc06c1d7bcda331
+7361175]
+
+2019-06-21 14:33:09,150 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Cache asset for: 1000015
+
+2019-06-21 14:33:09,151 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Get Sap Warranty Recall data for:
+1000020
+2019-06-21 14:33:09,152 WARNING [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Swapping asset_id 1000020 for t
+est id 5242454668
+2019-06-21 14:33:09,153 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Get the Engine Serial Number for a
+sset_id: 1000015
+'http://localhost:5000/sapwarrantyrecall/hierarchy/1000015'
+2019-06-21 14:33:09,305 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-21 14:33:09,466 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-21 14:33:09,466 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-21 14:33:09,466 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-21 14:33:09,637 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+'000000000200000081'
+'4711-011'
+2019-06-21 14:33:10,187 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Get the Aggregate Data for asset_i
+d: 1000015
+'http://localhost:5000/sapwarrantyrecall/master/1000015'
+2019-06-21 14:33:10,271 INFO [IoticAgent.Core.Client] {amqplink_recv} Received Feed Data for Point GUID 'e11d7f9e95ddd83
+5c48be30192125de0' but no callback registered.
+2019-06-21 14:33:12,426 INFO [rrps.dt.integrator.sapwarrantyrecall.impl] {MainThread} Sap Warranty Recall Integrator Shu
+tdown
+2019-06-21 14:33:12,427 INFO [ioticlabs.dt.api.integrator] {watcher} Finished
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapwarrantyrecall>

@@ -1,0 +1,52 @@
+<!--{% extends 'base.html' %}-->
+
+{% block title %} Admission Form {% endblock %}
+
+{% block content %}
+
+<!--{{ super() }}-->
+
+<h2>*** Last date: June 02, 2019 23:59:59 ***</h2>
+
+<head>
+  <title>LogIn</title>
+  <meta charset="utf-8">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<form method="POST" action="/home">
+    <br><br><input type = "submit" value="Home"><br><br>
+</form>
+
+<h2>LogIn: Last Year Admission Form</h2>
+<form method="POST" action="/home/delete" target="_blank">
+<!--<form method="POST" action="/thank">-->
+<!--<form method="POST">-->
+    Name:  <br>     <input type = "text" name="name" autocomplete="off" autofocus required><br><br>
+                    <!--= <output name="name" for='name'></output><br><br>-->
+    <!--Location: <br>  <input type = "text" name="location" maxlength="10" autocomplete="on" required><br><br>-->
+    <!--Username: <br>  <input type = "text" name="username" autocomplete="on"><br><br>-->
+    <!--E-Mail:  <br>   <input type = "email" name="email" autocomplete="on"><br><br>-->
+    <!--Password:  <br> <input type = "password" name="password" autocomplete="on"><br><br>-->
+                    <!--<input type="radio" name="gender" value="male" checked> Male<br>-->
+                    <!--<input type="radio" name="gender" value="female"> Female<br>-->
+                    <!--<input type="radio" name="gender" value="other"> Other<br><br>-->
+                    <!--<Button type="button" class="btn btn-primary">button</Button>-->
+                    <input type = "submit" value="Submit">
+                    <!--<output name = "name" for="name"></output>-->
+                    <!--<br><br><li role="presentation" class="active"><a href="#">Home</a>-->
+                    <!--</li><br><br>-->
+</form>
+
+
+<!--<img src="{{ url_for('static', filename= 'images/Penguins.jpg', align= 'middle', height='20', width='20' )}}">-->
+
+<!--<img src="url_for('static', images/Penguins.jpg"  height="42" width="42")">-->
+
+<!--{% include "include.html" %}-->
+
+{% endblock %}

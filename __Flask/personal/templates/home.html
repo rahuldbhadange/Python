@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block title%} Homepage {% endblock %}
+
+{% block content %}
+
+{{ super() }}
+
+<!--<h2>Welcome {{ name }}, You are on the home page!</h2>-->
+<!--<h2>This is {{ location }}.</h2>-->
+
+<!--{% if display %}-->
+
+<!--<h2>This is a if block</h2>-->
+
+<!--{% else %}-->
+<!--<h2>This is a 'Else' block</h2>-->
+
+<!--{% endif %}-->
+
+<!--{% for x in my_dict %}-->
+<!--<h3>{{x.three}}</h3>-->
+<!--{% endfor %}-->
+
+<!--{% for x in my_list %}-->
+<!--<h4>{{ x }}</h4>-->
+<!--{% endfor %}-->
+
+
+<form method="POST" action="/home">
+    <br><br><input type = "submit" value="Home"><br><br>
+</form>
+
+<form method="POST" action="/home/create">
+    <input type = "submit" value="Create"><br><br>
+</form>
+
+<form method="POST" action="/home/read">
+    <input type = "submit" value="Read"><br><br>
+</form>
+
+<form method="POST" action="/home/update">
+    <input type = "submit" value="Update"><br><br>
+</form>
+
+<form method="POST" action="/home/update">
+    <input type = "submit" value="Delete"><br><br>
+</form>
+
+
+{% endblock %}

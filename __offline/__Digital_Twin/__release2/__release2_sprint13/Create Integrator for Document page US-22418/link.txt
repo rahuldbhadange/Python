@@ -1,0 +1,13 @@
+http://localhost:8080/test-document/1000015/MOA
+
+http://localhost:8080/test-document/1000015/PPM
+
+
+http://localhost:5000/sapequipmenthistory/test_document/equnr/PPM
+
+
+
+http://127.0.0.1:8080/upcoming-events/1000015
+
+
+http://localhost:8080/doc-list/1000015

@@ -1,0 +1,101 @@
+---
+# Copyright (c) 2018 Iotic Labs Ltd. All rights reserved.
+
+# Configuration specific to example integrator
+
+my_config:
+
+  some:
+    var: Some value
+
+  another:
+    item:
+      somewhere:
+        - 4
+        - 10
+        - 7
+        - 3
+
+
+# Example integrator (core) configuration.
+
+integrator:
+
+  # Event source name as included in published events. Should NOT be changed once set!
+  source: acmecorp
+
+  # How many threads to reserve for performing asynchronous tasks such as event publishing and asset updates. Not
+  # applicable in synchronous even publishing case.
+  # workers: 1
+
+  # Metadata applicable to integrator Iotic Thing (all optional apart from lid)
+  thing:
+    lid: acme_integrator
+    # label:
+    # description:
+    # If type2 is enabled, this must be populated explicitly with one tag to identify the thing as a t2 provider and
+    # another to indicate the name of the provider.
+    # tags: []
+
+  # Details for controls associated with integrator thing (defaults will be used if not specified)
+  # point:
+    # lid:
+      # t2req:
+    # label:
+      # t2req:
+
+  asset:
+
+    # Legacy argument - replaced by type2.enabled. Whilst specified, will be prioritised over its replacement
+    # with_type2: no
+
+    type2:
+      # Whether to expect assets to expose type2 functionality. Assets which do not have the right points to support
+      # type2 requests will be ignored if this is enabled.
+      # enabled: no
+
+      # How large each response chunk should be at most (in bytes). This should adjusted based on transport (QAPI) size
+      # limits. For a standard Iotic Space container (sub-space) with hard limit of 64kB per request, a sensible maximum
+      # (and the default herein) would be 62208 (~95%)
+      # max_chunk_size: 62208
+
+    event:
+      # List of modules to load event definitions from. Only event types registered this way can be published. Each name
+      # must be an absolute module name in Python search path. Note: Internal built-in/virtual event types are always
+      # loaded.
+      modules:
+        - acmecorp.dt.events
+
+    # Event publishing timeout in seconds (applicable ONLY when confirmation has been requested both in sync and async
+    # cases). Should be high enough to allow for digital twin to respond as otherwise risk publishing the same event
+    # mutiple times. (default will be used if not specified)
+    publish:
+      timeout: 10
+
+    # Search criteria for finding assets (required)
+    discovery:
+      # One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)
+      # text:
+      # One of public, local or localOwn (default). Public is NOT recommended as one could, despite specified filter,
+      # end up pushing events to a completely unknown thing/point!
+      # scope:
+      # How often to poll for new assets, in seconds
+      interval: 5
+
+      filter:
+        label:
+          # Expected asset thing label. This is a standard Python regular expression and should be contained within
+          # '^' and '$'. Defined groups are ignored and this parameter is optional.
+          # thing_regex:
+          # Expected label for event production related control. (defaults will be used if not specified).
+          # control:
+          # Label for type 2 request control (incoming). Only applicable if with_type2 is set.
+          # control_t2:
+
+        tags:
+          # Expected unique tag containing asset id. This is a standard Python regular expression and should be
+          # contained within '^' and '$' and define one group (containing asset id). (default will be used if not
+          # specified)
+          # unique_regex:
+          # Expected static tags for each asset
+          # thing: []

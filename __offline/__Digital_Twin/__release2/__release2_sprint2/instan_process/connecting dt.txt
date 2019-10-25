@@ -1,0 +1,290 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>cd venv\Scripts\activate
+The directory name is invalid.
+
+C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>venv\Scripts\activate
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>cd..
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python>cd rrps.dt.events
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>pip install -e . -f ..\..\..\deps
+Looking in links: ..\..\..\deps
+Obtaining file:///C:/Users/HBD2KOR/digital.git/rrps/python/rrps.dt.events
+Collecting ioticlabs.dt.api<0.2,>=0.1.7 (from rrps.dt.events==0.1.7)
+Requirement already satisfied: ioticlabs.dt.common<0.2,>=0.1.12 in c:\users\hbd2kor\digital.git\rrps\pyt
+hon\rrps.dt.integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.
+events==0.1.7) (0.1.13)
+Collecting fastavro<0.22,>=0.21.9 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/33/6b/0a2ce53fd404170fc296a2956bff759324c3ae39545
+b1dcdec81bc875afa/fastavro-0.21.17.tar.gz
+Requirement already satisfied: py-IoticAgent<0.7.0,>=0.6.6 in c:\users\hbd2kor\digital.git\rrps\python\r
+rps.dt.integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.event
+s==0.1.7) (0.6.8)
+Collecting py-lz4framed==0.13.0 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+Requirement already satisfied: py-ubjson<0.13,>=0.12.0 in c:\users\hbd2kor\digital.git\rrps\python\rrps.
+dt.integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.
+api<0.2,>=0.1.7->rrps.dt.events==0.1.7) (0.12.0)
+Requirement already satisfied: regex==2018.11.22 in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.int
+egrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.api<0.
+2,>=0.1.7->rrps.dt.events==0.1.7) (2018.11.22)
+Requirement already satisfied: PyYAML<4,>=3.12 in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integ
+rator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.api<0.2,
+>=0.1.7->rrps.dt.events==0.1.7) (3.13)
+Requirement already satisfied: ioticlabs.common.logutil<0.2,>=0.1.0 in c:\users\hbd2kor\digital.git\rrps
+\python\rrps.dt.integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.common<0.2,>=0.1.12->
+ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7) (0.1.0)
+Requirement already satisfied: rdflib>=4.2.1 in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integra
+tor.sapmasterdata\venv\lib\site-packages (from py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2,>=0.1.7
+->rrps.dt.events==0.1.7) (4.2.2)
+Requirement already satisfied: pyparsing in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.
+sapmasterdata\venv\lib\site-packages (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<
+0.2,>=0.1.7->rrps.dt.events==0.1.7) (2.3.1)
+Requirement already satisfied: isodate in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sa
+pmasterdata\venv\lib\site-packages (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.
+2,>=0.1.7->rrps.dt.events==0.1.7) (0.6.0)
+Requirement already satisfied: six in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmas
+terdata\venv\lib\site-packages (from isodate->rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.a
+pi<0.2,>=0.1.7->rrps.dt.events==0.1.7) (1.12.0)
+Building wheels for collected packages: fastavro, py-lz4framed
+  Building wheel for fastavro (setup.py) ... done
+  Stored in directory: C:\Users\HBD2KOR\AppData\Local\pip\Cache\wheels\ea\0b\12\f4dea46f76ab3bd6f144df59
+0cc8be8fbe6b95f8ac020c5704
+  Building wheel for py-lz4framed (setup.py) ... done
+  Stored in directory: C:\Users\HBD2KOR\AppData\Local\pip\Cache\wheels\c1\90\2f\36b7523bfb7d1c609c8f3ce6
+affa99be1b0e2aff08d8d565d9
+Successfully built fastavro py-lz4framed
+Installing collected packages: fastavro, py-lz4framed, ioticlabs.dt.api, rrps.dt.events
+  Running setup.py develop for rrps.dt.events
+Successfully installed fastavro-0.21.17 ioticlabs.dt.api-0.1.11 py-lz4framed-0.13.0 rrps.dt.events
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>cd ..\rrps.dt.integrator.sapmasterdata
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>pip install -e . -f ..\
+..\..\deps
+Looking in links: ..\..\..\deps
+Obtaining file:///C:/Users/HBD2KOR/digital.git/rrps/python/rrps.dt.integrator.sapmasterdata
+Requirement already satisfied: ioticlabs.dt.api<0.2,>=0.1.7 in c:\users\hbd2kor\digital.git\rrps\python\
+rrps.dt.integrator.sapmasterdata\venv\lib\site-packages (from rrps.dt.integrator.sapmasterdata==0.1.8) (
+0.1.11)
+Requirement already satisfied: rrps.dt.events<0.2,<0.2ioticlabs.common.storeutil>=0.1.0,>=0.1.7 in c:\us
+ers\hbd2kor\digital.git\rrps\python\rrps.dt.events (from rrps.dt.integrator.sapmasterdata==0.1.8) (0.1.7
+)
+Collecting requests<3,>=2.19.1 (from rrps.dt.integrator.sapmasterdata==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/7d/e3/20f3d364d6c8e5d2353c72a67778eb189176f08e873
+c9900e10c0287b84b/requests-2.21.0-py2.py3-none-any.whl
+Requirement already satisfied: ioticlabs.dt.common<0.2,>=0.1.12 in c:\users\hbd2kor\digital.git\rrps\pyt
+hon\rrps.dt.integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.
+integrator.sapmasterdata==0.1.8) (0.1.13)
+Requirement already satisfied: py-lz4framed==0.13.0 in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.
+integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.integrator.s
+apmasterdata==0.1.8) (0.13.0)
+Requirement already satisfied: fastavro<0.22,>=0.21.9 in c:\users\hbd2kor\digital.git\rrps\python\rrps.d
+t.integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.integrator
+.sapmasterdata==0.1.8) (0.21.17)
+Requirement already satisfied: py-IoticAgent<0.7.0,>=0.6.6 in c:\users\hbd2kor\digital.git\rrps\python\r
+rps.dt.integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.integ
+rator.sapmasterdata==0.1.8) (0.6.8)
+Collecting certifi>=2017.4.17 (from requests<3,>=2.19.1->rrps.dt.integrator.sapmasterdata==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/9f/e0/accfc1b56b57e9750eba272e24c4dddeac86852c2be
+bd1236674d7887e8a/certifi-2018.11.29-py2.py3-none-any.whl
+Collecting urllib3<1.25,>=1.21.1 (from requests<3,>=2.19.1->rrps.dt.integrator.sapmasterdata==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/62/00/ee1d7de624db8ba7090d1226aebefab96a2c71cd5cf
+a7629d6ad3f61b79e/urllib3-1.24.1-py2.py3-none-any.whl
+Collecting idna<2.9,>=2.5 (from requests<3,>=2.19.1->rrps.dt.integrator.sapmasterdata==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/14/2c/cd551d81dbe15200be1cf41cd03869a46fe7226e745
+0af7a6545bfc474c9/idna-2.8-py2.py3-none-any.whl
+Collecting chardet<3.1.0,>=3.0.2 (from requests<3,>=2.19.1->rrps.dt.integrator.sapmasterdata==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b2
+2e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl
+Requirement already satisfied: ioticlabs.common.logutil<0.2,>=0.1.0 in c:\users\hbd2kor\digital.git\rrps
+\python\rrps.dt.integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.common<0.2,>=0.1.12->
+ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.integrator.sapmasterdata==0.1.8) (0.1.0)
+Requirement already satisfied: PyYAML<4,>=3.12 in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integ
+rator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.api<0.2,
+>=0.1.7->rrps.dt.integrator.sapmasterdata==0.1.8) (3.13)
+Requirement already satisfied: regex==2018.11.22 in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.int
+egrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.api<0.
+2,>=0.1.7->rrps.dt.integrator.sapmasterdata==0.1.8) (2018.11.22)
+Requirement already satisfied: py-ubjson<0.13,>=0.12.0 in c:\users\hbd2kor\digital.git\rrps\python\rrps.
+dt.integrator.sapmasterdata\venv\lib\site-packages (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.
+api<0.2,>=0.1.7->rrps.dt.integrator.sapmasterdata==0.1.8) (0.12.0)
+Requirement already satisfied: rdflib>=4.2.1 in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integra
+tor.sapmasterdata\venv\lib\site-packages (from py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2,>=0.1.7
+->rrps.dt.integrator.sapmasterdata==0.1.8) (4.2.2)
+Requirement already satisfied: pyparsing in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.
+sapmasterdata\venv\lib\site-packages (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<
+0.2,>=0.1.7->rrps.dt.integrator.sapmasterdata==0.1.8) (2.3.1)
+Requirement already satisfied: isodate in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sa
+pmasterdata\venv\lib\site-packages (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.
+2,>=0.1.7->rrps.dt.integrator.sapmasterdata==0.1.8) (0.6.0)
+Requirement already satisfied: six in c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmas
+terdata\venv\lib\site-packages (from isodate->rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.a
+pi<0.2,>=0.1.7->rrps.dt.integrator.sapmasterdata==0.1.8) (1.12.0)
+Installing collected packages: certifi, urllib3, idna, chardet, requests, rrps.dt.integrator.sapmasterda
+ta
+  Running setup.py develop for rrps.dt.integrator.sapmasterdata
+Successfully installed certifi-2018.11.29 chardet-3.0.4 idna-2.8 requests-2.21.0 rrps.dt.integrator.sapm
+asterdata urllib3-1.24.1
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>rrps-dt-integrator-sapm
+asterdata
+usage: rrps-dt-integrator-sapmasterdata [-h] [-l LOGGING_CONFIG] [--storeutil]
+                                        CONFIG AGENT
+rrps-dt-integrator-sapmasterdata: error: the following arguments are required: CONFIG, AGENT
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>rrps-dt-integrator-sapm
+asterdata cfg\integrator.cfg.yml cfg\agent.ini
+2019-01-29 10:53:48,265 WARNING [ioticlabs.dt.common.util] {MainThread} No logging configuration specifi
+ed
+2019-01-29 10:53:49,499 INFO [IoticAgent.IOT.Client] {MainThread} Core version: 0.6.8
+2019-01-29 10:53:49,499 INFO [IoticAgent.IOT.Client] {MainThread} IOT version: 0.6.8
+2019-01-29 10:53:49,499 INFO [IoticAgent.Core.Client] {MainThread} ubjson version: 0.12.0 (extension dis
+abled)
+2019-01-29 10:53:49,515 INFO [ioticlabs.dt.api.event.registry] {MainThread} Loaded 18 event types
+2019-01-29 10:53:53,043 INFO [IoticAgent.Core.Client] {MainThread} QAPI version: 1.2.0
+2019-01-29 10:53:53,043 INFO [IoticAgent.IOT.Client] {MainThread} create_thing(lid="integrator01")
+2019-01-29 10:53:53,262 INFO [ioticlabs.dt.api.integrator] {watcher} Started
+2019-01-29 10:53:53,262 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:53:53,527 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:53:53,761 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:53:54,057 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:53:54,369 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:53:54,603 INFO [IoticAgent.IOT.Thing] {watcher} __sub(foc=control, gpid="46547929ab8afc2f5
+202b0cac880d4ef", callback=None) [lid=integrator01]
+2019-01-29 10:53:54,603 INFO [IoticAgent.IOT.Thing] {watcher} __sub(foc=control, gpid="46547929ab8afc2f5
+202b0cac880d4ef", callback=None) [lid=integrator01]
+2019-01-29 10:53:54,978 INFO [ioticlabs.dt.api.integrator] {watcher} Added asset 1000020
+2019-01-29 10:53:54,978 INFO [IoticAgent.IOT.Thing] {watcher} __sub(foc=control, gpid="848bb1bd450e5644d
+7c50f2fd2dc27d4", callback=None) [lid=integrator01]
+2019-01-29 10:53:54,978 INFO [IoticAgent.IOT.Thing] {watcher} __sub(foc=control, gpid="848bb1bd450e5644d
+7c50f2fd2dc27d4", callback=None) [lid=integrator01]
+2019-01-29 10:53:55,227 INFO [ioticlabs.dt.api.integrator] {watcher} Added asset 1000015
+2019-01-29 10:53:55,227 INFO [IoticAgent.IOT.Thing] {watcher} __sub(foc=control, gpid="4d08e152dcaa8aca5
+d623711ce10a0c3", callback=None) [lid=integrator01]
+2019-01-29 10:53:55,227 INFO [IoticAgent.IOT.Thing] {watcher} __sub(foc=control, gpid="4d08e152dcaa8aca5
+d623711ce10a0c3", callback=None) [lid=integrator01]
+2019-01-29 10:53:55,446 INFO [ioticlabs.dt.api.integrator] {watcher} Added asset 1000021
+2019-01-29 10:53:58,272 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:53:58,445 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:53:58,663 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:53:58,897 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:53:59,147 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:03,287 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:03,475 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:03,647 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:03,865 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:04,161 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:08,300 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:08,520 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:08,769 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:09,035 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:09,393 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:13,298 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:13,487 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:13,736 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:13,970 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:14,313 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:18,312 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:18,485 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:18,703 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:18,890 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:19,218 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:23,325 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:23,512 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:23,715 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:23,933 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:24,198 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:28,335 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:29,085 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:29,381 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:29,772 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:30,069 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:33,349 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:37,536 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:37,816 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:38,082 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:38,331 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:38,566 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:38,769 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:39,050 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:40,487 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:40,846 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:43,564 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:44,032 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:44,344 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:44,704 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:45,047 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:48,578 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:48,749 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="17de73333545990bc951a51
+0208a3638"]
+2019-01-29 10:54:48,968 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="30897d6f54e322d75a4fd19
+a60331735"]
+2019-01-29 10:54:49,280 INFO [IoticAgent.IOT.Client] {watcher} describe() [guid="58f3a785b5e8aaed99a6ffa
+0aa2df0f3"]
+2019-01-29 10:54:49,624 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=200, reduced=True)
+2019-01-29 10:54:53,588 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", locat
+ion="None", unit="None", limit=200, offset=0, reduced=True)
+2019-01-29 10:54:53,588 ERROR [ioticlabs.dt.api.integrator] {watcher} Discovery/update failure
+2019-01-29 10:54:54,400 INFO [ioticlabs.dt.api.integrator] {watcher} Finished
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>

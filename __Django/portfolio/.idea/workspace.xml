@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="55c3af5b-1ae6-4181-b1be-0907679fa8a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Object-relational-Mappers.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../django-template-tags.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/blog/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/blog/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/blog/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/blog/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/blog/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/blog/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/blog/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/blog/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/templates/blog_post_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/templates/home1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../try_django_project/templates/title.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/and or.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Aggregation Framework.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Best way to work with data.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Cost shifted from databases to developer.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Document Data Model.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Drivers and Frameworks.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Legacy Database Design.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/ObjectID.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Python example.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Rich Query Functionality.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Terminology.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/Why MongoDB..JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/1. An Introduction to MongoDB/query functionality.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/2. Your First Application with MongoDB Atlas/Database Concept.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/2. Your First Application with MongoDB Atlas/MongoDB Documents.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/2. Your First Application with MongoDB Atlas/articleGenerator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/2. Your First Application with MongoDB Atlas/crudOperations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/2. Your First Application with MongoDB Atlas/insertArticle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/2. Your First Application with MongoDB Atlas/insertUser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/2. Your First Application with MongoDB Atlas/serverStatus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/BSON.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Data Normalization Complexity.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Data Normalization why..JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Data Normalization.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Data modeling.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Data similer to JSON.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Embedding Documents.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/JSON widely used.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Paul Car.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Performance issues.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Schema Design Factor.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Schema Design Questions.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/3. Schema Design Basics EMEA/Why.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/44.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/Developing with MongoDB.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/Eventual consistency.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/High Availability and Data Durability - 3 node.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/High Availability and Scalability.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/New Replica - 2 Node.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/Replica Set Creation.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/Replica Set Node Failure.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/Replica Set Recovery.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/hvnj.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/jh.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/5. High Availability and Scalability/strong consistency.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/Capture.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/Capture555.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/Capture56.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/Captureurtu.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/db.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/db1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/back-to-basics-2019-master/hiu.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/demo_mongodb_update_one.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/insert and find.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/insert_one.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/limit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/mongo- 1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/mongo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/mongoDB.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/mongodbtest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/query.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/query.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/skip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../__MongoDB/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/Getting Started.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/ImportAirlineDB.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/benford_FraudDetection.rdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/benford_demo.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/benford_setup.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/install_packages.r" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/iris_demo.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/iris_plots.rdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/iris_rx_demo.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/po.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Advanced Analytics/sample_db_setup.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Always Encrypted/Always Encrypted README.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Always Encrypted/Always Encrypted README.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Always Encrypted/AlwaysEncryptedCMK.pfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Data Masking/Data Masking Sample.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/In-Memory Analytics/Clustered Columnstore Sample Queries.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/In-Memory Analytics/Readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/In-Memory OLTP/Disk-based Inserts.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/In-Memory OLTP/Memory-optimized Inserts.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/In-Memory OLTP/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/JSON/1. de-normalization.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/JSON/2. json-views.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/JSON/3. json-procedures.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/JSON/4. json-indexes.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/JSON/5. json-import-export.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/JSON/6. json-query-examples.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/JSON/7. cleanup.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/JSON/readme.txt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/PolyBase/FactResellerSalesArchive.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/PolyBase/PolybaseSample.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/PolyBase/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Query Store/Query Store Sample.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Row-Level Security/Row-Level Security Sample.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Stretch DB/Stretch DB Sample.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Temporal/Temporal Setup.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql-server/sql-server-2016-samples/SQLServer2016Samples/Temporal/Temporal System-Versioning Sample.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../djngo.md" beforeDir="false" afterPath="$PROJECT_DIR$/../djngo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django-README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Django-README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_django_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../try_django_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_django_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../try_django_project/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_django_project/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/../try_django_project/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_django_project/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../try_django_project/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_django_project/templates/hello_world.html" beforeDir="false" afterPath="$PROJECT_DIR$/../try_django_project/templates/hello_world.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_django_project/try_django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../try_django_project/try_django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_django_project/try_django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../try_django_project/try_django_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_django_project/try_django_project/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../try_django_project/try_django_project/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../__Flask/flask_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../__Flask/flask_app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../__http/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../__http/requests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../__python/__data structure/__dictionary/__ordered dict/dict1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../__python/__data structure/__dictionary/__ordered dict/dict1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../__python/__regular expression/re-Match-Object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../__python/__regular expression/re-Match-Object.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/first_portfolio/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/first_portfolio/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Django-README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="272">
+                <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/first_portfolio/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/first_portfolio/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/portfolio/settings.py" />
+        <option value="$PROJECT_DIR$/portfolio/urls.py" />
+        <option value="$PROJECT_DIR$/first_portfolio/views.py" />
+        <option value="$PROJECT_DIR$/first_portfolio/models.py" />
+        <option value="$PROJECT_DIR$/first_portfolio/admin.py" />
+        <option value="$PROJECT_DIR$/Django-README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="30" />
+    <option name="width" value="1296" />
+    <option name="height" value="994" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../try_django_project" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55c3af5b-1ae6-4181-b1be-0907679fa8a3" name="Default Changelist" comment="" />
+      <created>1570168359815</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570168359815</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="22" width="1296" height="1010" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24960254" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Project Explorer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="DB Browser" order="4" />
+      <window_info id="Job Explorer" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Console" order="7" />
+      <window_info anchor="bottom" id="DB Execution Console" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30865604" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/portfolio/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="e#633#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio-project/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/portfolio-project/settings.py" />
+    <entry file="file://$PROJECT_DIR$/first_portfolio/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first_portfolio/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first_portfolio/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first_portfolio/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django-README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="272">
+            <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,56 @@
+="None", limit=50, offset=50, reduced=True)
+2019-07-03 20:13:34,838 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-03 20:13:35,037 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-03 20:13:35,212 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-07-03 20:13:39,657 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-03 20:13:39,833 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-03 20:13:39,833 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-03 20:13:40,011 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-03 20:13:40,186 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+
+
+iterator
+ <generator object FollowerDataHandler.request_sap_document_type at 0x048DBAF0>
+
+
+
+
+
+asset_data
+ {'_id': ObjectId('5cf657f7a98a29cb5dea0db0'), 'Ts': '2019-05-02T00:00:00+00:00', 'Material': '12V2000C10', 'System': '1
+000015', 'Region': '', 'MotorMaterial': 'R16V4000G83', 'Model': 'R16V4000G83 REMAN ENGINE', 'Engine': '4711-001', 'Custo
+mer': 'Land Badenw�rtenberg (0022111236)', 'ConnectivityDeviceNum': 'No Data From Source', 'TrainName': 'No Data From So
+urce', 'asset_id': '1000015', 'source': 'sapmasterdata', 'offset': 712, 'FSV': '1.2', 'EngineEquipmentNumber': '00000000
+0200000082', 'EquipmentNumber': '000000000200000081'}
+
+
+asset_id
+ 1000015
+
+
+Equnr
+ 000000000200000081
+
+
+document_type
+ MOA
+2019-07-03 20:13:42,829 INFO [IoticAgent.IOT.RemotePoint] {Thread-2} tell(timeout=10) [subid=3529834305a41614a5b0f113b79
+aad04]
+
+
+2019-07-03 20:13:43,597 ERROR [rrps.dt.follower.rest_follower.controllers.default_controller] {Thread-2} T2 request not
+handled by provider
+
+2019-07-03 20:13:43,599 INFO [werkzeug] {Thread-2} 127.0.0.1 - - [03/Jul/2019 20:13:43] "GET /test-document/1000015/MOA
+HTTP/1.1" 500 -
+
+2019-07-03 20:13:44,671 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+
+2019-07-03 20:13:44,846 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-03 20:13:44,846 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-03 20:13:45,024 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-03 20:13:45,199 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]

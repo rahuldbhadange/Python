@@ -1,0 +1,5 @@
+DEBUG:root: logger.debug : This will log a message with all level, .debug, .info, .warning, .error and .critical !!!
+INFO:root: logger.info : This will log a message with level, .info, .warning, .error and .critical ! But omits .debug !!!
+WARNING:root: logger.warning : This will log a message with level, .warning, .error and .critical ! But omits .debug and .info !!!
+ERROR:root: logger.error : This will log a message with level, .error and .critical ! But omits .debug, .info and .warning !!!
+CRITICAL:root: logger.critical : This will log a message with level only .critical ! And omits all other, .debug, .info, .warning and .error !!!

@@ -1,0 +1,3 @@
+[console_scripts]
+rrps-dt-follower-example = rrps.dt.follower.example.__main__:main
+

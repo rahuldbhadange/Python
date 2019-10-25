@@ -1,0 +1,228 @@
+    1  pwd
+    2  cd Desktop/
+    3  cd Desktop/
+    4  clone HBD2KOR@ECGCN1031334D MINGW64 ~
+    5  $ cd Desktop/
+    6  HBD2KOR@ECGCN1031334D MINGW64 ~/Desktop
+    7  $ clone
+    8  Clone 
+    9  HBD2KOR@ECGCN1031334D MINGW64 ~
+   10  $ cd Desktop/
+   11  HBD2KOR@ECGCN1031334D MINGW64 ~/Desktop
+   12  $ clone
+   13  git clone 
+   14  HBD2KOR@ECGCN1031334D MINGW64 ~
+   15  $ cd Desktop/
+   16  HBD2KOR@ECGCN1031334D MINGW64 ~/Desktop
+   17  $ clone
+   18  git clone https://github.com/Iotic-Labs/py-IoticAgent
+   19  git bash https://github.com/Iotic-Labs/py-application-examples.git
+   20  git clone  git bash https://github.com/Iotic-Labs/py-applicaclonetion-examples.git
+   21  git clone https://github.com/Iotic-Labs/py-application-examples.git
+   22  #!/bin/bash
+   23  trap '[ "$?" -eq 0 ] || read -p "Looks like something went wrong in step ´$STEP´... Press any key to continue..."' EXIT
+   24  #Quick Hack: used to convert e.g. "C:\Program Files\Docker Toolbox" to "/c/Program Files/Docker Toolbox"
+   25  win_to_unix_path(){  	wd="$(pwd)"; 	cd "$1"; 		the_path="$(pwd)"; 	cd "$wd"; 	echo $the_path; }
+   26  # This is needed  to ensure that binaries provided
+   27  # by Docker Toolbox over-ride binaries provided by
+   28  # Docker for Windows when launching using the Quickstart.
+   29  export PATH="$(win_to_unix_path "${DOCKER_TOOLBOX_INSTALL_PATH}"):$PATH"
+   30  VM=${DOCKER_MACHINE_NAME-default}
+   31  DOCKER_MACHINE="${DOCKER_TOOLBOX_INSTALL_PATH}\docker-machine.exe"
+   32  STEP="Looking for vboxmanage.exe"
+   33  if [ ! -z "$VBOX_MSI_INSTALL_PATH" ]; then   VBOXMANAGE="${VBOX_MSI_INSTALL_PATH}VBoxManage.exe"; else   VBOXMANAGE="${VBOX_INSTALL_PATH}VBoxManage.exe"; fi
+   34  BLUE='\033[1;34m'
+   35  GREEN='\033[0;32m'
+   36  NC='\033[0m'
+   37  #clear all_proxy if not socks address
+   38  if  [[ $ALL_PROXY != socks* ]]; then   unset ALL_PROXY; fi
+   39  if  [[ $all_proxy != socks* ]]; then   unset all_proxy; fi
+   40  if [ ! -f "${DOCKER_MACHINE}" ]; then   echo "Docker Machine is not installed. Please re-run the Toolbox Installer and try again.";   exit 1; fi
+   41  if [ ! -f "${VBOXMANAGE}" ]; then   echo "VirtualBox is not installed. Please re-run the Toolbox Installer and try again.";   exit 1; fi
+   42  cd digital.git/
+   43  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0001-Map-engine-serial-number-instead-of-equipment-number.patch
+   44  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0002-rrps-Fix-Dockerfiles-and-READMEs-for-testing.patch
+   45  git checkout -b dev-temp
+   46  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0003-Allow-to-run-sapmasterdata-static-checks-on-Windows.patch
+   47  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0004
+   48  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0004-rrps.dt.integrator.sapequipmenthistory-General-impro.patch
+   49  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0005-Development-quickstart.patch
+   50  git clone https://github.com/Iotic-Labs/py-IoticAgent.git
+   51  cd digital.git/
+   52  git status
+   53  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory
+   54  git commit -m "item_catche has been added in sapequipmenthistory"
+   55  git format-patch HEAD~2
+   56  git status
+   57  git log --stat -p
+   58  git status
+   59  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory
+   60  git commit --amend
+   61  git rm rrps\python\rrps.dt.integrator.sapequipmenthistory\data\assets.json
+   62  git rm rrps/python/rrps.dt.integrator.sapequipmenthistory/data/assets.json 
+   63  git rm -f rrps/python/rrps.dt.integrator.sapequipmenthistory/data/assets.json 
+   64  git -f rm rrps/python/rrps.dt.integrator.sapequipmenthistory/data/assets.json 
+   65  git status 
+   66  git log --stat -p
+   67  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory
+   68  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory
+   69  git commit
+   70  git stat
+   71  git log --stat -p
+   72  git format-patch HEAD~2
+   73  git add -u -p rrps/python/rrps.dt.integrator.sapbomasbuilt
+   74  git commit -m "sapbomasbuilt-item_cache-upgrade"
+   75  git format-patch HEAD~3
+   76  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall
+   77  git commit -m "sapwarrantyrecall-item_cache-upgrade"
+   78  git format-patch HEAD~4
+   79  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware
+   80  git commit -m "talendfirmware-item_cache-upgrade"
+   81  git format-patch HEAD~5
+   82  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument
+   83  git commit -m "talendtimdocument-item_cache-upgrade"
+   84  git format-patch HEAD~6
+   85  cd digital.git/
+   86  git remote add azure https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+   87  git remote fetch azure
+   88  git remote fetch azure https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+   89  git remote fetch azure https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+   90  git remote fetch azure
+   91  git remote -v fetch azure
+   92  git fetch azure
+   93  git stash
+   94  git checkout dev
+   95  git checkout dev
+   96  git rm rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/mock-document-data.json
+   97  git checkout dev
+   98  git checkout dev
+   99  git reset --hard azure/dev
+  100  git checkout dev-rahul-14195
+  101  git checkout dev-rahul-#14195
+  102  git checkout dev rahul #14195
+  103  git checkout -b dev-rahul-14195
+  104  git stash pop
+  105  git push --set-upstream azure dev-rahul-14195
+  106  git branch -vva
+  107  git staus
+  108  git status
+  109  cd Desktop/
+  110  git clone https://github.com/rahuldbhadange/hello-world.git
+  111  git push hello-world rahuldbhadange-patch-1
+  112  git status
+  113  pwd
+  114  cd digital.git/
+  115  git branch -wa
+  116  git branch -vva
+  117  git status
+  118  git config --global core.autocrlf input
+  119  git status
+  120  git diff
+  121  git diff
+  122  git status
+  123  git log
+  124  git diff
+  125  git log
+  126  git status
+  127  git status | less
+  128  git diff  3rd/python3/static_checks/pylint/lib/astroid/bases.py
+  129  vi 3rd/python3/static_checks/pylint/lib/astroid/bases.py
+  130  vi ~/.gitconfig 
+  131  git checkout 3rd/python
+  132  pwd
+  133  ls
+  134  git checkout 3rd
+  135  git status | less
+  136  vi ~/.gitconfig 
+  137  git status | less
+  138  git status
+  139  vi ~/.gitconfig 
+  140  git status
+  141  git status | less
+  142  git diff  rrps/python/rrps.dt.integrator.talendtimdocument/static_tests.sh
+  143  ls -la  rrps/python/rrps.dt.integrator.talendtimdocument/static_tests.sh
+  144  vi ~/.gitconfig 
+  145  git status | less
+  146  vi ~/.gitconfig 
+  147  git diff
+  148  history
+  149  history | less
+  150  git status
+  151  cd ..
+  152  cp -rp digital.git testlf.git
+  153  cd testlf.git
+  154  git status
+  155  vim rrps/python/rrps.dt.integrator.talendtimdocument/data/assets.json
+  156  vim rrps/python/rrps.dt.integrator.sapwarrantyrecall/cfg/agent.ini
+  157  git checkout-index --force -all
+  158  git checkout-index --force --all
+  159  git status
+  160  vim ~/.gitconfig
+  161  git status
+  162  vim ~/.gitconfig
+  163  git remote ls
+  164  git remote -v
+  165  git checkout-index --force --all
+  166  git status | less
+  167  git status
+  168  git diff  rrps/python/rrps.dt.integrator.sapequipmenthistory/setup.py
+  169  git rm -rf --cached .
+  170  git status
+  171  git reset --hard HEAD
+  172  git status
+  173  git remote -v
+  174  cd ..
+  175  git clone  https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic digitaltwin2.git
+  176  vim ~/.gitconfig 
+  177  git clone  https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic digitaltwin2.git
+  178  pwd
+  179  cd digitaltwin2.git/
+  180  git co dev
+  181  git checkout dev
+  182  cd ..
+  183  cd digital.git/
+  184  git log
+  185  cd ..
+  186  cd digitaltwin2.git/
+  187  git checkout e74d1bf7c2711a423c30ddd8d6652e3b8d067f53
+  188  vim ~/.gitconfig 
+  189  cd ..
+  190  rm -rf digitaltwin2.git/
+  191  git clone  https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic digitaltwin2.git
+  192  cd digitaltwin2.git/
+  193  git checkout e74d1bf7c2711a423c30ddd8d6652e3b8d067f53
+  194  cd ..
+  195  mv digital.git digital_auto.git
+  196  ls
+  197  ls digital.git
+  198  ls digital_auto.git
+  199  mv digital.git digital_auto.git
+  200  pwd
+  201  mv digital.git digital_auto.git
+  202  mv digitaltwin2.git/ digital.git
+  203  cd  digital.git
+  204  cd ..
+  205  cd digital_o
+  206  cd digital_auto.git/
+  207  git 
+  208  cd ..
+  209  cd digital.git
+  210  git checkout dev
+  211  git checkout -b dev-rahul-14195
+  212  git status
+  213  git diff
+  214  vim ~/.gitconfig 
+  215  dir
+  216  cd rrps
+  217  ls
+  218  cd python
+  219  vim setup_venv.cmd 
+  220  git commit -m "sapwarrantyrecall/fix static test errors"
+  221  git config --global user.email external.RahulDilip.Bhadange@rbeibsx.onmicrosoft.com
+  222  git commit --amend --reset-author
+  223  git branch -vva
+  224  git push --set-upstream origin dev-rahul-14195
+  225  history
+  226  cd ~
+  227  cd Desktop/
+  228  history > 20190206_history.txt

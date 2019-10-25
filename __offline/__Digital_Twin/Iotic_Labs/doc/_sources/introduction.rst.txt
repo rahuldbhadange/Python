@@ -1,0 +1,17 @@
+.. _introduction:
+
+Introduction
+============
+
+This is a series of "how to" guides to writing an :term:`integrator` and/or a :term:`follower`.
+
+In the Iotic :term:`Twin <Digital Twin>` model, the twin exists to receive data from an integrator and either to save it,
+in the case of :term:`Event` s or to just forward it on to any followers - as in the case of time-series data.
+
+At the moment, all the APIs are in python and are built as python packages. Each integrator, follower and set of
+events is also built as a package.
+
+..
+    TODO
+
+    Later it would be useful to find a way to integrate https://github.com/Iotic-Labs/iotic_digitaltwin/tree/dev/dt/python/doc/threads .

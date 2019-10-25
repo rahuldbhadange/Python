@@ -1,0 +1,89 @@
+---
+# Copyright (c) 2019 Rolls-Royce Power Systems AG. All rights reserved.
+
+# Configuration specific to SAPMasterDataIntegrator
+
+config:
+
+  sap:
+#    endpoint: http://localhost:5000/sapmasterdata/{asset_id}
+
+    hierarchy_endpoint: http://localhost:5000/sapmasterdata/hierarchy/$filter=Sernr%20eq%20{asset_id}&?format=json
+    master_endpoint: http://localhost:5000/sapmasterdata/master/$filter=Sernr%20eq%20{serial_number_of_the_aggregate}&?format=json
+    usr: ioticuser
+    pwd: ioticpassword
+    timeout: 60
+
+  loop_time: 5
+
+
+# SAPMasterDataIntegrator (core) configuration.
+
+integrator:
+
+  # Event source name as included in published events. Should NOT be changed once set!
+  sou rce: sapmasterdata
+
+  # How many threads to reserve for performing asynchronous tasks such as event publishing and asset updates. Not
+  # applicable in synchronous even publishing case.
+  # workers: 1
+
+  # Metadata applicable to integrator Iotic Thing (all optional apart from lid)
+  thing:
+    lid: sapmasterdata
+    # label:
+    # description:
+    # tags: []
+
+
+  asset:
+    # If specified, keep track of which assets have had field data things created previously to avoid additional Iotic
+    # Space calls
+    cache:
+      # How to persist. If none are specified, an in-memory only cache will be used
+      method:
+        # memory: {}
+        json:
+          path: data/assets.json
+          # How often (in seconds) to write to output file
+          write_interval: 10
+    with_type2: yes
+
+    event:
+      # List of modules to load event definitions from. Only event types registered this way can be published. Each name
+      # must be an absolute module name in Python search path. Note: Internal built-in/virtual event types are always
+      # loaded.
+      modules:
+        - rrps.dt.events
+
+      # Event publishing timeout in seconds (applicable ONLY when confirmation has been requested both in sync and async
+      # cases). Should be high enough to allow for digital twin to respond as otherwise risk publishing the same event
+      # mutiple times. (default will be used if not specified)
+      publish:
+        timeout: 10
+
+    # Search criteria for finding assets (required)
+    discovery:
+      # One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)
+      text: env_m_p
+      # One of public, local or localOwn (default). Public is NOT recommended as one could, despite specified filter,
+      # end up pushing events to a completely unknown thing/point!
+      scope: local
+      # How often to poll for new assets, in seconds
+      interval: 5
+
+      filter:
+        label:
+          # Expected asset thing label. This is a standard Python regular expression and should be contained within
+          # '^' and '$'. Defined groups are ignored and this parameter is optional.
+          # thing_regex:
+          # Expected label for event production related control. (defaults will be used if not specified).
+          # control:
+
+        tags:
+          # Expected unique tag containing asset id. This is a standard Python regular expression and should be
+          # contained within '^' and '$' and define one group (containing asset id). (default will be used if not
+          # specified)
+          unique_regex: '^m_(.+)$'
+          # Expected static tags for each asset
+          thing: ['env_m_p']

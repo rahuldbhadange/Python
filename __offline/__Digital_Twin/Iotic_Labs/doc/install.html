@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Event Definition" href="event_define.html" />
+    <link rel="prev" title="Write an integrator" href="integrator_overview.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="devguide.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="devguide.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="integrator_overview.html">Write an integrator</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="integrator_overview.html#purpose">Purpose</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="integrator_overview.html#how-to-steps">How-to steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="follower_overview.html">Write a follower</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_index.html">API index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="devguide.html">Developer Guide</a> &raquo;</li>
+        
+          <li><a href="integrator_overview.html">Write an integrator</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<span id="install"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="set-up-your-python-enviroment">
+<h2>Set up your python enviroment<a class="headerlink" href="#set-up-your-python-enviroment" title="Permalink to this headline">¶</a></h2>
+<p>In the root directory, setup your python virtual environment “venv” and activate it. You should see (my-venv) at the
+beginning of every command prompt</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">mvenv</span> <span class="n">my</span><span class="o">-</span><span class="n">venv</span>
+<span class="o">.</span> <span class="o">./</span><span class="n">my</span><span class="o">-</span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>Then update your pip installation…</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pip</span>
+</pre></div>
+</div>
+<p>… and install docutils</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">docutils</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-up-your-python-enviroment-windows">
+<h2>Set up your python enviroment (Windows)<a class="headerlink" href="#set-up-your-python-enviroment-windows" title="Permalink to this headline">¶</a></h2>
+<p>The Microsoft build tools are required.
+1. Download from here: <a class="reference external" href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017">https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017</a>
+2. Install from the command line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vs_buildtools</span><span class="o">.</span><span class="n">exe</span> <span class="o">--</span><span class="n">norestart</span> <span class="o">--</span><span class="n">nocache</span> <span class="o">--</span><span class="n">installPath</span> <span class="n">C</span><span class="p">:</span>\<span class="n">BuildTools</span> <span class="o">--</span><span class="n">add</span> <span class="n">Microsoft</span><span class="o">.</span><span class="n">VisualStudio</span><span class="o">.</span><span class="n">Workload</span><span class="o">.</span><span class="n">VCTools</span><span class="p">;</span><span class="n">includeRecommended</span> <span class="o">--</span><span class="n">add</span> <span class="n">Microsoft</span><span class="o">.</span><span class="n">VisualStudio</span><span class="o">.</span><span class="n">Component</span><span class="o">.</span><span class="n">Windows81SDK</span> <span class="o">--</span><span class="n">add</span> <span class="n">Microsoft</span><span class="o">.</span><span class="n">VisualStudio</span><span class="o">.</span><span class="n">ComponentGroup</span><span class="o">.</span><span class="n">NativeDesktop</span><span class="o">.</span><span class="n">Win81</span>
+</pre></div>
+</div>
+<p>Using cmd.exe in the root of the git repository, setup your python virtual environment “venv”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">my</span><span class="o">-</span><span class="n">venv</span>
+<span class="n">my</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
+</pre></div>
+</div>
+<p>Then update your pip installation…</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pip</span> <span class="n">setuptools</span>
+</pre></div>
+</div>
+<p>… and install docutils</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">docutils</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-or-clone-the-source">
+<h2>Download or clone the source<a class="headerlink" href="#download-or-clone-the-source" title="Permalink to this headline">¶</a></h2>
+<p>The best place to start is by looking at the Examples directory.</p>
+<p>This is available from</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">example</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples-file-structure">
+<h2>Examples file-structure<a class="headerlink" href="#examples-file-structure" title="Permalink to this headline">¶</a></h2>
+<p>This is a cut-down version of the file structure of the examples to show you where the important files are and where to put your code and config</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">dt</span>                                       <span class="c1"># &lt;-- route of the example digital twins</span>
+    <span class="o">/</span><span class="n">acmecorp</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">events</span>
+        <span class="o">/</span><span class="n">acmecorp</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">events</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>           <span class="c1"># &lt;-- event definitions in here</span>
+    <span class="o">/</span><span class="n">acmecorp</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">follower</span><span class="o">.</span><span class="n">example</span>
+        <span class="o">/</span><span class="n">acmecorp</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">follower</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">impl</span><span class="o">.</span><span class="n">py</span>     <span class="c1"># &lt;-- follower implementation in here</span>
+        <span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">follower</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">yml</span>                     <span class="c1"># &lt;-- follower config in here</span>
+        <span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">follower</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">yml</span>                     <span class="c1"># &lt;-- follower *logging* config in here</span>
+    <span class="o">/</span><span class="n">acmecorp</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">integrator</span><span class="o">.</span><span class="n">example</span>
+        <span class="o">/</span><span class="n">acmecorp</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">integrator</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">impl</span><span class="o">.</span><span class="n">py</span>   <span class="c1"># &lt;-- integrator implementation in here</span>
+        <span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">integrator</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">yml</span>                   <span class="c1"># &lt;-- integrator config in here</span>
+        <span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">integrator</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">yml</span>                   <span class="c1"># &lt;-- integrator *logging* config in here</span>
+</pre></div>
+</div>
+<p>Copy the complete directory <cite>example/dt</cite> structure to another place the same route directory, replacing:</p>
+<ul class="simple">
+<li><cite>example/dt</cite> with your company, e.g. <cite>newco/dt</cite></li>
+<li><cite>acmecorp</cite> with your company e.g. <cite>newco</cite></li>
+<li><cite>example</cite> in the <cite>dt.follower.example</cite> or <cite>dt.integrator.example</cite> with the function of the code, e.g. <cite>maintenance</cite></li>
+<li><cite>example</cite> in the <cite>/follower/example</cite> or <cite>/integrator/example</cite> with the function of the code, e.g. <cite>maintenance</cite></li>
+</ul>
+<p>You should end up with something like this…</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">newco</span><span class="o">/</span><span class="n">dt</span>                                         <span class="c1"># &lt;-- route of the example digital twins</span>
+    <span class="o">/</span><span class="n">newco</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">events</span>
+        <span class="o">/</span><span class="n">newco</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">events</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>              <span class="c1"># &lt;-- event definitions in here</span>
+    <span class="o">/</span><span class="n">newco</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">follower</span><span class="o">.</span><span class="n">maintenance</span>
+        <span class="o">/</span><span class="n">newco</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">follower</span><span class="o">/</span><span class="n">maintenance</span><span class="o">/</span><span class="n">impl</span><span class="o">.</span><span class="n">py</span>    <span class="c1"># &lt;-- follower implementation in here</span>
+        <span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">follower</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">yml</span>                     <span class="c1"># &lt;-- follower config in here</span>
+        <span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">follower</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">yml</span>                     <span class="c1"># &lt;-- follower *logging* config in here</span>
+    <span class="o">/</span><span class="n">newco</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">integrator</span><span class="o">.</span><span class="n">maintenance</span>
+        <span class="o">/</span><span class="n">newco</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">integrator</span><span class="o">/</span><span class="n">maintenance</span><span class="o">/</span><span class="n">impl</span><span class="o">.</span><span class="n">py</span>  <span class="c1"># &lt;-- integrator implementation in here</span>
+        <span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">integrator</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">yml</span>                   <span class="c1"># &lt;-- integrator config in here</span>
+        <span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">integrator</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">yml</span>                   <span class="c1"># &lt;-- integrator *logging* config in here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="packages">
+<h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ioticlabs-dt-common">
+<h2>ioticlabs.dt.common<a class="headerlink" href="#ioticlabs-dt-common" title="Permalink to this headline">¶</a></h2>
+<p>Functionality, templates and defaults shared amongst provider, API &amp; runner packages.</p>
+</div>
+<div class="section" id="ioticlabs-dt-provider">
+<h2>ioticlabs.dt.provider<a class="headerlink" href="#ioticlabs-dt-provider" title="Permalink to this headline">¶</a></h2>
+<p>Implements integrator, follower and T2 routing concepts using Iotic Space primitives. Only used for implementing DT runners.</p>
+<p>Note: The name of this module is not to be confused with the term “T2 provider”, which is an integrator that can service at least one T2 request. Instead “Provider” in this package’s context refers to its ability to represent assets etc. but without offering a runtime or the ability to dynamically determine what assets to create/delete. (That in turn is the responsibility of ioticlabs.dt.runner.)</p>
+</div>
+<div class="section" id="ioticlabs-dt-runner">
+<h2>ioticlabs.dt.runner<a class="headerlink" href="#ioticlabs-dt-runner" title="Permalink to this headline">¶</a></h2>
+<p>Exposes ioticlabs.dt.provider implementations as a service, currently with a fixed asset list.</p>
+</div>
+<div class="section" id="ioticlabs-dt-api">
+<h2>ioticlabs.dt.api<a class="headerlink" href="#ioticlabs-dt-api" title="Permalink to this headline">¶</a></h2>
+<p>Provides APIs and callbacks to implement specific followers, integrators or T2 providers. Asset discovery is automated.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="event_define.html" class="btn btn-neutral float-right" title="Event Definition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="integrator_overview.html" class="btn btn-neutral" title="Write an integrator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

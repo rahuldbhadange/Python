@@ -1,0 +1,30 @@
+>>> def a():
+    return 1
+
+>>> b = lambda: 1
+>>> a
+<function a at 0x0000000004036F98>
+>>> b
+<function <lambda> at 0x0000000004031588>
+
+
+''' As we can see - python knows that b is a lambda function and a is a regular function. why is that? '''
+
+
+>>> type(a)
+<type 'function'>
+>>> type(b)
+<type 'function'>
+
+'''They are the same type so they are treated the same way:'''
+
+
+
+
+>>> a.func_name
+'a'
+>>> b.func_name
+'<lambda>'
+
+Python also knows that b was defined as a lambda function and it sets that as function name:
+

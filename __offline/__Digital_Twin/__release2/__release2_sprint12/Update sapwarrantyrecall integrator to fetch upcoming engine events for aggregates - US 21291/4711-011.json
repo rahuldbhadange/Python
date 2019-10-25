@@ -1,0 +1,31 @@
+{
+  "d": {
+    "results": [
+      {
+        "Pnguid": "AFBWiyhYHtiE5aq+SeSqiw==",
+        "Pncnt": "00000001",
+        "HPntext": "2018.02.16.0001",
+        "Clmno": "000440000120",
+        "Clmty": "YCIF",
+        "Refdt": "/Date(1514764800000)/",
+        "Refno": "2018.02.16.0001",
+        "Sernr": "",
+        "Equnr": "000000000200000081",
+        "Parnr": "",
+        "Astate": "YC20",
+        "Abdes": "Active",
+        "YywtyState": "",
+        "YycifPrio": "M",
+        "YycifPriotxt": "Modifikation",
+        "Yyroopen": "0000-00-00",
+        "Yyroclosed": "0000-00-00",
+        "YydueDate": "2018-12-31",
+        "Yysystfir": "",
+        "Yyclmtype": "",
+        "Yyclmtypetxt": "",
+        "Yyrepcountry": "",
+        "DocLink": "HTTP://WWW.PRORATA-NOW.COM"
+      }
+    ]
+  }
+}

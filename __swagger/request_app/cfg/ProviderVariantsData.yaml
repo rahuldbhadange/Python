@@ -1,0 +1,9 @@
+properties:
+  displayName:
+    type: string
+  cif:
+    type: string
+  availableTemplates:
+    type: array
+      items:
+      type: string

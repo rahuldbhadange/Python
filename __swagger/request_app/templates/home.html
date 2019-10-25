@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block title%} Homepage {% endblock %}
+
+{% block content %}
+
+{{ super() }}
+
+<h1>Welcome {{ name }}, You are on the home page!</h1>
+<!--<h2>This is {{ location }}.</h2>-->
+
+{% if display %}
+
+<h2>This is being displayed !</h2>
+
+{% else %}
+<h2>This is a else block</h2>
+
+{% endif %}
+
+{% for x in my_dict %}
+<h3>{{x.three}}</h3>
+{% endfor %}
+
+{% for x in my_list %}
+<h4>{{ x }}</h4>
+{% endfor %}
+
+<img src="{{ url_for('static', filename= 'images/panda.jpg') }}">
+{% include "include.html" %}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+OK I've spoken to Fabio about 14374.  
+
+He pointed out that we need to handle 404 specially.  
+
+Apart from that the code is good. 
+
+Could you make the minor change above raise_for_status everywhere? 
+
+
+
+
+
+
+
+
+ And have the WeatherInfoSet event defined ==>>
+
+As suggested above?
+
+
+
+
+
+
+
+
+
+def main():
+    signal(SIGTERM, sigterm_handler)
+
+    args = parse_args()
+    follower = follower_via_storeutil(args) if args.storeutil else follower_via_args(args)
+    try:
+        follower.run()
+    except KeyboardInterrupt:
+        pass

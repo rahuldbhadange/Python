@@ -1,0 +1,15 @@
+        'ioticlabs.dt.common>=0.1.3,<0.2'
+        'ioticlabs.common.storeutil>=0.1.0,<0.2',
+        # Example: For using asset offset tracker's mongodb implementation (in ioticlabs.dt.api.follower.tracker)
+        'ioticlabs.dt.common[azure]',
+        'ioticlabs.dt.api>=0.1.11,<0.2',
+        # Note: Minor version changes in event definitions should never break existing events, only add new versions
+        # (but keep old defaults).
+        'rrps.dt.events>=0.1.0,<0.2'
+
+
+
+
+
+If you change the cfg/integrator.cfg.yml to use memory store instead of json 
+it will be easier to test (since it will replay all events every time rather than just new ones if it finds a cache) 

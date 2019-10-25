@@ -1,0 +1,4 @@
+ioticlabs.common.storeutil<0.2,>=0.1.0
+ioticlabs.dt.common[azure]
+ioticlabs.dt.api<0.2,>=0.1.11
+rrps.dt.events<0.2,>=0.1.0

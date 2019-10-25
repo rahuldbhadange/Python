@@ -1,0 +1,253 @@
+.. _integrator_configure:
+
+Integrator configuration
+========================
+
+The configuration file(s) for any integrator should be in the `cfg` folder on the root of the particular integrator.
+
+There will be 2 files
+
+#. the integrator.cfg.yml - this is for the integrator itself
+#. the integrator.log.yml - this is only for logging, we won't consider that here:
+
+::
+
+    ./example/dt/acmecorp.dt.integrator.example/cfg/integrator.cfg.yml
+    ./example/dt/acmecorp.dt.integrator.example/cfg/integrator.log.yml
+
+Format
+------
+
+The files are in the loose standard YAML format where indentation and colons (:) are used to show nesting.
+
+Example
+~~~~~~~
+
+::
+
+    my_config:
+
+      some:
+        var: Some value
+
+Integrator
+----------
+
+The main section for the Integrator config.
+
+- `source` the text source name used to identify the origin of the events. Don't change this after you've published any events.
+- `workers` the number of threads your integrator needs
+- `thing` identifying descriptive text about your integrator's Iotic Thing
+
+  - `lid` the local id of your integrator's Iotic Thing
+  - `label` the short description of your integrator's Iotic Thing. (Rarely needed)
+  - `description` the long description of your integrator's Iotic Thing. (Even less likely to need)
+  - `tags` a list of tags to help identify your integrator's Iotic Thing as a T2 provider. (Only needed in the case of T2 being enabled)
+
+::
+
+    integrator:
+
+      # Event source name as included in published events. Should NOT be changed once set!
+      source: acmecorp
+
+      # How many threads to reserve for performing asynchronous tasks such as event publishing and asset updates. Not
+      # applicable in synchronous event publishing case.
+      # workers: 1
+
+      # Metadata applicable to integrator Iotic Thing (all optional apart from lid)
+      thing:
+        lid: acme_integrator
+        # label:
+        # description:
+        # If type2 is enabled, this must be populated explicitly with one tag to identify the thing as a t2 provider and
+        # another to indicate the name of the provider.
+        # tags: []
+
+      # Details for controls associated with integrator thing (defaults will be used if not specified)
+      # point:
+        # lid:
+          # t2req:
+        # label:
+          # t2req:
+
+Asset
+~~~~~
+
+A group of config items for the asset twin.
+
+Events Module
+*************
+
+This allows you specify which sets of events (as defined by their module)
+your integrator is allowed to publish. If you try to publish something
+that is not in the list, then the event will be rejected and not reach the twin.
+
+::
+
+    event:
+      modules:
+        - rrps.dt.events
+
+Events Publish
+**************
+
+Here you can specify what publishing parameters you need. At the moment it's only:
+
+- timeout: the timeout in seconds for the twin to respond to the event publish
+
+::
+
+    # Event publishing timeout in seconds (applicable ONLY when confirmation has been requested both in sync and async
+    # cases). Should be high enough to allow for digital twin to respond as otherwise risk publishing the same event
+    # mutiple times. (default will be used if not specified)
+    publish:
+      timeout: 10
+
+Twin Discovery
+**************
+
+The `discovery:` part of the config is used to tell the Integrator API what digital twins to search for and how frequently.
+
+In the following example.
+
+- `text` a text or tag applied to all twins in a particular environment that identifies them as producers
+  of event-logs. These are the right twins for :term:`integrator` s to search for as they are able to receive events and
+  write them to the persistent storage.
+- `scope` refers to where in Iotic Space the search is to look. Local means in the same subspace as your integrator.
+- `interval` is how frequently the search should be performed to look for new twins.
+- `filter` is to refine how the search will work
+
+  - `label` allows you to search within the Digital Twins' `Label` s for extra text (not normally necessary)
+  - `tags` will get information from the tags associated with the twin. For example the twins in a "Q" environment will be tagged with "env_q_p" and also with a unique tag of "q_123456" where the 123456 is the unique id of the thing
+
+::
+
+    discovery:
+      # One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)
+      text: env_q_p
+      # One of public, local or localOwn (default).
+      scope: local
+      # How often to poll for new assets, in seconds
+      interval: 3600
+
+      filter:
+        label:
+          # Expected asset thing label. This is a standard Python regular expression and should be contained within
+          # '^' and '$'. Defined groups are ignored and this parameter is optional.
+          #thing_regex: '^q producer$'
+          # Expected label for event production related control. (defaults will be used if not specified).
+          # control:
+
+        tags:
+          # Expected unique tag containing asset id. This is a standard Python regular expression and should be
+          # contained within '^' and '$' and define one group (containing asset id). (default will be used if not
+          # specified)
+          unique_regex: '^q_(.+)$'
+          # Expected static tags for each asset
+          thing:
+          - env_q_p
+
+
+.. _t2_config_integrator:
+
+Type 2 specifics
+----------------
+
+In order to inform the twin that your Integrator is capable of providing a :term:`Type 2 request <Type2request>` you have to do 2 things:
+
+#. Enable type two in the `asset:` section
+#. Set 2 tags in the `thing:` section
+
+    #. Set the `q_t2` tag that says this is a T2 provider in a "Q" environment
+    #. Set the `q_t2_<name>` where the <name> is the unique id of the T2 request
+
+::
+
+    asset:
+
+      type2:
+        # Whether to expect assets to expose type2 functionality. Assets which do not have the right points to support
+        # type2 requests will be ignored if this is enabled.
+        enabled: yes
+
+
+    thing:
+      tags:
+      - q_t2
+      - q_t2_sapspc
+
+
+Your own config
+---------------
+
+In the section `my_config` (or chose your own name) you can add anything you need. This will be passed to the integrator
+along with all the other sections in the YAML.
+
+::
+
+    my_config:
+
+      some:
+        var: Some value
+
+      another:
+        item:
+          somewhere:
+            - 4
+            - 10
+            - 7
+            - 3
+
+
+Reading config from the code
+----------------------------
+
+The config is passed to your integrator. It's best to handle this in the `__init__()` method.
+
+The nested config handler API is :ref:`here <api_nestedconfig>`
+
+Imports
+~~~~~~~
+
+Import the nested config handler
+
+::
+
+    from ioticlabs.dt.api.util import NestedConfig, log_exceptions
+
+Get and validate the config
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the code you can get keys from the config as if it were a dictionary.
+
+::
+
+    config = config['my_config']
+    key = 'my_var'
+    # Could just access like any dict
+    log.debug('CONFIG [%s] %s', key, config.get(key, 'default value'))
+
+
+Or you can use the "dot" notation to get nested config items in one go - and check them all in one call.
+
+::
+
+    config = config['my_config']
+    key = 'some.var'
+    log.debug(
+        'CONFIG [%s] %s', key,
+        NestedConfig.get(config, key, required=False, default=42, check=NestedConfig.Check.non_empty_str)
+    )
+
+If you need some extra validation that's not available via the NestedConfig object, you can add that, too.
+
+::
+
+    key = 'another.item.somewhere'
+    log.debug(
+        'CONFIG [%s] %s', key,
+        NestedConfig.get(config, key, check=(
+            lambda x: isinstance(x, Sequence) and all(isinstance(item, int) and 1 <= item <= 10 for item in x)
+        ))
+    )

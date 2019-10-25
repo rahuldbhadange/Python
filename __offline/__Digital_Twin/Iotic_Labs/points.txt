@@ -1,0 +1,5 @@
+guid - globally unique ID
+
+lid - local ID
+
+'Getting_Started.ini' - CONFIG .ini

@@ -1,0 +1,49 @@
+git push --set-upstream origin dev-rahul-document
+
+http://127.0.0.1:8080/
+
+
+
+The Follower has an issue, I guess.
+Event data decoding failed SapWarrantyRecallSet.....
+
+2019-07-02 11:37:22,887 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,890 ERROR [ioticlabs.dt.api.follower] {tp-0} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,893 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,896 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,900 ERROR [ioticlabs.dt.api.follower] {tp-0} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,902 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,905 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,905 INFO [ioticlabs.dt.api.follower] {tp-0} Replay finished for 1000020 @ 786
+2019-07-02 11:37:22,907 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Interna
+l: <IntTwinEofReplay v1 ('1000020'@786)>
+2019-07-02 11:37:22,908 ERROR [ioticlabs.dt.api.follower] {tp-0} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,910 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,911 ERROR [ioticlabs.dt.api.follower] {tp-0} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,914 ERROR [ioticlabs.dt.api.follower] {tp-0} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,916 ERROR [ioticlabs.dt.api.follower] {tp-0} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+
+
+1 point => 1 to 6 hours
+
+
+
+What about the file extension ?
+
+Just curious about, What we will going to t2_respond ?? 'Xstring' ??
+		
+
+I got the error called 2019-07-03 19:57:09,311 ERROR [rrps.dt.follower.rest_follower.controllers.default_controller] {Thread-2} T2 request not
+handled by provider 

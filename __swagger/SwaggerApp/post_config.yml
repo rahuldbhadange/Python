@@ -1,0 +1,55 @@
+swagger: "3.0"
+info:
+  description: "This is a sample server."
+  version: "1.0.0"
+  title: "Swagger Application"
+#  termsOfService: "http://swagger.io/terms/"
+#  contact:
+#    email: "apiteam@swagger.io"
+#  license:
+#    name: "Apache 2.0"
+#    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+#schemes:
+#- "https"
+#- "http"
+summary: "summary POST"
+description: "description POST"
+operationId: "_add_function"
+consumes:
+  - "application/json"
+  - "application/text"
+produces:
+- "application/json"
+- "application/xml"
+parameters:
+  - in: "body"
+    name: "body"
+    description: "Accepts a input dictionary of inputs 'name' and 'location'"
+  schema:
+    - type: "object"
+    properties:
+    - name: "name"
+#      in: "formData"
+      description: "Updated name of the person"
+      required: True
+      type: "string"
+      example: "Rahul"
+    - name: "location"
+#      in: "formData"
+      description: "Updated location of the person"
+      required: True
+      type: "string"
+      example: "Nashik"
+responses:
+  405:
+    description: "Invalid input"
+  200:
+    description: 'successful operation'
+  400:
+    description: 'Invalid ID supplied'
+  404:
+    description: 'Id not found'
+  500:
+    description: 'INTERNAL SERVER ERROR'
+x-swagger-router-controller: '__Flask.SwaggerApp.swagger_python_flask_app'
+#x-swagger-router-controller: 'swagger_python_flask_app'

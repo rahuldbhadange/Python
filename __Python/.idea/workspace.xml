@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db8a3bec-355c-4741-bd42-a7dd1d299006" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/__class/__polymorphism/ex1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__args_and_kwargs/args_01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__args_and_kwargs/ex1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__args_and_kwargs/ex2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__args_and_kwargs/ex3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__args_and_kwargs/ex4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__args_and_kwargs/ex5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__class/__static method/ex1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__dictionary/dict_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/__dictionary/dict_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__dictionary/dict_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/__dictionary/dict_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__dictionary/ex1.py" beforeDir="false" afterPath="$PROJECT_DIR$/__dictionary/ex1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__filter/filter1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__lambda/lambda1.py" beforeDir="false" afterPath="$PROJECT_DIR$/__lambda/lambda1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__ordered_dict/ex1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__ordered_dict/ex2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__ordered_dict/ex3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__polymorphism/ex1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__polymorphism/ex2.py" beforeDir="false" afterPath="$PROJECT_DIR$/__class/__polymorphism/ex2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__random/ex1.py" beforeDir="false" afterPath="$PROJECT_DIR$/__random/ex1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__regular_expression/demo_regex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__sorting/Sorting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__sorting/Sorting2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__sorting/Sorting3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__sorting/sorting1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__super()/super_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__super()/super_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__time_pass/file open 1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__time_pass/tp1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__with open/with_open_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test - 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test - 1.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__dictionary/__ordered dict/ex1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__dictionary/__ordered dict/dict1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="135" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="135" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/__dictionary/__ordered dict/rank_students.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__dictionary/__ordered dict/ex2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/eg.py" />
+        <option value="$PROJECT_DIR$/__function/_function_1.py" />
+        <option value="$PROJECT_DIR$/test - 1.py" />
+        <option value="$PROJECT_DIR$/__polymorphism/ex1.py" />
+        <option value="$PROJECT_DIR$/__polymorphism/ex2.py" />
+        <option value="$PROJECT_DIR$/__random/ex1.py" />
+        <option value="$PROJECT_DIR$/__sorting/Sorting.py" />
+        <option value="$PROJECT_DIR$/__sorting/sorting1.py" />
+        <option value="$PROJECT_DIR$/__sorting/_sort_2.py" />
+        <option value="$PROJECT_DIR$/__list/_list_1.py" />
+        <option value="$PROJECT_DIR$/__class/class_1.py" />
+        <option value="$PROJECT_DIR$/__static method/ex1.py" />
+        <option value="$PROJECT_DIR$/__lambda/lambda1.py" />
+        <option value="$PROJECT_DIR$/__regular expression/demo_regex.py" />
+        <option value="$PROJECT_DIR$/__dictionary/dict-5.py" />
+        <option value="$PROJECT_DIR$/__dictionary/dict_2.py" />
+        <option value="$PROJECT_DIR$/__dictionary/dict_3.py" />
+        <option value="$PROJECT_DIR$/__dictionary/dict_4.py" />
+        <option value="$PROJECT_DIR$/__dictionary/ex1.py" />
+        <option value="$PROJECT_DIR$/__class/__static method/static_2.py" />
+        <option value="$PROJECT_DIR$/__class/__static method/static vs class.py" />
+        <option value="$PROJECT_DIR$/__class/__static method/static_3.py" />
+        <option value="$PROJECT_DIR$/__dictionary/dict1.py" />
+        <option value="$PROJECT_DIR$/__dictionary/__ordered dict/ex1.py" />
+        <option value="$PROJECT_DIR$/__dictionary/__ordered dict/ex2.py" />
+        <option value="$PROJECT_DIR$/__dictionary/__ordered dict/dict1.py" />
+        <option value="$PROJECT_DIR$/__dictionary/__ordered dict/rank_students.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-15" />
+    <option name="y" value="409" />
+    <option name="width" value="1296" />
+    <option name="height" value="1044" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+              <item name="__class" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+              <item name="__class" type="462c0819:PsiDirectoryNode" />
+              <item name="__static method" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+              <item name="__dictionary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+              <item name="__dictionary" type="462c0819:PsiDirectoryNode" />
+              <item name="__ordered dict" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+              <item name="__function" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+              <item name="__lambda" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+              <item name="__numpy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+              <item name="__regular expression" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="__python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="__python" type="462c0819:PsiDirectoryNode" />
+              <item name="__super" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Win\__area_51\__python\__dictionary" />
+      <recent name="C:\Win\__area_51\__python\__class" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.rank_students">
+    <configuration name="dict1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="__python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__dictionary/__ordered dict" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__dictionary/__ordered dict/dict1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dict1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="__python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__dictionary" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__dictionary/dict1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="__python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__dictionary/__ordered dict" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__dictionary/__ordered dict/ex1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="__python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__dictionary/__ordered dict" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__dictionary/__ordered dict/ex2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rank_students" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="__python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__dictionary/__ordered dict" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__dictionary/__ordered dict/rank_students.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.rank_students" />
+        <item itemvalue="Python.dict1 (1)" />
+        <item itemvalue="Python.ex2" />
+        <item itemvalue="Python.ex1 (1)" />
+        <item itemvalue="Python.dict1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db8a3bec-355c-4741-bd42-a7dd1d299006" name="Default Changelist" comment="" />
+      <created>1554194002609</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554194002609</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="32" width="1296" height="1000" extended-state="7" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17885533" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3375576" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39976957" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/eg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__function/_function_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#340#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/welcome.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test - 1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__random/ex1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__sorting/sorting1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__sorting/Sorting2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__sorting/Sorting3.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__sorting/Sorting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__sorting/_sort_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__list/list sorting.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__list/_list_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="71" lean-forward="true" selection-start-column="71" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__sorting/_sort_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__class/class_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__class/__polymorphism/ex1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__class/__polymorphism/ex2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__class/__static method/ex1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="26" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__lambda/Lambda.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__lambda/lambda1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__regular expression/demo_regex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__super/super_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__super/super_1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/dict-5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/dict_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/dict_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/dict_4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/ex1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="60" lean-forward="true" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/dict1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__class/__static method/static_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__class/__static method/static_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__class/__static method/static vs class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/__ordered dict/ex1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/__ordered dict/ex2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/__ordered dict/dict1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="135" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__dictionary/__ordered dict/rank_students.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,61 @@
+********************************************************************************
+fielddatasuccessset
+2
+{'Blobname': '2018/04/13/11/30/1000020_20180413_113004_20180414_103609_1.csv', 'Location': {'Latitude': 53.79201889038086, 'Longitude': 4.949999856762588e-05}}
+********************************************************************************
+fielddatasuccessset
+2
+{'Blobname': '2018/04/13/11/00/1000021_20180413_110003_20180413_182016_1.csv', 'Location': {'Latitude': 55.95227813720703, 'Longitude': 4.949999856762588e-05}}
+********************************************************************************
+fielddatasuccessset
+2
+{'Blobname': '2018/04/13/11/15/1000021_20180413_111509_20180413_183522_1.csv', 'Location': {'Latitude': 55.95227813720703, 'Longitude': 4.949999856762588e-05}}
+********************************************************************************
+fielddatasuccessset
+2
+{'Blobname': '2018/04/13/11/45/1000020_20180413_114505_20180414_105110_1.csv', 'Location': {'Latitude': 53.79201889038086, 'Longitude': 4.949999856762588e-05}}2019-03-21 19:41:44,668 INFO [rrps.dt.synthesiser.weather.impl] {ioticlabs.dt.api.follower.__do_callback} [1000021
+] #326 FieldData-Success-Set (from fielddata) @ 2019-03-16 06:14:42.745374 (sys: None)
+{'Blobname': '2018/04/13/11/30/1000021_20180413_113005_20180413_185018_1.csv',
+ 'Location': {'Latitude': 55.95227813720703,
+              'Longitude': 4.949999856762588e-05}}
+2019-03-21 19:41:44,670 INFO [rrps.dt.synthesiser.weather.impl] {ioticlabs.dt.api.follower.__do_callback} [1000020] #327 FieldData-Success-Set (from fielddata) @ 2019-03-16 06:14:48.244943 (sys: None)
+{'Blobname': '2018/04/13/12/00/1000020_20180413_120002_20180414_110607_1.csv',
+ 'Location': {'Latitude': 53.79201889038086,
+              'Longitude': 4.949999856762588e-05}}
+2019-03-21 19:41:44,670 INFO [rrps.dt.synthesiser.weather.impl] {ioticlabs.dt.api.follower.__do_callback} [1000021] #327 FieldData-Success-Set (from fielddata) @ 2019-03-16 06:14:46.194582 (sys: None)
+{'Blobname': '2018/04/13/11/45/1000021_20180413_114505_20180413_190518_1.csv',
+ 'Location': {'Latitude': 55.95227813720703,
+              'Longitude': 4.949999856762588e-05}}
+2019-03-21 19:41:44,671 INFO [rrps.dt.synthesiser.weather.impl] {ioticlabs.dt.api.follower.__do_callback} [1000021] #328 FieldData-Success-Set (from fielddata) @ 2019-03-16 06:14:49.888954 (sys: None)
+{'Blobname': '2018/04/13/12/00/1000021_20180413_120003_20180413_192016_1.csv',
+ 'Location': {'Latitude': 55.95227813720703,
+              'Longitude': 4.949999856762588e-05}}
+2019-03-21 19:42:01,148 DEBUG [rrps.dt.synthesiser.weather.nearestweather] {MainThread} Recent data received. Shared at 2019-03-21 19:07:27.101451
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 994, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 338, in getMessage
+    msg = msg % self.args
+TypeError: not enough arguments for format string
+Call stack:
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/venv/bin/rrps.dt.synthesiser.weather", line 11, in <module>
+    load_entry_point('rrps.dt.synthesiser.weather', 'console_scripts', 'rrps.dt.synthesiser.weather')()
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/__main__.py", line 71, in main
+    follower.run()
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/venv/lib/python3.6/site-packages/IoticAgent/ThingRunner.py", line 83, in run
+    self.__run()
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/venv/lib/python3.6/site-packages/IoticAgent/ThingRunner.py", line 98, in __run
+    self.main()
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py", line 51, in main
+    __event_object = __nea_wea.find_nearest_weather()
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/nearestweather.py", line 54, in find_nearest_weather
+    __recent_weather_to_publish = self.__process_data(sample)
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/nearestweather.py", line 85, in __process_data
+    log.debug('Found recent data for key %s: value: %s', args['data'])
+Message: 'Found recent data for key %s: value: %s'
+Arguments: {'time': '2019-03-21T21:00:00Z', 'feels': 11.0, 'gust': 11.0, 'humid': 83.0, 'temp': 12.0, 'visib': 'GO', 'winddir': 'SSW', 'windspd': 4.0, 'uv': 0.0, 'type': '7', 'prob': '8'}

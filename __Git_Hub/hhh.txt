@@ -1,0 +1,500 @@
+   30  git add ____Git
+   31  git add __Git Hub
+   32  git status
+   33  git add __Git Hub/
+   34  git add __Git Hub
+   35  git add __HTML
+   36  git add __Python
+   37  git add __Mongo DB/
+   38  git add __Mongo DB
+   39  git status
+   40  git add __Git_Hub
+   41  git status
+   42  git add __python
+   43  git add __Git_Hub
+   44  git status
+   45  git add Service Name wrt Port.png
+   46  git commit -m "update"
+   47  git push
+   48  git checkout dev
+   49  git stash 
+   50  git checkout dev
+   51  git checkout -b dev-rahul-partinfo
+   52  git checkout dev
+   53  git pull origin dev
+   54  git checkout dev-rahul-partinfo
+   55  git checkout dev
+   56  git checkout -b dev-rahul-partinformation
+   57  git status 
+   58  git status 
+   59  git status 
+   60  git status 
+   61  git status 
+   62  git status
+   63  git add __Machine-Learning
+   64  git commit -m "practice session"
+   65  git commit -m "practice session"
+   66  git stash
+   67  git stash list
+   68  git stash
+   69  git stash 
+   70  git merge
+   71  git rm .idea/workspace.xml
+   72  git add .idea/workspace.xml
+   73  git status 
+   74  git status 
+   75  git pull
+   76  git commit -m "practice session"
+   77  git status 
+   78  git push
+   79  git stash list
+   80  git status 
+   81  git status 
+   82  cd ..
+   83  cd ..
+   84  cd Wi
+   85  cd Window
+   86  git status 
+   87  git status
+   88  git add __Machine-Learning
+   89  git status
+   90  git commit __Machine-Learning - m "GL session study"
+   91  git commit __Machine-Learning - m"GL session study"
+   92  git commit __Machine-Learning -m"GL session study"
+   93  git push --set-upstream origin machine_learning 
+   94  git status
+   95  git status 
+   96  git status
+   97  cd ..
+   98  git status
+   99  cd work_practice/
+  100  git status
+  101  git add __Flask
+  102  git add __Python
+  103  git add __http
+  104  git add __HTML/
+  105  git add __Mongo_DB
+  106  git status
+  107  git status
+  108  git add Service Name wrt Port.png
+  109  git add __git_hub
+  110  git status
+  111  git add __Python
+  112  git status
+  113  cd ..
+  114  cd ..
+  115  cd Wind
+  116  cd Window
+  117  git status
+  118  git add __Machine-Learning
+  119  git status
+  120  git commit -m"update"
+  121  git push --set-upstream origin machine_learning 
+  122  cd ..
+  123  cd win
+  124  cd work_practice/
+  125  git status
+  126  git commit -m"update"
+  127  git push --set-upstream origin test-and-play 
+  128  exit
+  129  cd..
+  130  cd..
+  131  cd..
+  132  git status
+  133  cd..
+  134  cd ..
+  135  cd ..
+  136  git clone https://github.com/swagger-api/swagger-codegen.git
+  137  cd swagger-codegen/
+  138  cd ..
+  139  git status
+  140  cd ..
+  141  git status
+  142  git 
+  143  cd work_practice/
+  144  git status
+  145  git add __Django
+  146  git add __Flask
+  147  git status
+  148  git add __swagger
+  149  git status
+  150  git status
+  151  git commit -m"update"
+  152  git push --set-upstream origin test-and-play 
+  153  git status
+  154  git add __Flask
+  155  git commit -m"update"
+  156  git push --set-upstream origin test-and-play 
+  157  git status
+  158  git add __Machine-Learning
+  159  git commit -m "update"
+  160  git push --set-upstream origin machine_learning
+  161  git checkout
+  162  git stash
+  163  git pull origin dev
+  164  git checkout -b dev-rahul-sapbomasbuilt
+  165  exit
+  166  git status
+  167  git push --set-upstream origin machine_learning
+  168  git commit -m "update"
+  169  git push --set-upstream origin machine_learning
+  170  cd ..
+  171  cd Win
+  172  git status
+  173  cd work_practice/
+  174  git status
+  175  git add __Python
+  176  git add __Flask
+  177  git add __Mongo_DB
+  178  git add __mySQL
+  179  git add __swagger
+  180  git commit -m "update"
+  181  git push --set-upstream origin test-and-play
+  182  cd ..
+  183  cd c/Users/HBD2KOR/digital.git/rrps/python/
+  184  cd..
+  185  cd ..
+  186  cd ..
+  187  git status
+  188  git status
+  189  git status
+  190  git status
+  191  git status
+  192  git status
+  193  git add -u -p 
+  194  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/RiverOfNewsView.py
+  195  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument/rrps/dt/integrator/talendtimdocument/impl.py
+  196  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument/cfg/integrator.cfg.yml
+  197  git commit -m "#20748, #20749 datamatrix update for sapbomasbuilt and talendfirmware events. Enable devmapping added for talendtimdoc"
+  198  git push --set-upstream origin dev-rahul-sapbomasbuilt
+  199  git pull origin machine_learning 
+  200  git status
+  201  git add __Machine-Learning
+  202  git commit -m "update"
+  203  git push --set-upstream origin machine_learning
+  204  git status
+  205  cd ..
+  206  cd digital.git
+  207  git status
+  208  git stash
+  209  git pull origin dev
+  210  git checkout -b dev-rahul-sapmasterdata
+  211  git status
+  212  git status
+  213  git status
+  214  git status
+  215  cd work_practice/
+  216  git status
+  217  git add __Python
+  218  git add __Flask
+  219  git push --set-upstream origin test-and-play
+  220  git commit -m"update"
+  221  git commit -m"update"
+  222  git commit -m"update"
+  223  git push --set-upstream origin test-and-play
+  224  exit
+  225  git status
+  226  cd ..
+  227  git status
+  228  git add __Machine-Learning
+  229  git commit -m "update"
+  230  git push --set-upstream origin machine_learning
+  231  exit
+  232  git status
+  233  git status
+  234  git add -u -p rrps/python/rrps.dt.mockdataapi/cfg/config.py
+  235  git add -u -p rrps/python/rrps.dt.mockdataapi
+  236  git add -u -p rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
+  237  git status
+  238  git add -u -p rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+  239  git status
+  240  git status
+  241  git add -u -p rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+  242  git commit -m "#21243 Adapt the sapmasterdataintegrator to use updated SAP APIs"
+  243  git push --set-upstream origin dev-rahul-sapmasterdata
+  244  git status
+  245  git add -u -p rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+  246  git add -u -p rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+  247  git add -u -p rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
+  248  git add -u -p rrps/python/rrps.dt.mockdataapi
+  249  git status
+  250  git status
+  251  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapmasterdata
+  252  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapmasterdata
+  253  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapmasterdata
+  254  git status
+  255  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapmasterdata
+  256  git status
+  257  git commit -m "#21243 review comment fixed"
+  258  git push --set-upstream origin dev-rahul-sapmasterdata 
+  259  git status
+  260  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapmasterdata/master/4711-001.json
+  261  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapmasterdata/master/1000015.json
+  262  git add -u -p rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+  263  git status
+  264  git add -u -p rrps/python/rrps.dt.events/rrps/dt/events/__init__.py
+  265  git status
+  266  git commit -m "#21243 new review comment fixed"
+  267  git push --set-upstream origin dev-rahul-sapmasterdata 
+  268  git status
+  269  git add -u -p rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+  270  git commit -m "#21243 new review comment fixed"
+  271  git push --set-upstream origin dev-rahul-sapmasterdata 
+  272  git pull origin dev
+  273  git checkout -b dev-rahul-sapmasterdata
+  274  git checkout -b dev-rahul-sapwarrantyrecall
+  275  git status
+  276  git status
+  277  git add -u -p rrps/python/rrps.dt.events/rrps/dt/events/__init__.py
+  278  git add -u -p rrps/python/rrps.dt.mockdataapi
+  279  git add -u -p rrps/python/rrps.dt.mockdataapi
+  280  git status
+  281  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall/rrps/dt/integrator/sapwarrantyrecall/impl.py
+  282  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall/rrps/dt/integrator/sapwarrantyrecall/impl.py
+  283  git status
+  284  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall/cfg/integrator.cfg.yml
+  285  git add 
+  286  git status
+  287  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/follower.py
+  288  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/BaseView.py
+  289  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/UpcomingEventsView.py
+  290  git status
+  291  git commit -m "#21291 Update sapwarrantyrecall integrator to fetch upcoming engine events for aggregates"
+  292  git push --set-upstream origin dev-rahul-sapwarrantyrecall 
+  293  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/UpcomingEventsView.py
+  294  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/UpcomingEventsView.py
+  295  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/BaseView.py
+  296  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/follower.py
+  297  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall/rrps/dt/integrator/sapwarrantyrecall/impl.py
+  298  git status
+  299  git commit -m "#21291 Review comment resolved"
+  300  git push --set-upstream origin dev-rahul-sapwarrantyrecall
+  301  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall/rrps/dt/integrator/sapwarrantyrecall/impl.py
+  302  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/follower.py
+  303  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/BaseView.py
+  304  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/UpcomingEventsView.py
+  305  git status
+  306  git add -u -p rrps/python/rrps.dt.events/rrps/dt/events/__init__.py
+  307  git status
+  308  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/BasicDataView.py
+  309  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapwarrantyrecall/master/1000015.json
+  310  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapwarrantyrecall/master/4711-011.json 
+  311  git commit -m "#21291 Review comment, prune_engine_events method implemented"
+  312  git push --set-upstream origin dev-rahul-sapwarrantyrecall
+  313  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/follower.py
+  314  git commit -m "#21291 Review comment, SapMasterDataSet-prune_engine_events"
+  315  git push --set-upstream origin dev-rahul-sapwarrantyrecall
+  316  exit
+  317  git status
+  318  git add __Machine-Learning
+  319  cd ..
+  320  git add __Machine-Learning
+  321  git status
+  322  git commit -m"update"
+  323  git push --set-upstream origin machine_learning
+  324  cd ..
+  325  cd Win
+  326  git status
+  327  git add work_practice
+  328  git status
+  329  cd work_practice/
+  330  git status
+  331  git commit -m"update"
+  332  git push --set-upstream origin test-and-play
+  333  git checkout dev
+  334  git checkout origin dev
+  335  git checkout dev
+  336  git pull
+  337  git checkout -b dev-rahul-document
+  338  git status
+  339  git push --set-upstream origin dev-rahul-document
+  340  git status
+  341  git push --set-upstream origin dev-rahul-document
+  342  git status
+  343  git status
+  344  git add -u -p             # if equnr and Dokar == 'MOA':
+  345  git status
+  346  git add -u -p rrps/python/rrps.dt.mockdataapi/rrps/dt/mockdataapi/mock_app_server.py
+  347  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory/rrps/dt/integrator/sapequipmenthistory/impl.py
+  348  git status
+  349  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapequipmenthistory/test_document
+  350  git add -u -p rrps/python/rrps.dt.events/rrps/dt/events/t2defs.py
+  351  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/follower.py
+  352  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/follower.py
+  353  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/controllers/default_controller.py
+  354  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/swagger/swagger.yaml
+  355  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/BasicDataView.py
+  356  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/integrator.cfg.yml
+  357  git status
+  358  git add -u -p rrps/python/rrps.dt.mockdataapi/cfg/config.py
+  359  git commit -m "#22418 - Create Integrator/Follower for Test Bench Document, Station Acceptance"
+  360  git push --set-upstream origin dev-rahul-document 
+  361  cd rrps/python/
+  362  cd rrps.dt.integrator.sapequipmenthistory
+  363  git checkout cfg/integrator.cfg.yml
+  364  git pull
+  365  cd ..
+  366  cd ..
+  367  cd ..
+  368  git status
+  369  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/swagger/swagger.yaml
+  370  git status
+  371  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/swagger/swagger.yaml
+  372  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/controllers/default_controller.py
+  373  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/follower.py
+  374  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapequipmenthistory/test_document
+  375  git status
+  376  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory/rrps/dt/integrator/sapequipmenthistory/impl.py
+  377  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory/rrps/dt/integrator/sapequipmenthistory/impl.py
+  378  git commit -m "#22418 - Document download implemented"
+  379  git push --set-upstream origin dev-rahul-document 
+  380  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapequipmenthistory/test_document
+  381  git commit -m "#22418 - Document download implemented"
+  382  git push --set-upstream origin dev-rahul-document 
+  383  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/controllers/default_controller.py
+  384  git commit -m "#22418 - Document download implemented"
+  385  git push --set-upstream origin dev-rahul-document 
+  386  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/controllers/default_controller.py
+  387  exit
+  388  git status
+  389  cd ..
+  390  git status
+  391  git add -u -p Machine-Learning
+  392  cd Machine-Learning/
+  393  git status
+  394  cd..
+  395  cd ..
+  396  cd ..
+  397  cd Window
+  398  git status
+  399  git add Machine-Learning
+  400  git commit -m"update"
+  401  git push --set-upstream origin machine_learning
+  402  cd ..
+  403  cd Win
+  404  git statuss
+  405  git status
+  406  git add work_practice
+  407  git commit -m"update"
+  408  git push --set-upstream origin test-and-play
+  409  cd work_practice/
+  410  git status
+  411  git add __swagger
+  412  git add __Flask
+  413  git status
+  414  git add __python
+  415  git add __mongo_db 
+  416  git status 
+  417  git commit -m"update"
+  418  git push --set-upstream origin test-and-play
+  419  cd ..
+  420  cd ..
+  421  cd Window
+  422  git status
+  423  git fetch origin
+  424  git checkout -b machine_learning origin/machine_learning 
+  425  git checkout origin/machine_learning 
+  426  git merge master 
+  427  git checkout master 
+  428  git add .idea/workspace.xml 
+  429  git checkout master 
+  430  git rm .idea/workspace.xml 
+  431  git rm -f .idea/workspace.xml 
+  432  git checkout master 
+  433  git merge --no-ff machine_learning 
+  434  git merge --no-ff machine_learning 
+  435  git push origin master 
+  436  git pull
+  437  git push origin master 
+  438  cd..
+  439  cd..
+  440  cd ..
+  441  https://github.com/rahuldbhadange/Machine-Learning-Project.git
+  442  clone https://github.com/rahuldbhadange/Machine-Learning-Project.git
+  443  git clone https://github.com/rahuldbhadange/Machine-Learning-Project.git
+  444  cd Machine-Learning-Project/
+  445  git -b checkout project
+  446  git checkout -b project
+  447  git push --set-upstream origin project
+  448  git push --set-upstream origin project
+  449  git status
+  450  cd ..
+  451  cd Window
+  452  git checkout machine_learning 
+  453  git pull
+  454  git status
+  455  git status
+  456  git checkout dev
+  457  git stash
+  458  git checkout dev
+  459  git pull
+  460  git checkout -b dev-rahul-ron
+  461  git status
+  462  git status
+  463  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/controllers/default_controller.py
+  464  git add -u -p 
+  465  git status
+  466  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/swagger/swagger.yaml
+  467  git commit -m "#23673 Performance issues in loading for RON"
+  468  git push --set-upstream origin dev-rahul-ron
+  469  exit
+  470  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/controllers/default_controller.py
+  471  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/swagger/swagger.yaml
+  472  git commit -m "#23673 date format changed"
+  473  git push --set-upstream origin dev-rahul-ron
+  474  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/controllers/default_controller.py
+  475  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/swagger/swagger.yaml
+  476  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/controllers/default_controller.py
+  477  git commit -m "#23673 date format changed"
+  478  git push --set-upstream origin dev-rahul-ron
+  479  git status
+  480  git status
+  481  git status
+  482  git add ml-project
+  483  git commit -m "ml-project added"
+  484  git push --set-upstream origin project
+  485  git status
+  486  git add Machine-Learning
+  487  git commit -m "ml-data updated"
+  488  git push --set-upstream origin machine_learning
+  489  exit
+  490  git status
+  491  git add Machine-Learning
+  492  git commit -m "ml-data updated"
+  493  git push --set-upstream origin machine_learning
+  494  xit
+  495  exit
+  496  git pull
+  497  git status
+  498  git add -u -p rrps/python/rrps.dt.events/rrps/dt/events/__init__.py
+  499  git status
+  500  git add -u -p rrps/python/rrps.dt.events/setup.py
+  501  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/follower.py
+  502  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/BOMAsBuiltView.py
+  503  git status
+  504  git add -u -p rrps/python/rrps.dt.follower.rest_follower/rrps/dt/follower/rest_follower/views/RiverOfNewsView.py
+  505  git status
+  506  git add -u -p rrps/python/rrps.dt.follower.rest_follower/setup.py
+  507  git add -u -p rrps/python/rrps.dt.integrator.sapbomasbuilt/rrps/dt/integrator/sapbomasbuilt/impl.py
+  508  git status
+  509  git add -u -p rrps/python/rrps.dt.integrator.sapbomasbuilt/setup.py
+  510  git add -u -p rrps/python/rrps.dt.mockdataapi/rrps/dt/mockdataapi/mock_app_server.py
+  511  git add -u -p rrps/python/rrps.dt.mockdataapi/rrps/dt/mockdataapi/mock_app_server.py
+  512  git add -u -p rrps/python/rrps.dt.mockdataapi/cfg/config.py
+  513  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapbomasbuilt/aschange
+  514  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapbomasbuilt
+  515  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapbomasbuilt/aschange
+  516  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapbomasbuilt/aschange/1000015.json
+  517  git add -u -p rrps/python/rrps.dt.mockdataapi/data/sapbomasbuilt
+  518  git commit -m "#25022 BOM events"
+  519  git push --set-upstream origin dev-rahul-bom_events
+  520  git status
+  521  git add -u -p rrps/python/rrps.dt.follower.rest_follower/cfg/follower.cfg.yml
+  522  git add -u -p rrps/python/rrps.dt.follower.rest_follower/cfg/rahul-fol.ini 
+  523  git add -u -p rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/integrator.cfg.yml
+  524  git commit -m "#25022 BOM events"
+  525  git push --set-upstream origin dev-rahul-bom_events
+  526  git pull
+  527  git stash
+  528  git pull
+  529  history > hhh.txt

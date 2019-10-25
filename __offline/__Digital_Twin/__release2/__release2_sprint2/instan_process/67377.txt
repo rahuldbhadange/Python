@@ -1,0 +1,194 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Python37>python -mvenv %HOME%\envs\rrpsdev
+
+C:\Python37>cd..
+
+C:\>cd "Python37\%HOME%\envs"\
+
+C:\Python37\%HOME%\envs>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 6E60-648F
+
+ Directory of C:\Python37\%HOME%\envs
+
+01/30/2019  09:23 AM    <DIR>          .
+01/30/2019  09:23 AM    <DIR>          ..
+01/30/2019  09:23 AM    <DIR>          rrpsdev
+               0 File(s)              0 bytes
+               3 Dir(s)  429,303,980,032 bytes free
+
+C:\Python37\%HOME%\envs>cd rrpsdev\Scripts\activate
+The directory name is invalid.
+
+C:\Python37\%HOME%\envs>cd rrpsdev\Scripts
+
+C:\Python37\%HOME%\envs\rrpsdev\Scripts>activate
+
+(rrpsdev) C:\Python37\%HOME%\envs\rrpsdev\Scripts>cd../../..
+
+(rrpsdev) C:\Python37\%HOME%>cd../../..
+
+(rrpsdev) C:\>cd Users\HBD2KOR\
+
+(rrpsdev) C:\Users\HBD2KOR>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 6E60-648F
+
+ Directory of C:\Users\HBD2KOR
+
+01/29/2019  06:28 PM    <DIR>          .
+01/29/2019  06:28 PM    <DIR>          ..
+01/29/2019  06:28 PM    <DIR>          %HOME%
+01/30/2019  08:51 AM             2,693 .bash_history
+01/11/2019  06:19 PM                52 .gitconfig
+12/21/2018  10:37 AM    <DIR>          .idlerc
+01/25/2019  10:46 AM    <DIR>          .ipython
+12/24/2018  02:06 PM    <DIR>          .PyCharmCE2018.3
+01/29/2019  01:11 PM    <DIR>          .pylint.d
+01/10/2019  04:42 PM    <DIR>          .vscode
+12/26/2018  10:35 AM    <DIR>          Contacts
+01/30/2019  09:51 AM    <DIR>          Desktop
+01/29/2019  03:42 PM    <DIR>          digital.git
+01/25/2019  05:04 PM    <DIR>          Documents
+01/30/2019  09:21 AM    <DIR>          Downloads
+12/26/2018  10:35 AM    <DIR>          Favorites
+01/28/2019  09:48 AM    <DIR>          Links
+12/26/2018  10:35 AM    <DIR>          Music
+01/28/2019  09:48 AM    <DIR>          OneDrive
+01/30/2019  09:11 AM    <DIR>          OneDrive - RBEI
+12/26/2018  10:35 AM    <DIR>          Pictures
+01/28/2019  10:49 AM    <DIR>          py-application-examples
+01/28/2019  10:34 AM    <DIR>          py-IoticAgent
+12/26/2018  10:35 AM    <DIR>          Saved Games
+01/23/2019  10:13 AM    <DIR>          Searches
+01/25/2019  04:39 PM    <DIR>          Videos
+01/18/2019  10:37 AM    <DIR>          vsts_digital_twin_iotic_bare.git
+01/10/2019  11:40 AM             1,658 ZscalerRootCertificate-2048-SHA256.crt
+01/28/2019  09:44 AM               994 ZscalerRootCertificate-2048-SHA256.crt.cer
+               4 File(s)          5,397 bytes
+              25 Dir(s)  429,303,980,032 bytes free
+
+(rrpsdev) C:\Users\HBD2KOR>cd  digital.git
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 6E60-648F
+
+ Directory of C:\Users\HBD2KOR\digital.git
+
+01/29/2019  03:42 PM    <DIR>          .
+01/29/2019  03:42 PM    <DIR>          ..
+01/28/2019  04:15 PM               324 .dockerignore
+01/28/2019  04:15 PM               824 .gitignore
+01/30/2019  09:55 AM    <DIR>          .idea
+01/28/2019  04:15 PM    <DIR>          3rd
+01/28/2019  04:16 PM    <DIR>          deps
+01/28/2019  04:16 PM    <DIR>          devops
+01/28/2019  04:16 PM    <DIR>          dt
+01/28/2019  04:16 PM    <DIR>          example
+01/29/2019  10:37 AM            13,498 README.md
+01/28/2019  04:16 PM    <DIR>          release
+01/28/2019  04:16 PM    <DIR>          rrps
+               3 File(s)         14,646 bytes
+              10 Dir(s)  429,303,980,032 bytes free
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git>cd rrps
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 6E60-648F
+
+ Directory of C:\Users\HBD2KOR\digital.git\rrps
+
+01/28/2019  04:16 PM    <DIR>          .
+01/28/2019  04:16 PM    <DIR>          ..
+01/29/2019  10:35 AM    <DIR>          python
+               0 File(s)              0 bytes
+               3 Dir(s)  429,303,980,032 bytes free
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps>cd python
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 6E60-648F
+
+ Directory of C:\Users\HBD2KOR\digital.git\rrps\python
+
+01/29/2019  10:35 AM    <DIR>          .
+01/29/2019  10:35 AM    <DIR>          ..
+01/28/2019  04:16 PM               548 build_deps.sh
+01/28/2019  04:16 PM    <DIR>          rrps.dt.api.fielddata
+01/28/2019  04:39 PM    <DIR>          rrps.dt.events
+01/29/2019  10:35 AM    <DIR>          rrps.dt.follower.rest_follower
+01/29/2019  10:35 AM    <DIR>          rrps.dt.integrator.fielddata
+01/29/2019  10:35 AM    <DIR>          rrps.dt.integrator.sapbomasbuilt
+01/29/2019  10:37 AM    <DIR>          rrps.dt.integrator.sapequipmenthistory
+01/29/2019  10:37 AM    <DIR>          rrps.dt.integrator.sapmasterdata
+01/29/2019  10:35 AM    <DIR>          rrps.dt.integrator.sapsupersession
+01/29/2019  10:35 AM    <DIR>          rrps.dt.integrator.sapwarrantyrecall
+01/29/2019  10:35 AM    <DIR>          rrps.dt.integrator.talendfirmware
+01/29/2019  10:35 AM    <DIR>          rrps.dt.integrator.talendtimdocument
+               1 File(s)            548 bytes
+              13 Dir(s)  429,303,980,032 bytes free
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python>cd rrps.dt.events
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>pip install -e . -f ..\..\..\deps
+Looking in links: ..\..\..\deps
+Obtaining file:///C:/Users/HBD2KOR/digital.git/rrps/python/rrps.dt.events
+Collecting ioticlabs.dt.api<0.2,>=0.1.7 (from rrps.dt.events==0.1.7)
+Collecting fastavro<0.22,>=0.21.9 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+Collecting py-lz4framed==0.13.0 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+Collecting py-IoticAgent<0.7.0,>=0.6.6 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/fc/bf/28bf7f58055b693e90f8d2d568333718979f3a48525
+af9f99af16d69b314/py_IoticAgent-0.6.8-py2.py3-none-any.whl
+Collecting ioticlabs.dt.common<0.2,>=0.1.12 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+Collecting py-ubjson>=0.8.5 (from py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.eve
+nts==0.1.7)
+Collecting rdflib>=4.2.1 (from py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events
+==0.1.7)
+Collecting regex==2018.11.22 (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.api<0.2,>=0.1.7->rrps.
+dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/29/e5/71a9018236969f7622d6598778c04e8fa030fc50f6b
+4593e2649ab3077fb/regex-2018.11.22-cp37-none-win32.whl
+Collecting PyYAML<4,>=3.12 (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt
+.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/5c/ed/d6557f70daaaab6ee5cd2f8ccf7bedd63081e522e38
+679c03840e1acc114/PyYAML-3.13-cp37-cp37m-win32.whl
+Collecting ioticlabs.common.logutil<0.2,>=0.1.0 (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.api
+<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+Collecting isodate (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2,>=0.1.7->rrps.
+dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/9b/9f/b36f7774ff5ea8e428fdcfc4bb332c39ee5b9362ddd
+3d40d9516a55221b2/isodate-0.6.0-py2.py3-none-any.whl
+Collecting pyparsing (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2,>=0.1.7->rrp
+s.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/de/0a/001be530836743d8be6c2d85069f46fecf84ac6c18c
+7f5fb8125ee11d854/pyparsing-2.3.1-py2.py3-none-any.whl
+Collecting six (from isodate->rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2,>=0.1.7->
+rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0e
+cfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Installing collected packages: fastavro, py-lz4framed, py-ubjson, six, isodate, pyparsing, rdflib, py-Io
+ticAgent, regex, PyYAML, ioticlabs.common.logutil, ioticlabs.dt.common, ioticlabs.dt.api, rrps.dt.events
+
+  The script fastavro.exe is installed in 'c:\python37\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-scrip
+t-location.
+  The scripts csv2rdf.exe, rdf2dot.exe, rdfgraphisomorphism.exe, rdfpipe.exe and rdfs2dot.exe are instal
+led in 'c:\python37\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-scrip
+t-location.
+  The script ioticlabs-dt-event-cli.exe is installed in 'c:\python37\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-scrip
+t-location.
+  Running setup.py develop for rrps.dt.events
+Successfully installed PyYAML-3.13 fastavro-0.21.17 ioticlabs.common.logutil-0.1.0 ioticlabs.dt.api-0.1.
+11 ioticlabs.dt.common-0.1.13 isodate-0.6.0 py-IoticAgent-0.6.8 py-lz4framed-0.13.0 py-ubjson-0.12.0 pyp
+arsing-2.3.1 rdflib-4.2.2 regex-2018.11.22 rrps.dt.events six-1.12.0
+You are using pip version 10.0.1, however version 19.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>

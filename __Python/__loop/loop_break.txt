@@ -1,0 +1,16 @@
+
+print(i)
+    if i == 5:
+        break
+sample = range(10) #(1,2,3,4,5,6,7,8,9,0)
+next(sample)
+'''
+
+
+
+
+
+
+item_cache for rrps.dt.integrator.sapequipmenthistory 14192
+item_cache for rrps.dt.integrator.talendtimdocument 14193
+item_cache for rrps.dt.integrator.talendfirmware 14195

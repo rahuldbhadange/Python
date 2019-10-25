@@ -1,0 +1,5 @@
+2019-06-17 09:48:08,421 DEBUG [root] {MainThread}  logger.debug : This will log a message with all level, .debug, .info, .warning, .error and .critical !!!
+2019-06-17 09:48:08,421 INFO [root] {MainThread}  logger.info : This will log a message with level, .info, .warning, .error and .critical ! But omits .debug !!!
+2019-06-17 09:48:08,421 WARNING [root] {MainThread}  logger.warning : This will log a message with level, .warning, .error and .critical ! But omits .debug and .info !!!
+2019-06-17 09:48:08,421 ERROR [root] {MainThread}  logger.error : This will log a message with level, .error and .critical ! But omits .debug, .info and .warning !!!
+2019-06-17 09:48:08,421 CRITICAL [root] {MainThread}  logger.critical : This will log a message with level only .critical ! And omits all other, .debug, .info, .warning and .error !!!

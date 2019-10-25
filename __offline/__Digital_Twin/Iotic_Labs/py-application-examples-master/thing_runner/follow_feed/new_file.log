@@ -1,0 +1,3 @@
+2019-05-02 09:51:48,514 ERROR [IoticAgent.Core.AmqpLink] {amqplink_send} ssl.SSLError Bad Certificate?
+2019-05-02 09:51:48,768 WARNING [IoticAgent.Core.AmqpLink] {MainThread} AmqpLink Failed to start.  Giving up.
+2019-05-02 09:51:48,913 WARNING [IoticAgent.ThingRunner] {MainThread} LinkException/IOTSyncTimeout caught, will retry on_startup

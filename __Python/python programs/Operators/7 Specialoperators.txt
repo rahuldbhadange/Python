@@ -1,0 +1,17 @@
+Special operators
+
+we have 2 types of special operators
+1.Identity Operators
+2.Membership operators
+
+1.Identity Operators: These are used to compare the addresses of objects
+ 2 types
+  i.is operator
+  ii.is not operator
+
+2.Membership operator: to check whether given element is present or not
+ 2 types
+  i.in operator
+  ii.not in operator
+
+

@@ -1,0 +1,11 @@
+@app.route('/hello/<int:pwd>')  # Variable with type filter. Accept only int
+def hello_username(usr):    # The function shall take the URL variable as parameter
+    return 'Hello, your ID is: {:d}'.format(pwd)
+
+
+
+
+
+
+
+http://localhost:5000/sapwarrantyrecall?asset_id=5242454669?usr=usr?pwd=pwd

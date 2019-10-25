@@ -1,0 +1,274 @@
+From 52720da71a6e9564e3a93efc5c9a9e10420cca45 Mon Sep 17 00:00:00 2001
+From: Tim Churchard <tim.churchard@iotic-labs.com>
+Date: Fri, 15 Mar 2019 19:44:22 +0000
+Subject: [PATCH] __TC__ Add integrator to synthesiser and find nearest weather
+
+---
+ .../cfg/follower.cfg.yml                      |  80 +++++++++++
+ .../rrps/dt/synthesiser/weather/impl.py       | 128 +++++++++++++++++-
+ 2 files changed, 201 insertions(+), 7 deletions(-)
+
+diff --git a/rrps/python/rrps.dt.synthesiser.weather/cfg/follower.cfg.yml b/rrps/python/rrps.dt.synthesiser.weather/cfg/follower.cfg.yml
+index 5ce5f4e..0316008 100644
+--- a/rrps/python/rrps.dt.synthesiser.weather/cfg/follower.cfg.yml
++++ b/rrps/python/rrps.dt.synthesiser.weather/cfg/follower.cfg.yml
+@@ -96,3 +96,83 @@ follower:
+               # Write concern. Note that 'majority' level is only usable with WiredTiger storage engine (currently not
+               # supported by Azure CosmosDB with MongoDB v3.2)
+               # w: majority
++
++
++# Example integrator (core) configuration.
++
++integrator:
++
++  # Event source name as included in published events. Should NOT be changed once set!
++  source: rrps
++
++  # How many threads to reserve for performing asynchronous tasks such as asset updates.
++  # workers: 2
++
++  # Metadata applicable to integrator Iotic Thing (all optional apart from lid)
++  thing:
++    lid: acme_integrator
++    # label:
++    # description:
++    # If type2 is enabled, this must be populated explicitly with one tag to identify the thing as a t2 provider and
++    # another to indicate the name of the provider.
++    # tags: []
++
++  # Details for controls associated with integrator thing (defaults will be used if not specified)
++  # point:
++    # lid:
++      # t2req:
++    # label:
++      # t2req:
++
++  asset:
++
++    type2:
++      # Whether to expect assets to expose type2 functionality. Assets which do not have the right points to support
++      # type2 requests will be ignored if this is enabled.
++      enabled: no
++
++      # How large each response chunk should be at most (in bytes). This should adjusted based on transport (QAPI) size
++      # limits. For a standard Iotic Space container (sub-space) with hard limit of 64kB per request, a sensible maximum
++      # (and the default herein) would be 62208 (~95%)
++      # max_chunk_size: 62208
++
++    event:
++      # List of modules to load event definitions from. Only event types registered this way can be published. Each name
++      # must be an absolute module name in Python search path. Note: Internal built-in/virtual event types are always
++      # loaded.
++      modules:
++        - rrps.dt.events
++
++    # Event publishing timeout in seconds (applicable ONLY when confirmation has been requested both in sync and async
++    # cases). Should be high enough to allow for digital twin to respond as otherwise risk publishing the same event
++    # mutiple times. (default will be used if not specified)
++    publish:
++      timeout: 10
++
++    # Search criteria for finding assets (required)
++    discovery:
++      # One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)
++      text: env_m_c
++      # One of public, local or localOwn (default). Public is NOT recommended as one could, despite specified filter,
++      # end up pushing events to a completely unknown thing/point!
++      scope: local
++      # How often to poll for new assets, in seconds
++      interval: 5
++
++      filter:
++        label:
++          # Expected asset thing label. This is a standard Python regular expression and should be contained within
++          # '^' and '$'. Defined groups are ignored and this parameter is optional.
++          # thing_regex:
++          # Expected labels for event production related points. Feed is for live events and control for replay
++          # requests (defaults will be used if not specified).
++          # feed:
++          # control:
++
++        tags:
++          # Expected unique tag containing asset id. This is a standard Python regular expression and should be
++          # contained within '^' and '$' and define one group (containing asset id). (default will be used if not
++          # specified)
++          unique_regex: '^m_(.+)$'
++          # Expected static tags for each asset
++          thing: ['env_m_c']
+diff --git a/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py b/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py
+index 9117d72..e780faa 100644
+--- a/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py
++++ b/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py
+@@ -7,6 +7,7 @@ import logging
+ from IoticAgent import ThingRunner
+ from IoticAgent.IOT.Config import Config
+ 
++from ioticlabs.dt.api.integrator import Integrator, IntegratorCallbacks
+ from ioticlabs.dt.api.follower import (
+     Follower, FollowerCallbacks, NamedEventMixin, T2ResponseException, AssetUnknown, T2ReqFailureReason, T2Unavailable,
+     T2Timeout
+@@ -19,6 +20,107 @@ log = logging.getLogger(__name__)
+ ENABLE_T2_PROMPT = False
+ 
+ 
++from json import dumps
++
++
++def pretty_print(msg, data):
++    print(msg, dumps(data, indent=4))
++
++
++class NearestWeather:
++
++    def __init__(self, client):
++        self.client = client
++
++    def __validate_weather_type(self, thing_data_label, point_data_label):
++        if thing_data_label.startswith("Weather Forecast for: ") and point_data_label == "Current weather info":
++            #print(" Welcome to Metoffice Forecast")
++            return "metoffice forecast"
++        if thing_data_label.startswith("Weather Observation for: ") and point_data_label == "Observation info":
++            #print("Welcome to Metoffice Observation")
++            return "metoffice observation"
++        return None
++
++    def find_nearest_weather(self, location={'lat': 52.427809, 'long': -0.327829}):
++        thing = self.client.create_thing('My_SysthesiserWeather_Thing')
++        radius_increment = 0.5
++        location['radius'] = radius_increment
++
++        results = None
++        while not results:
++            results = self.client.search(text="weather", location=location)
++            if results:
++                pretty_print("results", results)
++
++            for thing_guid, thing_data in results.items():
++                pretty_print("thing_guid", thing_guid)
++                pretty_print("thing_data", thing_data)
++                pretty_print("thing_data_label", thing_data['label'])
++                thing_data_label = thing_data['label']
++
++                for point_guid, point_data in thing_data['points'].items():
++                    pretty_print("point_guid", point_guid)
++                    pretty_print("point_data", point_data)
++                    pretty_print("point_data_label", point_data['label'])
++                    point_data_label = point_data['label']
++
++                    descr = self.client.describe(point_guid)
++                    pretty_print("descr", descr)
++
++                    if descr and self.__validate_weather_type(thing_data_label, point_data_label):
++                        remotefeed = thing.follow(point_guid)
++                        samples = remotefeed.get_recent(99)
++
++                        for sample in samples:
++                            recent_weather_to_publish = self.__callback_recent(sample)
++                            pretty_print("Today's Forecast is : ", recent_weather_to_publish)
++
++                        thing.unfollow(remotefeed.subid)
++
++                        recent_weather_to_publish['label'] = thing_data['label']
++                        return recent_weather_to_publish
++
++            location["radius"] += radius_increment
++
++    @staticmethod
++    def __callback_recent(args):
++        log.debug("Recent data received. Shared at %s", args['time'])
++        # at the moment, recent data isn't parsed to extract metadata for values so we have to use fixed keys
++
++        try:
++            #log.debug('Found recent data for key %s: value: %s', args['data'])
++            recent_weather_to_publish = args['data']
++        except KeyError as exc:
++            log.warning('Failed to find key %s in recent data %s', exc, args)
++        except:
++            log.error("Some exception in __callback_recent", exc_info=False)  # TODO: set True to debug
++        return recent_weather_to_publish
++
++
++class IntegratorHelper(IntegratorCallbacks):
++
++    def __init__(self, config, client):
++        self.__integrator = Integrator(config, client, self)
++
++    def start(self):
++        self.__integrator.start()
++
++    def stop(self):
++        self.__integrator.stop()
++
++    def publish_event(self, event):
++        self.__integrator.publish_event(event)
++
++    def on_asset_created(self, asset_id):
++        log.debug('IntegratorCallbacks Asset created: %s', asset_id)
++
++    def on_asset_deleted(self, asset_id):
++        log.debug('IntegratorCallbacks Asset deleted: %s', asset_id)
++
++    def on_t2_request(self, request):
++        pass
++
++
+ class SynthesiserWeather(NamedEventMixin, FollowerCallbacks, ThingRunner):
+ 
+     def __init__(self, config, agent_config_str):
+@@ -32,9 +134,12 @@ class SynthesiserWeather(NamedEventMixin, FollowerCallbacks, ThingRunner):
+         self.__follower = Follower(config['follower'], self.client, self)
+         self.__assets = set()
+ 
++        self.__integrator = IntegratorHelper(config['integrator'], self.client)
++
+     def on_startup(self):
+         log.debug('Startup')
+         self.__follower.start()
++        self.__integrator.start()
+ 
+     def main(self):
+         log.debug('Running')
+@@ -79,6 +184,7 @@ class SynthesiserWeather(NamedEventMixin, FollowerCallbacks, ThingRunner):
+     def on_shutdown(self, exc_info):
+         log.debug('Shutdown')
+         self.__follower.stop()
++        self.__integrator.stop()
+ 
+     # for FollowerCallbacks
+     def on_asset_created(self, asset_id):
+@@ -91,16 +197,24 @@ class SynthesiserWeather(NamedEventMixin, FollowerCallbacks, ThingRunner):
+         self.__assets.remove(asset_id)
+ 
+     # For NamedEventMixin (specific event)
+-    def do_bombuiltset(self, event):
+-        log.info(
+-            '[%s] #%d BoM-as-built (from %s) @ %s (sys: %s)\n%s', event.asset, event.offset, event.source, event.time,
+-            event.systime, pformat(event.data)
+-        )
++    def do_fielddatasuccessset(self, event):
++        print("*" * 80)
++        print(event.name().lower())
++        print(event.version)
++        print(event.data)
+         self.__follower.ack_event(event)
+ 
+-    def on_FieldDataSuccessSet(self, event):
++        if event.version >= 1:
++            # Note: Events > 1 will have Location in the event.data
++            try:
++                nw = NearestWeather(self.client)
++                print("weather data", nw.find_nearest_weather())
++            except:
++                log.error("Exception.", exc_info=True)
+ 
+-        self.__follower.ack_event(event)
++            # Note: self.__integrator.publish_event(WeatherSetInfo(
++
++        print("*" * 80)
+ 
+     # for NamedEventMixin (all events for which there isn't a do_ method)
+     #
+-- 
+2.17.1
+

@@ -1,0 +1,180 @@
+C:\Users\HBD2KOR\envs\rrpsdev\Scripts\python.exe C:/Users/HBD2KOR/digital.git/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/test/dev_test.py
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {}
+results {
+    "1df3ca77c8cbdc66440bee3406974abc": {
+        "owner": "283d8c71f9e31ddf43adbce5e5f2d959",
+        "matches": 4.319319,
+        "label": "Weather Forecast for: EYE (PETERBOROUGH), ENGLAND",
+        "lat": 52.6123,
+        "long": -0.1862,
+        "points": {
+            "3d17e23b58f587dbbc5886006bafb687": {
+                "matches": 4.319319,
+                "label": "Current weather info",
+                "type": "Feed",
+                "storesRecent": true
+            }
+        }
+    }
+}
+thing_guid "1df3ca77c8cbdc66440bee3406974abc"
+thing_data {
+    "owner": "283d8c71f9e31ddf43adbce5e5f2d959",
+    "matches": 4.319319,
+    "label": "Weather Forecast for: EYE (PETERBOROUGH), ENGLAND",
+    "lat": 52.6123,
+    "long": -0.1862,
+    "points": {
+        "3d17e23b58f587dbbc5886006bafb687": {
+            "matches": 4.319319,
+            "label": "Current weather info",
+            "type": "Feed",
+            "storesRecent": true
+        }
+    }
+}
+thing_data_label "Weather Forecast for: EYE (PETERBOROUGH), ENGLAND"
+point_guid "3d17e23b58f587dbbc5886006bafb687"
+point_data {
+    "matches": 4.319319,
+    "label": "Current weather info",
+    "type": "Feed",
+    "storesRecent": true
+}
+point_data_label "Current weather info"
+descr {
+    "type": "Point",
+    "meta": {
+        "parent": "1df3ca77c8cbdc66440bee3406974abc",
+        "label": "Current weather info",
+        "comment": "Current weather info for EYE (PETERBOROUGH)",
+        "type": "Feed",
+        "storesRecent": true,
+        "values": [
+            {
+                "label": "feels",
+                "type": "decimal",
+                "unit": null,
+                "comment": "temperature feels like"
+            },
+            {
+                "label": "gust",
+                "type": "decimal",
+                "unit": null,
+                "comment": "wind gust speed in kph"
+            },
+            {
+                "label": "humid",
+                "type": "decimal",
+                "unit": null,
+                "comment": "screen relative humidity"
+            },
+            {
+                "label": "prob",
+                "type": "decimal",
+                "unit": null,
+                "comment": "precipitation probability"
+            },
+            {
+                "label": "temp",
+                "type": "decimal",
+                "unit": null,
+                "comment": "temperature"
+            },
+            {
+                "label": "time",
+                "type": "dateTime",
+                "unit": null,
+                "comment": "time of forecast ISO format UTC"
+            },
+            {
+                "label": "type",
+                "type": "string",
+                "unit": null,
+                "comment": "metoffice API record type"
+            },
+            {
+                "label": "uv",
+                "type": "decimal",
+                "unit": null,
+                "comment": "UV index"
+            },
+            {
+                "label": "visib",
+                "type": "string",
+                "unit": null,
+                "comment": "visibility short code VG = very good, GO = good, MO = moderate"
+            },
+            {
+                "label": "winddir",
+                "type": "string",
+                "unit": null,
+                "comment": "wind direction compass points SW = south west"
+            },
+            {
+                "label": "windspd",
+                "type": "decimal",
+                "unit": null,
+                "comment": "wind speed in kph"
+            }
+        ],
+        "tags": []
+    }
+}
+ Welcome to Metoffice Forecast
+Today's Forecast is :  {
+    "time": "2019-03-14T15:00:00Z",
+    "feels": 7.0,
+    "gust": 40.0,
+    "humid": 56.0,
+    "temp": 11.0,
+    "visib": "VG",
+    "winddir": "WNW",
+    "windspd": 22.0,
+    "uv": 1.0,
+    "type": "3",
+    "prob": "1"
+}

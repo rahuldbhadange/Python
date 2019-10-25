@@ -1,0 +1,1 @@
+chunk = [b'[{"FileName": "kopie (8) von test.tif", "Xstring": "SUkqBAwABAAAAAABUBAwABA"}]]
