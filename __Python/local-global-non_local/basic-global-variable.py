@@ -3,6 +3,7 @@
 
 
 x = 15
+print("x =", x)
 
 
 def change():

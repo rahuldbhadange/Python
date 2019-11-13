@@ -30,3 +30,6 @@ print(int("".join(map(str, [1, 2, 3, 4, 5, 6, 7, 8]))))
 
 print(reduce(lambda a, d: 10*a+d, [1, 2, 3, 4, 5, 6, 7, 8], 0))
 
+
+
+# map => (fuc, iter) =>

@@ -12,8 +12,9 @@ print(x.end(), x.pos, x.string, x.endpos, x.lastindex)
 
 # If no matches are found, the value None is returned:
 str_1 = "The rain in Spain"
-x = re.search("Portugal", str_1)
+x = re.search("Spain", str_1)
 print(x)
+print(x.end(), x.pos, x.string, x.endpos, x.lastindex)
 
 
 print(".", "88\s88", ".")
