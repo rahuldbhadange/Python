@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Events API &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Follower API" href="api_follower.html" />
+    <link rel="prev" title="API index" href="api_index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html">Developer Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api_index.html">API index</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Events API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-ioticlabs.dt.api.event.base">API reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#assetevent">AssetEvent</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_follower.html">Follower API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_integrator.html">Integrator API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_nestedconfig.html">NestedConfig API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_itemcache.html">item_cache API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_t2.html">T2 API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="api_index.html">API index</a> &raquo;</li>
+        
+      <li>Events API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api_events.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="events-api">
+<span id="api-events"></span><h1>Events API<a class="headerlink" href="#events-api" title="Permalink to this headline">¶</a></h1>
+<p>The history of a Digital Twin is built from events produced by Integrators;
+these events are declared in a Python package and their base class is <cite>AssetEvent</cite> …</p>
+<div class="section" id="module-ioticlabs.dt.api.event.base">
+<span id="api-reference"></span><h2>API reference<a class="headerlink" href="#module-ioticlabs.dt.api.event.base" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="assetevent">
+<h3>AssetEvent<a class="headerlink" href="#assetevent" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ioticlabs.dt.api.event.base.AssetEvent">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.event.base.</code><code class="descname">AssetEvent</code><span class="sig-paren">(</span><em>asset</em>, <em>source=None</em>, <em>time=None</em>, <em>systime=None</em>, <em>offset=-1</em>, <em>version=None</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.event.base.AssetEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for asset event types. Covers handling of extra data (schema and validation) and versioning</p>
+<p>Only the abstract methods and optionally _validate_data should be implemented/overloaded. The name of the event is
+derived from the class name itself which must follow camel case and is restriced to ASCII.</p>
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.event.base.AssetEvent.asset">
+<code class="descname">asset</code><a class="headerlink" href="#ioticlabs.dt.api.event.base.AssetEvent.asset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asset id (str) to which event applies</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.event.base.AssetEvent.data">
+<code class="descname">data</code><a class="headerlink" href="#ioticlabs.dt.api.event.base.AssetEvent.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extra data specific to event type and version, or None if not applicable.</p>
+<dl class="docutils">
+<dt>Notes:</dt>
+<dd><ul class="first last simple">
+<li>This is the decoded version - encoding/decoding is automated based on applicable version and schema.</li>
+<li><dl class="first docutils">
+<dt>An Avro schema defining a single primitive null type cannot be distinguished from no extra data at all,</dt>
+<dd>i.e. both will decode as None.</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ioticlabs.dt.api.event.base.AssetEvent.name">
+<em class="property">classmethod </em><code class="descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.event.base.AssetEvent.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name (str) of event type. Must NOT be overridden.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.event.base.AssetEvent.offset">
+<code class="descname">offset</code><a class="headerlink" href="#ioticlabs.dt.api.event.base.AssetEvent.offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Offset (int) of event in event stream for this asset. A value of -1 indicates the offset is not applicable,
+i.e. the event instance has been created for publishing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.event.base.AssetEvent.source">
+<code class="descname">source</code><a class="headerlink" href="#ioticlabs.dt.api.event.base.AssetEvent.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source of event (str), e.g. an integrator. Can be None when instance has been created for publishing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.event.base.AssetEvent.systime">
+<code class="descname">systime</code><a class="headerlink" href="#ioticlabs.dt.api.event.base.AssetEvent.systime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of event insertion (datetime). Ignored from publishing perspective. Consumed events have this set to
+a monotonically increasing timestamp which indicates when the event was stored in the system. It is independent
+from the time field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.event.base.AssetEvent.time">
+<code class="descname">time</code><a class="headerlink" href="#ioticlabs.dt.api.event.base.AssetEvent.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of event (datetime). Can be None when instance has been created for publishing, in which case current
+UTC time will be used. This field has no monotonicity requirement and should be used to store time which has a
+specific meaning to the event. (E.g. document creation time.)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.event.base.AssetEvent.version">
+<code class="descname">version</code><a class="headerlink" href="#ioticlabs.dt.api.event.base.AssetEvent.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version (int) of this type of event (defaults to _default_version()). Used to indicate changes in extra data
+format. Message consumers should explicitly check for event version to ensure they are not blindly consuming
+newer versions in an incompatible manner.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api_follower.html" class="btn btn-neutral float-right" title="Follower API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api_index.html" class="btn btn-neutral" title="API index" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

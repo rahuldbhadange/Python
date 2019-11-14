@@ -1,0 +1,24 @@
+.. _api_t2:
+
+T2 API
+======
+
+Specific things for :term:`Type 2 requests <Type2request>`
+
+API reference
+-------------
+
+.. py:module:: ioticlabs.dt.common.values.t2
+
+T2ReqFailureReason
+******************
+
+.. autoclass:: T2ReqFailureReason
+   :members:
+
+
+T2ProviderFailureReason
+***********************
+
+.. autoclass:: T2ProviderFailureReason
+   :members:

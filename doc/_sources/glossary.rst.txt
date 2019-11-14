@@ -1,0 +1,64 @@
+========
+Glossary
+========
+
+.. glossary::
+
+    Follower
+        A Follower is an Iotic thing that binds to a twin or twins and uses the twins as sources of data. Followers can optionally store these data in the form of :term:`view` s or can provide data directly to an application.
+
+    Integrator
+        An Integrator is an Iotic ThingRunner that interfaces to sources of data and provides a stream of events to a :term:`Twin`
+
+    ThingRunner
+        An abstracted Iotic Thing class that provides a lifecycle and a simple API. Examples `here <https://github.com/Iotic-Labs/py-application-examples/tree/master/thing_runner>`_
+
+    Twin
+        A twin is a virtual representation of a physical objects in term of the data that it can provide and the events in its history.
+        A twin can also be controlled to ask for data on demand - the so-called :term:`Type 2 request <Type2request>`
+
+    Type2request
+        An "instantaneous" request for data from a follower to the twin. The twin will forward the request to the appropriate integrator and send the data returned to the follower
+
+    View
+        A view is a subset of the event stream that is persisted for the sake of an application. For example, only specific historical events regarding maintenance might be extracted to create a maintenance history view
+
+    Client
+        (AKA User, Customer):  Individual, group or organisation which wants to use the DT solution.
+
+    Digital Twin
+        (AKA DT, Asset): A client-specific entity which exposes an event stream and optionally can respond to T2 requests. Each asset within a group/deployment has a unique id (again usually client-specific).
+        A twin is made of two parts, the :term:`Consumer Twin` and :term:`Producer Twin`
+
+    Event Stream
+        (AKA Event Log, Asset History, ES): A set of strictly ordered events, treated as an append-only log. Existing events cannot be removed but can be superseded by e.g. a newer version of the same event type.
+
+    Event
+        (AKA Type 1 "_request_", T1): A piece of information applicable to a particular asset at a given point in time. Each event has a type, offset, time and optionally payload (specific to its type).
+
+    Event Offset
+        (AKA Sequence number, seq): A monotonically increasing number indicating the position of an event in the event stream. Typically starts with zero. Used by followers to request replay of events.
+
+    Event Time
+        Might relate to something that has happened (e.g. "Engine has been serviced"), a version of a document applicable to the asset (e.g. "Operation Manual v0.6") or something completely different. Note that within the Event Stream for a particular asset event time does **not** have to necessarily increase. I.e. time should relate to data associated with the event, not when the event was inserted.
+
+    Event System Time
+        (AKA systime): Automatically provided time of when an event was _appended_ to an Asset's event stream.
+
+    Event Type
+        Client-specific event definition applicable to some/all of their assets. Each event type has a unique name and an (optional) strictly-defined payload. Event types should be defined with the help of domain experts.
+
+    Twin Runner
+        (AKA DT runner): Represents one or more assets in Iotic Space. Can also optionally route T2 requests.
+
+    DT API
+        API (currently in Python) used to implement integrators, followers and T2 providers
+
+    T2 Provider
+        (AKA T2 Integrator): An integrator which also services at least one type of T2 request
+
+    Consumer Twin
+        Slightly confusingly this is the twin that a follower will follow. It's called a consumer because it reads events ("consumes") out of the :term:`Event Stream` and sends them to the :term:`Follower`
+
+    Producer Twin
+        Slightly confusingly this is the twin that receives events from integrators and stores them ("produces") in the :term:`Event Stream` for use by :term:`Consumer Twin` s

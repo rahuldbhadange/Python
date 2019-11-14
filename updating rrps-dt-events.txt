@@ -1,0 +1,7 @@
+pip uninstall ioticlabs.dt.api
+pip install --no-cache -f ../../../deps ioticlabs.dt.api
+
+
+
+pip uninstall rrps.dt.events
+pip install --no-cache -f ../../../deps rrps.dt.events

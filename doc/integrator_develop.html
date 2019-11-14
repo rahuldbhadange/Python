@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Develop your integrator &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Write a follower" href="follower_overview.html" />
+    <link rel="prev" title="Integrator configuration" href="integrator_configure.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="devguide.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="devguide.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="integrator_overview.html">Write an integrator</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="integrator_overview.html#purpose">Purpose</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="integrator_overview.html#how-to-steps">How-to steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="follower_overview.html">Write a follower</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_index.html">API index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="devguide.html">Developer Guide</a> &raquo;</li>
+        
+          <li><a href="integrator_overview.html">Write an integrator</a> &raquo;</li>
+        
+      <li>Develop your integrator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/integrator_develop.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="develop-your-integrator">
+<span id="integrator-develop"></span><h1>Develop your integrator<a class="headerlink" href="#develop-your-integrator" title="Permalink to this headline">¶</a></h1>
+<p>An <a class="reference internal" href="glossary.html#term-integrator"><span class="xref std std-term">Integrator</span></a> is an instance of a <a class="reference internal" href="glossary.html#term-thingrunner"><span class="xref std std-term">ThingRunner</span></a> so it has the standard “lifecycle” methods of any ThingRunner:</p>
+<ol class="arabic">
+<li><p class="first"><em>on_startup()</em> - called on initialisation. Call self.__integrator.start() here.</p>
+</li>
+<li><p class="first"><em>main()</em> - called after initialisation. Any loop code goes in here, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">__process</span><span class="p">()</span>  <span class="c1"># do whatever you need, then wait for your schedule interval</span>
+   <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">wait_for_shutdown</span><span class="p">(</span><span class="o">&lt;</span><span class="n">loop_time</span><span class="o">&gt;</span><span class="p">):</span>
+       <span class="k">break</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em>on_shutdown()</em> called after the main has returned. Perform any cleanup and shutdown task in here.</p>
+</li>
+</ol>
+<p>Integrators also inherit from IntegratorCallbacks and have to implement that interface. See
+<a class="reference internal" href="#integrator-callbacks"><span class="std std-ref">Implementing the Callbacks</span></a> below.</p>
+<p>The full class definition is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IntegratorExample</span><span class="p">(</span><span class="n">IntegratorCallbacks</span><span class="p">,</span> <span class="n">ThingRunner</span><span class="p">):</span>
+</pre></div>
+</div>
+<div class="section" id="integrator-api">
+<h2>Integrator API<a class="headerlink" href="#integrator-api" title="Permalink to this headline">¶</a></h2>
+<p>The integrator API is described <a class="reference internal" href="api_integrator.html#api-integrator"><span class="std std-ref">here</span></a></p>
+</div>
+<div class="section" id="api-object-and-methods">
+<h2>API object and methods<a class="headerlink" href="#api-object-and-methods" title="Permalink to this headline">¶</a></h2>
+<p>The API object is there for your integrator to call when, for example, a new event has happened and needs to be sent to the twin.</p>
+<p>From the example in ../example/dt/acmecorp.dt.integrator.example/acmecorp/integrator/example/impl.py</p>
+<p>In the <em>__init__()</em> method, instantiate your API object, passing:</p>
+<ol class="arabic simple">
+<li>The integrator config</li>
+<li>Your Iotic Client</li>
+<li>Your self pointer - to allow it to call your callbacks</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">__integrator</span> <span class="o">=</span> <span class="n">Integrator</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;integrator&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then, in your <em>on_startup()</em> method you must call the <em>start()</em> method on the Integrator API object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__integrator</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Then you can call the methods on the Integrator object as follows.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">_get_bom_as_built_for</span><span class="p">(</span><span class="n">asset_id</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">__integrator</span><span class="o">.</span><span class="n">publish_event</span><span class="p">(</span><span class="n">BomBuiltSet</span><span class="p">(</span><span class="n">asset_id</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Ts&#39;</span><span class="p">],</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Materials&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>Finally, in your <em>on_shutdown()</em> method, call stop() on the Integrator API object</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_info</span><span class="p">):</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Shutdown&#39;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__integrator</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="implementing-the-callbacks">
+<span id="integrator-callbacks"></span><h2>Implementing the Callbacks<a class="headerlink" href="#implementing-the-callbacks" title="Permalink to this headline">¶</a></h2>
+<p>There are 2 callbacks for asset creation and asset deletion. They are</p>
+<ol class="arabic simple">
+<li><em>on_asset_created()</em></li>
+<li><em>on_asset_deleted()</em></li>
+</ol>
+<p><em>on_asset_created()</em> is called by the Integrator API object on start up, once per asset that it has discovered and then once every time a new asset is created and discovered.
+In the method, save the assets known to you and, if necessary, publish any events that are required by your integrator at startup.</p>
+<p><em>on_asset_deleted()</em> is called by the Integrator API object once per asset that it has discovered has been deleted.
+In the method, remove the asset from any lists of known assets that you have maintained.</p>
+</div>
+<div class="section" id="type-2-specifics">
+<h2>Type 2 specifics<a class="headerlink" href="#type-2-specifics" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">note:</th><td class="field-body">Type 2 requests have to be specifically enabled in your Integrator config. See <a class="reference internal" href="integrator_configure.html#t2-config-integrator"><span class="std std-ref">here</span></a></td>
+</tr>
+</tbody>
+</table>
+<p>A <a class="reference internal" href="glossary.html#term-type2request"><span class="xref std std-term">Type 2 request</span></a> is a request for data sent to you by the Integrator API object for you to fulfil immediately.
+You’ll need to run this request in a separate thread otherwise it will block the Integrator API object until it returns.
+There’s a standard boiler-plate code approach to this:</p>
+<p>First define a request threadpool in the <em>__init__()</em> method. (Set the <em>max_workers</em> to a sensible value. It’s advisible to use a config item for this.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pool of workers to execture type2 requests</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">__req_pool</span> <span class="o">=</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then use the threadpool to execute your t2 handler (in this case <em>__process_t2()</em> )</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># callback itself</span>
+<span class="k">def</span> <span class="nf">on_t2_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__req_pool</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__process_t2</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span>
+
+<span class="c1"># Wrap since run via thread pool without handling return/exception</span>
+<span class="nd">@log_exceptions</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">__process_t2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;New T2 req for </span><span class="si">%s</span><span class="s1"> - </span><span class="si">%s</span><span class="s1">(</span><span class="si">%r</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">asset_id</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">type_</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">type_</span> <span class="o">!=</span> <span class="s1">&#39;AcmecorpExampleReq&#39;</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Ignoring unknown request type </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">type_</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__t2_do_example_req</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then, when you’ve got the data required you can send it back to the Integrator API object by calling</p>
+<ol class="arabic simple">
+<li><em>t2_respond()</em> - for small amounts of data</li>
+<li><em>t2_respond_streamed()</em> - for large amounts of data that can be split into chunks.</li>
+</ol>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>This is a contrived example as it reads from a file, but shows how you can chunk up an input and stream it to
+<em>respond_streamed()</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">__integrator</span><span class="o">.</span><span class="n">t2_respond_streamed</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">mime</span><span class="p">)</span> <span class="k">as</span> <span class="n">write</span><span class="p">:</span>
+            <span class="c1"># write method will return False once zero bytes received. If this is</span>
+            <span class="c1"># not an indicator of EOF a different approach should be used.</span>
+            <span class="k">while</span> <span class="n">write</span><span class="p">(</span><span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">)):</span>
+                <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="errors">
+<h3>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h3>
+<p>If you encounter any problems, call:</p>
+<ol class="arabic simple">
+<li><em>t2_respond_error()</em> - with a reason code from <a class="reference internal" href="api_t2.html#api-t2"><span class="std std-ref">T2ProviderFailureReason</span></a></li>
+</ol>
+</div>
+</div>
+<div class="section" id="static-testing">
+<h2>Static testing<a class="headerlink" href="#static-testing" title="Permalink to this headline">¶</a></h2>
+<p>Your integrator should be tested for static errors using, in the acme example case:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">example</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">acmecorp</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">integrator</span><span class="o">.</span><span class="n">example</span>
+
+<span class="c1"># For linux</span>
+<span class="o">./</span><span class="n">static_tests</span><span class="o">.</span><span class="n">sh</span>
+
+<span class="c1"># For windows</span>
+<span class="n">static_tests</span><span class="o">.</span><span class="n">cmd</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-dependencies">
+<h2>Installing dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>This command will install your integrator in your venv and allow you to run it using the python files in your directory.
+Run this only once for each directory. You need to install any dependencies, e.g. Events
+So, starting with acmecorp.dt.events and then, for each integrator you’re interested in.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span> <span class="o">-</span><span class="n">f</span> <span class="o">../../../</span><span class="n">deps</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running">
+<h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
+<p>You should be able to run the code just by invoking the python module</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">acmecorp</span><span class="o">-</span><span class="n">dt</span><span class="o">-</span><span class="n">integrator</span><span class="o">-</span><span class="n">example</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="follower_overview.html" class="btn btn-neutral float-right" title="Write a follower" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="integrator_configure.html" class="btn btn-neutral" title="Integrator configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

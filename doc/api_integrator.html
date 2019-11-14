@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Integrator API &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="NestedConfig API" href="api_nestedconfig.html" />
+    <link rel="prev" title="Follower API" href="api_follower.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html">Developer Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api_index.html">API index</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api_events.html">Events API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_follower.html">Follower API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Integrator API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-ioticlabs.dt.api.integrator">Integrator API reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#integrator">Integrator</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#integrator-callbacks-reference">Integrator Callbacks reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#integratorcallbacks">IntegratorCallbacks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_nestedconfig.html">NestedConfig API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_itemcache.html">item_cache API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_t2.html">T2 API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="api_index.html">API index</a> &raquo;</li>
+        
+      <li>Integrator API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api_integrator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="integrator-api">
+<span id="api-integrator"></span><h1>Integrator API<a class="headerlink" href="#integrator-api" title="Permalink to this headline">¶</a></h1>
+<p>This API is in 2 parts</p>
+<ol class="arabic simple">
+<li>The API on the Integrator API <em>Object</em> that the integrator calls</li>
+<li>The Integrator Callback Interface that the integrator has to implement</li>
+</ol>
+<div class="section" id="module-ioticlabs.dt.api.integrator">
+<span id="integrator-api-reference"></span><h2>Integrator API reference<a class="headerlink" href="#module-ioticlabs.dt.api.integrator" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="integrator">
+<h3>Integrator<a class="headerlink" href="#integrator" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ioticlabs.dt.api.integrator.Integrator">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.integrator.</code><code class="descname">Integrator</code><span class="sig-paren">(</span><em>config</em>, <em>client</em>, <em>callbacks</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.Integrator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides asset notifications as well as event publishing functionality.</p>
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.integrator.Integrator.assets">
+<code class="descname">assets</code><a class="headerlink" href="#ioticlabs.dt.api.integrator.Integrator.assets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence of assets (snapshot) known to integrator internally. on_asset_* callbacks should be used to
+determine what assets exist rather than polling this.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.integrator.Integrator.publish_event">
+<code class="descname">publish_event</code><span class="sig-paren">(</span><em>event</em>, <em>confirm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.Integrator.publish_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publish an event for a given asset.</p>
+<dl class="docutils">
+<dt>event - Instance of AssetEvent implementing class. If time is not specified, current UTC time will be used. The</dt>
+<dd>source field is also ignored (and set based on configuration).</dd>
+<dt>confirm - Confirm delivery of the event. If set, this method will block until the event has been published.</dt>
+<dd>Otherwise it will return immediatley and publish failures will be ignored.</dd>
+<dt>Raises:</dt>
+<dd><p class="first">TypeError - If the event is invalid
+AssetUnknown - If the integrator is currently not handling this asset
+EventPublishFailure - If confirm=True and the event could not be published. Note: Timeouts are goverend by</p>
+<blockquote>
+<div>agent and integrator configuration.</div></blockquote>
+<p class="last">UnknownEvent - event is not registered
+UnknownVersion - event version not known for registered event
+EncodeDecodeError - extra data cannot be encoded
+ValidationError - additional type data validation failed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.integrator.Integrator.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.Integrator.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the integrator. Other public methods herein must not be called beforehand. Should be called after
+starting Iotic agent. Alternatively use with keyword on the instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.integrator.Integrator.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><em>timeout=10</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.Integrator.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the integrator. Should be called before shutting down the Iotic agent.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.integrator.Integrator.t2_respond">
+<code class="descname">t2_respond</code><span class="sig-paren">(</span><em>request</em>, <em>mime</em>, <em>data</em>, <em>wait=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.Integrator.t2_respond" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send response for the given type2 request. If a large amount of data is to be returned, t2_respond_streamed
+is preferred.</p>
+<p>request - T2Request instance
+mime - Mime type of data (string, required)
+data - bytes (i.e. raw response)
+wait - whether to block until all underlying agent requests complete. Otherwise returns as soon as all requests</p>
+<blockquote>
+<div>have been enqueued.</div></blockquote>
+<dl class="docutils">
+<dt>Raises:</dt>
+<dd>TypeError - If the request is invalid
+ValueError - If mime or data are invalid
+AssetUnknown - If the asset is no longer known. In this case the original t2 request should be ignored</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.integrator.Integrator.t2_respond_error">
+<code class="descname">t2_respond_error</code><span class="sig-paren">(</span><em>request</em>, <em>reason</em>, <em>wait=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.Integrator.t2_respond_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send failure response for the given type2 request.</p>
+<p>request - T2Request instance
+reason - T2ProviderFailureReason instance
+wait - whether to block until underlying agent request completes. Otherwise returns as soon as the request has</p>
+<blockquote>
+<div>been enqueued.</div></blockquote>
+<dl class="docutils">
+<dt>Raises:</dt>
+<dd>TypeError - If the request or reason is invalid
+AssetUnknown - If the asset is no longer known. In this case the original t2 request should be ignored</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.integrator.Integrator.t2_respond_streamed">
+<code class="descname">t2_respond_streamed</code><span class="sig-paren">(</span><em>request</em>, <em>mime</em>, <em>wait=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.Integrator.t2_respond_streamed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Streaming version of t2_respond. Provides context-managed function which accepts one argument: data (bytes).
+See t2_respond for more details. Expected usage:</p>
+<dl class="docutils">
+<dt>with t2_respond_streamed(req, ‘application/some-mime’) as write:</dt>
+<dd><dl class="first last docutils">
+<dt>for chunk in response_data:</dt>
+<dd>write(chunk)</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="integrator-callbacks-reference">
+<h2>Integrator Callbacks reference<a class="headerlink" href="#integrator-callbacks-reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="integratorcallbacks">
+<h3>IntegratorCallbacks<a class="headerlink" href="#integratorcallbacks" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ioticlabs.dt.api.integrator.IntegratorCallbacks">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.integrator.</code><code class="descname">IntegratorCallbacks</code><a class="headerlink" href="#ioticlabs.dt.api.integrator.IntegratorCallbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of callbacks which integrator implementations must provide.</p>
+<p>NOTE: Methods herein should not perform long-running tasks and instead delegate to make necessary changes.</p>
+<dl class="method">
+<dt id="ioticlabs.dt.api.integrator.IntegratorCallbacks.on_asset_created">
+<code class="descname">on_asset_created</code><span class="sig-paren">(</span><em>asset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.IntegratorCallbacks.on_asset_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>A new asset has been created. Called once for each known asset on startup as well as whenever a new asset
+appears whilst the integrator is running.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.integrator.IntegratorCallbacks.on_asset_deleted">
+<code class="descname">on_asset_deleted</code><span class="sig-paren">(</span><em>asset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.IntegratorCallbacks.on_asset_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>An asset has been deleted. Called whenever an asset has been removed and should no longer be considered by
+the integrator. Note: This is NOT called if an asset has been deleted whilst the integrator is not running.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.integrator.IntegratorCallbacks.on_t2_request">
+<code class="descname">on_t2_request</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.integrator.IntegratorCallbacks.on_t2_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>A new type2 request has been made for a particular asset.</p>
+<p>request - instance of T2Request</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api_nestedconfig.html" class="btn btn-neutral float-right" title="NestedConfig API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api_follower.html" class="btn btn-neutral" title="Follower API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

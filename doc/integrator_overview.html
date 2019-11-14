@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Write an integrator &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="install.html" />
+    <link rel="prev" title="Developer Guide" href="devguide.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="devguide.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="devguide.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Write an integrator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-steps">How-to steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="follower_overview.html">Write a follower</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_index.html">API index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="devguide.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Write an integrator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/integrator_overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="write-an-integrator">
+<span id="integrator-overview"></span><h1>Write an integrator<a class="headerlink" href="#write-an-integrator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>An <a class="reference internal" href="glossary.html#term-integrator"><span class="xref std std-term">integrator</span></a> is an extention of a <a class="reference internal" href="glossary.html#term-thingrunner"><span class="xref std std-term">ThingRunner</span></a>.
+Their purpose is to interface with the source data on the “left” and provide events to the digital twin on the “right”.
+They may or may not need to poll the source systems, but that’s the most common way of turning an API into an event stream</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+------------+</span>            <span class="o">+------------+</span>              <span class="o">+------------+</span>
+<span class="o">|</span> <span class="n">Source</span>     <span class="o">|&lt;---</span><span class="n">Poll</span><span class="o">---&gt;|</span> <span class="n">Integrator</span> <span class="o">|---&gt;</span><span class="n">Events</span><span class="o">---&gt;|</span>   <span class="n">Twin</span>     <span class="o">|</span>
+<span class="o">+------------+</span>            <span class="o">+------------+</span>              <span class="o">+------------+</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-steps">
+<h2>How-to steps<a class="headerlink" href="#how-to-steps" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-up-your-python-enviroment">Set up your python enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-up-your-python-enviroment-windows">Set up your python enviroment (Windows)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#download-or-clone-the-source">Download or clone the source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#examples-file-structure">Examples file-structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html#packages">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ioticlabs-dt-common">ioticlabs.dt.common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ioticlabs-dt-provider">ioticlabs.dt.provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ioticlabs-dt-runner">ioticlabs.dt.runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ioticlabs-dt-api">ioticlabs.dt.api</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="event_define.html">Event Definition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event_define.html#avro-definition">Avro Definition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="event_define.html#imports-and-class-definition">Imports and class definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="event_define.html#default-version-method">Default version method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="event_define.html#known-version-method">Known version method</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="event_define.html#versioning-events">Versioning Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="event_define.html#validating-events">Validating Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="event_define.html#working-on-the-package">Working on the package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="event_define.html#building-the-package">Building the package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="integrator_configure.html">Integrator configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="integrator_configure.html#format">Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="integrator_configure.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_configure.html#integrator">Integrator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="integrator_configure.html#asset">Asset</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_configure.html#type-2-specifics">Type 2 specifics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_configure.html#your-own-config">Your own config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_configure.html#reading-config-from-the-code">Reading config from the code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="integrator_configure.html#imports">Imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="integrator_configure.html#get-and-validate-the-config">Get and validate the config</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="integrator_develop.html">Develop your integrator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="integrator_develop.html#integrator-api">Integrator API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_develop.html#api-object-and-methods">API object and methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_develop.html#implementing-the-callbacks">Implementing the Callbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_develop.html#type-2-specifics">Type 2 specifics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="integrator_develop.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="integrator_develop.html#errors">Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_develop.html#static-testing">Static testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_develop.html#installing-dependencies">Installing dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator_develop.html#running">Running</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="devguide.html" class="btn btn-neutral" title="Developer Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Write a follower &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Follower configuration" href="follower_configure.html" />
+    <link rel="prev" title="Develop your integrator" href="integrator_develop.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="devguide.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="devguide.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="integrator_overview.html">Write an integrator</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Write a follower</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-steps">How-to steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_index.html">API index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="devguide.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Write a follower</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/follower_overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="write-a-follower">
+<span id="follower-overview"></span><h1>Write a follower<a class="headerlink" href="#write-a-follower" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference internal" href="glossary.html#term-follower"><span class="xref std std-term">Follower</span></a> is an extention of an <a class="reference internal" href="glossary.html#term-thingrunner"><span class="xref std std-term">ThingRunner</span></a>.
+Their purpose is to interface with the <a class="reference internal" href="glossary.html#term-twin"><span class="xref std std-term">twin</span></a> on the “left” and to provide a <a class="reference internal" href="glossary.html#term-view"><span class="xref std std-term">view</span></a> of data for consumption elsewhere - normally in an app - on the “right”
+They can ask any twin to replay the data from its event stream so they can recover from crashes or construct new views.
+They may or may not need to persist any of the data from the twin for the app. They can be entirely event based.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+------------+</span>              <span class="o">+------------+</span>            <span class="o">+------------+</span>            <span class="o">+------------+</span>
+<span class="o">|</span> <span class="n">Twin</span>       <span class="o">|---&gt;</span><span class="n">Events</span><span class="o">---&gt;|</span> <span class="n">Follower</span>   <span class="o">|---&gt;</span><span class="n">Data</span><span class="o">---&gt;|</span>   <span class="n">Views</span>    <span class="o">|---&gt;</span><span class="n">Data</span><span class="o">---&gt;|</span>   <span class="n">App</span>      <span class="o">|</span>
+<span class="o">+------------+</span>              <span class="o">+------------+</span>            <span class="o">+------------+</span>            <span class="o">+------------+</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-steps">
+<h2>How-to steps<a class="headerlink" href="#how-to-steps" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-up-your-python-enviroment">Set up your python enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-up-your-python-enviroment-windows">Set up your python enviroment (Windows)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#download-or-clone-the-source">Download or clone the source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#examples-file-structure">Examples file-structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html#packages">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ioticlabs-dt-common">ioticlabs.dt.common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ioticlabs-dt-provider">ioticlabs.dt.provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ioticlabs-dt-runner">ioticlabs.dt.runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ioticlabs-dt-api">ioticlabs.dt.api</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="follower_configure.html">Follower configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="follower_configure.html#discovery">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="follower_configure.html#events-package">Events Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="follower_configure.html#type-2-specifics">Type 2 specifics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="follower_develop.html">Develop your follower</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="follower_develop.html#follower-api">Follower API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="follower_develop.html#api-object-and-methods">API object and methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="follower_develop.html#implementing-the-callbacks">Implementing the Callbacks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="follower_develop.html#asset-creation-and-deletion">Asset creation and deletion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="follower_develop.html#event-handling">Event Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="follower_develop.html#dealing-with-named-events">Dealing with Named Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="follower_develop.html#type-2-specifics">Type 2 specifics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="follower_develop.html#type-2-exceptions">Type 2 exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="follower_develop.html#static-testing">Static testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="follower_develop.html#working-on-the-package">Working on the package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="follower_develop.html#building-the-package">Building the package</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="follower_configure.html" class="btn btn-neutral float-right" title="Follower configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="integrator_develop.html" class="btn btn-neutral" title="Develop your integrator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
