@@ -30,5 +30,7 @@ value of x 20"""
 
 # In the above example Before and after making change(),
 # the variable x takes the value of local variable i.e x = 15.
-# Outside of the add() function, the variable x will take value defined in the change() function i.e x = 20.
-# because we have used global keyword in x to create global variable inside the change() function (local scope).
+# Outside of the add() function, the variable x will take value defined
+# in the change() function i.e x = 20.
+# because we have used global keyword in x to create global
+# variable inside the change() function (local scope).

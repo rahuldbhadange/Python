@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Glossary &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="T2 API (ioticlabs.dt.common.values.t2)" href="api_t2.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_index.html">API index</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Glossary</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/glossary.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<dl class="glossary docutils">
+<dt id="term-follower">Follower</dt>
+<dd>A Follower is an Iotic thing that binds to a twin or twins and uses the twins as sources of data. Followers can optionally store these data in the form of <a class="reference internal" href="#term-view"><span class="xref std std-term">view</span></a> s or can provide data directly to an application.</dd>
+<dt id="term-integrator">Integrator</dt>
+<dd>An Integrator is an Iotic ThingRunner that interfaces to sources of data and provides a stream of events to a <a class="reference internal" href="#term-twin"><span class="xref std std-term">Twin</span></a></dd>
+<dt id="term-thingrunner">ThingRunner</dt>
+<dd>An abstracted Iotic Thing class that provides a lifecycle and a simple API. Examples <a class="reference external" href="https://github.com/Iotic-Labs/py-application-examples/tree/master/thing_runner">here</a></dd>
+<dt id="term-twin">Twin</dt>
+<dd>A twin is a virtual representation of a physical objects in term of the data that it can provide and the events in its history.
+A twin can also be controlled to ask for data on demand - the so-called <a class="reference internal" href="#term-type2request"><span class="xref std std-term">Type 2 request</span></a></dd>
+<dt id="term-type2request">Type2request</dt>
+<dd>An “instantaneous” request for data from a follower to the twin. The twin will forward the request to the appropriate integrator and send the data returned to the follower</dd>
+<dt id="term-view">View</dt>
+<dd>A view is a subset of the event stream that is persisted for the sake of an application. For example, only specific historical events regarding maintenance might be extracted to create a maintenance history view</dd>
+<dt id="term-client">Client</dt>
+<dd>(AKA User, Customer):  Individual, group or organisation which wants to use the DT solution.</dd>
+<dt id="term-digital-twin">Digital Twin</dt>
+<dd>(AKA DT, Asset): A client-specific entity which exposes an event stream and optionally can respond to T2 requests. Each asset within a group/deployment has a unique id (again usually client-specific).
+A twin is made of two parts, the <a class="reference internal" href="#term-consumer-twin"><span class="xref std std-term">Consumer Twin</span></a> and <a class="reference internal" href="#term-producer-twin"><span class="xref std std-term">Producer Twin</span></a></dd>
+<dt id="term-event-stream">Event Stream</dt>
+<dd>(AKA Event Log, Asset History, ES): A set of strictly ordered events, treated as an append-only log. Existing events cannot be removed but can be superseded by e.g. a newer version of the same event type.</dd>
+<dt id="term-event">Event</dt>
+<dd>(AKA Type 1 “_request_”, T1): A piece of information applicable to a particular asset at a given point in time. Each event has a type, offset, time and optionally payload (specific to its type).</dd>
+<dt id="term-event-offset">Event Offset</dt>
+<dd>(AKA Sequence number, seq): A monotonically increasing number indicating the position of an event in the event stream. Typically starts with zero. Used by followers to request replay of events.</dd>
+<dt id="term-event-time">Event Time</dt>
+<dd>Might relate to something that has happened (e.g. “Engine has been serviced”), a version of a document applicable to the asset (e.g. “Operation Manual v0.6”) or something completely different. Note that within the Event Stream for a particular asset event time does <strong>not</strong> have to necessarily increase. I.e. time should relate to data associated with the event, not when the event was inserted.</dd>
+<dt id="term-event-system-time">Event System Time</dt>
+<dd>(AKA systime): Automatically provided time of when an event was _appended_ to an Asset’s event stream.</dd>
+<dt id="term-event-type">Event Type</dt>
+<dd>Client-specific event definition applicable to some/all of their assets. Each event type has a unique name and an (optional) strictly-defined payload. Event types should be defined with the help of domain experts.</dd>
+<dt id="term-twin-runner">Twin Runner</dt>
+<dd>(AKA DT runner): Represents one or more assets in Iotic Space. Can also optionally route T2 requests.</dd>
+<dt id="term-dt-api">DT API</dt>
+<dd>API (currently in Python) used to implement integrators, followers and T2 providers</dd>
+<dt id="term-t2-provider">T2 Provider</dt>
+<dd>(AKA T2 Integrator): An integrator which also services at least one type of T2 request</dd>
+<dt id="term-consumer-twin">Consumer Twin</dt>
+<dd>Slightly confusingly this is the twin that a follower will follow. It’s called a consumer because it reads events (“consumes”) out of the <a class="reference internal" href="#term-event-stream"><span class="xref std std-term">Event Stream</span></a> and sends them to the <a class="reference internal" href="#term-follower"><span class="xref std std-term">Follower</span></a></dd>
+<dt id="term-producer-twin">Producer Twin</dt>
+<dd>Slightly confusingly this is the twin that receives events from integrators and stores them (“produces”) in the <a class="reference internal" href="#term-event-stream"><span class="xref std std-term">Event Stream</span></a> for use by <a class="reference internal" href="#term-consumer-twin"><span class="xref std std-term">Consumer Twin</span></a> s</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="api_t2.html" class="btn btn-neutral" title="T2 API (ioticlabs.dt.common.values.t2)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

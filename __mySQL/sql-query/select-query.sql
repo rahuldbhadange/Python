@@ -20,6 +20,13 @@ select rollno, firstname, lastname from mytesttable where rollno IN (2, 6) -- WI
 
 
 
+------------------------------------------------- NOT IN -------------------------------------------------
+use mytestdb
+select rollno, firstname, lastname from mytesttable where rollno NOT IN (2, 6) -- WILL ONLY RETURNS WHER ROLLNO <> 2 and 6
+
+
+
+
 --------------------------- OPERATOR (AND, OR, LIKE[%], <, >, <> , = ,)----------------------------------
 use mytestdb
 

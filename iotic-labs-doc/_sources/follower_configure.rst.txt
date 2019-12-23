@@ -1,0 +1,15 @@
+.. _follower_configure:
+
+Follower configuration
+========================
+
+Discovery
+---------
+
+Events Package
+--------------
+
+.. _t2_config_Follower:
+
+Type 2 specifics
+----------------

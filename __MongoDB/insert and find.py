@@ -6,7 +6,6 @@ from pprint import pprint
 
 Client = pymongo.MongoClient("mongodb://localhost:27017/")
 
-
 # creating database
 DB = Client["database2019"]
 DB = Client.database2019

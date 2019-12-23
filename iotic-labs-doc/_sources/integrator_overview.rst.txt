@@ -1,0 +1,28 @@
+.. _integrator_overview:
+
+Write an integrator
+===================
+
+Purpose
+-------
+
+An :term:`integrator` is an extention of a :term:`ThingRunner`.
+Their purpose is to interface with the source data on the "left" and provide events to the digital twin on the "right".
+They may or may not need to poll the source systems, but that's the most common way of turning an API into an event stream
+
+::
+
+    +------------+            +------------+              +------------+
+    | Source     |<---Poll--->| Integrator |--->Events--->|   Twin     |
+    +------------+            +------------+              +------------+
+
+How-to steps
+------------
+
+.. toctree::
+   :maxdepth: 3
+
+   install
+   event_define
+   integrator_configure
+   integrator_develop

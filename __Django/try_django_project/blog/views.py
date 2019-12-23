@@ -10,5 +10,3 @@ def blog_post_detail_page(request):
     template_name = "blog_post_detail.html"
     context = {"object": obj, "title": "blog_post_detail"}
     return render(request, template_name, context)
-
-

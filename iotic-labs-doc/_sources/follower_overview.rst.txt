@@ -1,0 +1,28 @@
+.. _follower_overview:
+
+Write a follower
+================
+
+Purpose
+-------
+
+A :term:`Follower` is an extention of an :term:`ThingRunner`.
+Their purpose is to interface with the :term:`twin` on the "left" and to provide a :term:`view` of data for consumption elsewhere - normally in an app - on the "right"
+They can ask any twin to replay the data from its event stream so they can recover from crashes or construct new views.
+They may or may not need to persist any of the data from the twin for the app. They can be entirely event based.
+
+::
+
+    +------------+              +------------+            +------------+            +------------+
+    | Twin       |--->Events--->| Follower   |--->Data--->|   Views    |--->Data--->|   App      |
+    +------------+              +------------+            +------------+            +------------+
+
+How-to steps
+------------
+
+.. toctree::
+   :maxdepth: 3
+
+   install
+   follower_configure
+   follower_develop

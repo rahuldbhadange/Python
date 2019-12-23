@@ -1,0 +1,26 @@
+.. _devguide:
+
+Developer Guide
+===============
+
+Overview
+--------
+
+In the event-based model that is used by the Iotic labs digital twin solution an :term:`integrator`'s job is to communicate with the source(s) of data and to provide the twin with data in the form of events
+The :term:`twin` stores these events as an :term:`Event Stream`.
+A :term:`follower` then binds to the twin and receives events from it when new ones arrive. Followers can request the twin to replay the stream from a particular offset.
+
+::
+
+    +------------+              +------------+               +------------+
+    | Integrator |--->Events--->| Twin       |--->Events---->| Follower   |
+    +------------+              +------------+               +------------+
+
+This guide is a task-based approach to writing either a integrator and/or an follower. The guide will take you through the steps necessary to write each one
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Writing a...:
+
+   integrator_overview
+   follower_overview

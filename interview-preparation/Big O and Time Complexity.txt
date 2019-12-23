@@ -1,0 +1,19 @@
+time_complexity
+
+1. Linear
+2. Constant
+3. Quadratic
+
+Big-O Notation:
+	Rules:
+	  1. Find the fastest growing term
+	  2. Take out the coefficient
+n = size of input
+
+O(n) - linear
+	T = an+b = an = O(n)
+O(1) - constant
+	T = c = 0.122 = 0.122 * 1 = O(1)
+O(n^2)  - quadratic
+	T = an^2 + bn + c = O(n^2)
+

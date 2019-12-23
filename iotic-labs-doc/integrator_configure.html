@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Integrator configuration &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Develop your integrator" href="integrator_develop.html" />
+    <link rel="prev" title="Event Definition" href="event_define.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="devguide.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="devguide.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="integrator_overview.html">Write an integrator</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="integrator_overview.html#purpose">Purpose</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="integrator_overview.html#how-to-steps">How-to steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="follower_overview.html">Write a follower</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_index.html">API index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="devguide.html">Developer Guide</a> &raquo;</li>
+        
+          <li><a href="integrator_overview.html">Write an integrator</a> &raquo;</li>
+        
+      <li>Integrator configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/integrator_configure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="integrator-configuration">
+<span id="integrator-configure"></span><h1>Integrator configuration<a class="headerlink" href="#integrator-configuration" title="Permalink to this headline">¶</a></h1>
+<p>The configuration file(s) for any integrator should be in the <cite>cfg</cite> folder on the root of the particular integrator.</p>
+<p>There will be 2 files</p>
+<ol class="arabic simple">
+<li>the integrator.cfg.yml - this is for the integrator itself</li>
+<li>the integrator.log.yml - this is only for logging, we won’t consider that here:</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">example</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">acmecorp</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">integrator</span><span class="o">.</span><span class="n">example</span><span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">integrator</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">yml</span>
+<span class="o">./</span><span class="n">example</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">acmecorp</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">integrator</span><span class="o">.</span><span class="n">example</span><span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">integrator</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<div class="section" id="format">
+<h2>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h2>
+<p>The files are in the loose standard YAML format where indentation and colons (:) are used to show nesting.</p>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_config</span><span class="p">:</span>
+
+  <span class="n">some</span><span class="p">:</span>
+    <span class="n">var</span><span class="p">:</span> <span class="n">Some</span> <span class="n">value</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="integrator">
+<h2>Integrator<a class="headerlink" href="#integrator" title="Permalink to this headline">¶</a></h2>
+<p>The main section for the Integrator config.</p>
+<ul class="simple">
+<li><cite>source</cite> the text source name used to identify the origin of the events. Don’t change this after you’ve published any events.</li>
+<li><cite>workers</cite> the number of threads your integrator needs</li>
+<li><cite>thing</cite> identifying descriptive text about your integrator’s Iotic Thing<ul>
+<li><cite>lid</cite> the local id of your integrator’s Iotic Thing</li>
+<li><cite>label</cite> the short description of your integrator’s Iotic Thing. (Rarely needed)</li>
+<li><cite>description</cite> the long description of your integrator’s Iotic Thing. (Even less likely to need)</li>
+<li><cite>tags</cite> a list of tags to help identify your integrator’s Iotic Thing as a T2 provider. (Only needed in the case of T2 being enabled)</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrator</span><span class="p">:</span>
+
+  <span class="c1"># Event source name as included in published events. Should NOT be changed once set!</span>
+  <span class="n">source</span><span class="p">:</span> <span class="n">acmecorp</span>
+
+  <span class="c1"># How many threads to reserve for performing asynchronous tasks such as event publishing and asset updates. Not</span>
+  <span class="c1"># applicable in synchronous event publishing case.</span>
+  <span class="c1"># workers: 1</span>
+
+  <span class="c1"># Metadata applicable to integrator Iotic Thing (all optional apart from lid)</span>
+  <span class="n">thing</span><span class="p">:</span>
+    <span class="n">lid</span><span class="p">:</span> <span class="n">acme_integrator</span>
+    <span class="c1"># label:</span>
+    <span class="c1"># description:</span>
+    <span class="c1"># If type2 is enabled, this must be populated explicitly with one tag to identify the thing as a t2 provider and</span>
+    <span class="c1"># another to indicate the name of the provider.</span>
+    <span class="c1"># tags: []</span>
+
+  <span class="c1"># Details for controls associated with integrator thing (defaults will be used if not specified)</span>
+  <span class="c1"># point:</span>
+    <span class="c1"># lid:</span>
+      <span class="c1"># t2req:</span>
+    <span class="c1"># label:</span>
+      <span class="c1"># t2req:</span>
+</pre></div>
+</div>
+<div class="section" id="asset">
+<h3>Asset<a class="headerlink" href="#asset" title="Permalink to this headline">¶</a></h3>
+<p>A group of config items for the asset twin.</p>
+<div class="section" id="events-module">
+<h4>Events Module<a class="headerlink" href="#events-module" title="Permalink to this headline">¶</a></h4>
+<p>This allows you specify which sets of events (as defined by their module)
+your integrator is allowed to publish. If you try to publish something
+that is not in the list, then the event will be rejected and not reach the twin.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">event</span><span class="p">:</span>
+  <span class="n">modules</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">rrps</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">events</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="events-publish">
+<h4>Events Publish<a class="headerlink" href="#events-publish" title="Permalink to this headline">¶</a></h4>
+<p>Here you can specify what publishing parameters you need. At the moment it’s only:</p>
+<ul class="simple">
+<li>timeout: the timeout in seconds for the twin to respond to the event publish</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Event publishing timeout in seconds (applicable ONLY when confirmation has been requested both in sync and async</span>
+<span class="c1"># cases). Should be high enough to allow for digital twin to respond as otherwise risk publishing the same event</span>
+<span class="c1"># mutiple times. (default will be used if not specified)</span>
+<span class="n">publish</span><span class="p">:</span>
+  <span class="n">timeout</span><span class="p">:</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="twin-discovery">
+<h4>Twin Discovery<a class="headerlink" href="#twin-discovery" title="Permalink to this headline">¶</a></h4>
+<p>The <cite>discovery:</cite> part of the config is used to tell the Integrator API what digital twins to search for and how frequently.</p>
+<p>In the following example.</p>
+<ul class="simple">
+<li><cite>text</cite> a text or tag applied to all twins in a particular environment that identifies them as producers
+of event-logs. These are the right twins for <a class="reference internal" href="glossary.html#term-integrator"><span class="xref std std-term">integrator</span></a> s to search for as they are able to receive events and
+write them to the persistent storage.</li>
+<li><cite>scope</cite> refers to where in Iotic Space the search is to look. Local means in the same subspace as your integrator.</li>
+<li><cite>interval</cite> is how frequently the search should be performed to look for new twins.</li>
+<li><cite>filter</cite> is to refine how the search will work<ul>
+<li><cite>label</cite> allows you to search within the Digital Twins’ <cite>Label</cite> s for extra text (not normally necessary)</li>
+<li><cite>tags</cite> will get information from the tags associated with the twin. For example the twins in a “Q” environment will be tagged with “env_q_p” and also with a unique tag of “q_123456” where the 123456 is the unique id of the thing</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">discovery</span><span class="p">:</span>
+  <span class="c1"># One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)</span>
+  <span class="n">text</span><span class="p">:</span> <span class="n">env_q_p</span>
+  <span class="c1"># One of public, local or localOwn (default).</span>
+  <span class="n">scope</span><span class="p">:</span> <span class="n">local</span>
+  <span class="c1"># How often to poll for new assets, in seconds</span>
+  <span class="n">interval</span><span class="p">:</span> <span class="mi">3600</span>
+
+  <span class="nb">filter</span><span class="p">:</span>
+    <span class="n">label</span><span class="p">:</span>
+      <span class="c1"># Expected asset thing label. This is a standard Python regular expression and should be contained within</span>
+      <span class="c1"># &#39;^&#39; and &#39;$&#39;. Defined groups are ignored and this parameter is optional.</span>
+      <span class="c1">#thing_regex: &#39;^q producer$&#39;</span>
+      <span class="c1"># Expected label for event production related control. (defaults will be used if not specified).</span>
+      <span class="c1"># control:</span>
+
+    <span class="n">tags</span><span class="p">:</span>
+      <span class="c1"># Expected unique tag containing asset id. This is a standard Python regular expression and should be</span>
+      <span class="c1"># contained within &#39;^&#39; and &#39;$&#39; and define one group (containing asset id). (default will be used if not</span>
+      <span class="c1"># specified)</span>
+      <span class="n">unique_regex</span><span class="p">:</span> <span class="s1">&#39;^q_(.+)$&#39;</span>
+      <span class="c1"># Expected static tags for each asset</span>
+      <span class="n">thing</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">env_q_p</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="type-2-specifics">
+<span id="t2-config-integrator"></span><h2>Type 2 specifics<a class="headerlink" href="#type-2-specifics" title="Permalink to this headline">¶</a></h2>
+<p>In order to inform the twin that your Integrator is capable of providing a <a class="reference internal" href="glossary.html#term-type2request"><span class="xref std std-term">Type 2 request</span></a> you have to do 2 things:</p>
+<ol class="arabic">
+<li><p class="first">Enable type two in the <cite>asset:</cite> section</p>
+</li>
+<li><p class="first">Set 2 tags in the <cite>thing:</cite> section</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Set the <cite>q_t2</cite> tag that says this is a T2 provider in a “Q” environment</li>
+<li>Set the <cite>q_t2_&lt;name&gt;</cite> where the &lt;name&gt; is the unique id of the T2 request</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">asset</span><span class="p">:</span>
+
+  <span class="n">type2</span><span class="p">:</span>
+    <span class="c1"># Whether to expect assets to expose type2 functionality. Assets which do not have the right points to support</span>
+    <span class="c1"># type2 requests will be ignored if this is enabled.</span>
+    <span class="n">enabled</span><span class="p">:</span> <span class="n">yes</span>
+
+
+<span class="n">thing</span><span class="p">:</span>
+  <span class="n">tags</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">q_t2</span>
+  <span class="o">-</span> <span class="n">q_t2_sapspc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="your-own-config">
+<h2>Your own config<a class="headerlink" href="#your-own-config" title="Permalink to this headline">¶</a></h2>
+<p>In the section <cite>my_config</cite> (or chose your own name) you can add anything you need. This will be passed to the integrator
+along with all the other sections in the YAML.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_config</span><span class="p">:</span>
+
+  <span class="n">some</span><span class="p">:</span>
+    <span class="n">var</span><span class="p">:</span> <span class="n">Some</span> <span class="n">value</span>
+
+  <span class="n">another</span><span class="p">:</span>
+    <span class="n">item</span><span class="p">:</span>
+      <span class="n">somewhere</span><span class="p">:</span>
+        <span class="o">-</span> <span class="mi">4</span>
+        <span class="o">-</span> <span class="mi">10</span>
+        <span class="o">-</span> <span class="mi">7</span>
+        <span class="o">-</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reading-config-from-the-code">
+<h2>Reading config from the code<a class="headerlink" href="#reading-config-from-the-code" title="Permalink to this headline">¶</a></h2>
+<p>The config is passed to your integrator. It’s best to handle this in the <cite>__init__()</cite> method.</p>
+<p>The nested config handler API is <a class="reference internal" href="api_nestedconfig.html#api-nestedconfig"><span class="std std-ref">here</span></a></p>
+<div class="section" id="imports">
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
+<p>Import the nested config handler</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ioticlabs.dt.api.util</span> <span class="k">import</span> <span class="n">NestedConfig</span><span class="p">,</span> <span class="n">log_exceptions</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-and-validate-the-config">
+<h3>Get and validate the config<a class="headerlink" href="#get-and-validate-the-config" title="Permalink to this headline">¶</a></h3>
+<p>In the code you can get keys from the config as if it were a dictionary.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;my_config&#39;</span><span class="p">]</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;my_var&#39;</span>
+<span class="c1"># Could just access like any dict</span>
+<span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;CONFIG [</span><span class="si">%s</span><span class="s1">] </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;default value&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Or you can use the “dot” notation to get nested config items in one go - and check them all in one call.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;my_config&#39;</span><span class="p">]</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;some.var&#39;</span>
+<span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+    <span class="s1">&#39;CONFIG [</span><span class="si">%s</span><span class="s1">] </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span>
+    <span class="n">NestedConfig</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="n">NestedConfig</span><span class="o">.</span><span class="n">Check</span><span class="o">.</span><span class="n">non_empty_str</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>If you need some extra validation that’s not available via the NestedConfig object, you can add that, too.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;another.item.somewhere&#39;</span>
+<span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+    <span class="s1">&#39;CONFIG [</span><span class="si">%s</span><span class="s1">] </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span>
+    <span class="n">NestedConfig</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">item</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="integrator_develop.html" class="btn btn-neutral float-right" title="Develop your integrator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="event_define.html" class="btn btn-neutral" title="Event Definition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

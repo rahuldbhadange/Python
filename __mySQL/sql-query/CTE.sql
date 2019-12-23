@@ -14,9 +14,6 @@ VALUES
 
 SELECT * FROM TEST_CTE
 
-
-
-
 SELECT a, b, count(*) AS 'OCC' from TEST_CTE GROUP BY a, b
 SELECT a, b, count(a) AS 'OCC' from TEST_CTE GROUP BY a, b
 
