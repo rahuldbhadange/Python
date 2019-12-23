@@ -1,0 +1,4 @@
+C:\User\HBD2KOR\AppData\Local\Programs\Python
+
+
+ C:\Users\HBD2KOR\AppData\Local\Programs\Python\%HOME%\envs>

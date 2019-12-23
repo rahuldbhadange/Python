@@ -1,0 +1,46 @@
+[?6/?4/?2019 4:30 PM]  
+Hi Fabio
+After restarting also it gives the same error. Can we try the other way?
+ 
+[?6/?4/?2019 4:32 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+ok, so you will need to execute "mmc" 
+ 
+[?6/?4/?2019 4:33 PM]  
+win+r => certmgr.mmc  ???
+like that?
+ 
+[?6/?4/?2019 4:33 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+win + r 
+mmc 
+ 
+[?6/?4/?2019 4:34 PM]  
+okay. Console Root?
+ 
+[?6/?4/?2019 4:34 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+now click on File 
+Add Remove SnapIn 
+from Available Snapins, click on Certificates (should be the third in the list) and then on Add 
+ 
+[?6/?4/?2019 4:35 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+when adding the snap-in, select the option "Computer account" 
+ 
+[?6/?4/?2019 4:36 PM]  
+done. finish ?
+ 
+[?6/?4/?2019 4:36 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+yes 
+then you should see the Certificates (Local Computer) icon in the sidebar 
+ 
+[?6/?4/?2019 4:37 PM]  
+yes I can see it.
+ 
+[?6/?4/?2019 4:41 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+so now if you expand it you should be able to import the certificate in Trusted Root Authorities as we did before 
+and then hopefully it will work 
+ 
+[?6/?4/?2019 4:43 PM]  
+Okay. I will try
+ 
+[?6/?4/?2019 4:55 PM]  
+I think that has been resolved.
+ 

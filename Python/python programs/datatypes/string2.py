@@ -1,0 +1,11 @@
+x="python program"
+print(x)
+print(x[7:15])
+print(x[2:6])
+print(x[-7:-3])
+print(x[12:6])
+print(x[-3:-7])
+print(x[7: ])
+print(x[ :5])
+print(x[ : ])
+print(x)

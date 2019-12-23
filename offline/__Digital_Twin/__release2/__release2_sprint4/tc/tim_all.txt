@@ -1,0 +1,218 @@
+Hi Tim
+ 
+Hi, how's it going? 
+ 
+all good
+ 
+I have made changes to sapwarrantyrecall regarding error log
+ 
+can you please check and confirm?
+ 
+Ok which branch? 
+ 
+Okay I will push
+ 
+Hi Tim
+ 
+Hi 
+ 
+Need one help
+ 
+Ok 
+ 
+I was in dev branch...wanted to checkout so error occurred as "need to push", so I have stash that changes and move to dev-rahul-XXXX branch.... shows no changes
+ 
+You can run:    git stash pop    to recover what was stashed.   If there is a conflict it won't remove the stash.   You can run:  git stash list    to see how many stashes you have.  And you can run:  git stash show -p stash@{1} to see what is in the stashes 
+ 
+Its a conflict actually asking for merge, even after git stash pop
+ 
+Yes thats OK, if you use git stash it shoudl say 'both modified' on some files.  You edit each file and you should fine some >>> sections with the conflicts.  Edit the files to fix the issues.  Then you can git add and git commit 
+Then check the git log -p carefully to see the merge has been successful.  And then you can git stash drop to remove the stash 
+ 
+Hi Tim
+If you have some time, will you please look into this?
+ 
+Hi Rahul I'm sorry for the delay.  I think the easiest way for me to help will be if you force git to make a commit from the conflict.  You can do this by using:  git add    for all the files that are 'both modified' in git status.  And then committing.  Make the message start with like __conflict__ or something.  Push to a new branch so I can advise what to do next 
+ 
+Hi Tim
+I have push changes for sapwarrantyrecall to dev-rahul-60319
+ 
+Please go through it
+ 
+I will be waitung for your response
+ 
+OK I pushed 1 commit to the top of your branch.  You should be able to:  git fetch ; git rebase    to apply the update. 
+ 
+The raise_for_status will raise a HTTPError which will be like "500 Internal Server Error" or some http error string like that. 
+The exc_info flag will print a stack trace if True 
+I left an unused variable but you can remove that 
+ 
+Hi Rahul.  Was my changed version OK?  Any questions?  I didn't try running it etc 
+ 
+I run it
+ 
+small changes but was running
+ 
+Ok great.  Do you think it'll work for the other integrators?  I think perhaps the url/asset_id change to __call function might not be a direct copy into the other integrators 
+And your branch is quite far diverged from dev.  You will not be able to rebase without pain.  I think you should make a new branch based off dev.  Cherry pick the commits you want to share with azure.  Fix any conflicts.  Then you can push and raise PR.  Then repeat.  Its best to have one issue per PR but I think you have ~15 commits ahead of dev. 
+ 
+okay I will do that
+ 
+but I pull dev branch after creating new one i.e. dev-rahul-60319
+ 
+I think perhaps the pull is the problem.  From an earlier commit VSTS squashed some of your commits so git thought they were different.  The pull tried to put them both in the branch in the wrong order and it has messed up your history.  The easiest way is to go back to dev history and cherry pick.  You could fix it with rebase but it would be hard.  I think it cannot be fixed with pull 
+ 
+okay I will create new branch, based on dev.
+ 
+and then make the changes, will it work?
+ 
+So you run like:   git checkout dev;  git fetch --prune;  git rebase;  git checkout -b dev-rahul-12345 (where 12345 is whatever issue);    git log dev-rahul-60319    (Go down to the oldest commit of yours not in the dev branch.  Copy the commit ID.)  git cherry-pick commitid;      and then when that 12345 branch has enough commits to solve the issue you can raise a PR.  Then repeat for other issues.  Until finally you're onto the  current issue 
+ 
+Now I have made changes to new branch, so unable to checkout before commiting:(
+ 
+Yes thats fine.  Keep working on your current branch.  But when you want to raise PRs you'll have to go through the cherry pick process 
+ 
+but for that I will have to checkout from current branch right? so you want me to push the changes then do the above stuff?
+ 
+Oh right yes, OK first you can run:    git reset HEAD~1    this will wipe my __TC__ commit off your branch but leave the code changed.  -- Then when your change is finished you can git add and git commit --amend   to edit your sapwarrantyrecall_error_log_http commit (you can also change the commit message in the amend) 
+ 
+I have push the changes for all integrator
+ 
+I'm leaving for the day 
+ 
+Ok, good evening.  I'll email you feedback about the push (y) 
+ 
+Thanks you:)
+take care
+ 
+Good Morning Tim
+ 
+Hi Rahul, how's it going? 
+ 
+Quick call?
+ 
+I'm sorry I don't have time.  I'm about to join an iotic call and then I'm travelling to Cambridge for more meetings :( 
+ 
+Ohh
+ 
+We could schedule one for tomorrow morning? 
+ 
+Actually I wanted show you cherry-pick conflict
+ 
+Ok can you send me like screenshots / copy & paste of the diffs and I'll try to help by email.  Sorry just time is tight today. 
+Or perhaps Muthu can help with the conflict resolution? 
+ 
+Okay
+ 
+Muthu has suggested to talk to you:(
+ 
+Ok sorry about that.  I'll reply to emails as quickly as possible today.  Or I can have a call tomorrow 
+ 
+No issues
+ 
+I can understand
+We will email, please take your time I don't want to trouble you
+ 
+You are helping that itself a lot for me.
+ 
+Good Morning Rahul.  I just got to a meeting in Cambridge 
+ 
+I should have some time to chat this morning 
+How's it going?  Did you work out how to fix the conflicts in those files? 
+ 
+Good Morning Tim
+ 
+Yeah
+ 
+I tried
+ 
+there is confusion so I mailed you regrading, if you can help
+ 
+Let me check the mail again 
+ 
+sure
+ 
+OK so consider the first diff in this file 
+<<<<<<< HEAD
+SapConfig = namedtuple('SapConfig', 'md_endp md_usr md_pwd md_timeout')
+MOCK_DATA_FILE = "data/mock-master-data.json"
+=======
+DEBUG_ENABLED = log.isEnabledFor(logging.DEBUG)
+>>>>>>> 997e16f... integrator_error_log_http 
+You need to remove the << == >> sections to make the code read as it should.  In this case I think it should look like this in the end 
+MOCK_DATA_FILE = "data/mock-master-data.json"
+DEBUG_ENABLED = log.isEnabledFor(logging.DEBUG)
+
+log = logging.getLogger(__name__)
+SapConfig = namedtuple('SapConfig', 'md_endp md_usr md_pwd md_timeout') 
+ 
+So its not a straight forward fix at all.  But I think you are the best person to fix this code as you're familiar with the integrators 
+ 
+what about 
+"MOCK_DATA_FILE = "data/mock-master-data.json" ?
+ 
+Oh yes I forgot that line can go.  I thought it was removed from dev already. 
+ 
+What is the basic aim?
+Do I need to match the dev branch ?
+ 
+The basic aim is to re-make your change onto this new branch.  This new branch is based off dev. 
+(And then future aim is to stay close to dev) 
+ 
+okay then this conflict is with which file (or branch should I say)
+ 
+30619?
+ 
+So you're currently on the 14374 branch? And you cherry picked from your old branch? Git status says 'both modified' for some files?  -- You should fix and commit onto 14374 
+ 
+ you're currently on the 14374 branch? yes
+ 
+Git status says 'both modified' for some files? yes
+ 
+Actually!  I just realised there might be an easier way to make the change.  You could git reset --hard azure/dev and re-make the requests error logging commit by hand.  No conflicts.  But it does mean redoing some work 
+ 
+I will do that
+ 
+shall do reset stuff?
+ 
+what say?
+ 
+Reset will be the easier to make the 14374 commit.  If you don't mind redoing the work. 
+ 
+I don't mind it, I will do it
+ 
+Ok sorry about that.  Is there any work on the old 306 branch that needs to come to dev? 
+ 
+reset will update 14374 with dev, no?
+ 
+From the 14374 you can wipe the state back to dev by running:  git cherry-pick --abort;  git reset --hard azure/dev 
+ 
+306.. I have do error logging? stuff?
+ 
+Yes the error logging change that you're going to remake into the 14374 branch 
+Any other changes? 
+ 
+I don't think so
+ 
+Now I'm in 14374 cheery pick
+ 
+OK if you run: git cherry-pick --abort    it should releas e you 
+ 
+shall I abort?
+ 
+yep 
+ 
+I will give it a try
+ 
+worked!!!
+ 
+Ok cool.  Run the reset.  Then remake the error logging commit onto the clean branch.  Raise a PR.  Then you can make a new branch off dev for the next work. 
+ 
+sure
+ 
+ thanks a lot:)
+ 
+No probs.  I'm sorry it involved remaking the commit.  Sometimes its easier todo that than to fix git. 
+ 
+yeah, I completely understand.
+ 

@@ -1,0 +1,113 @@
+2019-06-20 16:53:00,923 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000015
+2019-06-20 16:53:00,923 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000015
+2019-06-20 16:53:00,930 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-20 16:53:01,093 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-20 16:53:01,093 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-20 16:53:01,093 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-20 16:53:01,263 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-20 16:53:01,954 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000015
+event_data['Datbi']   0000-00-00
+event_data['Datab']   2018-10-31
+{'Datab': 1540924200000,
+ 'Datbi': None,
+ 'Eqart': 'SYS',
+ 'EquiPartSet': {'__deferred': {'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('
+000000000200000082')/EquiPartSet"}},
+ 'EqunrAgg': '000000000200000081',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MatnrAgg': '12V2000C10',
+ 'Name1': 'Land Badenw�rtenberg',
+ 'SernrAgg': '1000015',
+ 'Vkbur': '0101',
+ 'Yybau': '030',
+ 'Yyerz': '10V1600A50',
+ '__metadata': {'id': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('00000000020000008
+2')",
+                'type': 'Y_DIGITAL_TWIN_SRV.EQUI01',
+                'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('0000000002000000
+82')"}}
+2019-06-20 16:53:02,995 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ 4711-001
+engine_data['Datbi']   2018-10-31
+engine_data['Datab']   0000-00-00
+2019-06-20 16:53:04,036 ERROR [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Could not parse time response for eng
+ine_serial 4711-001
+2019-06-20 16:53:04,036 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000015
+2019-06-20 16:53:04,037 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Publish event for 1000015
+{'Datab': 1540924200000,
+ 'Datbi': None,
+ 'Eqart': 'SYS',
+ 'EquiPartSet': {'__deferred': {'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('
+000000000200000082')/EquiPartSet"}},
+ 'EqunrAgg': '000000000200000081',
+ 'EqunrEng': '000000000200000082',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MaktxEng': 'R16V4000G83 REMAN ENGINE',
+ 'MatnrAgg': '12V2000C10',
+ 'MatnrEng': 'R16V4000G83',
+ 'Name1': 'Land Badenw�rtenberg',
+ 'SernrAgg': '1000015',
+ 'SernrEng': '4711-001',
+ 'Vkbur': '0101',
+ 'Yybau': '030',
+ 'Yyerz': '10V1600A50',
+ '__metadata': {'id': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('00000000020000008
+2')",
+                'type': 'Y_DIGITAL_TWIN_SRV.EQUI01',
+                'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('0000000002000000
+82')"}}
+SapMasterDataSet('1000015', source=None, time=datetime.datetime(2018, 10, 30, 18, 30), systime=None, offset=-1, version=
+1, data=...)
+
+
+
+2019-06-20 16:53:05,139 INFO [ioticlabs.dt.api.integrator] {watcher} Finished
+
+
+
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\event\registry.py", line 264, in encode_into
+    avro_schemaless_writer(output, schema, event.data)
+  File "fastavro\_write.pyx", line 755, in fastavro._write.schemaless_writer
+  File "fastavro\_write.pyx", line 543, in fastavro._write.write_data
+  File "fastavro\_write.pyx", line 480, in fastavro._write.write_record
+  File "fastavro\_write.pyx", line 541, in fastavro._write.write_data
+  File "fastavro\_write.pyx", line 444, in fastavro._write.write_union
+ValueError: None (type <class 'NoneType'>) do not match [{'logicalType': 'date', 'type': 'long'}]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HBD2KOR\envs\rrpsdev\Scripts\rrps-dt-integrator-sapmasterdata-script.py", line 11, in <module>
+    load_entry_point('rrps.dt.integrator.sapmasterdata', 'console_scripts', 'rrps-dt-integrator-sapmasterdata')()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\rrps\dt\integrator\sapmasterdata\__mai
+n__.py", line 9, in main
+    main_run('RRPS SAP Master Data Integrator', SAPMasterDataIntegrator)
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\rrps\dt\common\__init__.py", line 90, in main_run
+    integrator.run()
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\IoticAgent\ThingRunner.py", line 83, in run
+    self.__run()
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\IoticAgent\ThingRunner.py", line 104, in __run
+    if self.__handle_exception(ctx):
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\IoticAgent\ThingRunner.py", line 98, in __run
+    self.main()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\rrps\dt\integrator\sapmasterdata\impl.
+py", line 80, in main
+    self.__process_master_data()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\rrps\dt\integrator\sapmasterdata\impl.
+py", line 338, in __process_master_data
+    self.__integrator.publish_event(event, retry=True)
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\integrator\__init__.py", line 243, in publish_e
+vent
+    self.__registry.encode_into(event, template)
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\event\registry.py", line 266, in encode_into
+    raise EncodeDecodeError(name, event.version) from ex
+ioticlabs.dt.api.event.exceptions.EncodeDecodeError
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>

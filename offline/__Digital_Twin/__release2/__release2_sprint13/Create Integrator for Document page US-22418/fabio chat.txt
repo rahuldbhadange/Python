@@ -1,0 +1,402 @@
+[?7/?1/?2019 4:41 PM]
+Hi Fabio
+Rahul Dilip Bhadange 4:42 PM:
+Is deployment of SapWarrantyRecall is possible?
+Rahul Dilip Bhadange 4:42 PM:
+In dev*
+Fabio Corneti <fabio.corneti@iotic-labs.com> 4:42 PM:
+hi, I have no access to the machines at the moment, waiting for RRPS IT to fix that
+Fabio Corneti <fabio.corneti@iotic-labs.com> 4:43 PM:
+hopefully it will be restored today
+Rahul Dilip Bhadange 4:43 PM:
+Shall I wait or shall I create new branch with existing dev*?
+Fabio Corneti <fabio.corneti@iotic-labs.com> 4:45 PM:
+maybe best if I merge
+Fabio Corneti <fabio.corneti@iotic-labs.com> 4:45 PM:
+then if there is any small bug I'll simply fix it in another branch
+Rahul Dilip Bhadange 4:46 PM:
+shall create a new one then ?
+Fabio Corneti <fabio.corneti@iotic-labs.com> 4:46 PM:
+merged
+Fabio Corneti <fabio.corneti@iotic-labs.com> 4:46 PM:
+you can checkout dev, pull and then create a new branch
+Rahul Dilip Bhadange 4:47 PM:
+ohh deployed ?
+Fabio Corneti <fabio.corneti@iotic-labs.com> 4:47 PM:
+just merged
+Rahul Dilip Bhadange 4:47 PM:
+okay
+Fabio Corneti <fabio.corneti@iotic-labs.com> 4:48 PM:
+deployment will happen when RRPS IT fixes my access
+Rahul Dilip Bhadange 4:48 PM:
+okay Fabio
+Rahul Dilip Bhadange 4:48 PM:
+Thank you !
+Fabio Corneti <fabio.corneti@iotic-labs.com> 4:48 PM:
+no problem
+Rahul Dilip Bhadange 4:59 PM:
+Hi Fabio
+Rahul Dilip Bhadange 5:00 PM:
+there are multiple Untrack Files (new  branch)
+Rahul Dilip Bhadange 5:01 PM:
+Do we need to add it or will be fine like this (just curious)
+Fabio Corneti <fabio.corneti@iotic-labs.com> 5:32 PM:
+what files?
+
+[‎7/‎1/‎2019 5:52 PM]
+No Title
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        rrps/__init__.py
+        rrps/python/%HOME%/
+        rrps/python/__init__.py
+        rrps/python/flake8.cfg.recommended
+        rrps/python/integrator_static
+        rrps/python/rrps.dt.follower.rest_follower/follower_assets.json
+        rrps/python/rrps.dt.follower.rest_follower/result.txt
+        rrps/python/rrps.dt.integrator.fielddata/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/data/
+
+
+[‎7/‎1/‎2019 5:53 PM]
+like this files
+
+[‎7/‎1/‎2019 6:10 PM]  Fabio Corneti:
+those look ok to be ignored
+
+[‎7/‎1/‎2019 6:11 PM]
+cool
+thank you
+
+[‎7/‎2/‎2019 2:15 PM]
+Hello Fabio
+
+[‎7/‎2/‎2019 2:15 PM]
+What will be the “equnr”???    Engine (Basic data) ???
+
+[‎7/‎2/‎2019 2:31 PM]  Fabio Corneti:
+so the field in the SapMasterDataSet would be EqunrEng
+but I see that it is not saved in Cosmos currently, so we need to save it when we get a SapMasterDataSet event
+
+[‎7/‎2/‎2019 2:37 PM]
+yes you are right
+
+[‎7/‎2/‎2019 2:37 PM]
+do we need to update it now?
+
+[‎7/‎2/‎2019 2:41 PM]  Fabio Corneti:
+if you open BasicDataView in the follower and go to line 64 you can add the field in map_fields
+
+[‎7/‎2/‎2019 2:41 PM]
+Yes I have checked that
+
+[‎7/‎2/‎2019 2:43 PM]
+mapped named for EqunrEng ? same ?
+
+[‎7/‎2/‎2019 2:43 PM]  Fabio Corneti:
+I would put both that and the Equipment number for the engine in case it is needed at some point:
+
+        mapped_payload['EngineEquipmentNumber'] = payload.get("EqunrEng", BaseView.NO_DATA_FROM_SOURCE)
+        mapped_payload['EquipmentNumber'] = payload.get("EqunrAgg", BaseView.NO_DATA_FROM_SOURCE)
+
+
+[‎7/‎2/‎2019 2:44 PM]
+okay Fabio
+
+[‎7/‎2/‎2019 2:44 PM]  Fabio Corneti:
+then, when you call the T2 request, pass EquipmentNumber from "EquipmentNumber"
+I said EqunrEng before but the SDOK API requires EqunrAgg
+which is mapped to EquipmentNumber by adding the two lines above
+
+[‎7/‎2/‎2019 2:44 PM]
+okay no issues
+
+[‎7/‎2/‎2019 2:46 PM]
+I want to ask about follower, but since you are in meeting I will ping later
+
+[‎7/‎2/‎2019 2:47 PM]  Fabio Corneti:
+ok, I should finish in 10 minutes
+
+[‎7/‎2/‎2019 2:47 PM]
+okay, will ping then
+
+[‎7/‎2/‎2019 2:52 PM]
+No Title
+The Follower has an issue, I guess.
+Event data decoding failed SapWarrantyRecallSet.....
+
+2019-07-02 11:37:22,887 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,890 ERROR [ioticlabs.dt.api.follower] {tp-0} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,893 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,896 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,900 ERROR [ioticlabs.dt.api.follower] {tp-0} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,902 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,905 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,905 INFO [ioticlabs.dt.api.follower] {tp-0} Replay finished for 1000020 @ 786
+2019-07-02 11:37:22,907 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Interna
+l: <IntTwinEofReplay v1 ('1000020'@786)>
+2019-07-02 11:37:22,908 ERROR [ioticlabs.dt.api.follower] {tp-0} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+2019-07-02 11:37:22,910 ERROR [ioticlabs.dt.api.follower] {tp-1} Replay - Event data decoding failed SapWarrantyRecallSe
+t (v2) for 1000015
+
+[‎7/‎2/‎2019 2:53 PM]
+Event data is also affected, earlier was not like this
+{
+    "_id" : ObjectId("5d105c87ea1321a72e0756f5"),
+    "asset_id" : "1000015",
+    "source" : "sapwarrantyrecall",
+    "offset" : 237,
+    "_clmno" : "000440000111",
+    "AssetType" : "",
+    "AssetSerialNumber" : "",
+    "Seq" : 237,
+    "Source" : "sapwarrantyrecall",
+    "Ts" : "2019-06-21T06:39:44.733214+00:00",
+    "Type" : "K I F",
+    "Details" : [
+        {
+            "EventName" : "Name of Modification",
+            "EventValue" : "PRO-RATATATA"
+        },
+        {
+            "EventName" : "Date of Update",
+            "EventValue" : "2018-12-31"
+        },
+        {
+            "EventName" : "Link to Document",
+            "EventValue" : "http://www.dsc-eishockey.de/"
+        }
+    ]
+}
+
+
+
+[‎7/‎2/‎2019 2:53 PM]  Fabio Corneti:
+ah yes, that is a bug for which we'll need a workaround for a few days
+there are some invalid events in the stream
+can you paste your integrator.cfg.yml ?
+sorry, follower.cfg.yml
+
+[‎7/‎2/‎2019 2:54 PM]
+sure
+
+[‎7/‎2/‎2019 2:54 PM]
+No Title
+# Copyright (c) 2019 Rolls-Royce Power Systems AG. All rights reserved.
+
+rest_follower:
+  # mongo db connection string
+  cache_db:
+    connection_string: mongodb://localhost:27017
+
+  # (optional, default False) turn off api token authentication
+  disable_auth: True
+
+  # audiences for B2C call, list.  Required when disable_auth: False
+  #audiences: [aud1, aud2, aud3, aud4]
+  cors_origins: ['http://127.0.0.1:8080/', 'example.com', 'iotic-labs.com']
+
+  # if there is no data in a collection then test data is inserted on startup
+  inject_test_data: False
+
+fielddata:
+  # How many threads to reserve for performing asynchronous tasks such as asset updates & feed follows
+  workers: 1
+
+  asset:
+    # Search criteria for finding assets (required)
+    discovery:
+      # One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)
+      text: env_m_fd
+      # One of public, local or localOwn (default). Public is NOT recommended as one could, despite specified filter,
+      # end up pushing events to a completely unknown thing/point!
+      scope: local
+      # How often to poll for new field data assets, in seconds (only applicable when expecting at least one based on
+      # known set of generic ones).
+      interval: 5
+
+      filter:
+        label:
+        # Expected asset thing label. This is a standard Python regular expression and should be contained within
+        # '^' and '$'. Defined groups are ignored and this parameter is optional.
+        # thing_regex:
+        # Expected labels for field data feed. (default will be used if not specified).
+        # feed:
+
+        tags:
+          # Expected unique tag containing asset id. This is a standard Python regular expression and should be
+          # contained within '^' and '$' and define one group (containing asset id). (default will be used if not
+          # specified)
+          # unique_regex: '^fdtag_(.+)$'
+          unique_regex: '^mfd_(.+)$'
+          # Expected static tags for each asset
+          thing: ['env_m_fd']
+
+follower:
+  # How many threads to reserve for performing asynchronous tasks such as asset updates & replay requests.
+  workers: 1
+
+  # Metadata applicable to follower Iotic Thing (all optional apart from lid)
+  thing:
+    lid: follower01
+    # label:
+    # description:
+    # tags: []
+
+  asset:
+    # Whether to expect assets to expose type2 functionality. Assets which do not have the right points to support type2
+    # requests will be ignored if this is enabled. Note: Currently response control details cannot be overridden.
+    with_type2: yes
+
+    event:
+      # List of modules to load event definitions from. Only event types registered this way can be received. Each name
+      # must be an absolute module name in Python search path. Note: Internal built-in/virtual event types are always
+      # loaded.
+      modules:
+        - rrps.dt.events
+
+      # How long to wait (in seconds) for acknowledgement that replay request has been received. Must be high enough to
+      # allow for asynchronous nature of asset communication. (default will be used if not specified)
+      replay:
+        # timeout: 10
+
+    # Search criteria for finding assets (required)
+    discovery:
+      # One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)
+      text: env_m_c
+      # One of public, local or localOwn (default). Public is NOT recommended as one could, despite specified filter,
+      # end up pushing events to a completely unknown thing/point!
+      scope: local
+      # How often to poll for new assets, in seconds
+      interval: 5
+
+      filter:
+        label:
+          # Expected asset thing label. This is a standard Python regular expression and should be contained within
+          # '^' and '$'. Defined groups are ignored and this parameter is optional.
+          # thing_regex:
+          # Expected labels for event production related points. Feed is for live events and control for replay
+          # requests (defaults will be used if not specified).
+          # feed:
+          # control:
+
+        tags:
+          # Expected unique tag containing asset id. This is a standard Python regular expression and should be
+          # contained within '^' and '$' and define one group (containing asset id). (default will be used if not
+          # specified)
+          # unique_regex:
+          unique_regex: '^m_(.+)$'
+          # Expected static tags for each asset
+          # thing: []
+          thing: ['env_m_c']
+
+    # Keep track consume asset event offsets
+    tracker:
+      # How to persist. If none are specified, an in-memory only tracker will be used
+      method:
+        # memory: {}
+
+        json:
+          path: tmp/follower_assets.json
+          # How often (in seconds) to write to output file
+          write_interval: 10
+
+        # mongodb:
+          # How often (in seconds, fractional) to write pending changes to the database.
+          # write_interval: 10
+
+          # conn:
+            # MongoDB connection string
+            # uri:
+            # Database under which to store tracker
+            # db:
+            # Collection in which to store tracker. Will be created if does not exist
+            # collection:
+            # For client identification purposes e.g. in DB server logs (optional)
+            # appname: follower_asset_tracker
+            # Extra configuration options for pymongo.MongoClient. Some potentially relevant options which might be
+            # worth setting are detailed below. See also
+            # http://api.mongodb.com/python/current/api/pymongo/mongo_client.html#pymongo.mongo_client.MongoClient)
+            # cfg:
+              # connectTimeoutMS: 10000
+              # socketTimeoutMS: 10000
+              # readConcernLevel: majority
+              # Write concern. Note that 'majority' level is only usable with WiredTiger storage engine (currently not
+              # supported by Azure CosmosDB with MongoDB v3.2)
+              # w: majority
+
+[‎7/‎2/‎2019 2:55 PM]
+Above follower.cfg
+
+[‎7/‎2/‎2019 2:56 PM]  Fabio Corneti:
+ok, can you paste the contents of tmp/follower_assets.json?
+
+[‎7/‎2/‎2019 2:59 PM]
+The location I have changed from
+rrps.dt.follower.rest_follower.cfg ->tmp/follower_assets.json
+to
+rrps.dt.follower.rest_follower ->tmp/follower_assets.json
+
+[‎7/‎2/‎2019 3:00 PM]
+{
+  "1000021": {
+    "offset": 803
+  },
+  "1000020": {
+    "offset": 338
+  },
+  "1000015": {
+    "offset": 238
+  }
+}
+
+The it was running otherwise was troughing an error
+
+[‎7/‎2/‎2019 3:00 PM]
+throwing*
+
+[‎7/‎2/‎2019 3:00 PM]  Fabio Corneti:
+ok, so change the offset under 1000015 to 700
+
+[‎7/‎2/‎2019 3:00 PM]
+ok
+
+[‎7/‎2/‎2019 3:00 PM]  Fabio Corneti:
+and then try restarting the follower
+
+[‎7/‎2/‎2019 3:01 PM]
+will check
+
+[‎7/‎2/‎2019 3:02 PM]
+you are great
+
+[‎7/‎2/‎2019 3:02 PM]
+It worked
+
+[‎7/‎2/‎2019 3:07 PM]
+How is it but?
+
+[‎7/‎2/‎2019 3:07 PM]  Fabio Corneti:
+this is a bug in the digital twin runner that another person is fixing
+the invalid events should be skipped automatically
+
+[‎7/‎2/‎2019 3:09 PM]
+yeah..but how offset change worked?
+
+[‎7/‎2/‎2019 3:10 PM]  Fabio Corneti:
+because now the follower will skip events with an offset older than 700 when replaying the history
+
+[‎7/‎2/‎2019 3:10 PM]
+ohh I see
+

@@ -1,0 +1,1 @@
+https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/WTYRCLSet?$filter=Sernr%20eq%20{asset_id}&$format=json

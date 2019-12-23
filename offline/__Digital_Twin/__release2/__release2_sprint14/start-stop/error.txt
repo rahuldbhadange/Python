@@ -1,0 +1,21 @@
+connexion.exceptions.InvalidSpecification: {'name': 'doc', 'in': 'query', 'description': 'query parameter to fetch requi
+red doc', 'required': True, 'schema': None, 'type': 'object', 'properties': {'start': {'type': 'string'}, 'stop': {'type
+': 'string'}, 'date': {'type': 'string'}, 'doc': {'type': 'array', 'items': {'type': 'string'}}}} is not valid under any
+ of the given schemas
+
+Failed validating 'oneOf' in schema['properties']['paths']['patternProperties']['^/']['properties']['get']['properties']
+['parameters']['items']:
+    {'oneOf': [{'$ref': '#/definitions/parameter'},
+               {'$ref': '#/definitions/jsonReference'}]}
+
+On instance['paths']['/ronn/{asset_id}']['get']['parameters'][1]:
+    {'description': 'query parameter to fetch required doc',
+     'in': 'query',
+     'name': 'doc',
+     'properties': {'date': {'type': 'string'},
+                    'doc': {'items': {'type': 'string'}, 'type': 'array'},
+                    'start': {'type': 'string'},
+                    'stop': {'type': 'string'}},
+     'required': True,
+     'schema': None,
+     'type': 'object'}

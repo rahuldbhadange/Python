@@ -1,0 +1,15 @@
+.. _api_nestedconfig:
+
+NestedConfig API
+================
+
+This is the object that can be used to retrieve and validate config items quickly and easily.
+
+
+NestedConfig API reference
+--------------------------
+
+.. py:module:: ioticlabs.dt.api.util
+
+.. autoclass:: NestedConfig
+   :members:

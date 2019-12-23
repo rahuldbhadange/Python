@@ -1,0 +1,300 @@
+2019-08-09 14:47:39,402 INFO [IoticAgent.IOT.Client] {finder} search(text="env_m_fd", lang="None", location="None", unit
+="None", limit=200, offset=200, reduced=True)
+2019-08-09 14:47:39,553 INFO [ioticlabs.dt.api.follower] {fworker_0} Replay start confirmed for 1000020 @ 795
+2019-08-09 14:47:39,553 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 14:47:39,579 INFO [IoticAgent.IOT.Thing] {worker_0} __sub(foc=feed, gpid="739bf141f3dce289a19284a8bfe8f679",
+callback=functools.partial(<bound method FdFollower.__fd_feed_cb of <rrps.dt.api.fielddata.follower.FdFollower object at
+ 0x04290090>>, '1000020')) [lid=follower-rahul]
+2019-08-09 14:47:39,580 INFO [IoticAgent.IOT.Thing] {worker_0} __sub(foc=feed, gpid="739bf141f3dce289a19284a8bfe8f679",
+callback=functools.partial(<bound method FdFollower.__fd_feed_cb of <rrps.dt.api.fielddata.follower.FdFollower object at
+ 0x04290090>>, '1000020')) [lid=follower-rahul]
+2019-08-09 14:47:39,746 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 14:47:39,755 INFO [rrps.dt.api.fielddata.follower] {worker_0} Following asset 1000020
+2019-08-09 14:47:39,755 INFO [rrps.dt.follower.rest_follower.follower] {worker_0} Field data available: 1000020
+2019-08-09 14:47:39,945 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 14:47:41,611 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 14:47:41,919 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 14:47:41,919 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 14:47:42,100 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 14:47:42,262 INFO [ioticlabs.dt.api.follower] {tp-1} Replay finished for 1000015 @ 5722
+2019-08-09 14:47:42,277 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 14:47:44,483 INFO [ioticlabs.dt.api.follower] {tp-1} Replay finished for 1000021 @ 1262
+2019-08-09 14:47:44,812 INFO [ioticlabs.dt.api.follower] {tp-1} Replay finished for 1000020 @ 794
+2019-08-09 14:47:46,078 INFO [IoticAgent.IOT.RemotePoint] {Thread-5} tell(timeout=10) [subid=f4f9b6c309b5b82fdfe624afbe0
+e21d4]
+2019-08-09 14:47:46,620 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 14:47:46,820 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 14:47:46,820 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 14:47:47,061 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 14:47:47,289 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 14:47:48,522 ERROR [rrps.dt.follower.rest_follower.controllers.default_controller] {Thread-5} T2 failed - rea
+son: T2ReqFailureReason.PROVIDER_UNAVAILABLE
+2019-08-09 14:47:48,525 INFO [werkzeug] {Thread-5} 127.0.0.1 - - [09/Aug/2019 14:47:48] "GET /engine-bom-as-maintained/1
+000015 HTTP/1.1" 500 -
+2019-08-09 14:47:51,624 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 14:47:51,795 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 14:47:51,795 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 14:47:51,990 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 14:47:52,181 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 14:47:52,297 INFO [IoticAgent.IOT.RemotePoint] {Thread-6} tell(timeout=10) [subid=f4f9b6c309b5b82fdfe624afbe0
+e21d4]
+2019-08-09 14:47:56,638 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 14:47:56,810 ERROR [rrps.dt.follower.rest_follower.controllers.default_controller] {Thread-6} T2 failed - rea
+son: T2ReqFailureReason.PROVIDER_UNAVAILABLE
+2019-08-09 14:47:56,812 INFO [werkzeug] {Thread-6} 127.0.0.1 - - [09/Aug/2019 14:47:56] "GET /engine-bom-as-maintained/1
+000015 HTTP/1.1" 500 -
+2019-08-09 14:47:56,834 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 14:47:56,834 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 14:47:57,008 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 14:47:57,185 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 14:47:59,486 INFO [IoticAgent.IOT.RemotePoint] {Thread-8} tell(timeout=10) [subid=f4f9b6c309b5b82fdfe624afbe0
+e21d4]
+2019-08-09 14:48:00,915 ERROR [rrps.dt.follower.rest_follower.controllers.default_controller] {Thread-8} T2 failed - rea
+son: T2ReqFailureReason.PROVIDER_UNAVAILABLE
+2019-08-09 14:48:00,917 INFO [werkzeug] {Thread-8} 127.0.0.1 - - [09/Aug/2019 14:48:00] "GET /engine-bom-as-maintained/1
+000015 HTTP/1.1" 500 -
+2019-08-09 14:48:01,643 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 14:48:01,828 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 14:48:01,828 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 14:48:02,021 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 14:48:02,197 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 14:48:06,645 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 14:48:06,832 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 14:48:06,832 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 14:48:07,049 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 14:48:07,287 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 14:48:08,971 INFO [rrps.dt.api.fielddata.follower] {finder} Finished
+2019-08-09 14:48:08,971 INFO [ioticlabs.dt.api.follower] {watcher} Finished
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.follower.rest_follower>rrps-dt-follower-rest_follower cfg\fol
+lower.cfg.yml cfg\rahul-fol.ini
+2019-08-09 15:25:47,383 WARNING [ioticlabs.dt.common.util] {MainThread} No logging configuration specified
+2019-08-09 15:25:48,572 INFO [IoticAgent.IOT.Client] {MainThread} Core version: 0.6.9
+2019-08-09 15:25:48,573 INFO [IoticAgent.IOT.Client] {MainThread} IOT version: 0.6.9
+2019-08-09 15:25:48,573 INFO [IoticAgent.Core.Client] {MainThread} ubjson version: 0.13.0 (extension enabled)
+2019-08-09 15:25:48,604 INFO [ioticlabs.dt.api.event.registry] {MainThread} Loaded 25 event types
+ * Serving Flask app "rrps.dt.follower.rest_follower.app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2019-08-09 15:25:48,914 INFO [werkzeug] {MainThread}  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+2019-08-09 15:25:51,969 INFO [IoticAgent.Core.Client] {bg_ed89ee6b0c259119b405d2d666daaada} QAPI version: 1.2.1
+2019-08-09 15:25:51,971 INFO [IoticAgent.IOT.Client] {bg_ed89ee6b0c259119b405d2d666daaada} create_thing(lid="follower-ra
+hul")
+2019-08-09 15:25:52,142 INFO [IoticAgent.IOT.Thing] {bg_ed89ee6b0c259119b405d2d666daaada} create_control(pid="replay_rec
+eiver", control_cb=<bound method Follower.__cb_replay_control of <rrps.dt.api.fielddata.follower.FdFollower object at 0x
+04260730>>) [lid=follower-rahul]
+2019-08-09 15:25:53,846 INFO [ioticlabs.dt.api.follower.t2] {bg_ed89ee6b0c259119b405d2d666daaada} Type2 requests will be
+ enabled
+2019-08-09 15:25:53,846 INFO [IoticAgent.IOT.Thing] {bg_ed89ee6b0c259119b405d2d666daaada} create_control(pid="t2_rsp", c
+ontrol_cb=<bound method T2Handler.__cb_t2_rsp of <ioticlabs.dt.api.follower.t2.T2Handler object at 0x043A4730>>) [lid=fo
+llower-rahul]
+2019-08-09 15:25:55,445 INFO [ioticlabs.dt.api.follower] {watcher} Started
+2019-08-09 15:25:55,445 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:25:55,445 INFO [rrps.dt.api.fielddata.follower] {finder} Started
+2019-08-09 15:25:55,646 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:25:55,646 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:25:55,852 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:25:56,029 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:25:56,222 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="5321d6f8d57d3bf6af6a75abb70d1b4
+b", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:56,223 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="5321d6f8d57d3bf6af6a75abb70d1b4
+b", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:56,398 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=feed, gpid="e11d7f9e95ddd835c48be30192125de0",
+ callback=functools.partial(<bound method Follower.__cb_event_feed of <rrps.dt.api.fielddata.follower.FdFollower object
+at 0x04260730>>, '1000015')) [lid=follower-rahul]
+2019-08-09 15:25:56,399 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=feed, gpid="e11d7f9e95ddd835c48be30192125de0",
+ callback=functools.partial(<bound method Follower.__cb_event_feed of <rrps.dt.api.fielddata.follower.FdFollower object
+at 0x04260730>>, '1000015')) [lid=follower-rahul]
+2019-08-09 15:25:56,575 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="f05a5f0f2a18081f674f06d3b485a58
+2", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:56,575 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="f05a5f0f2a18081f674f06d3b485a58
+2", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:56,747 INFO [ioticlabs.dt.api.follower] {fworker_0} Added asset 1000015
+2019-08-09 15:25:56,748 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="9078e341d4860b06ea8eb23221c5930
+3", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:56,748 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Asset c
+reated: 1000015
+2019-08-09 15:25:56,749 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="9078e341d4860b06ea8eb23221c5930
+3", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:56,922 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=feed, gpid="89223e31b8c7b5c92bb4052195d35dd0",
+ callback=functools.partial(<bound method Follower.__cb_event_feed of <rrps.dt.api.fielddata.follower.FdFollower object
+at 0x04260730>>, '1000020')) [lid=follower-rahul]
+2019-08-09 15:25:56,923 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=feed, gpid="89223e31b8c7b5c92bb4052195d35dd0",
+ callback=functools.partial(<bound method Follower.__cb_event_feed of <rrps.dt.api.fielddata.follower.FdFollower object
+at 0x04260730>>, '1000020')) [lid=follower-rahul]
+2019-08-09 15:25:57,108 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="402c362227d9374faf3b20a9ab532bc
+7", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:57,109 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="402c362227d9374faf3b20a9ab532bc
+7", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:57,281 INFO [ioticlabs.dt.api.follower] {fworker_0} Added asset 1000020
+2019-08-09 15:25:57,281 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="eba6584e4360078ac12d3f4cc172077
+b", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:57,282 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Asset c
+reated: 1000020
+2019-08-09 15:25:57,282 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="eba6584e4360078ac12d3f4cc172077
+b", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:57,458 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=feed, gpid="d97dfd98cbae6a4aa1a8b7bb3ad1a300",
+ callback=functools.partial(<bound method Follower.__cb_event_feed of <rrps.dt.api.fielddata.follower.FdFollower object
+at 0x04260730>>, '1000021')) [lid=follower-rahul]
+2019-08-09 15:25:57,459 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=feed, gpid="d97dfd98cbae6a4aa1a8b7bb3ad1a300",
+ callback=functools.partial(<bound method Follower.__cb_event_feed of <rrps.dt.api.fielddata.follower.FdFollower object
+at 0x04260730>>, '1000021')) [lid=follower-rahul]
+2019-08-09 15:25:57,466 INFO [IoticAgent.IOT.Client] {finder} search(text="env_m_fd", lang="None", location="None", unit
+="None", limit=200, offset=0, reduced=True)
+2019-08-09 15:25:57,635 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="4e5399c9e486446d76b684e6b7fa006
+4", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:57,636 INFO [IoticAgent.IOT.Thing] {fworker_0} __sub(foc=control, gpid="4e5399c9e486446d76b684e6b7fa006
+4", callback=None) [lid=follower-rahul]
+2019-08-09 15:25:57,646 INFO [IoticAgent.IOT.Client] {finder} describe() [guid="55e27fc5a03e9bbde0b7d7069d104552"]
+2019-08-09 15:25:57,812 INFO [ioticlabs.dt.api.follower] {fworker_0} Added asset 1000021
+2019-08-09 15:25:57,814 INFO [IoticAgent.IOT.RemotePoint] {fworker_0} tell(timeout=10) [subid=e4ae6c8965b3bd0c5cc603b384
+3a3fb0]
+2019-08-09 15:25:57,814 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Asset c
+reated: 1000021
+2019-08-09 15:25:57,826 INFO [IoticAgent.IOT.Client] {finder} describe() [guid="7d720f36c516d2c7e9475694f17463b6"]
+2019-08-09 15:25:58,011 INFO [IoticAgent.IOT.Client] {finder} describe() [guid="912078ed166b1f1fb245a65afc11c7e6"]
+2019-08-09 15:25:58,207 INFO [IoticAgent.IOT.Client] {finder} search(text="env_m_fd", lang="None", location="None", unit
+="None", limit=200, offset=200, reduced=True)
+2019-08-09 15:25:58,384 INFO [IoticAgent.IOT.Thing] {worker_0} __sub(foc=feed, gpid="739bf141f3dce289a19284a8bfe8f679",
+callback=functools.partial(<bound method FdFollower.__fd_feed_cb of <rrps.dt.api.fielddata.follower.FdFollower object at
+ 0x04260730>>, '1000020')) [lid=follower-rahul]
+2019-08-09 15:25:58,384 INFO [IoticAgent.IOT.Thing] {worker_0} __sub(foc=feed, gpid="739bf141f3dce289a19284a8bfe8f679",
+callback=functools.partial(<bound method FdFollower.__fd_feed_cb of <rrps.dt.api.fielddata.follower.FdFollower object at
+ 0x04260730>>, '1000020')) [lid=follower-rahul]
+2019-08-09 15:25:58,555 INFO [rrps.dt.api.fielddata.follower] {worker_0} Following asset 1000020
+2019-08-09 15:25:58,555 INFO [rrps.dt.follower.rest_follower.follower] {worker_0} Field data available: 1000020
+2019-08-09 15:25:58,556 INFO [IoticAgent.IOT.Thing] {worker_0} __sub(foc=feed, gpid="fb37ee867e2db038448748c898a8a272",
+callback=functools.partial(<bound method FdFollower.__fd_feed_cb of <rrps.dt.api.fielddata.follower.FdFollower object at
+ 0x04260730>>, '1000015')) [lid=follower-rahul]
+2019-08-09 15:25:58,556 INFO [IoticAgent.IOT.Thing] {worker_0} __sub(foc=feed, gpid="fb37ee867e2db038448748c898a8a272",
+callback=functools.partial(<bound method FdFollower.__fd_feed_cb of <rrps.dt.api.fielddata.follower.FdFollower object at
+ 0x04260730>>, '1000015')) [lid=follower-rahul]
+2019-08-09 15:25:58,730 INFO [rrps.dt.api.fielddata.follower] {worker_0} Following asset 1000015
+2019-08-09 15:25:58,731 INFO [rrps.dt.follower.rest_follower.follower] {worker_0} Field data available: 1000015
+2019-08-09 15:26:00,078 INFO [ioticlabs.dt.api.follower] {fworker_0} Replay start confirmed for 1000015 @ 5723
+2019-08-09 15:26:00,079 INFO [IoticAgent.IOT.RemotePoint] {fworker_0} tell(timeout=10) [subid=f7aa4bfe46588a0eac1a2cac7a
+b0fb33]
+2019-08-09 15:26:00,444 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:00,620 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:02,374 INFO [ioticlabs.dt.api.follower] {fworker_0} Replay start confirmed for 1000020 @ 795
+2019-08-09 15:26:02,375 INFO [IoticAgent.IOT.RemotePoint] {fworker_0} tell(timeout=10) [subid=c33a667f9f36b7d307e23a3a6b
+938a45]
+2019-08-09 15:26:02,482 INFO [IoticAgent.IOT.Client] {finder} search(text="env_m_fd", lang="None", location="None", unit
+="None", limit=200, offset=0, reduced=True)
+2019-08-09 15:26:02,658 INFO [IoticAgent.IOT.Client] {finder} describe() [guid="55e27fc5a03e9bbde0b7d7069d104552"]
+2019-08-09 15:26:02,837 INFO [IoticAgent.IOT.Client] {finder} describe() [guid="7d720f36c516d2c7e9475694f17463b6"]
+2019-08-09 15:26:03,019 INFO [IoticAgent.IOT.Client] {finder} describe() [guid="912078ed166b1f1fb245a65afc11c7e6"]
+2019-08-09 15:26:03,199 INFO [IoticAgent.IOT.Client] {finder} search(text="env_m_fd", lang="None", location="None", unit
+="None", limit=200, offset=200, reduced=True)
+2019-08-09 15:26:03,398 INFO [IoticAgent.IOT.Thing] {worker_0} __sub(foc=feed, gpid="d8faf7e72433c24b1bf7516218f735f2",
+callback=functools.partial(<bound method FdFollower.__fd_feed_cb of <rrps.dt.api.fielddata.follower.FdFollower object at
+ 0x04260730>>, '1000021')) [lid=follower-rahul]
+2019-08-09 15:26:03,399 INFO [IoticAgent.IOT.Thing] {worker_0} __sub(foc=feed, gpid="d8faf7e72433c24b1bf7516218f735f2",
+callback=functools.partial(<bound method FdFollower.__fd_feed_cb of <rrps.dt.api.fielddata.follower.FdFollower object at
+ 0x04260730>>, '1000021')) [lid=follower-rahul]
+2019-08-09 15:26:03,578 INFO [rrps.dt.api.fielddata.follower] {worker_0} Following asset 1000021
+2019-08-09 15:26:03,579 INFO [rrps.dt.follower.rest_follower.follower] {worker_0} Field data available: 1000021
+2019-08-09 15:26:04,635 INFO [ioticlabs.dt.api.follower] {fworker_0} Replay start confirmed for 1000021 @ 1263
+2019-08-09 15:26:04,636 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:04,815 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:04,995 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:05,453 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:05,695 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:05,696 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:05,893 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:06,075 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:06,093 INFO [IoticAgent.IOT.RemotePoint] {Thread-2} tell(timeout=10) [subid=f4f9b6c309b5b82fdfe624afbe0
+e21d4]
+2019-08-09 15:26:06,355 INFO [ioticlabs.dt.api.follower] {tp-1} Replay finished for 1000015 @ 5722
+2019-08-09 15:26:08,590 INFO [ioticlabs.dt.api.follower] {tp-1} Replay finished for 1000020 @ 794
+2019-08-09 15:26:09,772 INFO [ioticlabs.dt.api.follower] {tp-0} Replay finished for 1000021 @ 1262
+2019-08-09 15:26:10,468 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:10,647 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:10,647 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:10,828 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:11,007 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:11,489 ERROR [rrps.dt.follower.rest_follower.controllers.default_controller] {Thread-2} T2 failed - rea
+son: T2ReqFailureReason.PROVIDER_UNAVAILABLE
+2019-08-09 15:26:11,491 INFO [werkzeug] {Thread-2} 127.0.0.1 - - [09/Aug/2019 15:26:11] "GET /engine-bom-as-maintained/1
+000015 HTTP/1.1" 500 -
+2019-08-09 15:26:15,470 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:15,646 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:15,647 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:15,828 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:15,999 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:20,478 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:20,647 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:20,648 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:20,830 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:20,999 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:25,488 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:25,665 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:25,665 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:25,848 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:26,043 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:30,498 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:30,698 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:30,699 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:30,908 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:31,097 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:35,501 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:35,674 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:35,675 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:35,861 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:36,042 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:37,799 INFO [IoticAgent.IOT.RemotePoint] {Thread-6} tell(timeout=10) [subid=f4f9b6c309b5b82fdfe624afbe0
+e21d4]
+2019-08-09 15:26:40,260 ERROR [rrps.dt.follower.rest_follower.controllers.default_controller] {Thread-6} T2 failed - rea
+son: T2ReqFailureReason.PROVIDER_UNAVAILABLE
+2019-08-09 15:26:40,262 INFO [werkzeug] {Thread-6} 127.0.0.1 - - [09/Aug/2019 15:26:40] "GET /engine-bom-as-maintained/1
+000015 HTTP/1.1" 500 -
+2019-08-09 15:26:40,514 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:40,697 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:40,698 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:40,905 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:41,090 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:45,522 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-08-09 15:26:45,692 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-08-09 15:26:45,692 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-08-09 15:26:45,874 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-08-09 15:26:46,050 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-08-09 15:26:47,683 INFO [rrps.dt.api.fielddata.follower] {finder} Finished
+2019-08-09 15:26:47,684 INFO [ioticlabs.dt.api.follower] {watcher} Finished
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.follower.rest_follower>^A

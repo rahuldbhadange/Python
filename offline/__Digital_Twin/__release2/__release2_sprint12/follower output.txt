@@ -1,0 +1,240 @@
+
+
+
+payload:
+
+
+
+[{'Abdes': 'Active',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '2018-12-31',
+  'Yyroopen': '2018-12-31',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000121',
+  'Clmty': 'YCIF',
+  'DocLink': 'http://www.google.de',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0002',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5ie9Vxcqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0002',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000122',
+  'Clmty': 'YCIF',
+  'DocLink': '',
+  'Equnr': '000000000010000018',
+  'HPntext': 'Text',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiGkBla4Rdqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0004',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetType': 'ENG',
+  'Astate': 'YC20',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000200000081',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetType': 'ENG',
+  'Astate': 'YC20',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000200000081',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''}]
+
+
+
+
+
+
+
+
+
+
+'AGG'
+396
+395
+
+
+
+
+
+
+[{'_clmno': '000440000120', 'asset_id': '1000020'}]
+
+
+
+
+
+
+[{'_clmno': '000440000120', 'asset_id': '1000020'}]
+
+
+
+
+
+
+[{'_clmno': '000440000120', 'asset_id': '1000020'}]
+
+
+
+
+
+
+[{'_clmno': '000440000120', 'asset_id': '1000020'}]
+
+
+
+
+mapped list:
+
+
+
+[{'AssetType': 'AGG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0002'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'http://www.google.de'}],
+  'Seq': 396,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-24T09:36:54.372042+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000121',
+  'asset_id': '1000020',
+  'offset': 396,
+  'source': 'sapwarrantyrecall'},
+ {'AssetType': 'AGG',
+  'Details': [{'EventName': 'Name of Modification', 'EventValue': 'Text'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document', 'EventValue': ''}],
+  'Seq': 396,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-24T09:36:54.372042+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000122',
+  'asset_id': '1000020',
+  'offset': 396,
+  'source': 'sapwarrantyrecall'},
+ {'AssetType': 'ENG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0001'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+  'Seq': 396,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-24T09:36:54.372042+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000120',
+  'asset_id': '1000020',
+  'offset': 396,
+  'source': 'sapwarrantyrecall'},
+ {'AssetType': 'ENG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0001'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+  'Seq': 396,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-24T09:36:54.372042+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000120',
+  'asset_id': '1000020',
+  'offset': 396,
+  'source': 'sapwarrantyrecall'}]
+
+
+
+
+remove list:
+
+
+
+
+[{'_clmno': '000440000120', 'asset_id': '1000020'}]

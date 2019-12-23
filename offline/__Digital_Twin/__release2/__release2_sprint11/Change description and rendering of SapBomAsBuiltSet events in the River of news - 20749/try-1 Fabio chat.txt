@@ -1,0 +1,77 @@
+[?6/?4/?2019 3:17 PM]  
+2019-06-04 14:57:28,136 WARNING [IoticAgent.Core.AmqpLink] {bg_9fb1ab1ccdab280246029b0f6253f7b5} AmqpLink Failed to star
+t.  Giving up.
+2019-06-04 14:57:28,216 WARNING [IoticAgent.ThingRunner] {bg_9fb1ab1ccdab280246029b0f6253f7b5} LinkException/IOTSyncTime
+out caught, will retry on_startup
+2019-06-04 14:57:43,534 ERROR [IoticAgent.Core.AmqpLink] {amqplink_send} ssl.SSLError Bad Certificate?
+2019-06-04 14:57:43,738 WARNING [IoticAgent.Core.AmqpLink] {bg_9fb1ab1ccdab280246029b0f6253f7b5} AmqpLink Failed to star
+t.  Giving up.
+2019-06-04 14:57:43,845 WARNING [IoticAgent.ThingRunner] {bg_9fb1ab1ccdab280246029b0f6253f7b5} LinkException/IOTSyncTime
+out caught, will retry on_startup 
+ 
+[?6/?4/?2019 3:17 PM]  
+Hi Fabio
+ 
+[?6/?4/?2019 3:17 PM]  
+How are you?
+ 
+We saved this conversation. You'll see it soon in the Conversations tab in Skype for Business and in the Conversation History folder in Outlook. 
+[?6/?4/?2019 3:47 PM]  Fabio Corneti:  
+hi Rahul, sorry for the delay, I was in a call 
+are you working on Windows 7? 
+ 
+[?6/?4/?2019 3:47 PM]  
+no issue
+ 
+[?6/?4/?2019 3:47 PM]  
+yes fabio I'm working on win7
+ 
+[?6/?4/?2019 3:48 PM]  Fabio Corneti:  
+so let me check the chats with Muthu, he had the same issue some time ago 
+ 
+[?6/?4/?2019 3:52 PM]  Fabio Corneti:  
+so first thing download http://comodo.tbs-certificats.com/SectigoRSAClientAuthenticationandSecureEmailCA.crt 
+ 
+[?6/?4/?2019 3:52 PM]  
+download done.
+
+ 
+[?6/?4/?2019 3:53 PM]  Fabio Corneti:  
+then press WIN+R and run certmgr.msc 
+it should open a window with certificate folders in the sidebar 
+ 
+[?6/?4/?2019 3:54 PM]  
+yes opened
+ 
+[?6/?4/?2019 3:55 PM]  Fabio Corneti:  
+now right click on Trusted Root Certification Authorities 
+All Tasks 
+Import... 
+ 
+[?6/?4/?2019 3:55 PM]  
+import......the same downloaded one?
+ 
+[?6/?4/?2019 3:55 PM]  Fabio Corneti:  
+yes 
+ 
+[?6/?4/?2019 3:56 PM]  
+next->.....then asking for install??
+ 
+[?6/?4/?2019 3:57 PM]  Fabio Corneti:  
+yes 
+once the certificate is there you should be able to connect 
+ 
+[?6/?4/?2019 3:58 PM]  
+okay, I will check and let you know the same.
+ 
+[?6/?4/?2019 4:03 PM]  
+Does it required restart or creating new venv, something like that??
+Because observing the same error.
+ 
+[?6/?4/?2019 4:05 PM]  Fabio Corneti:  
+it should not require a restart but in Windows 7 it might; if it still does not work after a restart, we will need to install the certificate in a different way 
+ 
+[?6/?4/?2019 4:05 PM]  
+Okay, I will give a shot and check.
+ 
+

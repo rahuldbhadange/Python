@@ -1,0 +1,905 @@
+[?6/?19/?2019 3:37 PM]  Fabio Corneti:  
+if you run git status, what is the output? there might be untracked files that need to be added 
+ 
+[?6/?19/?2019 3:41 PM]  
+yes there are multiple untracked files/folder. mock data is one of them
+ 
+
+
+[?6/?19/?2019 4:03 PM]  
+Hello Fabio
+ 
+[?6/?19/?2019 4:10 PM]  Fabio Corneti:  
+hello, have you pushed your changes? 
+ 
+[?6/?19/?2019 4:10 PM]  
+Not yet
+ 
+[?6/?19/?2019 4:12 PM]  
+Hey Fabio
+ 
+[?6/?19/?2019 4:13 PM]  
+I checked files in the VSTS files are not there mockdataapi/data/sapmasterdata
+
+But I can see the commit message
+ 
+[?6/?19/?2019 4:21 PM]  
+Hi fabio 
+ 
+[?6/?19/?2019 4:21 PM]  
+I have push the code
+ 
+[?6/?19/?2019 5:20 PM]  Fabio Corneti:  
+hello, will have a look in a few minutes 
+ 
+[?6/?19/?2019 5:20 PM]  
+sure, no issues.
+then after we can talk about sapawarrantyrecall
+ 
+[?6/?19/?2019 5:24 PM]  Fabio Corneti:  
+it looks ok to me, before approving and merging I'll need to do a test deployment and run it 
+ 
+[?6/?19/?2019 5:25 PM]  
+Okay
+ 
+
+[?6/?19/?2019 5:25 PM]  
+Please let me know, then we can start discussing about sapwarrantyrecall
+ 
+[?6/?19/?2019 5:26 PM]  Fabio Corneti:  
+I've launched a build 
+ 
+[?6/?19/?2019 5:28 PM]  
+okay, am I able to see it?
+ 
+[?6/?19/?2019 5:29 PM]  Fabio Corneti:  
+no, once finished I'll have to copy that to the server and see if there is any issue with real data (I don't think so) 
+ 
+[?6/?19/?2019 5:29 PM]  
+cool no issues
+ 
+[?6/?19/?2019 5:29 PM]  Fabio Corneti:  
+about sapwarrantyrecall, I'm adding a task that is missing from the story 
+ 
+[?6/?19/?2019 5:29 PM]  
+okay
+ 
+[?6/?19/?2019 5:30 PM]  Fabio Corneti:  
+basically right now when you call the warrantyrecall endpointin mock data you get the contents of 1000015.json 
+ 
+[?6/?19/?2019 5:30 PM]  Fabio Corneti:  
+we need to have the endpoint answer with a similar json for the engine serial number as well 
+ 
+[?6/?19/?2019 5:31 PM]  
+1000015.json and 410-001.json like?
+ 
+[?6/?19/?2019 5:31 PM]  Fabio Corneti:  
+yes 
+the existing 1000015.json is already ok, we just need another one for the engine 
+ 
+
+
+[?6/?19/?2019 5:31 PM]  
+ok
+ 
+[?6/?19/?2019 5:32 PM]  Fabio Corneti:  
+then you can call the endpoint once with the asset_id (the powerpack serial number), then with the engine serial number, and merge the two results in a single event 
+you can get the engine serial number for an asset id with the same procedure that you used in sapmasterdata 
+ 
+[?6/?19/?2019 5:32 PM]  
+{
+  "d" : {
+    "results" : [
+      {
+        "Equnr" : "000000000200000081",
+        "Sernr" : "1000015",
+        "Eqart" : "SSY",
+        "Hequi" : ""
+      },
+      {
+        "Equnr" : "000000000200000082",
+        "Sernr" : "4711-001",
+        "Eqart" : "ENG",
+        "Hequi" : "000000000200000081"
+      }
+    ]
+  }
+} 
+ 
+[?6/?19/?2019 5:32 PM]  
+above one??
+ 
+[?6/?19/?2019 5:33 PM]  Fabio Corneti:  
+yes 
+ 
+[?6/?19/?2019 5:33 PM]  
+need to look for sernr then need to go forward?
+ 
+
+
+[?6/?19/?2019 5:33 PM]  
+need to look for sernr then need to go forward?
+ 
+[?6/?19/?2019 5:34 PM]  Fabio Corneti:  
+yes, once you have the engine serial number you can call the warrantyrecall endpoint again with it 
+ 
+[?6/?19/?2019 5:34 PM]  
+okay
+ 
+[?6/?19/?2019 5:35 PM]  
+can I get more clarity about other json and parameter need to update
+ 
+[?6/?19/?2019 5:38 PM]  Fabio Corneti:  
+yes 
+if you open rrps.dt.events/rrpd/dt/events/__init__.py 
+ 
+[?6/?19/?2019 5:38 PM]  Fabio Corneti:  
+you'll see a SapWarrantyRecallSet event 
+ 
+[?6/?19/?2019 5:39 PM]  
+yes
+ 
+[?6/?19/?2019 5:39 PM]  Fabio Corneti:  
+we need to create a new version of that event 
+ 
+[?6/?19/?2019 5:39 PM]  
+hmm ok
+ 
+[?6/?19/?2019 5:39 PM]  Fabio Corneti:  
+that has an additional field named AssetType 
+ 
+[?6/?19/?2019 5:40 PM]  Fabio Corneti:  
+the other fields will be the same as today 
+ 
+
+
+[?6/?19/?2019 5:40 PM]  Fabio Corneti:  
+so the way to create a new version of an event is to change the _default_version method in the class to return the new version, which will be 2 in this case 
+ 
+[?6/?19/?2019 5:41 PM]  Fabio Corneti:  
+and then you'll need to add a new element to the dictionary returned by _known_versions 
+you can basically copy the element having the key 1 
+then you can add a field to the list with this definition:
+
+field('AssetType', 'string', doc='The type of asset (ENG or SYS)'),
+ 
+ 
+[?6/?19/?2019 5:42 PM]  Fabio Corneti:  
+then the event would be ready to use for the rest of the changes 
+in the story 
+ 
+[?6/?19/?2019 5:46 PM]  
+understood
+ 
+[?6/?19/?2019 5:48 PM]  
+But what about the parameter/element of the event? will it be similar to master data? what about AssetType which value need to assiged?
+ 
+[?6/?19/?2019 5:48 PM]  Fabio Corneti:  
+if an item is a warranty item for the powerpack, it will be SYS 
+if an item is a warranty item for an engine, ENG 
+ 
+[?6/?19/?2019 5:49 PM]  Fabio Corneti:  
+you can look at the existing sapwarrantyrecall integrator to see how the event is built from the JSON 
+ 
+[?6/?19/?2019 5:49 PM]  Fabio Corneti:  
+I'm off to lunch for about 30 minutes, I'll see if I can add more details to the story when I'm back 
+ 
+[?6/?19/?2019 5:50 PM]  
+okay 
+ 
+
+
+[?6/?20/?2019 12:41 PM]  Fabio Corneti:  
+At the moment the code is something like:
+
+- get response for asset_id
+- for item response['d']['results']:
+       <parse item date>
+   return response['d']['results']
+
+it should become something like:
+
+- get response for asset_id
+- get response for engine
+- events = []
+- for item in asset_response:
+    item['AssetType'] = 'SYS'
+    item['Refdt'] = re.find...
+    events.append(item)
+- for item in engine_response:
+    item['Refdt'] = re.find...
+    item['AssetType'] = 'ENG'
+     events.append(item)
+
+- return events 
+ 
+[?6/?20/?2019 12:42 PM]  Fabio Corneti:  
+then the merged events can be passed to the constructor of SapWarrantyRecallSet 
+ 
+
+[?6/?20/?2019 2:04 PM]  
+[{'Abdes': 'Active',
+  'AssetType': 'SYS',
+  'Astate': 'YC20',
+  'Equnr': '000000000010000018',
+  'Refdt': '\\/Date(1514764800000)\\/',
+  'YywtyState': '',
+  '__metadata': {'id': "https://sap-fes-i.org-intra.net:443/sap/opu/odata/sa,Pncnt='00000001')",
+                 'type': 'Y_DIGITAL_TWIN_SRV.WTYRCL',
+                 'uri': "https://sap-fes-i.org-intra.net:443/sap/opu/odata/sap/YB',Pncnt='00000001')"}},
+ {'Abdes': 'Active',
+  'AssetType': 'ENG',
+  'Astate': 'YC20',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'Yysystfir': '',
+  'YywtyState': ''}]   
+some fields have ommited
+is it a required response
+ 
+[?6/?20/?2019 2:05 PM]  Fabio Corneti:  
+the _metadata can be removed (if not removed already), otherwise that kind of merging seems ok 
+ 
+[?6/?20/?2019 2:06 PM]  
+so under list there will be two dict of ENG and AGG?
+ 
+[?6/?20/?2019 2:07 PM]  Fabio Corneti:  
+there should be a list with one or more dicts having AssetType SYS and one or more dicts having AssetType ENG 
+in the mocks I think there is just one item per type so the above looks ok 
+ 
+[?6/?20/?2019 2:08 PM]  
+okay this was the doubt, thanks for clearing and your time.
+ 
+[?6/?20/?2019 2:10 PM]  
+One more thing in sapmasterdata if change the data 0000-00-00 it gives an error (ValueError: time data '0000-00-00' does not match format '%Y-%m-%d')
+ 
+[?6/?20/?2019 2:10 PM]  Fabio Corneti:  
+yes, that should be handled in the code as it could happen in real data 
+noticed it while testing in Dev 
+ 
+[?6/?20/?2019 2:11 PM]  
+oh
+ 
+
+
+[?6/?20/?2019 2:11 PM]  Fabio Corneti:  
+if Datbi is 0000-00-00 it should be set to None 
+in the event 
+if Datab is 0000-00-00 an error should be logged and the event should not be processed 
+as Datab should always be set, Datbi might be not 
+ 
+[?6/?20/?2019 2:12 PM]  
+okay will go through it
+ 
+[?6/?20/?2019 5:05 PM]  
+if Datbi (Eng data/411-001) is 0000-00-00 it should be set to None è unable to publish event
+            (ValueError: None (type <class 'NoneType'>) do not match [{'logicalType': 'date', 'type': 'long'}])
+if Datbi (Agg data/1000015) is 0000-00-00 it should be set to None è able to publish event 
+ 
+[?6/?20/?2019 5:05 PM]  Fabio Corneti:  
+so we'll need to allow that field to be null as after the latest changes it can be null 
+ 
+[?6/?20/?2019 5:06 PM]  Fabio Corneti:  
+in order to allow the field to be null, you'll need to add a new version to SapMasterDataSet in rrps.dt.events/rrps/dt/events/__init__.py 
+ 
+[?6/?20/?2019 5:06 PM]  
+if Datab (Eng data/411-001) is 0000-00-00 an error should be logged, and the event should not be processed è error logged but event processed and give error while publishing 
+ 
+[?6/?20/?2019 5:07 PM]  Fabio Corneti:  
+Datab in the asset, not in the engine 
+engine dates are not processed 
+ 
+[?6/?20/?2019 5:12 PM]  Fabio Corneti:  
+try doing this:
+
+in  rrps.dt.events/rrps/dt/events/__init__.py -> SapMasterDataSet return 2 from _default_version 
+ 
+[?6/?20/?2019 5:12 PM]  Fabio Corneti:  
+then in known_versions, copy the item in the dictionary having key set to 1 to a new one with key set to to 2 
+ 
+
+[?6/?20/?2019 5:14 PM]  Fabio Corneti:  
+and in the 'fields' list of the dictionary with key '2', change the Datbi definition as:
+
+                    field('Datbi', ['null', {'type': 'long', 'logicalType': 'date'}], doc='Valid To Date'),
+ 
+that should allow you to produce events with Datbi set to None (when SAP returns 0000-00-00) 
+ 
+[?6/?20/?2019 7:19 PM]  
+Hi fabio
+ 
+[?6/?20/?2019 7:19 PM]  
+I have push the code
+ 
+[?6/?20/?2019 7:19 PM]  
+please have a look
+ 
+[?6/?20/?2019 7:26 PM]  Fabio Corneti:  
+thanks, you can remove the processing of dates for the engine as we will use only the dates from the aggregate response 
+otherwise looks fine 
+ 
+[?6/?20/?2019 7:27 PM]  
+but in your comment you mentioned so
+ 
+[?6/?20/?2019 7:27 PM]  Fabio Corneti:  
+ah sorry, I closed that comment but it was not deleted 
+ 
+[?6/?20/?2019 7:28 PM]  
+so much confusion 
+ 
+[?6/?20/?2019 7:28 PM]  Fabio Corneti:  
+you can leave the json as is, just remove lines from 244 to 255 
+ 
+
+[?6/?20/?2019 7:29 PM]  
+okay 
+pushing again
+ 
+[?6/?20/?2019 7:30 PM]  
+done
+when you will deploy to dev?
+ 
+[?6/?20/?2019 7:30 PM]  Fabio Corneti:  
+I think in a couple hours 
+ 
+[?6/?20/?2019 7:32 PM]  
+Okay then I will create new branch for sapwarranty wrt dev tomorrow 
+ 
+[?6/?20/?2019 7:32 PM]  Fabio Corneti:  
+ok 
+ 
+[?6/?20/?2019 7:32 PM]  
+See you tomorrow tc
+ 
+[?6/?20/?2019 7:32 PM]  Fabio Corneti:  
+thanks, bye 
+ 
+[?6/?21/?2019 5:12 PM]  
+Hello Fabio
+Can you please put more light on follower task?
+ 
+[?6/?21/?2019 5:35 PM]  Fabio Corneti:  
+hi Rahul 
+ 
+
+[?6/?21/?2019 5:36 PM]  Fabio Corneti:  
+so let's say that you have 5 upcoming events for asset 123 where AssetType is set to ENG and the engine serial number is 456 
+ 
+[?6/?21/?2019 5:37 PM]  Fabio Corneti:  
+at some point the engine 456 in the powerpack is replaced by engine 789 
+ 
+[?6/?21/?2019 5:37 PM]  Fabio Corneti:  
+when that happens, any item in upcoming_events for the old engine should be removed 
+ 
+[?6/?21/?2019 5:39 PM]  Fabio Corneti:  
+so any time you receive a SapMasterDataSet or SapWarrantyRecallSet, after processing the event you should remove any item from from the upcoming_events table that is not for the current engine 
+ 
+[?6/?24/?2019 10:39 AM]  
+Thank you Fabio
+This message wasn't sent to Fabio Corneti. 
+[?6/?24/?2019 4:33 PM]  
+Hello Fabio
+ 
+[?6/?24/?2019 4:33 PM]  
+Good morning
+As of now we are getting two types of event
+ 
+
+[?6/?24/?2019 4:34 PM]  
+No Title 
+{
+    "_id" : ObjectId("5d10aa16ea1321a72e075901"),
+    "asset_id" : "1000020",
+    "source" : "sapwarrantyrecall",
+    "offset" : 515,
+    "_clmno" : "000440000121",
+    "AssetType" : "ENG",
+    "Seq" : 515,
+    "Source" : "sapwarrantyrecall",
+    "Ts" : "2019-06-24T10:48:10.499040+00:00",
+    "Type" : "K I F",
+    "Details" : [ 
+        {
+            "EventName" : "Name of Modification",
+            "EventValue" : "2018.02.16.0001"
+        }, 
+        {
+            "EventName" : "Date of Update",
+            "EventValue" : "2018-12-31"
+        }, 
+        {
+            "EventName" : "Link to Document",
+            "EventValue" : "HTTP://WWW.PRORATA-NOW.COM"
+        }
+    ]
+}
+
+
+
+
+
+{
+    "_id" : ObjectId("5d1087d0b6bc8d3280d082a2"),
+    "asset_id" : "1000015",
+    "Source" : "sapwarrantyrecall",
+    "Ts" : "2019-06-24T08:20:30.613035+00:00",
+    "Seq" : 273,
+    "source" : "sapwarrantyrecall",
+    "offset" : 273,
+    "_clmno" : "000440000120",
+    "AssetType" : "AGG",
+    "Type" : "K I F",
+    "Details" : [ 
+        {
+            "EventName" : "Name of Modification",
+            "EventValue" : "2018.02.16.0001"
+        }, 
+        {
+            "EventName" : "Date of Update",
+            "EventValue" : "2018-12-31"
+        }, 
+        {
+            "EventName" : "Link to Document",
+            "EventValue" : "HTTP://WWW.PRORATA-NOW.COM"
+        }
+    ]
+} 
+ 
+[?6/?24/?2019 4:36 PM]  
+In existing code, we are deleting wrt "_clmno" but if it is same for both (ENG & AGG) event then it will delete both the event 
+Do we need to check all three condition at the same time then proceed or we can segregate both situation earlier one and which is given now (if we do so same "_clmno" will removing the both event) 
+ 
+[?6/?24/?2019 4:41 PM]  Fabio Corneti:  
+clmno is the warranty claim, what should be deleted are events where the serial number of the engine is different than the serial number of the engine currently mounted in the aggregate 
+ 
+[?6/?24/?2019 4:42 PM]  
+So we can segregate both situation ??
+ 
+
+
+[?6/?24/?2019 4:43 PM]  Fabio Corneti:  
+yes, after getting the current engine serial number from basic data 
+ 
+
+[?6/?24/?2019 4:44 PM]  Fabio Corneti:  
+the query should delete documents where AssetType = 'ENG' and Sernr != '<current engine serial number>' 
+ 
+[?6/?24/?2019 4:44 PM]  Fabio Corneti:  
+let me double check on SAP that the API returns the correct serial number 
+ 
+[?6/?24/?2019 4:45 PM]  
+okay
+this is a serial number no "Seq" : 273 ??
+ 
+[?6/?24/?2019 4:46 PM]  Fabio Corneti:  
+that is the event offset, I don't see the serial number in the documents aboe 
+ 
+[?6/?24/?2019 4:49 PM]  
+existing code, we have not implemented this
+We can see in above event offset and seq are same 
+ 
+[?6/?24/?2019 4:50 PM]  Fabio Corneti:  
+that is fine 
+ 
+[?6/?24/?2019 4:51 PM]  Fabio Corneti:  
+so the problem is that the Warranty API does not set Sernr in its output, thus we need to have the integrator set it when it produces the SapWarrantyRecallSet event 
+ 
+[?6/?24/?2019 4:52 PM]  
+we can include it in baseview?
+ 
+[?6/?24/?2019 4:52 PM]  Fabio Corneti:  
+we also need to add a new field to the event 
+ 
+[?6/?24/?2019 4:52 PM]  
+As I have added AsseType?
+ 
+
+
+[?6/?24/?2019 4:53 PM]  Fabio Corneti:  
+yes 
+could you push your current branch? I can point quickly to where the field / code would have to be added 
+ 
+[?6/?24/?2019 4:53 PM]  
+great
+okay
+ 
+[?6/?24/?2019 4:53 PM]  
+I will implement two things then I will push, Is it fine?
+ 
+[?6/?24/?2019 4:53 PM]  Fabio Corneti:  
+sure 
+then I'll ask why the serial is not set by SAP 
+ 
+[?6/?24/?2019 4:54 PM]  
+Thank you
+cool
+ 
+[?6/?24/?2019 4:57 PM]  
+Hello Fabio
+One more thing 
+ 
+[?6/?24/?2019 4:59 PM]  
+At present, we are not SapWarrantyRecallSet event in basic data, so I planned to take old data from UpcomingEventsView then to compare ?
+ 
+[?6/?24/?2019 5:09 PM]  Fabio Corneti:  
+you might test by adding a new mocked engine json to sapmasterdata/master 
+so you can switch between two engines 
+ 
+[?6/?24/?2019 5:12 PM]  
+Not understood
+ 
+
+
+[?6/?24/?2019 5:12 PM]  
+But {
+    "_id" : ObjectId("5d10aa17ea1321a72e075905"),
+    "asset_id" : "1000015",
+    "source" : "sapwarrantyrecall",
+    "offset" : 424,
+    "_clmno" : "000440000132",
+    "AssetType" : "ENG",
+    "Sernr" : "",
+    "Seq" : 424,
+    "Source" : "sapwarrantyrecall",
+    "Ts" : "2019-06-24T11:41:33.850040+00:00",
+    "Type" : "K I F",
+    "Details" : [ 
+        {
+            "EventName" : "Name of Modification",
+            "EventValue" : "2018.02.16.0001"
+        }, 
+        {
+            "EventName" : "Date of Update",
+            "EventValue" : "2018-12-31"
+        }, 
+        {
+            "EventName" : "Link to Document",
+            "EventValue" : "HTTP://WWW.PRORATA-NOW.COM"
+        }
+    ]
+} 
+ 
+[?6/?24/?2019 5:13 PM]  
+I have included Sernr in code
+ 
+[?6/?24/?2019 5:13 PM]  
+I will push the code then you can get the clear idea, then we can go further?
+ 
+[?6/?24/?2019 5:14 PM]  Fabio Corneti:  
+yes please 
+I don't get why the Sernr is empty 
+not only in the mock, in the production API as well 
+ 
+[?6/?24/?2019 5:14 PM]  
+It is empty in mock
+ 
+[?6/?24/?2019 5:14 PM]  
+Okay 
+ 
+[?6/?24/?2019 5:15 PM]  Fabio Corneti:  
+but we can set it as we know what it should be, once you've pushed the code I'll point it out 
+ 
+
+
+[?6/?24/?2019 5:56 PM]  Fabio Corneti:  
+hi, I see the branch in vsts 
+ 
+[?6/?24/?2019 6:15 PM]  Fabio Corneti:  
+added comments at https://mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic/commit/a1b9fc88e141ebf8961596fb63937fc68b519ca8?refName=refs%2Fheads%2Fdev-rahul-sapwarrantyrecall , let me know if you don't see them 
+ 
+[?6/?24/?2019 6:15 PM]  
+I can see it
+ 
+[?6/?24/?2019 6:15 PM]  
+I will go through it
+ 
+[?6/?24/?2019 6:29 PM]  
+current engine serial number  ?? means existing, no? which is already stored ?
+ 
+[?6/?24/?2019 6:29 PM]  Fabio Corneti:  
+the one in basic_data 
+ 
+[?6/?24/?2019 7:28 PM]  
+Get the current engine serial number for the asset from basic_data  
+if we follow this we are getting sapmasterdata events
+even if I used if isinstance(event, SapWarrantyRecallSet) 
+in basic_data_view
+ 
+[?6/?24/?2019 7:29 PM]  Fabio Corneti:  
+in order to get the current engine serial number you only need the asset_id 
+that is available in all the events 
+ 
+
+[?6/?24/?2019 7:38 PM]  
+I'm sorry, I didn't get it
+First of all, what do you mean by current engine serial?? past AssetSerialNumber no? which we need to compare with current going events AssetSerialNumber ?
+ 
+[?6/?24/?2019 7:40 PM]  Fabio Corneti:  
+the current engine serial would be:
+
+<instance of data_access>.load(self.BASIC_DATA_TABLE, event.asset)['Engine']
+ 
+ 
+[?6/?24/?2019 7:41 PM]  Fabio Corneti:  
+for example capture_old_data in BasicDataView returns (although the name is a bit misleading as it is returning the row as is) 
+^returns the document for an asset 
+ 
+[?6/?24/?2019 7:42 PM]  Fabio Corneti:  
+if there are documents in upcoming_events of AssetType 'ENG' with an AssetSerialNumber different than that, they should be removed 
+ 
+[?6/?24/?2019 7:48 PM]  
+I though earlier to take serial num from upcoming event itself
+ 
+[?6/?24/?2019 7:50 PM]  Fabio Corneti:  
+the deletion of obsolete documents can occur even if there are no upcoming events for an engine, so you always need to get the current engine serial number from basic_data 
+then remove upcoming events for other engines 
+other/previous 
+ 
+[?6/?24/?2019 8:01 PM]  
+okay
+ 
+[?6/?24/?2019 8:01 PM]  
+In SapWarrantyRecallSet 'AssetSerialNumber': '4711-011'  and SapMasterDataSet 'Engine': '4711-001' 
+ 
+
+
+[?6/?24/?2019 8:01 PM]  
+No Title 
+[{'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0001'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+  'Seq': 632,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-24T14:25:19.757480+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000120',
+  'asset_id': '1000020',
+  'offset': 632,
+  'source': 'sapwarrantyrecall'},
+ {'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0002'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'http://www.google.de'}],
+  'Seq': 632,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-24T14:25:19.757480+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000121',
+  'asset_id': '1000020',
+  'offset': 632,
+  'source': 'sapwarrantyrecall'},
+ {'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Details': [{'EventName': 'Name of Modification', 'EventValue': 'Text'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document', 'EventValue': ''}],
+  'Seq': 632,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-24T14:25:19.757480+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000122',
+  'asset_id': '1000020',
+  'offset': 632,
+  'source': 'sapwarrantyrecall'},
+ {'AssetSerialNumber': '4711-011',
+  'AssetType': 'ENG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0001'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+  'Seq': 632,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-24T14:25:19.757480+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000120',
+  'asset_id': '1000020',
+  'offset': 632,
+  'source': 'sapwarrantyrecall'},
+ {'AssetSerialNumber': '4711-011',
+  'AssetType': 'ENG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0001'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+  'Seq': 632,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-24T14:25:19.757480+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000132',
+  'asset_id': '1000020',
+  'offset': 632,
+  'source': 'sapwarrantyrecall'}] 
+ 
+[?6/?24/?2019 8:02 PM]  
+
+[{'AssetSerialNumber': '4711-001', 'asset_id': '1000020'},
+ {'AssetSerialNumber': '4711-001', 'asset_id': '1000020'}] 
+ 
+[?6/?24/?2019 8:02 PM]  Fabio Corneti:  
+looks fine 
+ 
+[?6/?24/?2019 8:02 PM]  
+pprint(mapped_list)
+pprint(remove_list) 
+I will push the code, please suggest anything is there?
+ 
+[?6/?24/?2019 8:03 PM]  Fabio Corneti:  
+yes, push and I'll check 
+ 
+[?6/?24/?2019 8:03 PM]  
+okay
+ 
+[?6/?24/?2019 8:08 PM]  
+I have push the code, please go through it.
+I'm leaving for the day, will go through tomorrow morning
+Thanks Fabio
+ 
+
+
+[?6/?24/?2019 8:09 PM]  Fabio Corneti:  
+ok, see you tomorrow 
+ 
+[?6/?24/?2019 8:09 PM]  
+take care
+ 
+[?6/?25/?2019 1:36 PM]  
+Good morning Fabio
+ 
+[?6/?25/?2019 1:38 PM]  Fabio Corneti:  
+hello 
+ 
+[?6/?25/?2019 1:38 PM]  
+Is review completed?
+Is there anything ?
+ 
+[?6/?25/?2019 1:41 PM]  Fabio Corneti:  
+I've added a comment about the method to remove documents for other engine 
+ 
+[?6/?25/?2019 1:42 PM]  
+I'm unable to find it, can you please ping me URL ?
+ 
+[?6/?25/?2019 1:43 PM]  Fabio Corneti:  
+https://mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic/commit/dd67424a1268fcada88ceda651566edec37287b6?path=%2Frrps%2Fpython%2Frrps.dt.follower.rest_follower%2Frrps%2Fdt%2Ffollower%2Frest_follower%2Ffollower.py&gridItemType=3&mpath=%2Frrps%2Fpython%2Frrps.dt.follower.rest_follower%2Frrps%2Fdt%2Ffollower%2Frest_follower%2Ffollower.py&opath=%2Frrps%2Fpython%2Frrps.dt.follower.rest_follower%2Frrps%2Fdt%2Ffollower%2Frest_follower%2Ffollower.py&mversion=GCdd67424a1268fcada88ceda651566edec37287b6&oversion=GCa1b9fc88e141ebf8961596fb63937fc68b519ca8&discussionId=8491&_a=compare 
+ 
+[?6/?25/?2019 1:44 PM]  
+thank you
+ 
+
+
+[?6/?25/?2019 2:58 PM]  
+Small doubt,
+ "AssetSerialNumber": {"$ne": current_engine_serial}
+
+instead of current_engine_serial(from basic data)  we should put AssetSerialNumber (event which is running)
+ 
+[?6/?25/?2019 2:59 PM]  Fabio Corneti:  
+we want to remove all documents where AssetSerialNumber is not equal to the current_engine_serial, $ne stands for "not equal" 
+ 
+[?6/?25/?2019 3:06 PM]  
+but we want to remove old AssetSerialNumber (event which is running/new published),  no? if event (contains AssetSerialNumber) is not in past events then we are deleting old one, no ? 
+then if it is "AssetSerialNumber": {"$ne": current_engine_serial} then it will delete other docs which not equal to current_engine_serial (from old event/basic data)
+ 
+[?6/?25/?2019 3:07 PM]  Fabio Corneti:  
+the full query has also AssetType: 'ENG' and asset_id, not only AssetSerialNumber 
+so it would delete any document from the upcoming_events collection that has AssetType set to 'ENG', asset_id set to the specified one and AssetSerialNumber different than the current engine serial number 
+documents that have AssetType se to 'AGG' or no AssetType would not be deleted 
+ 
+[?6/?25/?2019 3:09 PM]  
+I understood that, I just feel about current engine serial
+ 
+[?6/?25/?2019 3:09 PM]  Fabio Corneti:  
+the current engine serial is always the value of Engine in basic_data 
+ 
+[?6/?25/?2019 3:10 PM]  Fabio Corneti:  
+that comes from SapMasterDataSet events 
+ 
+[?6/?25/?2019 3:12 PM]  
+yeah right Fabio
+ 
+[?6/?25/?2019 3:19 PM]  
+As per your comment I have implemented the same, but follower is not running
+ 
+[?6/?25/?2019 3:21 PM]  
+I'm calling method from basic_data_view, for that I had to inherit the upcoming_event, creating an instance out of it and calling the method using same 
+ 
+
+
+[?6/?25/?2019 3:24 PM]  Fabio Corneti:  
+you might call that method from follower.py 
+ 
+[?6/?25/?2019 3:25 PM]  Fabio Corneti:  
+in on_event, after processing SapMasterDataSet and SapWarrantyRecallSet 
+ 
+[?6/?25/?2019 3:25 PM]  Fabio Corneti:  
+e.g.:
+
+        if isinstance(event, SapBomAsBuiltSet):
+            self._bom_view.on_event(event)
+            self._ron_view.on_event(event)
+            self._upcoming_events_view.prune... 
+ 
+[?6/?25/?2019 3:26 PM]  Fabio Corneti:  
+so you can avoid inheritance 
+ 
+[?6/?25/?2019 3:33 PM]  
+then we will have get the old data from basic data then need to get Engine and asset_id
+ 
+[?6/?25/?2019 3:35 PM]  Fabio Corneti:  
+yes, that should be available from self._basic_data_view.capture_old_data(event)
+ 
+ 
+[?6/?25/?2019 3:35 PM]  
+yes, the old_data
+ 
+[?6/?25/?2019 4:49 PM]  
+Hi Fabio
+I will push the code, please verify
+ 
+
+
+[?6/?25/?2019 4:52 PM]  Fabio Corneti:  
+ok 
+ 
+[?6/?25/?2019 4:57 PM]  
+I have push the code, please go through it
+ 
+[?6/?25/?2019 5:49 PM]  
+Hello Fabio
+ 
+[?6/?25/?2019 5:52 PM]  Fabio Corneti:  
+I've added just one comment at https://mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic/commit/1f8ad276d7e2ac4591cc3220c7803eba132bd4ce?refName=refs%2Fheads%2Fdev-rahul-sapwarrantyrecall , then just open a PR and I'll run it to test 
+ 
+[?6/?25/?2019 5:54 PM]  
+Okay, will implement the same and will raise the PR
+ 
+[?6/?25/?2019 6:14 PM]  
+Do we need to change API name ?
+ 
+[?6/?25/?2019 6:24 PM]  Fabio Corneti:  
+which API? 
+ 
+[?6/?25/?2019 6:24 PM]  
+http://localhost:5000/sapwarrantyrecall/hierarchy/{asset_id}  and http://localhost:5000/sapwarrantyrecall/master/{asset_id} 
+ 
+
+[?6/?25/?2019 6:25 PM]  Fabio Corneti:  
+I think those are fine 
+ 
+[?6/?25/?2019 6:25 PM]  
+cool
+ 
+[?6/?25/?2019 6:25 PM]  
+Can you please tell me use of version 1 after returning version 2?
+ 
+[?6/?25/?2019 6:26 PM]  Fabio Corneti:  
+for previously existing events 
+ 
+[?6/?25/?2019 6:27 PM]  
+But we are setting default to version 2 
+ 
+[?6/?25/?2019 6:27 PM]  Fabio Corneti:  
+but you could still receive old events when replaying the stream from the beginning 
+ 
+[?6/?25/?2019 6:28 PM]  
+that time we would have to change to version 1 no?
+ 
+[?6/?25/?2019 6:29 PM]  Fabio Corneti:  
+no, because events with version 1 will be deserialized using the schema for version 1 
+for version 2 with the schema for version 2 
+ 
+[?6/?25/?2019 6:30 PM]  
+okay
+I have raised the PR
+ 
+[?6/?25/?2019 6:31 PM]  
+Please go through it
+ 

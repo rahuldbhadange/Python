@@ -1,0 +1,256 @@
+swagger: '2.0'
+info:
+  description: 'This App is to test HTTP Request using swagger'
+  version: 'beta'
+  title: 'Request_App'
+  contact:
+    email: 'jamesbond_007@mifive.com'
+consumes:
+- "application/json"
+- "application/xml"
+- "application/text"
+- "multipart/form-data"
+produces:
+- "application/json"
+- "application/xml"
+- "application/text"
+- "multipart/form-data"
+host: 'localhost:8080'
+basePath: '/swagger'
+schemes:
+- 'https'
+- 'http'
+paths:
+  /app/{home}:
+    get:
+      summary: "fetching data from mongoDB"
+      description: "description GET"
+      operationId: "_read_app"
+      parameters:
+      - name: "home"
+        in: "path"
+        description: "Updated name of the person"
+        required: True
+        type: "string"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: 'successful operation'
+          schema:
+            properties:
+              name:
+                type: 'string'
+              location:
+                type: 'string'
+              _id:
+                type: 'string'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'request_app'
+  /home:
+    get:
+      summary: "fetching data from mongoDB"
+      description: "description GET"
+      operationId: "_read"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: 'successful operation'
+          schema:
+            properties:
+              name:
+                type: 'string'
+              location:
+                type: 'string'
+              _id:
+                type: 'string'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'request_app'
+  /home/{name}/{location}:
+  # /post:
+    post:
+      summary: "adding data into mongoDB"
+      description: "description POST"
+      operationId: "_create"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "Updated name of the person"
+        required: True
+        type: "string"
+      - name: "location"
+        in: "path"
+        description: "Updated location of the person"
+        required: True
+        type: "string"
+      # - in: "body"
+      #   name: "body"
+      #   type: "string"
+        # schema:
+        #   type: "object"
+        #   # $ref: "#/definitions/Tag" this is anotherway
+        #   properties:
+        #   - name: "name"
+        #     in: "path"
+        #     description: "name that need to be updated"
+        #     required: True
+        #     type: "string"
+        #     example: 'Rahul'
+        #   - name: "location"
+        #     in: "path"
+        #     description: "pan_no that need to be updated"
+        #     required: True
+        #     type: "string"
+        #     example: "Bengalure"
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+        405:
+          description: "Invalid input"
+        500:
+          description: 'INTERNAL SERVER ERROR'
+      x-swagger-router-controller: 'request_app'
+  # /delete:
+  /home/delete/{id}:
+    delete:
+      summary: "deleting data by name from mongoDB"
+      description: "description DELETE"
+      operationId: "_delete"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "name of the person to be deleted"
+        required: True
+        type: "string"
+      # - name: "body"
+      #   in: "body"
+      #   description: "name of the person to be deleted"
+      #   required: false
+      #   type: "string"
+        # schema:
+        #   type: 'object'
+        #   properties:
+        #   - name: 'name'
+        #     in: 'path'
+        #     description: 'name of the person to be deleted'
+        #     required: True
+        #     type: 'string'
+        #     example: 'Rahul'
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'request_app'
+  /home/update/old_data/{name}/{location}:
+  # /put:
+    put:
+      summary: "updating old data of mongoDB"
+      description: "description PUT"
+      operationId: "_old_update"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "name that need to be updated"
+        required: true
+        type: "string"
+      - name: "location"
+        in: "path"
+        description: "location that need to be updated"
+        required: true
+        type: "string"
+      # - in: "body"
+      #   name: "body"
+      #   description: "Updated user object"
+      #   required: false
+        # schema:
+        #   type: "object"
+        #   # $ref: "#/definitions/Tag" this is anotherway
+        #   properties:
+        #   - name: "name"
+        #     in: "path"
+        #     description: "name that need to be updated"
+        #     required: True
+        #     type: "string"
+        #     example: 'Rahul'
+        #   - name: "location"
+        #     in: "path"
+        #     description: "pan_no that need to be updated"
+        #     required: True
+        #     type: "string"
+        #     example: "Bengalure"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'request_app'
+  /home/update/new_data/{mobile_no}/{pan_no}:
+  # /put:
+    put:
+      summary: "updating new data of mongoDB"
+      description: "description PUT"
+      operationId: "_new_update"
+      parameters:
+      - name: "mobile_no"
+        in: "path"
+        description: "mobile_no that need to be updated"
+        required: true
+        type: "string"
+      - name: "pan_no"
+        in: "path"
+        description: "pan_no that need to be updated"
+        required: true
+        type: "string"
+      # - in: "body"
+      #   name: "body"
+      #   description: "Updated user object"
+      #   required: false
+        # schema:
+        #   type: "object"
+        #   # $ref: "#/definitions/Tag" this is anotherway
+        #   properties:
+        #   - name: "mobile_no"
+        #     in: "path"
+        #     description: "name that need to be updated"
+        #     required: True
+        #     type: "string"
+        #     example: '8600003771'
+        #   - name: "pan_no"
+        #     in: "path"
+        #     description: "pan_no that need to be updated"
+        #     required: True
+        #     type: "string"
+        #     example: "AYHPK4348P"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'request_app'
+externalDocs:
+  description: "Find out more about RequestApp"
+  url: "http://localhost:8080/home"

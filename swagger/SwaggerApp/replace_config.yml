@@ -1,0 +1,43 @@
+swagger: "3.0"
+info:
+  description: "This is a sample server."
+  version: "1.0.0"
+  title: "Swagger Application"
+summary: "summary PUT"
+description: "description PUT"
+operationId: "_put_function"
+consumes:
+- "application/json"
+- "application/text"
+produces:
+- "application/json"
+- "application/xml"
+parameters:
+- in: "path"
+  name: "path"
+  description: "Accepts a input dictionary of inputs 'name' and 'new_name' to replace"
+  schema:
+    - type: "object"
+    properties:
+    - name: "name"
+      in: "formData"
+      description: "name of the person to be replaced"
+      required: True
+      type: "string"
+      example: "Rahul"
+    - new_name: "new_name"
+      in: "formData"
+      description: "Replaced name of the person"
+      required: True
+      type: "string"
+      example: "Rahul_new"
+responses:
+  405:
+    description: "Invalid input"
+  200:
+    description: 'successful operation'
+  400:
+    description: 'Invalid ID supplied'
+  404:
+    description: 'Id not found'
+x-swagger-router-controller: '__Flask.SwaggerApp.swagger_python_flask_app'

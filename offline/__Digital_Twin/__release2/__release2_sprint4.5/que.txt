@@ -1,0 +1,20 @@
+While running there are some events comming before weather stuff, how's it?
+
+It is (other event) running (with +0.5) then publishing other events then again tracking (+0.5)for weather stuff?
+
+From the other multiple event - which "location" exactly it is taken for weather stuff?
+
+Not completely cleared about location yet?
+
+
+
+
+
+
+
+
+
+
+
+
+

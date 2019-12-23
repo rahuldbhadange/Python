@@ -1,0 +1,196 @@
+.. _integrator_develop:
+
+Develop your integrator
+=======================
+
+An :term:`Integrator` is an instance of a :term:`ThingRunner` so it has the standard "lifecycle" methods of any ThingRunner:
+
+#. *on_startup()* - called on initialisation. Call self.__integrator.start() here.
+#. *main()* - called after initialisation. Any loop code goes in here, e.g.
+
+   ::
+
+     while True:
+        self.__process()  # do whatever you need, then wait for your schedule interval
+        if self.wait_for_shutdown(<loop_time>):
+            break
+
+
+#. *on_shutdown()* called after the main has returned. Perform any cleanup and shutdown task in here.
+
+
+Integrators also inherit from IntegratorCallbacks and have to implement that interface. See
+:ref:`Implementing the Callbacks <integrator_callbacks>` below.
+
+
+The full class definition is as follows:
+
+::
+
+    class IntegratorExample(IntegratorCallbacks, ThingRunner):
+
+
+Integrator API
+--------------
+
+The integrator API is described :ref:`here <api_integrator>`
+
+API object and methods
+----------------------
+
+The API object is there for your integrator to call when, for example, a new event has happened and needs to be sent to the twin.
+
+From the example in ../example/dt/acmecorp.dt.integrator.example/acmecorp/integrator/example/impl.py
+
+In the *__init__()* method, instantiate your API object, passing:
+
+#. The integrator config
+#. Your Iotic Client
+#. Your self pointer - to allow it to call your callbacks
+
+::
+
+    self.__integrator = Integrator(config['integrator'], self.client, self)
+
+Then, in your *on_startup()* method you must call the *start()* method on the Integrator API object:
+
+::
+
+    def on_startup(self):
+        self.__integrator.start()
+
+Then you can call the methods on the Integrator object as follows.:
+
+::
+
+    data = _get_bom_as_built_for(asset_id)
+    self.__integrator.publish_event(BomBuiltSet(asset_id, time=data['Ts'], data=data['Materials']))
+
+Finally, in your *on_shutdown()* method, call stop() on the Integrator API object
+
+::
+
+
+    def on_shutdown(self, exc_info):
+        log.debug('Shutdown')
+        self.__integrator.stop()
+
+
+.. _integrator_callbacks:
+
+Implementing the Callbacks
+--------------------------
+
+There are 2 callbacks for asset creation and asset deletion. They are
+
+#. *on_asset_created()*
+#. *on_asset_deleted()*
+
+*on_asset_created()* is called by the Integrator API object on start up, once per asset that it has discovered and then once every time a new asset is created and discovered.
+In the method, save the assets known to you and, if necessary, publish any events that are required by your integrator at startup.
+
+*on_asset_deleted()* is called by the Integrator API object once per asset that it has discovered has been deleted.
+In the method, remove the asset from any lists of known assets that you have maintained.
+
+
+Type 2 specifics
+----------------
+
+:note:
+    Type 2 requests have to be specifically enabled in your Integrator config. See :ref:`here <t2_config_integrator>`
+
+A :term:`Type 2 request <Type2request>` is a request for data sent to you by the Integrator API object for you to fulfil immediately.
+You'll need to run this request in a separate thread otherwise it will block the Integrator API object until it returns.
+There's a standard boiler-plate code approach to this:
+
+First define a request threadpool in the *__init__()* method. (Set the *max_workers* to a sensible value. It's advisible to use a config item for this.
+
+::
+
+    # Pool of workers to execture type2 requests
+    self.__req_pool = ThreadPoolExecutor(max_workers=1)
+
+Then use the threadpool to execute your t2 handler (in this case *__process_t2()* )
+
+::
+
+    # callback itself
+    def on_t2_request(self, request):
+        self.__req_pool.submit(self.__process_t2, request)
+
+    # Wrap since run via thread pool without handling return/exception
+    @log_exceptions(log)
+    def __process_t2(self, request):
+        log.info('New T2 req for %s - %s(%r)', request.asset_id, request.type_, request.data)
+
+        if request.type_ != 'AcmecorpExampleReq':
+            log.warning('Ignoring unknown request type %s', request.type_)
+            return
+        self.__t2_do_example_req(request)
+
+Then, when you've got the data required you can send it back to the Integrator API object by calling
+
+#. *t2_respond()* - for small amounts of data
+#. *t2_respond_streamed()* - for large amounts of data that can be split into chunks.
+
+Example
+~~~~~~~
+
+This is a contrived example as it reads from a file, but shows how you can chunk up an input and stream it to
+*respond_streamed()*
+
+::
+
+    try:
+        with open(filename, 'rb') as infile:
+            with self.__integrator.t2_respond_streamed(request, mime) as write:
+                # write method will return False once zero bytes received. If this is
+                # not an indicator of EOF a different approach should be used.
+                while write(infile.read(1024 * 1024)):
+                    pass
+
+Errors
+~~~~~~
+
+If you encounter any problems, call:
+
+#. *t2_respond_error()* - with a reason code from :ref:`T2ProviderFailureReason <api_t2>`
+
+
+
+Static testing
+--------------
+
+Your integrator should be tested for static errors using, in the acme example case:
+
+::
+
+    cd example/dt/acmecorp.dt.integrator.example
+
+    # For linux
+    ./static_tests.sh
+
+    # For windows
+    static_tests.cmd
+
+
+Installing dependencies
+-----------------------
+
+This command will install your integrator in your venv and allow you to run it using the python files in your directory.
+Run this only once for each directory. You need to install any dependencies, e.g. Events
+So, starting with acmecorp.dt.events and then, for each integrator you're interested in.
+
+::
+
+    pip install -e . -f ../../../deps
+
+
+Running
+-------
+
+You should be able to run the code just by invoking the python module
+
+::
+
+    acmecorp-dt-integrator-example

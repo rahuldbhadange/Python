@@ -1,0 +1,100 @@
+2019-06-17 14:20:24,303 WARNING [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Swapping asset_id 1000020 for test
+id 1000015
+2019-06-17 14:20:24,304 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000015
+2019-06-17 14:20:25,328 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000015
+2019-06-17 14:20:26,366 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ 4711-0006
+2019-06-17 14:20:26,866 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-17 14:20:27,068 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-17 14:20:27,068 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-17 14:20:27,068 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-17 14:20:27,252 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-17 14:20:27,402 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000020
+2019-06-17 14:20:27,402 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Publish event for 1000020
+{'Datab': 1558377000000,
+ 'Datbi': 1558377000000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+SapMasterDataSet('1000020', source=None, time=datetime.datetime(2019, 5, 20, 18, 30), systime=None, offset=-1, version=1
+, data=...)
+2019-06-17 14:20:27,407 INFO [IoticAgent.IOT.RemotePoint] {MainThread} tell(timeout=10) [subid=e7ef03fb513ba72e0c69b999d
+1fa30dd]
+2019-06-17 14:20:30,150 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Cache asset for: 1000020
+2019-06-17 14:20:30,151 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000021
+2019-06-17 14:20:30,151 WARNING [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Swapping asset_id 1000021 for test
+id 1000015
+2019-06-17 14:20:30,152 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000015
+2019-06-17 14:20:31,187 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000015
+2019-06-17 14:20:31,883 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-17 14:20:32,148 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-17 14:20:32,149 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-17 14:20:32,149 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-17 14:20:32,218 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ 4711-0006
+2019-06-17 14:20:32,333 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-17 14:20:33,243 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000021
+2019-06-17 14:20:33,247 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Publish event for 1000021
+{'Datab': 1558377000000,
+ 'Datbi': 1558377000000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+SapMasterDataSet('1000021', source=None, time=datetime.datetime(2019, 5, 20, 18, 30), systime=None, offset=-1, version=1
+, data=...)
+2019-06-17 14:20:33,251 INFO [IoticAgent.IOT.RemotePoint] {MainThread} tell(timeout=10) [subid=57d8e6f5a980688811517ea5e
+eccf097]
+2019-06-17 14:20:34,989 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Cache asset for: 1000021
+2019-06-17 14:20:36,907 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-17 14:20:37,101 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-17 14:20:37,102 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-17 14:20:37,102 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-17 14:20:37,290 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-17 14:20:40,005 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000015
+2019-06-17 14:20:40,005 WARNING [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Swapping asset_id 1000015 for test
+id 1000015
+2019-06-17 14:20:40,006 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000015
+2019-06-17 14:20:41,027 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000015
+2019-06-17 14:20:41,928 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-17 14:20:42,047 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ 4711-0006
+2019-06-17 14:20:43,058 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000015
+2019-06-17 14:20:43,059 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000020
+2019-06-17 14:20:43,059 WARNING [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Swapping asset_id 1000020 for test
+id 1000015
+2019-06-17 14:20:43,060 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset

@@ -1,0 +1,45 @@
+2019-07-03 20:05:05,277 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-03 20:05:05,277 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-03 20:05:05,469 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-03 20:05:05,663 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+
+
+iterator
+ <generator object FollowerDataHandler.request_sap_document_type at 0x0435BE30>
+
+
+
+
+
+asset_data
+ {'_id': ObjectId('5cf657f8a98a29cb5dea0db3'), 'Ts': '2017-12-31T00:00:00+00:00', 'Material': '12V2000C10AAA', 'System':
+ '1000015', 'Region': '', 'MotorMaterial': 'R16V4000G83', 'Model': 'R16V4000G83 REMAN ENGINE003', 'Engine': '4711-001',
+'Customer': 'Land Badenwürtenberg (0022111236)', 'ConnectivityDeviceNum': 'No Data From Source', 'TrainName': 'No Data F
+rom Source', 'asset_id': '1000020', 'source': 'sapmasterdata', 'offset': 337}
+
+
+asset_id
+ 1000020
+
+
+Equnr
+ None
+
+
+document_type
+ ppm
+2019-07-03 20:05:06,182 INFO [IoticAgent.IOT.RemotePoint] {Thread-2} tell(timeout=10) [subid=03e4b6329d4ab184a653b3e9060
+d6f6e]
+2019-07-03 20:05:09,038 ERROR [rrps.dt.follower.rest_follower.controllers.default_controller] {Thread-2} T2 request not
+handled by provider
+2019-07-03 20:05:09,040 INFO [werkzeug] {Thread-2} 127.0.0.1 - - [03/Jul/2019 20:05:09] "GET /test-document/1000020/ppm
+HTTP/1.1" 500 -
+2019-07-03 20:05:10,099 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-07-03 20:05:10,279 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-07-03 20:05:10,280 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="13430192f1ed82cccb4b8eee679ef06f"]
+2019-07-03 20:05:10,463 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="88164660baafd175f1dc7ff77592d9cd"]
+2019-07-03 20:05:10,643 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+2019-07-03 20:05:15,105 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_c", lang="None", location="None", unit

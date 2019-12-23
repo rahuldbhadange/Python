@@ -1,0 +1,5 @@
+2019-04-30 16:53:51,408 Something happened
+Traceback (most recent call last):
+  File "C:/Win/work_practice/__python/__exception handling/trying with log.py", line 16, in <module>
+    1555/"5"
+TypeError: unsupported operand type(s) for /: 'int' and 'str'

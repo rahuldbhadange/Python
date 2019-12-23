@@ -1,0 +1,57 @@
+/* 1 */
+{
+    "_id" : ObjectId("5d10aa17ea1321a72e075905"),
+    "asset_id" : "1000015",
+    "source" : "sapwarrantyrecall",
+    "offset" : 675,
+    "_clmno" : "000440000132",
+    "AssetType" : "ENG",
+    "AssetSerialNumber" : "4711-011",
+    "Seq" : 675,
+    "Source" : "sapwarrantyrecall",
+    "Ts" : "2019-06-25T11:08:05.552999+00:00",
+    "Type" : "K I F",
+    "Details" : [ 
+        {
+            "EventName" : "Name of Modification",
+            "EventValue" : "2018.02.16.00011"
+        }, 
+        {
+            "EventName" : "Date of Update",
+            "EventValue" : "2002-12-31"
+        }, 
+        {
+            "EventName" : "Link to Document",
+            "EventValue" : "HTTP://WWW.PRORATA-NOW.COM"
+        }
+    ]
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5d10cec1ea1321a72e0759b1"),
+    "asset_id" : "1000015",
+    "source" : "sapwarrantyrecall",
+    "offset" : 675,
+    "_clmno" : "000440000120",
+    "AssetType" : "ENG",
+    "AssetSerialNumber" : "4711-011",
+    "Seq" : 675,
+    "Source" : "sapwarrantyrecall",
+    "Ts" : "2019-06-25T11:08:05.552999+00:00",
+    "Type" : "K I F",
+    "Details" : [ 
+        {
+            "EventName" : "Name of Modification",
+            "EventValue" : "2018.02.16.00022"
+        }, 
+        {
+            "EventName" : "Date of Update",
+            "EventValue" : "2002-12-31"
+        }, 
+        {
+            "EventName" : "Link to Document",
+            "EventValue" : "HTTP://WWW.PRORATA-NOW.COM"
+        }
+    ]
+}

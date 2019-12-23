@@ -1,0 +1,148 @@
+C:\Users\HBD2KOR\envs\rrpsdev\Scripts\python.exe C:/Users/HBD2KOR/digital.git/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/test/dev_test.py
+results {}
+1.0
+results {}
+18.0
+results {
+    "07a6c5830fca580feb1cd4382ab33061": {
+        "owner": "283d8c71f9e31ddf43adbce5e5f2d959",
+        "matches": 4.4908695,
+        "label": "Weather Forecast for: BEDFORD, ENGLAND",
+        "lat": 52.1339,
+        "long": -0.4614,
+        "points": {
+            "918dd97a8537afcf33048ad4fb7af8bc": {
+                "matches": 4.4908695,
+                "label": "Current weather info",
+                "type": "Feed",
+                "storesRecent": true
+            }
+        }
+    }
+}
+thing_guid "07a6c5830fca580feb1cd4382ab33061"
+thing_data {
+    "owner": "283d8c71f9e31ddf43adbce5e5f2d959",
+    "matches": 4.4908695,
+    "label": "Weather Forecast for: BEDFORD, ENGLAND",
+    "lat": 52.1339,
+    "long": -0.4614,
+    "points": {
+        "918dd97a8537afcf33048ad4fb7af8bc": {
+            "matches": 4.4908695,
+            "label": "Current weather info",
+            "type": "Feed",
+            "storesRecent": true
+        }
+    }
+}
+thing_data_label "Weather Forecast for: BEDFORD, ENGLAND"
+point_guid "918dd97a8537afcf33048ad4fb7af8bc"
+point_data {
+    "matches": 4.4908695,
+    "label": "Current weather info",
+    "type": "Feed",
+    "storesRecent": true
+}
+point_data_label "Current weather info"
+descr {
+    "type": "Point",
+    "meta": {
+        "parent": "07a6c5830fca580feb1cd4382ab33061",
+        "label": "Current weather info",
+        "comment": "Current weather info for BEDFORD",
+        "type": "Feed",
+        "storesRecent": true,
+        "values": [
+            {
+                "label": "feels",
+                "type": "decimal",
+                "unit": null,
+                "comment": "temperature feels like"
+            },
+            {
+                "label": "gust",
+                "type": "decimal",
+                "unit": null,
+                "comment": "wind gust speed in kph"
+            },
+            {
+                "label": "humid",
+                "type": "decimal",
+                "unit": null,
+                "comment": "screen relative humidity"
+            },
+            {
+                "label": "prob",
+                "type": "decimal",
+                "unit": null,
+                "comment": "precipitation probability"
+            },
+            {
+                "label": "temp",
+                "type": "decimal",
+                "unit": null,
+                "comment": "temperature"
+            },
+            {
+                "label": "time",
+                "type": "dateTime",
+                "unit": null,
+                "comment": "time of forecast ISO format UTC"
+            },
+            {
+                "label": "type",
+                "type": "string",
+                "unit": null,
+                "comment": "metoffice API record type"
+            },
+            {
+                "label": "uv",
+                "type": "decimal",
+                "unit": null,
+                "comment": "UV index"
+            },
+            {
+                "label": "visib",
+                "type": "string",
+                "unit": null,
+                "comment": "visibility short code VG = very good, GO = good, MO = moderate"
+            },
+            {
+                "label": "winddir",
+                "type": "string",
+                "unit": null,
+                "comment": "wind direction compass points SW = south west"
+            },
+            {
+                "label": "windspd",
+                "type": "decimal",
+                "unit": null,
+                "comment": "wind speed in kph"
+            }
+        ],
+        "tags": []
+    }
+}
+__validate_weather_type
+into if descr
+a49a8475d3834e5bd2aad5fca6f55aa4 (thing, My_SysthesiserWeather_Thing)
+remotefeed <IoticAgent.IOT.RemotePoint.RemoteFeed object at 0x03286D90>
+samples <generator object RemoteFeed.get_recent at 0x031C19B0>
+{'data': {'time': '2019-03-14T12:00:00Z', 'feels': 7.0, 'gust': 40.0, 'humid': 64.0, 'temp': 11.0, 'visib': 'VG', 'winddir': 'WNW', 'windspd': 22.0, 'uv': 2.0, 'type': '7', 'prob': '44'}, 'mime': None, 'time': datetime.datetime(2019, 3, 14, 9, 57, 23, 638869)}
+forcast is :  {
+    "time": "2019-03-14T12:00:00Z",
+    "feels": 7.0,
+    "gust": 40.0,
+    "humid": 64.0,
+    "temp": 11.0,
+    "visib": "VG",
+    "winddir": "WNW",
+    "windspd": 22.0,
+    "uv": 2.0,
+    "type": "7",
+    "prob": "44"
+}
+35.0
+
+Process finished with exit code -1

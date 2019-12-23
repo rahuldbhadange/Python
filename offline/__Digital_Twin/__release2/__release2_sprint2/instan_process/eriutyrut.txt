@@ -1,0 +1,33 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\HBD2KOR>cd envs
+
+C:\Users\HBD2KOR\envs>cd rrpsdev
+
+C:\Users\HBD2KOR\envs\rrpsdev>Scripts\activate
+
+(rrpsdev) C:\Users\HBD2KOR\envs\rrpsdev>cd ..
+
+(rrpsdev) C:\Users\HBD2KOR\envs>cd..
+
+(rrpsdev) C:\Users\HBD2KOR>cd digital.git
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git>cd rrps
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps>cd python
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python>cd rrps.dt.follower.example
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.follower.example>rrps-dt-follower-example -l
+cfg\follower.log.yml cfg\follower.cfg.yml cfg\agent.ini
+2019-01-30 11:16:54,200 DEBUG [rrps.dt.follower.example.impl] {MainThread} Startup
+2019-01-30 11:16:55,808 DEBUG [rrps.dt.follower.example.impl] {MainThread} Running
+2019-01-30 11:16:56,923 INFO [rrps.dt.follower.example.impl] {ioticlabs.dt.api.follower.__do_callback} A
+sset created: 1000015
+2019-01-30 11:16:57,232 INFO [rrps.dt.follower.example.impl] {ioticlabs.dt.api.follower.__do_callback} A
+sset created: 1000020
+2019-01-30 11:16:57,543 INFO [rrps.dt.follower.example.impl] {ioticlabs.dt.api.follower.__do_callback} A
+sset created: 1000021
+2019-01-30 11:17:01,404 INFO [rrps.dt.follower.example.impl] {ioticlabs.dt.api.follower.__do_callback} I
+nternal: <IntTwinEofReplay v1 ('1000015'@17)>

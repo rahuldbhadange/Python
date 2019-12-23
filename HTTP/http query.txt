@@ -1,0 +1,1 @@
+https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/IbaseChangesSet?$filter=Sernr eq '526104875' and Uptim gt '20160406135745'&$format=json

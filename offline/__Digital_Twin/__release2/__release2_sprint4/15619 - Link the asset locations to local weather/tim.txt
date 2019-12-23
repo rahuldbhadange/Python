@@ -1,0 +1,85 @@
+From Tim Churchard to Everyone:  03:06 PM
+__thing.follow(point_guid)
+
+remotefeed = self.__thing.follow(point_guid) 
+
+remotefeed.get_recent(-1) 
+
+
+
+
+
+From Tim Churchard to Everyone:  03:12 PM
+follow((lid, pid)) is used for local subscribe.  You can ignore it.  Normally you follow(point_guid) 
+
+
+
+
+
+
+From Tim Churchard to Everyone:  03:26 PM
+rrps/python/rrps.dt.events/rrps/dt/events/__init__.pyWeatherInfoSetgit fetch origin ; git rebase origin/dev git stashgit rebase origin/devgit stash pop
+
+
+remote = self.__thing.follow(point_guid, callback_parsed=self.__cb_parsed)
+                        samples = remote.get_recent(-1)
+
+
+
+So that weather comes from metoffice.  But Iotic Space has other providers of weather. 
+
+ OpenWeather for example.  
+
+Perhaps you can change the code to find an openweather and get the data?  To see what is common between them 
+
+
+def __validate_weather_type(self, thing_label, point_label):
+        if thing_label.startswith("Weather Forecast for: ") and point_label == "Current weather info":
+            return "metoffice"
+        #if thing_label.startswith("
+        return None 
+
+
+
+
+
+
+
+
+The 15617 branch you have committed a venv so that should be undone/removed.  
+
+The test code looks OK, you have everything you need to get weather data.
+
+The next task will be to merge it into the synthesiser.  
+	-- Can you run the synthesiser and see if you get any FieldData* events? 
+		But anyway if not just pick another one (sapmasterdata) or whatever.  
+		When you get that event call the function that will find nearest weather. 
+Then we can work out how to make the synthesiser into a follower & integrator.  
+
+I'll need to talk to Vilnis about how todo that though
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

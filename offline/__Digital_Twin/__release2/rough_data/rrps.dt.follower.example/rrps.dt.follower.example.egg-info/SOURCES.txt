@@ -1,0 +1,13 @@
+rrps/__init__.py
+rrps.dt.follower.example.egg-info/PKG-INFO
+rrps.dt.follower.example.egg-info/SOURCES.txt
+rrps.dt.follower.example.egg-info/dependency_links.txt
+rrps.dt.follower.example.egg-info/entry_points.txt
+rrps.dt.follower.example.egg-info/requires.txt
+rrps.dt.follower.example.egg-info/top_level.txt
+rrps.dt.follower.example.egg-info/zip-safe
+rrps/dt/__init__.py
+rrps/dt/follower/__init__.py
+rrps/dt/follower/example/__init__.py
+rrps/dt/follower/example/__main__.py
+rrps/dt/follower/example/impl.py

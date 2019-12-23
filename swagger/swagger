@@ -1,0 +1,502 @@
+swagger: '2.0'
+info:
+  description: 'rr b2c'
+  version: '1.0.0'
+  title: 'rr b2c'
+  contact:
+    email: 'steven.zarka@iotic-labs.com'
+host: 'localhost:8080'
+basePath: '/'
+schemes:
+  - 'https'
+  - 'http'
+paths:
+  /field-data/{asset_id}:
+    get:
+      summary: 'Find field data by asset ID'
+      description: 'Returns a single asset'
+      operationId: 'get_field_data_by_asset_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID asset to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /field-data/{asset_id}/{start}/{stop}:
+    get:
+      summary: 'Find field data by asset ID and time'
+      description: 'Returns time boxed fielddata'
+      operationId: 'get_field_data_by_asset_id_and_time'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID asset to return'
+          required: true
+          type: 'string'
+        - name: 'start'
+          in: 'path'
+          description: 'start time'
+          required: true
+          type: 'string'
+        - name: 'stop'
+          in: 'path'
+          description: 'end time'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /bom/{asset_id}:
+    get:
+      summary: 'Find BOM data by asset ID'
+      description: 'Returns bom data'
+      operationId: 'get_bom_data_by_asset_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /ron/{asset_id}/{start}/{stop}/:
+    get:
+      summary: 'Find ron data by asset ID and time'
+      description: 'Returns sample eventlist json'
+      operationId: 'get_ron_data_by_asset_id_and_time'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset to return'
+          required: true
+          type: 'string'
+        - name: 'start'
+          in: 'path'
+          description: 'start time'
+          required: true
+          type: 'string'
+        - name: 'stop'
+          in: 'path'
+          description: 'end time'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /ron/{asset_id}:
+    post:
+      summary: 'Find ron data by asset ID and time'
+      description: 'Returns sample event list json'
+      operationId: 'get_ron_data_by_asset_id_and_time_desc'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+      - name: 'asset_id'
+        in: 'path'
+        description: 'ID of asset to return'
+        required: true
+        type: 'string'
+      - name: 'query'
+        in: 'body'
+        description: 'query parameter to fetch required doc'
+        required: true
+        schema:
+          $ref: '#/definitions/RonQuery'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+    get:
+      summary: 'Find ron data by asset ID and time'
+      description: 'Returns sample event list json'
+      operationId: 'get_ron_data_by_asset_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /weather-info/{asset_id}:
+    get:
+      summary: 'Get weather information by asset ID'
+      description: 'Returns weather information for an asset'
+      operationId: 'get_weather_info_by_asset_id'
+      produces:
+      - 'application/xml'
+      - 'application/json'
+      parameters:
+      - name: 'asset_id'
+        in: 'path'
+        description: 'Asset ID'
+        required: true
+        type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /basic-data/{asset_id}:
+    get:
+      summary: 'Find basic data by asset ID'
+      description: 'Returns sample basic data json'
+      operationId: 'get_basic_data_by_asset_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /master-field-history/{asset_id}/{field_name}:
+    get:
+      summary: 'Returns the historical values for a master data field and an asset ID'
+      description: 'Returns the historical values for a master data field and an asset ID'
+      operationId: 'get_master_field_history_by_asset_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset to return'
+          required: true
+          type: 'string'
+        - name: 'field_name'
+          in: 'path'
+          description: 'Name of field to return'
+          required: true
+          type: 'string'
+        - name: 'limit'
+          in: 'query'
+          description: 'Maximum number of entries to return'
+          type: 'integer'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /engine-bom-as-maintained/{asset_id}:
+    get:
+      summary: 'Get the latest BOM for the asset'
+      description: 'Return  the latest BOM for the asset'
+      operationId: 'get_bom_as_maintained_by_asset_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /doc-list/{asset_id}:
+    get:
+      summary: 'Returns the document list for an asset.'
+      description: 'Returns the document list for an asset.'
+      operationId: 'get_doc_list_by_asset_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'The ID of the asset for which documents are requested.'
+          required: true
+          type: 'string'
+        - name: event
+          in: query
+          type: string
+          description: 'If set, the controller will return only documents reported in events having the specified name.'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Asset not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /part-info/{asset_id}/<path:material_id>:
+    get:
+      summary: 'Find part info by material id'
+      description: 'Returns a part info object'
+      operationId: 'get_part_info_by_material_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset for document to return'
+          required: true
+          type: 'string'
+        - name: 'material_id'
+          in: 'path'
+          description: 'ID of material for part info to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Material id not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /part-info-history/{asset_id}/<path:material_id>:
+    get:
+      summary: 'Find part info by material id'
+      description: 'Returns a part info object'
+      operationId: 'get_part_info_history_by_material_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset for document to return'
+          required: true
+          type: 'string'
+        - name: 'material_id'
+          in: 'path'
+          description: 'ID of material for part info to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Material id not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /talend-doc/{asset_id}/{document_label}/{document_name}:
+    post:
+      summary: 'Get a talend document using document name'
+      description: 'Returns a document'
+      operationId: 'get_talend_document_by_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset for document to return'
+          required: true
+          type: 'string'
+        - name: 'document_label'
+          in: 'path'
+          description: 'label of document to return'
+          required: true
+          type: 'string'
+        - name: 'document_name'
+          in: 'path'
+          description: 'name of document to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /document/{asset_id}/{document_id}.{file_ext}:
+    post:
+      summary: 'Get document using document id'
+      description: 'Returns a document'
+      operationId: 'get_document_by_id'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset for document to return'
+          required: true
+          type: 'string'
+        - name: 'document_id'
+          in: 'path'
+          description: 'ID of document to return'
+          required: true
+          type: 'string'
+        - name: 'file_ext'
+          in: 'path'
+          description: 'File extension document to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /status:
+    get:
+      summary: 'Get status of api'
+      description: 'Returns status of api'
+      operationId: 'get_status'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Bad request'
+        404:
+          description: 'Not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /:
+    get:
+      summary: 'Get status of api'
+      description: 'Returns status of api'
+      operationId: 'get_root'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Bad request'
+        404:
+          description: 'Not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /upcoming-events/{asset_id}:
+    get:
+      summary: 'Get upcoming events using asset id'
+      description: 'Returns list of upcoming events'
+      operationId: 'get_upcoming_events_by_id'
+      produces:
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid ID supplied'
+        404:
+          description: 'Id not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+  /test-document/{asset_id}/{document_type}:
+    post:
+      summary: 'Get test-document using document type'
+      description: 'Returns a test-document'
+      operationId: 'get_document_by_type'
+      produces:
+        - 'application/xml'
+        - 'application/json'
+      parameters:
+        - name: 'asset_id'
+          in: 'path'
+          description: 'ID of asset for document to return'
+          required: true
+          type: 'string'
+        - name: 'document_type'
+          in: 'path'
+          description: 'Type of document to return'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'successful operation'
+        400:
+          description: 'Invalid type supplied'
+        404:
+          description: 'type not found'
+      x-swagger-router-controller: 'rrps.dt.follower.rest_follower.controllers.default_controller'
+definitions:
+  RonQuery:
+    properties:
+      start:
+        type: 'string'
+      end:
+        type: 'string'
+      description:
+        type: 'array'
+        items:
+          type: 'string'

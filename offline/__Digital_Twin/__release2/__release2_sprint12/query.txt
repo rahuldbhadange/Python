@@ -1,0 +1,73 @@
+{
+    "_id" : ObjectId("5d10aa16ea1321a72e075901"),
+    "asset_id" : "1000020",
+    "source" : "sapwarrantyrecall",
+    "offset" : 515,
+    "_clmno" : "000440000121",
+    "AssetType" : "ENG",
+    "Seq" : 515,
+    "Source" : "sapwarrantyrecall",
+    "Ts" : "2019-06-24T10:48:10.499040+00:00",
+    "Type" : "K I F",
+    "Details" : [ 
+        {
+            "EventName" : "Name of Modification",
+            "EventValue" : "2018.02.16.0001"
+        }, 
+        {
+            "EventName" : "Date of Update",
+            "EventValue" : "2018-12-31"
+        }, 
+        {
+            "EventName" : "Link to Document",
+            "EventValue" : "HTTP://WWW.PRORATA-NOW.COM"
+        }
+    ]
+}
+
+
+
+
+
+{
+    "_id" : ObjectId("5d1087d0b6bc8d3280d082a2"),
+    "asset_id" : "1000015",
+    "Source" : "sapwarrantyrecall",
+    "Ts" : "2019-06-24T08:20:30.613035+00:00",
+    "Seq" : 273,
+    "source" : "sapwarrantyrecall",
+    "offset" : 273,
+    "_clmno" : "000440000120",
+    "AssetType" : "AGG",
+    "Type" : "K I F",
+    "Details" : [ 
+        {
+            "EventName" : "Name of Modification",
+            "EventValue" : "2018.02.16.0001"
+        }, 
+        {
+            "EventName" : "Date of Update",
+            "EventValue" : "2018-12-31"
+        }, 
+        {
+            "EventName" : "Link to Document",
+            "EventValue" : "HTTP://WWW.PRORATA-NOW.COM"
+        }
+    ]
+}
+
+
+In existing code, we are deleting wrt "_clmno" but if it is same for both (ENG & AGG) event then it will delete both the event
+
+Do we need to check all three condition at the same time then proceed or we can segregate both situation earlier one and which is given now (if we do so same "_clmno" will removing the both event)
+
+
+db.getCollection('ron').find({$and:[{"AssetType" : "ENG" }, {"asset_id" : "1000015"}]})
+
+
+db.getCollection('ron').find({$and:[{$or:[{"AssetType" : "ENG"}, {"AssetType" : "AGG"}]},
+{"Source" : "sapwarrantyrecall"},{"AssetSerialNumber" : "4711-011"}]})
+
+
+db.getCollection('upcoming_events').find({$and:[{$or:[{"AssetType" : "ENG"}, {"AssetType" : "AGG"}]},
+{"Source" : "sapwarrantyrecall"},{"AssetSerialNumber" : "4711-011"},{"asset_id" : "1000015"}]})

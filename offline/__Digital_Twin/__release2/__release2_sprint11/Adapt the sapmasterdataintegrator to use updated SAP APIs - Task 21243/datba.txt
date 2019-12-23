@@ -1,0 +1,9 @@
+                        try:
+                            if event_data['Datab'] == "0000-00-00" or event_data['Datab'] is None:
+                                raise ValueError
+                            else:
+                                event_data['Datab'] = math.floor(
+                                    datetime.datetime.strptime(event_data['Datab'],
+                                                               '%Y-%m-%d').timestamp()) * 1000
+                        except ValueError:
+                            log.error("Could not find time response")

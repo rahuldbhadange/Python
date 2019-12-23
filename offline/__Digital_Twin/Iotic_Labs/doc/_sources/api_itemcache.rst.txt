@@ -1,0 +1,15 @@
+.. _api_item_cache:
+
+item_cache API
+==============
+
+Simple key-value abstraction used to e.g. track known assets.
+
+API reference
+-------------
+
+.. py:module:: ioticlabs.dt.common.item_cache
+
+.. autoclass:: CacheBase
+   :members:
+

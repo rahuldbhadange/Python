@@ -1,0 +1,32 @@
+Yep push to VSTS.  
+I like to prefix my commit message with "__wip__ " so its clear its still work in progress.  
+For example "__wip__ sapmasterdata/ Integrator consistency #14572" 
+-- And then later I use (git commit --amend) to remove the __wip__ (If you git add and run commit 
+--amend it will add those updates to the commit so you can keep growing/changing the commit etc) 
+
+
+
+
+
+Does (git branch -vva) show that your local branch is tracking a remote branch?  And that you are ahead by 1..n commits? 
+For example when I look at git branch -vva on my digital.git clone.  I am currently on the dev branch so the output is like this: 
+* dev                                 5b81c7e [azure/dev] Merged PR 800: dt/
+
+
+
+
+
+it shows my dev branch, remote tracking branch [] 
+ 
+
+
+
+
+
+
+
+
+
+
+
+Try this command:  git config --global core.autocrlf input   and then status/diff/add again

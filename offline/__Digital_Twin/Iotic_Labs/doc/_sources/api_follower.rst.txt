@@ -1,0 +1,61 @@
+.. _api_follower:
+
+Follower API
+============
+
+This API is in 2 parts
+
+#. The API on the Follower API *Object* that the follower calls
+#. The Follower Callback Interface that the follower has to implement
+
+Follower API reference
+------------------------
+
+.. py:module:: ioticlabs.dt.api.follower
+
+Follower
+**********
+
+.. autoclass:: Follower
+   :members:
+
+Follower Callbacks reference
+----------------------------
+
+FollowerCallbacks
+*****************
+
+.. autoclass:: FollowerCallbacks
+   :members:
+
+NamedEventMixin reference
+-------------------------
+
+NamedEventMixin
+***************
+
+.. autoclass:: NamedEventMixin
+   :members:
+
+.. _t2_exceptions_Follower:
+
+Type 2 exceptions
+-----------------
+
+Exceptions
+**********
+
+.. autoclass:: T2Unavailable
+   :members:
+
+.. autoclass:: T2Timeout
+   :members:
+
+.. autoclass:: T2ResponseException
+   :members:
+
+Reasons
+*******
+
+.. autoclass:: T2ReqFailureReason
+   :members:

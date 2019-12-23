@@ -1,0 +1,240 @@
+hi_endpoint
+
+
+'http://localhost:5000/sapmasterdata/hierarchy/1000015'
+
+
+
+
+
+
+
+data
+
+
+{'d': {'results': [{'Eqart': 'SYS',
+                    'Equnr': '000000000200000465',
+                    'Hequi': '',
+                    'Sernr': '1000015'},
+                   {'Eqart': 'ENG',
+                    'Equnr': '000000000200000031',
+                    'Hequi': '000000000200000465',
+                    'Sernr': '4711-0006'}]}}
+
+
+
+
+
+
+
+md_endpoint:::::::asset_id
+
+
+'http://localhost:5000/sapmasterdata/master/1000015'
+
+
+
+
+
+
+
+data:::::::::md_endpoint:::::::asset_id
+
+
+{'d': {'results': [{'Datab': '2016-02-10',
+                    'Datbi': '2016-12-31',
+                    'Eqart': 'SYS',
+                    'Equnr': '000000000200000465',
+                    'Kunde': '',
+                    'Maktx': 'SYSTEM',
+                    'Matnr': 'SYSTEM',
+                    'Name1': '',
+                    'Sernr': '150001',
+                    'Vkbur': '0100',
+                    'Yybau': 'SYS',
+                    'Yyerz': ''}]}}
+
+
+
+
+
+
+
+md_endpoint::::::::::engine_serial
+
+
+'http://localhost:5000/sapmasterdata/master/4711-0006'
+
+
+
+
+
+
+
+data:::::::::md_endpoint::::::::::engine_serial
+
+
+{'d': {'results': [{'Datab': '2016-02-10',
+                    'Datbi': '2016-12-31',
+                    'Eqart': 'ENG',
+                    'Equnr': '000000000200000031',
+                    'Kunde': '',
+                    'Maktx': 'Reman engine 0002',
+                    'Matnr': 'R-REM-0002',
+                    'Name1': '',
+                    'Sernr': '4711-0006',
+                    'Vkbur': '0100',
+                    'Yybau': 'SYS',
+                    'Yyerz': ''}]}}
+
+
+
+
+
+
+
+event_data
+
+
+{'Datab': 1455042600000,
+ 'Datbi': 1483122600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+
+
+
+
+
+event_data:::::::::__get_the_event_data
+
+
+{'Datab': 1455042600000,
+ 'Datbi': 1483122600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+
+
+
+
+
+data:::::::::__get_data_for_asset
+
+
+
+
+data:::__process_master_data::::::
+
+
+{'Datab': 1455042600000,
+ 'Datbi': 1483122600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+
+
+
+2019-06-13 13:29:21,598 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000015
+2019-06-13 13:29:21,598 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Publish event for 1000015
+
+
+data:::__process_master_data::::::
+
+
+{'Datab': 1455042600000,
+ 'Datbi': 1483122600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+
+
+
+
+
+master_data
+
+
+{'Datab': 1455042600000,
+ 'Datbi': 1483122600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+
+
+
+
+
+publish_event:::::::::
+
+
+SapMasterDataSet('1000015', source=None, time=datetime.datetime(2016, 2, 9, 18, 30), systime=None, offset=-1, version=1,
+ data=...)
+<SapMasterDataSet v1 ('1000015'@-1)>
+
+

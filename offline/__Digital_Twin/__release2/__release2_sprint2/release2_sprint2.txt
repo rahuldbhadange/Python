@@ -1,0 +1,6 @@
+https://www.jetbrains.com/help/pycharm/configuring-line-endings-and-line-separators.html  -- Use LF (unix) line ending 
+copy   (pylint.rc, flake8.cfg & static_tests.cmd) to each integrator 
+If pylint.rc & flake8.cfg exist obv' don't overwrite 
+
+
+{equnr} <-- This is python format string used in the impl.py.   From the other integrators where we have used like XX_ASSET_ID_XX please replace with python format string 

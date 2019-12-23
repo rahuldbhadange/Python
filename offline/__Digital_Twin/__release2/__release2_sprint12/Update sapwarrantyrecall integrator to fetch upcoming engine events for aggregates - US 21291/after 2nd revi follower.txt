@@ -1,0 +1,332 @@
+              {'EventName': 'Link to Document', 'EventValue': ''}],
+  'Seq': 763,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-25T10:12:46.427001+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000122',
+  'asset_id': '1000020',
+  'offset': 763,
+  'source': 'sapwarrantyrecall'},
+ {'AssetSerialNumber': '4711-011',
+  'AssetType': 'ENG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0001'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+  'Seq': 763,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-25T10:12:46.427001+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000120',
+  'asset_id': '1000020',
+  'offset': 763,
+  'source': 'sapwarrantyrecall'}]
+
+
+
+
+remove_list
+
+[]
+
+
+
+
+
+
+
+
+
+
+
+
+000440000132
+ENG
+4711-011
+
+
+
+
+
+
+
+
+
+
+
+
+{'AssetSerialNumber': '4711-011',
+ 'AssetType': 'ENG',
+ 'Details': [{'EventName': 'Name of Modification',
+              'EventValue': '2018.02.16.0001'},
+             {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+             {'EventName': 'Link to Document',
+              'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+ 'Seq': 763,
+ 'Source': 'sapwarrantyrecall',
+ 'Ts': '2019-06-25T10:12:46.427001+00:00',
+ 'Type': 'K I F',
+ '_clmno': '000440000132',
+ 'asset_id': '1000020',
+ 'offset': 763,
+ 'source': 'sapwarrantyrecall'}
+
+
+
+
+
+
+
+
+
+
+update_list
+
+[{'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0001'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+  'Seq': 763,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-25T10:12:46.427001+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000120',
+  'asset_id': '1000020',
+  'offset': 763,
+  'source': 'sapwarrantyrecall'},
+ {'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0002'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'http://www.google.de'}],
+  'Seq': 763,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-25T10:12:46.427001+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000121',
+  'asset_id': '1000020',
+  'offset': 763,
+  'source': 'sapwarrantyrecall'},
+ {'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Details': [{'EventName': 'Name of Modification', 'EventValue': 'Text'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document', 'EventValue': ''}],
+  'Seq': 763,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-25T10:12:46.427001+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000122',
+  'asset_id': '1000020',
+  'offset': 763,
+  'source': 'sapwarrantyrecall'},
+ {'AssetSerialNumber': '4711-011',
+  'AssetType': 'ENG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0001'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+  'Seq': 763,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-25T10:12:46.427001+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000120',
+  'asset_id': '1000020',
+  'offset': 763,
+  'source': 'sapwarrantyrecall'},
+ {'AssetSerialNumber': '4711-011',
+  'AssetType': 'ENG',
+  'Details': [{'EventName': 'Name of Modification',
+               'EventValue': '2018.02.16.0001'},
+              {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+              {'EventName': 'Link to Document',
+               'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+  'Seq': 763,
+  'Source': 'sapwarrantyrecall',
+  'Ts': '2019-06-25T10:12:46.427001+00:00',
+  'Type': 'K I F',
+  '_clmno': '000440000132',
+  'asset_id': '1000020',
+  'offset': 763,
+  'source': 'sapwarrantyrecall'}]
+
+
+
+
+remove_list
+
+[]
+
+
+
+
+000440000132
+ENG
+4711-011
+
+
+
+
+
+
+
+
+
+
+
+
+{'AssetSerialNumber': '4711-011',
+ 'AssetType': 'ENG',
+ 'Details': [{'EventName': 'Name of Modification',
+              'EventValue': '2018.02.16.0001'},
+             {'EventName': 'Date of Update', 'EventValue': '2018-12-31'},
+             {'EventName': 'Link to Document',
+              'EventValue': 'HTTP://WWW.PRORATA-NOW.COM'}],
+ 'Seq': 763,
+ 'Source': 'sapwarrantyrecall',
+ 'Ts': '2019-06-25T10:12:46.427001+00:00',
+ 'Type': 'K I F',
+ '_clmno': '000440000132',
+ 'asset_id': '1000020',
+ 'offset': 763,
+ 'source': 'sapwarrantyrecall'}
+
+
+
+
+
+2019-06-25 15:57:51,340 INFO [rrps.dt.api.fielddata.follower] {finder} Finished
+2019-06-25 15:57:51,341 ERROR [rrps.dt.follower.rest_follower.DataAccess] {ioticlabs.dt.api.follower.__do_callback} Fail
+ed upserting upcoming_events for asset id 1000020
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.follower.rest_follower\rrps\dt\follower\rest_follower\DataAcces
+s.py", line 152, in upsert
+    database = self.client[self.database]
+TypeError: 'NoneType' object is not subscriptable
+2019-06-25 15:57:51,374 ERROR [ioticlabs.dt.api.follower] {ioticlabs.dt.api.follower.__do_callback} on_event(*(SapWarran
+tyRecallSet('1000020', source='sapwarrantyrecall', time=datetime.datetime(2019, 6, 25, 10, 12, 46, 427001), systime=None
+, offset=763, version=2, data=...),), **{}) failed
+2019-06-25 15:57:51,375 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Event f
+or 1000020 (SapWarrantyRecallSet)
+2019-06-25 15:57:51,375 ERROR [rrps.dt.follower.rest_follower.DataAccess] {ioticlabs.dt.api.follower.__do_callback} Fail
+ed loading asset from basic_data for asset id 1000020
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.follower.rest_follower\rrps\dt\follower\rest_follower\DataAcces
+s.py", line 169, in load
+    database = self.client[self.database]
+TypeError: 'NoneType' object is not subscriptable
+2019-06-25 15:57:51,376 ERROR [rrps.dt.follower.rest_follower.views.BasicDataView] {ioticlabs.dt.api.follower.__do_callb
+ack} Exception reading from table basic_data when capturing the old data
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.follower.rest_follower\rrps\dt\follower\rest_follower\views\Bas
+icDataView.py", line 33, in capture_old_data
+    return self._data_access.load(self.BASIC_DATA_TABLE, event.asset)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.follower.rest_follower\rrps\dt\follower\rest_follower\DataAcces
+s.py", line 169, in load
+    database = self.client[self.database]
+TypeError: 'NoneType' object is not subscriptable
+
+
+
+
+
+
+None
+
+
+
+
+
+
+2019-06-25 15:57:51,378 INFO [rrps.dt.follower.rest_follower.views.UpcomingEventsView] {ioticlabs.dt.api.follower.__do_c
+allback} UpcomingEventsView on_event called
+
+
+
+
+payload
+
+[{'Abdes': 'Active',
+  'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000120',
+  'Clmty': 'YCIF',
+  'DocLink': 'HTTP://WWW.PRORATA-NOW.COM',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0001',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5aq+SeSqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0001',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  'YywtyState': ''},
+ {'Abdes': 'Active',
+  'AssetSerialNumber': '1000015',
+  'AssetType': 'AGG',
+  'Astate': 'YC20',
+  'Clmno': '000440000121',
+  'Clmty': 'YCIF',
+  'DocLink': 'http://www.google.de',
+  'Equnr': '000000000010000018',
+  'HPntext': '2018.02.16.0002',
+  'Parnr': '',
+  'Pncnt': '00000001',
+  'Pnguid': 'AFBWiyhYHtiE5ie9Vxcqiw==',
+  'Refdt': 1514764800000,
+  'Refno': '2018.02.16.0002',
+  'Sernr': '',
+  'YycifPrio': 'M',
+  'YycifPriotxt': 'Modifikation',
+  'Yyclmtype': '',
+  'Yyclmtypetxt': '',
+  'YydueDate': '2018-12-31',
+  'Yyrepcountry': '',
+  'Yyroclosed': '0000-00-00',
+  'Yyroopen': '0000-00-00',
+  'Yysystfir': '',
+  Fatal Python error: could not acquire lock for <_io.BufferedWriter name='<stdout>'> at interpreter shutdown, possibly
+due to daemon threads
+
+Thread 0x00001904 (most recent call first):
+  File "C:\Python37\lib\pprint.py", line 348 in _format_dict_items
+  File "C:\Python37\lib\pprint.py", line 189 in _pprint_dict
+  File "C:\Python37\lib\pprint.py", line 167 in _format
+  File "C:\Python37\lib\pprint.py", line 389 in _format_items
+  File "C:\Python37\lib\pprint.py", line 210 in _pprint_list
+  File "C:\Python37\lib\pprint.py", line 167 in _format
+  File "C:\Python37\lib\pprint.py", line 139 in pprint
+  File "C:\Python37\lib\pprint.py", line 53 in pprint
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.follower.rest_follower\rrps\dt\follower\rest_follower\views\Upc
+omingEventsView.py", line 22 in on_event
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.follower.rest_follower\rrps\dt\follower\rest_follower\follower.
+py", line 140 in on_event
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.api.fielddata\rrps\dt\api\fielddata\follower\__init__.py", line
+ 269 in _on_event
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.api.fielddata\rrps\dt\api\fielddata\follower\__init__.py", line
+ 68 in on_event
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\follower\__init__.py", line 520 in __do_callbac
+k
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\common\util\__init__.py", line 52 in consumer
+  File "C:\Python37\lib\threading.py", line 865 in run
+  File "C:\Python37\lib\threading.py", line 917 in _bootstrap_inner
+  File "C:\Python37\lib\threading.py", line 885 in _bootstrap
+
+Current thread 0x0000271c (most recent call first):

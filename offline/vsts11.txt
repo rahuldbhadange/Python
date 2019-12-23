@@ -1,0 +1,35 @@
+Ah right yes.  
+
+git is offline first.  
+
+Nothing happens on VSTS until you 'push'.    
+
+
+
+The first time you want to upload a new branch you run like: git push --set-upstream azure dev-rahul-14195 
+
+
+And then you use:  git branch -vva _ _ _ _ _ to see where you local branch is pointing. It will also tell you if you are ahead/behind the remote branch 
+
+
+Then you can just run:    git push _ _ _ _ _ to push your latest changes.   
+
+
+If you've changed history you might need to (git push -f) but that will overwrite remote history so you should be careful with that one.
+
+
+
+
+Oh and you can update your repo's knowledge of VSTS by running:  git fetch azure 
+
+
+Its always safe to fetch
+
+
+You can always run:   git fetch azure _ _ _ _ _ to download the latest info from VSTS 
+
+
+Then:    git branch -vva _ _ _ _ _  to show the state of all branches known to your repo 
+
+
+And then:      git rebase _ _ _ _ _ to update to latest of the remote branch.  (git rebase azure/dev   for example)

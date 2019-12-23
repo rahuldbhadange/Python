@@ -1,0 +1,14 @@
+  var READTHEDOCS_DATA = {
+    project: "dont-be-afraid-to-commit",
+    version: "latest",
+    language: "en",
+    subprojects: {},
+    canonical_url: "http://dont-be-afraid-to-commit.readthedocs.io/en/latest/",
+    theme: "sphinx_rtd_theme",
+    builder: "sphinx",
+    docroot: "/docs/",
+    source_suffix: ".rst",
+    api_host: "https://readthedocs.org",
+    commit: "bc42e1d6"
+  };
+  

@@ -1,0 +1,49 @@
+data = self.__get_data_for_asset(asset_id)
+
+
+
+{'Datab': 1549737000000,
+ 'Datbi': 1546194600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+
+
+
+
+2019-06-13 17:04:04,802 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000015
+2019-06-13 17:04:04,802 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Publish event for 1000015
+2019-06-13 17:04:04,803 INFO [IoticAgent.IOT.RemotePoint] {MainThread} tell(timeout=10) [subid=59c59aa461a6aabd61d73437c
+a14761f]
+2019-06-13 17:04:06,741 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-13 17:04:06,908 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-13 17:04:06,908 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-13 17:04:06,908 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-13 17:04:07,087 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-13 17:04:07,528 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Cache asset for: 1000015
+
+
+
+
+"self.__integrator.publish_event(event, retry=True)
+
+
+
+
+SapMasterDataSet('1000015', source=None, time=datetime.datetime(2019, 2, 9, 18, 30), systime=None, offset=-1, version=1,
+ data=...)

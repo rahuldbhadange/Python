@@ -1,0 +1,370 @@
+[
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 0,
+        "Type": "SapEquipmentHistoryDeliverySet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 1,
+        "Type": "SapEquipmentHistoryMaterialMovementSet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 2,
+        "Type": "SapEquipmentHistoryMaintenanceContractSet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 3,
+        "Type": "SapEquipmentHistoryDeliverySet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 4,
+        "Type": "SapEquipmentHistoryDeliverySet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 5,
+        "Type": "SapEquipmentHistoryMaterialMovementSet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 6,
+        "Type": "SapEquipmentHistoryMaintenanceContractSet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 7,
+        "Type": "SapEquipmentHistoryDeliverySet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 0,
+        "Type": "SapEquipmentHistoryDeliverySet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 1,
+        "Type": "SapEquipmentHistoryMaterialMovementSet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 2,
+        "Type": "SapEquipmentHistoryMaintenanceContractSet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 3,
+        "Type": "SapEquipmentHistoryDeliverySet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 4,
+        "Type": "SapEquipmentHistoryDeliverySet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 5,
+        "Type": "SapEquipmentHistoryMaterialMovementSet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 6,
+        "Type": "SapEquipmentHistoryMaintenanceContractSet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2013-03-07T00:00:00+00:00",
+        "Seq": 7,
+        "Type": "SapEquipmentHistoryDeliverySet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    }
+]

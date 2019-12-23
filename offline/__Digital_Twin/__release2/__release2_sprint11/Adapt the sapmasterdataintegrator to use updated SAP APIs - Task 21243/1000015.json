@@ -1,0 +1,20 @@
+{
+  "d": {
+    "results": [
+      {
+        "Equnr": "000000000200000465",
+        "Matnr": "SYSTEM",
+        "Maktx": "SYSTEM",
+        "Sernr": "150001",
+        "Kunde": "",
+        "Name1": "",
+        "Datab": "2015-02-10",
+        "Datbi": "9999-12-31",
+        "Yybau": "SYS",
+        "Yyerz": "",
+        "Vkbur": "0100",
+        "Eqart": "SYS"
+      }
+    ]
+  }
+}

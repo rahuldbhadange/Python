@@ -1,0 +1,22 @@
+{
+	"variables": [],
+	"info": {
+		"name": "rahul",
+		"_postman_id": "617e9ba2-581e-a9fc-3612-3303e49a648f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/sapwarrantyrecall-mock-data",
+			"request": {
+				"url": "http://localhost:5000/sapwarrantyrecall-mock-data",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

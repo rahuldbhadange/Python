@@ -1,0 +1,10 @@
+range() :
+
+
+ex:
+range(10)------>generates 10no's i.e from 0 to 9 (excluding 10)
+
+range(size)---->generates no's from 0 to size-1 
+
+x=range(10)---->here 10 nos are generated and are stored in x object
+                to get one by one numbers------>use for loop

@@ -1,0 +1,21 @@
+item_cache for rrps.dt.integrator.sapmasterdata
+
+
+
+item_cache for rrps.dt.integrator.sapequipmenthistory
+
+
+
+item_cache for rrps.dt.integrator.talendtimdocument
+
+
+
+item_cache for rrps.dt.integrator.talendfirmware
+
+
+
+item_cache for rrps.dt.integrator.sapwarrantyrecall
+
+
+
+item_cache for rrps.dt.integrator.sapbomasbuilt

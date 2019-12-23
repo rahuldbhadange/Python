@@ -1,0 +1,10 @@
+required:
+  - providerName
+  - providerVariants
+properties:
+  providerName:
+    type: string
+  providerVariants:
+    type: array
+      items:
+        $ref: "#/definitions/ProviderVariantsData"

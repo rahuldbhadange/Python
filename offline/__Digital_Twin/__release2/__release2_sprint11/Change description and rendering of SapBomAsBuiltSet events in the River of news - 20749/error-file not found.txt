@@ -1,0 +1,58 @@
+2019-06-04 17:03:36,284 INFO [werkzeug] {MainThread}  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+2019-06-04 17:03:38,954 INFO [IoticAgent.Core.Client] {bg_9fb1ab1ccdab280246029b0f6253f7b5} QAPI version: 1.2.1
+2019-06-04 17:03:38,956 INFO [IoticAgent.IOT.Client] {bg_9fb1ab1ccdab280246029b0f6253f7b5} create_thing(lid="follower01"
+)
+2019-06-04 17:03:39,101 INFO [IoticAgent.IOT.Thing] {bg_9fb1ab1ccdab280246029b0f6253f7b5} create_control(pid="replay_rec
+eiver", control_cb=<bound method Follower.__cb_replay_control of <rrps.dt.api.fielddata.follower.FdFollower object at 0x
+0434E2F0>>) [lid=follower01]
+2019-06-04 17:03:40,498 INFO [ioticlabs.dt.api.follower.t2] {bg_9fb1ab1ccdab280246029b0f6253f7b5} Type2 requests will be
+ enabled
+2019-06-04 17:03:40,499 INFO [IoticAgent.IOT.Thing] {bg_9fb1ab1ccdab280246029b0f6253f7b5} create_control(pid="t2_rsp", c
+ontrol_cb=<bound method T2Handler.__cb_t2_rsp of <ioticlabs.dt.api.follower.t2.T2Handler object at 0x04A39CB0>>) [lid=fo
+llower01]
+Exception in thread bg_9fb1ab1ccdab280246029b0f6253f7b5:
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\common\item_cache\json.py", line 65, in start
+    self.__file = inout_file = open(self.__path, 'r+')
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/follower_assets.json'
+
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python37\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Python37\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\IoticAgent\ThingRunner.py", line 104, in __run
+    if self.__handle_exception(ctx):
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\IoticAgent\ThingRunner.py", line 94, in __run
+    self.on_startup()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.follower.rest_follower\rrps\dt\follower\rest_follower\follower.
+py", line 45, in on_startup
+    self.__follower.start()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.api.fielddata\rrps\dt\api\fielddata\follower\__init__.py", line
+ 107, in start
+    super().start()
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\follower\__init__.py", line 190, in start
+    self.__tracker.start()
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\api\follower\tracker\json.py", line 19, in start
+    self.__cache.start()
+  File "c:\users\hbd2kor\envs\rrpsdev\lib\site-packages\ioticlabs\dt\common\item_cache\json.py", line 67, in start
+    self.__file = inout_file = open(self.__path, 'w+')
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/follower_assets.json'
+
+
+
+
+
+solution ==>>
+
+
+
+
+
+in your follower.cfg.yml, try putting  follower_assets.json rather than tmp/follower_assets.json 
+or create a directory named tmp, I think it is failing because the directory is missing 

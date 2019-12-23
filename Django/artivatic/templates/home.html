@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block head_title %}
+
+    {{ title }}
+
+{% endblock %}
+
+
+{% block content %}
+
+    {{ title }}
+
+    {{ user }}
+
+    {{ request.user }}
+
+    {{ request.path }}
+
+    {{ user.is_authenticated}}
+
+
+        {% if user.is_authenticated %}
+
+            <h4>User only data</h4>
+
+                {% for i in my_list %}
+
+                    <li> {{ i }} </li>
+
+                {% endfor %}
+
+        {% endif %}
+
+{% endblock %}

@@ -1,0 +1,48 @@
+rrps.dt.integrator.sap1/* -- becomes one patch 
+sap2/* is another etc 
+You can do it with git add -u -p rrps.dt.integrator.sap1/ 
+git format-patch HEAD~5
+
+
+Yep --stat adds a summary of the files changes.   -p shows the patch.  You can press up/down cursor to read the patch until you get down to the next commit.  Press q to quit when done.
+
+
+This is an example of the difference in the config file.  The things to bring across to integratots you want to run are like text: env_m_p 
+
+
+
+<       text: env_m_p
+---
+>       # text:
+59c63
+<       scope: local
+---
+>       # scope:
+67c71
+<           #thing_regex: '^q producer$'
+---
+>           # thing_regex:
+75c79
+<           unique_regex: '^m_(.+)$'
+---
+>           # unique_regex: 77,78c81
+<           thing:<- env_m_p 
+
+
+
+[?2/?1/?2019 3:29 PM]  Tim Churchard:  
+diff the integrator.cfg.yml from fabio (that works for sapmasterdata) with the other sap integrator.cfg.ymls and set the text/tags/regex stuff 
+ 
+
+
+
+diff the integrator.cfg.yml from fabio (that works for sapmasterdata) with the other sap integrator.cfg.ymls and set the text/tags/regex stuff
+
+
+
+
+
+
+git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory
+
+C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapequipmenthistory\data\

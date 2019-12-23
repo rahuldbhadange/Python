@@ -1,0 +1,26 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "https://sap-fes-i.org-intra.net:443/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set(EqunrAgg='000000000200000081',MatnrAgg='12V2000C10',SernrAgg='SER-00123',EqunrEng='000000000200000082',MatnrEng='R16V4000G83',SernrEng='4711-001')",
+                    "uri": "https://sap-fes-i.org-intra.net:443/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set(EqunrAgg='000000000200000081',MatnrAgg='12V2000C10',SernrAgg='SER-00123',EqunrEng='000000000200000082',MatnrEng='R16V4000G83',SernrEng='4711-001')",
+                    "type": "Y_DIGITAL_TWIN_SRV.EQUI01"
+                },
+                "EqunrAgg": "000000000200000081",
+                "MaktxAgg": "AUFNAHMEKOERPER",
+                "MatnrAgg": "12V2000C10",
+                "MaktxEng": "R16V4000G83 REMAN ENGINE",
+                "SernrAgg": "SER-00123",
+                "Name1": "Land Badenwürtenberg",
+                "EqunrEng": "000000000200000082",
+                "MatnrEng": "R16V4000G83",
+                "SernrEng": "4711-001",
+                "Kunde": "0022111236",
+                "Datab": "\/Date(1504828800000)\/",
+                "Datbi": "\/Date(253402214400000)\/",
+                "Yybau": "030"
+            }
+        ]
+    }
+}

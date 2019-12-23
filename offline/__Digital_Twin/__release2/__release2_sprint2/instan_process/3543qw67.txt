@@ -1,0 +1,349 @@
+
+HBD2KOR@ECGCN1031334D MINGW64 ~
+$ pwd
+/c/Users/HBD2KOR
+
+HBD2KOR@ECGCN1031334D MINGW64 ~
+$ cd digital.git/
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./
+.dockerignore  .idea/         devops/        README.md
+.git/          3rd/           dt/            release/
+.gitignore     deps/          example/       rrps/
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./dt/patch/patch
+patch2/ patch8/
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./dt/patch/patch2/000
+0006-Added-Pycharm-instructions.patch
+0007-dt-doc-Documentation-first-release.patch
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./dt/patch/patch2/0006-Added-Pycharm-instructions.patch
+Applying: Added Pycharm instructions
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./dt/patch/patch2/0007-dt-doc-Documentation-first-release.patch
+.git/rebase-apply/patch:2367: trailing whitespace.
+#. Neither the name of the copyright holder nor the names of the
+.git/rebase-apply/patch:2368: trailing whitespace.
+   contributors may be used to endorse or promote products derived
+.git/rebase-apply/patch:2374: trailing whitespace.
+   PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR
+.git/rebase-apply/patch:2375: trailing whitespace.
+   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+.git/rebase-apply/patch:2376: trailing whitespace.
+   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+warning: squelched 2124 whitespace errors
+warning: 2129 lines add whitespace errors.
+Applying: dt/doc Documentation first release
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./dt/patch/patch
+patch2/ patch8/
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./dt/patch/patch8/0008-dt-doc-Documentation-second-update.patch
+.git/rebase-apply/patch:253: trailing whitespace.
+
+.git/rebase-apply/patch:255: trailing whitespace.
+
+.git/rebase-apply/patch:257: trailing whitespace.
+
+.git/rebase-apply/patch:259: trailing whitespace.
+
+.git/rebase-apply/patch:260: trailing whitespace.
+
+warning: squelched 65 whitespace errors
+warning: 70 lines add whitespace errors.
+Applying: dt/doc Documentation second update
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./dt/patch/patch
+patch2/ patch8/
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./dt/patch/0001-sapmasterdata-item_cache-upgrade.patch
+.git/rebase-apply/patch:147: trailing whitespace.
+        self.__data_cache.set_attr(asset_id, **{'hash': data_hash})
+error: rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml: does not match index
+error: rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py: does not match index
+hint: Use 'git am --show-current-patch' to see the failed patch
+Applying: sapmasterdata/ item_cache upgrade
+Patch failed at 0001 sapmasterdata/ item_cache upgrade
+When you have resolved this problem, run "git am --continue".
+If you prefer to skip this patch, run "git am --skip" instead.
+To restore the original branch and stop patching, run "git am --abort".
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp|AM 1/1)
+$ git am --ignore-whitespace ./dt/patch/0001-sapmasterdata-item_cache-upgrade.patch
+fatal: previous rebase directory .git/rebase-apply still exists but mbox given.
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp|AM 1/1)
+$ ^C
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp|AM 1/1)
+$ git status
+On branch dev-temp
+You are in the middle of an am session.
+  (fix conflicts and then run "git am --continue")
+  (use "git am --skip" to skip this patch)
+  (use "git am --abort" to restore the original branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   rrps/python/rrps.dt.events/README.md
+        modified:   rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
+        modified:   rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .idea/
+        dt/patch/
+        rrps/python/rrps.dt.follower.example/
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/rrps/dt/integrator/sapequipmenthistory/impl_modified.py
+        rrps/python/rrps.dt.integrator.sapmasterdata/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapmasterdata/venv/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp|AM 1/1)
+$ git diff
+warning: LF will be replaced by CRLF in rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml.
+The file will have its original line endings in your working directory
+diff --git a/rrps/python/rrps.dt.events/README.md b/rrps/python/rrps.dt.events/README.md
+index 4b05e8e..bd653af 100644
+--- a/rrps/python/rrps.dt.events/README.md
++++ b/rrps/python/rrps.dt.events/README.md
+@@ -6,6 +6,7 @@ Event definitions used by RRPS integrators and followers.
+ ```shell
+ # Assuming have built common and dt specific packages already. See also readme in level above.
+ pip install -f ../../../common/python/dist -f ../../../dt/python/dist -e .
++pip install -f ..\..\..\deps -e .  # Windows cmd
+ ```
+ The above step is not required if the requirement packages are installed in development mode already. In this case the following is enough:
+ ```shell
+diff --git a/rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml b/rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
+index 2215158..5ff5927 100644
+--- a/rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
++++ b/rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
+@@ -6,13 +6,13 @@
+ config:
+
+   bomgar:
+-    endpoint: https://defnsv2123.fn2.mtufn.com:8002/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set?$filter=SernrAgg%20eq%20'XXX_ASSET_ID_XXX'&$format=json
+-    usr: IOTIC_IAS_OD
+-    pwd: lDm&P@X}FU87pkdFaTccM7(nD>4T&Y#=]HCu>gqk
++    endpoint: http://localhost/XXX_ASSET_ID_XXX
++    usr: user
++    pwd: pass
+     timeout: 60
+
+   use_mock_data: 1
+-  loop_time: 5
++  loop_time: 10
+   data-cache: ./cfg/tmpdata/data-cache
+
+
+@@ -21,7 +21,7 @@ config:
+ integrator:
+
+   # Event source name as included in published events. Should NOT be changed once set!
+-  source: integrator01
++  source: sapmasterdata
+
+   # How many threads to reserve for performing asynchronous tasks such as event publishing and asset updates. Not
+   # applicable in synchronous even publishing case.
+@@ -29,7 +29,7 @@ integrator:
+
+   # Metadata applicable to integrator Iotic Thing (all optional apart from lid)
+   thing:
+-    lid: integrator01
++    lid: sapmasterdata
+     # label:
+     # description:
+     # tags: []
+@@ -53,10 +53,10 @@ integrator:
+     # Search criteria for finding assets (required)
+     discovery:
+       # One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)
+-      # text:
++      text: env_m_p
+       # One of public, local or localOwn (default). Public is NOT recommended as one could, despite specified filter,
+       # end up pushing events to a completely unknown thing/point!
+-      # scope:
++      scope: local
+       # How often to poll for new assets, in seconds
+       interval: 5
+
+@@ -64,7 +64,7 @@ integrator:
+         label:
+           # Expected asset thing label. This is a standard Python regular expression and should be contained within
+           # '^' and '$'. Defined groups are ignored and this parameter is optional.
+-          # thing_regex:
++          #thing_regex: '^q producer$'
+           # Expected label for event production related control. (defaults will be used if not specified).
+           # control:
+
+@@ -72,6 +72,7 @@ integrator:
+           # Expected unique tag containing asset id. This is a standard Python regular expression and should be
+           # contained within '^' and '$' and define one group (containing asset id). (default will be used if not
+           # specified)
+-          # unique_regex:
++          unique_regex: '^m_(.+)$'
+           # Expected static tags for each asset
+-          # thing: []
++          thing:
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp|AM 1/1)
+$ git stash
+warning: LF will be replaced by CRLF in rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml.
+The file will have its original line endings in your working directory
+Saved working directory and index state WIP on dev-temp: dc66bcd dt/doc Documentation second update
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp|AM 1/1)
+$ git am --ignore-whitespace ./dt/patch/0001-sapmasterdata-item_cache-upgrade.patch
+fatal: previous rebase directory .git/rebase-apply still exists but mbox given.
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp|AM 1/1)
+$ git am --abort
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git am --ignore-whitespace ./dt/patch/0001-sapmasterdata-item_cache-upgrade.patch
+.git/rebase-apply/patch:147: trailing whitespace.
+        self.__data_cache.set_attr(asset_id, **{'hash': data_hash})
+warning: 1 line adds whitespace errors.
+Applying: sapmasterdata/ item_cache upgrade
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git log
+commit 61a817aec29a96587a181684e5ab699169268eff (HEAD -> dev-temp)
+Author: Muthu Kumaresan Mariappan <external.muthukumaresan.mariappan@in.bosch.com>
+Date:   Thu Jan 31 15:46:02 2019 +0530
+
+    sapmasterdata/ item_cache upgrade
+
+commit dc66bcdd44b0fc0454a77dd4a7d259dea1fba4cb
+Author: Tim Churchard <tim.churchard@iotic-labs.com>
+Date:   Wed Jan 30 14:03:01 2019 +0000
+
+    dt/doc Documentation second update
+
+commit ad63662ba707b01e86ae60c65c3c76adc7b8c3aa
+Author: Mark Wharton <mark.wharton@iotic-labs.com>
+Date:   Tue Jan 29 16:43:13 2019 +0000
+
+    dt/doc Documentation first release
+
+commit c95f64e4da655365ecec76d401c4e186ebed2f3d
+Author: Fabio Corneti <fabio.corneti@iotic-labs.com>
+Date:   Tue Jan 29 09:58:25 2019 +0000
+
+    Added Pycharm instructions
+
+commit c23f581bb03c7be4b6045368d9c1589b752f2970
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git stash pop
+Auto-merging rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+CONFLICT (content): Merge conflict in rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+Auto-merging rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
+The stash entry is kept in case you need it again.
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ vim rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git st .
+git: 'st' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        reset
+        stage
+        stash
+        svn
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git status
+On branch dev-temp
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   rrps/python/rrps.dt.events/README.md
+        modified:   rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
+
+Unmerged paths:
+  (use "git reset HEAD <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   rrps/python/rrps.dt.integrator.sapmasterdata/rrps/dt/integrator/sapmasterdata/impl.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .idea/
+        dt/patch/
+        rrps/python/rrps.dt.follower.example/
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/rrps/dt/integrator/sapequipmenthistory/impl_modified.py
+        rrps/python/rrps.dt.integrator.sapmasterdata/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapmasterdata/venv/
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git add -u
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git reset HEAD
+Unstaged changes after reset:
+M       rrps/python/rrps.dt.events/README.md
+M       rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git log
+commit 61a817aec29a96587a181684e5ab699169268eff (HEAD -> dev-temp)
+Author: Muthu Kumaresan Mariappan <external.muthukumaresan.mariappan@in.bosch.com>
+Date:   Thu Jan 31 15:46:02 2019 +0530
+
+    sapmasterdata/ item_cache upgrade
+
+commit dc66bcdd44b0fc0454a77dd4a7d259dea1fba4cb
+Author: Tim Churchard <tim.churchard@iotic-labs.com>
+Date:   Wed Jan 30 14:03:01 2019 +0000
+
+    dt/doc Documentation second update
+
+commit ad63662ba707b01e86ae60c65c3c76adc7b8c3aa
+Author: Mark Wharton <mark.wharton@iotic-labs.com>
+Date:   Tue Jan 29 16:43:13 2019 +0000
+
+    dt/doc Documentation first release
+
+commit c95f64e4da655365ecec76d401c4e186ebed2f3d
+Author: Fabio Corneti <fabio.corneti@iotic-labs.com>
+Date:   Tue Jan 29 09:58:25 2019 +0000
+
+    Added Pycharm instructions
+
+commit c23f581bb03c7be4b6045368d9c1589b752f2970
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git status -uno
+On branch dev-temp
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   rrps/python/rrps.dt.events/README.md
+        modified:   rrps/python/rrps.dt.integrator.sapmasterdata/cfg/integrator.cfg.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$

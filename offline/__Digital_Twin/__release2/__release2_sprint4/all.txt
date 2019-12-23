@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+def main():
+    signal(SIGTERM, sigterm_handler)
+
+    args = parse_args()
+    follower = follower_via_storeutil(args) if args.storeutil else follower_via_args(args)
+    try:
+        follower.run()
+    except KeyboardInterrupt:
+        pass
+	
+
+
+
+from collections import namedtuple
+
+TestTuple = namedtuple('TestTuple', ['field1', 'field2', 'field3'])
+my_item = TestTuple('a', 'b', [1, 2])
+type(my_item)
+
+
+

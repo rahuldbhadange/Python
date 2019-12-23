@@ -1,0 +1,68 @@
+1.	Instantiate an Integrator object and start it (begin asset discovery)
+
+2.	Process Data - For every asset:
+		----322
+2.1	Get data for that asset_id
+	----326->258, 258->326
+2.2a	If mock-data is used:
+		
+2.2.1	Open 'MOCK_DATA_FILE'
+		
+2.2.2	Get 'Results' section from the file - for every item:
+			
+2.2.2.1	Rewrite 'Datum' section in a proper way
+			
+2.2.2.2	Get the equipment number (Equnr)
+			
+2.2.2.3	Open 'MOCK_DOCUMENT_FILE'
+			
+2.2.2.4	Get the 'results' section from the file - for every item:
+				
+2.2.2.4.1	Rewrite 'Crdat' and 'Chdat' in a proper way
+				
+2.2.2.4.2 Create a new section for every item called 'Documents' with the previous sections
+		
+2.2.3	Return updated dictionary (see 2.2.2.4.2)
+	
+2.2b	If mock-data not used:
+		
+2.2.1	If asset_id is either ('1000021', '1000015'):
+ -Enable document hack
+ -Set asset_id value
+		
+2.2.2	Get 'equipment_history_endpoint' data
+		
+2.2.3	Get 'Results' section from the file - for every item:
+			
+2.2.3.1	Rewrite 'Datum' section in a proper way
+			
+2.2.3.2a  Check whether enable_document_hack - if yes:
+ - Set the equipment number to '10000018'
+			
+2.2.3.2b	Get the equipment number (Equnr)
+			
+2.2.3.3	Get equipment_document_endpoint data
+			
+2.2.3.4	Get the 'results' section from the file - for every item:
+				
+2.2.3.4.1	Rewrite 'Crdat' and 'Chdat' in a proper way
+				
+2.2.3.4.2	Create a new section for every item called 'Documents'
+	
+2.3	Check whether asset has changed compared to the cache, if yes:
+		
+2.3.1	Get the 'results' section of that asset - for every item:
+			
+2.3.1.1	Check whether there is at least one document
+			
+2.3.1.2	Get the 'Doctype'
+			
+2.3.1.3	Create document event:
+				
+2.3.1.3.1	Get the 'Datum' section
+				
+2.3.1.3.2	Return the correct document type class (generate event object)
+			
+2.3.1.4	Publish event
+			
+2.3.1.5	Update cache

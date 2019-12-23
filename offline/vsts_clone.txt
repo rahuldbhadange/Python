@@ -1,0 +1,419 @@
+
+HBD2KOR@ECGCN1031334D MINGW64 ~
+$ cd digital.git/
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git remote add azure https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git remote fetch azure
+error: Unknown subcommand: fetch
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git remote fetch azure https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+error: Unknown subcommand: fetch
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git remote fetch azure https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+error: Unknown subcommand: fetch
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git remote fetch azure
+error: Unknown subcommand: fetch
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git remote -v fetch azure
+error: Unknown subcommand: fetch
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp) - - - - -  - --  - - - - --  - - - - - - 
+$ git fetch azure
+remote: Azure Repos
+remote: Found 506 objects to send. (58 ms)
+Receiving objects: 100% (506/506), 138.11 KiB | 314.00 KiB/s, done.
+Resolving deltas: 100% (214/214), completed with 84 local objects.
+From https://mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+ * [new branch]      dev                   -> azure/dev
+ * [new branch]      dev-lp-fielddataint   -> azure/dev-lp-fielddataint
+ * [new branch]      dev-pathfindr         -> azure/dev-pathfindr
+ * [new branch]      dev-tc-sample         -> azure/dev-tc-sample
+ * [new branch]      dev-tc-tidyup         -> azure/dev-tc-tidyup
+ * [new branch]      issue-fc-13799        -> azure/issue-fc-13799
+ * [new branch]      issue-fc-env-setup    -> azure/issue-fc-env-setup
+ * [new branch]      issue-fc-folengine    -> azure/issue-fc-folengine
+ * [new branch]      issue-fc-int-unit     -> azure/issue-fc-int-unit
+ * [new branch]      issue-fc-net-dmz      -> azure/issue-fc-net-dmz
+ * [new branch]      issue-fc-pycharm      -> azure/issue-fc-pycharm
+ * [new branch]      issue-fc-static-tests -> azure/issue-fc-static-tests
+ * [new branch]      issue-nssm-build      -> azure/issue-nssm-build
+ * [new branch]      master                -> azure/master
+ * [new branch]      new-pexes             -> azure/new-pexes
+ * [new branch]      sz_dev                -> azure/sz_dev
+ * [new branch]      test-automerge        -> azure/test-automerge
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git stash
+warning: LF will be replaced by CRLF in rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/integrator.cfg.yml.
+The file will have its original line endings in your working directory
+Saved working directory and index state WIP on dev-temp: 8b50a5c talendtimdocument-item_cache-upgrade
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git checkout dev
+error: The following untracked working tree files would be overwritten by checkout:
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/mock-document-data.json
+Please move or remove them before you switch branches.
+Aborting
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git checkout dev
+error: The following untracked working tree files would be overwritten by checkout:
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/mock-document-data.json
+Please move or remove them before you switch branches.
+Aborting
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git rm rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/mock-document-data.json
+fatal: pathspec 'rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/mock-document-data.json' did not match any files
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git checkout dev
+error: The following untracked working tree files would be overwritten by checkout:
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/mock-document-data.json
+Please move or remove them before you switch branches.
+Aborting
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-temp)
+$ git checkout dev
+Switched to branch 'dev'
+Your branch is ahead of 'origin/dev' by 2 commits.
+  (use "git push" to publish your local commits)
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev)
+$ git reset --hard azure/dev
+HEAD is now at e74d1bf Merged PR 783: talendfirmware - item_cache-upgrade #14195
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev)
+$ git checkout dev-rahul-14195
+error: pathspec 'dev-rahul-14195' did not match any file(s) known to git
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev)
+$ git checkout dev-rahul-#14195
+error: pathspec 'dev-rahul-#14195' did not match any file(s) known to git
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev)
+$ git checkout dev rahul #14195
+error: pathspec 'rahul' did not match any file(s) known to git
+
+
+
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev)
+$ git checkout -b dev-rahul-14195  - - - - - - - - - - - - - - - - - - - - - - - - Switched to a new branch
+Switched to a new branch 'dev-rahul-14195'
+
+
+
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-14195)
+$ git stash pop
+On branch dev-rahul-14195
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   rrps/python/rrps.dt.integrator.fielddata/cfg/integrator.cfg.yml
+        modified:   rrps/python/rrps.dt.integrator.fielddata/rrps/dt/integrator/fielddata/impl.py
+        modified:   rrps/python/rrps.dt.integrator.fielddata/setup.py
+        modified:   rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/integrator.cfg.yml
+        modified:   rrps/python/rrps.dt.integrator.sapsupersession/cfg/integrator.cfg.yml
+        modified:   rrps/python/rrps.dt.integrator.sapsupersession/rrps/dt/integrator/sapsupersession/impl.py
+        modified:   rrps/python/rrps.dt.integrator.sapsupersession/setup.py
+        modified:   rrps/python/rrps.dt.integrator.sapwarrantyrecall/flake8.cfg
+        modified:   rrps/python/rrps.dt.integrator.talendfirmware/flake8.cfg
+        modified:   rrps/python/rrps.dt.integrator.talendtimdocument/flake8.cfg
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .idea/
+        0001-sapmasterdata-item_cache-upgrade.patch
+        0002-item_catche-has-been-added-in-sapequipmenthistory.patch
+        0003-sapbomasbuilt-item_cache-upgrade.patch
+        0004-sapwarrantyrecall-item_cache-upgrade.patch
+        0005-talendfirmware-item_cache-upgrade.patch
+        0006-talendtimdocument-item_cache-upgrade.patch
+        dt/patch/
+        rrps/python/rrps.dt.follower.example/
+        rrps/python/rrps.dt.integrator.fielddata/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.fielddata/data/
+        rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapbomasbuilt/data/
+        rrps/python/rrps.dt.integrator.sapbomasbuilt/static_tests.cmd
+        rrps/python/rrps.dt.integrator.sapbomasbuilt/venv/
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/tmp/
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/data/assets.json
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/venv/
+        rrps/python/rrps.dt.integrator.sapmasterdata/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapmasterdata/data/
+        rrps/python/rrps.dt.integrator.sapmasterdata/venv/
+        rrps/python/rrps.dt.integrator.sapsupersession/data/
+        rrps/python/rrps.dt.integrator.sapwarrantyrecall/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapwarrantyrecall/data/
+        rrps/python/rrps.dt.integrator.sapwarrantyrecall/static_tests.cmd
+        rrps/python/rrps.dt.integrator.sapwarrantyrecall/venv/
+        rrps/python/rrps.dt.integrator.talendfirmware/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.talendfirmware/data/
+        rrps/python/rrps.dt.integrator.talendfirmware/static_tests.cmd
+        rrps/python/rrps.dt.integrator.talendfirmware/venv/
+        rrps/python/rrps.dt.integrator.talendtimdocument/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.talendtimdocument/data/
+        rrps/python/rrps.dt.integrator.talendtimdocument/static_tests.cmd
+        rrps/python/rrps.dt.integrator.talendtimdocument/venv/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (21dd6aefe3e38dd672c37bde52e698c8bb5cb09c)
+
+
+
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-14195)
+$ git push --set-upstream azure dev-rahul-14195
+Total 0 (delta 0), reused 0 (delta 0)
+To https://mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+ * [new branch]      dev-rahul-14195 -> dev-rahul-14195
+Branch 'dev-rahul-14195' set up to track remote branch 'dev-rahul-14195' from 'azure'.
+
+
+
+
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-14195)
+$ git branch -vva
+  dev                                 e74d1bf [origin/dev: ahead 30] Merged PR 783: talendfirmware - item_cache-upgrade #14195
+* dev-rahul-14195                     e74d1bf [azure/dev-rahul-14195] Merged PR 783: talendfirmware - item_cache-upgrade #14195
+  dev-temp                            8b50a5c talendtimdocument-item_cache-upgrade
+  remotes/azure/dev                   e74d1bf Merged PR 783: talendfirmware - item_cache-upgrade #14195
+  remotes/azure/dev-lp-fielddataint   3fc6518 rrps/python/rrps.dt.integrator.fielddata improvements: - namedtuple used to store azure config info - added some try/except blocks when reading dictionaries - NestedConfig.get() is now used to read config info - single quotes fixes for logging messages - proper indentation - static_tests warnings solved
+  remotes/azure/dev-pathfindr         d02c426 Initial commit. Only tested for one device with one location
+  remotes/azure/dev-rahul-14195       e74d1bf Merged PR 783: talendfirmware - item_cache-upgrade #14195
+  remotes/azure/dev-tc-sample         69540fa rrps/test Sample SAP Data
+  remotes/azure/dev-tc-tidyup         6841007 rrps/ Fix Dockerfiles and READMEs for testing
+  remotes/azure/issue-fc-13799        324a5e7 Load engines mappings for field data integrators from CSV, include engine serial in shares
+  remotes/azure/issue-fc-env-setup    41a30a8 Virtualenv setup script
+  remotes/azure/issue-fc-folengine    dd90809 Map engine serial number instead of equip:...skipping...
+  dev                                 e74d1bf [origin/dev: ahead 30] Merged PR 783: talendfirmware - item_cache-upgrade #14195
+* dev-rahul-14195                     e74d1bf [azure/dev-rahul-14195] Merged PR 783: talendfirmware - item_cache-upgrade #14195
+  dev-temp                            8b50a5c talendtimdocument-item_cache-upgrade
+  remotes/azure/dev                   e74d1bf Merged PR 783: talendfirmware - item_cache-upgrade #14195
+  remotes/azure/dev-lp-fielddataint   3fc6518 rrps/python/rrps.dt.integrator.fielddata improvements: - namedtuple used to store azure config info - added some try/except blocks when reading dictionaries - NestedConfig.get() is now used to read config info - single quotes fixes for logging messages - proper indentation - static_tests warnings solved
+  remotes/azure/dev-pathfindr         d02c426 Initial commit. Only tested for one device with one location
+  remotes/azure/dev-rahul-14195       e74d1bf Merged PR 783: talendfirmware - item_cache-upgrade #14195
+  remotes/azure/dev-tc-sample         69540fa rrps/test Sample SAP Data
+  remotes/azure/dev-tc-tidyup         6841007 rrps/ Fix Dockerfiles and READMEs for testing
+  remotes/azure/issue-fc-13799        324a5e7 Load engines mappings for field data integrators from CSV, include engine serial in shares
+  remotes/azure/issue-fc-env-setup    41a30a8 Virtualenv setup script
+  remotes/azure/issue-fc-folengine    dd90809 Map engine serial number instead of equipment number to the Engine field
+  remotes/azure/issue-fc-int-unit     4bc841b Mocking example
+  remotes/azure/issue-fc-net-dmz      f57b001 Merge branch 'dev' of https://mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic into issue-fc-net-dmz
+  remotes/azure/issue-fc-pycharm      a31c1af Added Pycharm setup instructions to overview
+  remotes/azure/issue-fc-static-tests 6b20257 Allow to run sapmasterdata static checks on Windows
+  remotes/azure/issue-nssm-build      895d9e6 Squash: long paths in README
+  remotes/azure/master                e448d96 Added README.md file
+  remotes/azure/new-pexes             f1616d3 Updated sapmasterdata integrator pex to latest version
+  remotes/azure/sz_dev                6d3dc7a rrps.dt.follower.gomanage.fielddata / changed upsert method
+  remotes/azure/test-automerge        8fd4c16 Updated source dependencies
+  remotes/origin/HEAD                 -> origin/dev
+  remotes/origin/dev                  c4e0fdc rrps/ Bring azure up-to-date with iotic repos
+  remotes/origin/dev-pathfindr        d02c426 Initial commit. Only tested for one device with one location
+  remotes/origin/dev-tc               4f465e3 __wip__ rrps/ Bring azure up-to-date with iotic repos
+  remotes/origin/master               e448d96 Added README.md file
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-14195)
+$ git status
+On branch dev-rahul-14195
+Your branch is up to date with 'azure/dev-rahul-14195'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   rrps/python/rrps.dt.integrator.fielddata/cfg/integrator.cfg.yml
+        modified:   rrps/python/rrps.dt.integrator.fielddata/rrps/dt/integrator/fielddata/impl.py
+        modified:   rrps/python/rrps.dt.integrator.fielddata/setup.py
+        modified:   rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/integrator.cfg.yml
+        modified:   rrps/python/rrps.dt.integrator.sapsupersession/cfg/integrator.cfg.yml
+        modified:   rrps/python/rrps.dt.integrator.sapsupersession/rrps/dt/integrator/sapsupersession/impl.py
+        modified:   rrps/python/rrps.dt.integrator.sapsupersession/setup.py
+        modified:   rrps/python/rrps.dt.integrator.sapwarrantyrecall/flake8.cfg
+        modified:   rrps/python/rrps.dt.integrator.talendfirmware/flake8.cfg
+        modified:   rrps/python/rrps.dt.integrator.talendtimdocument/flake8.cfg
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .idea/
+        0001-sapmasterdata-item_cache-upgrade.patch
+        0002-item_catche-has-been-added-in-sapequipmenthistory.patch
+        0003-sapbomasbuilt-item_cache-upgrade.patch
+        0004-sapwarrantyrecall-item_cache-upgrade.patch
+        0005-talendfirmware-item_cache-upgrade.patch
+        0006-talendtimdocument-item_cache-upgrade.patch
+        dt/patch/
+        rrps/python/rrps.dt.follower.example/
+        rrps/python/rrps.dt.integrator.fielddata/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.fielddata/data/
+        rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapbomasbuilt/data/
+        rrps/python/rrps.dt.integrator.sapbomasbuilt/static_tests.cmd
+        rrps/python/rrps.dt.integrator.sapbomasbuilt/venv/
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/tmp/
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/data/assets.json
+        rrps/python/rrps.dt.integrator.sapequipmenthistory/venv/
+        rrps/python/rrps.dt.integrator.sapmasterdata/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapmasterdata/data/
+        rrps/python/rrps.dt.integrator.sapmasterdata/venv/
+        rrps/python/rrps.dt.integrator.sapsupersession/data/
+        rrps/python/rrps.dt.integrator.sapwarrantyrecall/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.sapwarrantyrecall/data/
+        rrps/python/rrps.dt.integrator.sapwarrantyrecall/static_tests.cmd
+        rrps/python/rrps.dt.integrator.sapwarrantyrecall/venv/
+        rrps/python/rrps.dt.integrator.talendfirmware/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.talendfirmware/data/
+        rrps/python/rrps.dt.integrator.talendfirmware/static_tests.cmd
+        rrps/python/rrps.dt.integrator.talendfirmware/venv/
+        rrps/python/rrps.dt.integrator.talendtimdocument/cfg/agent.ini
+        rrps/python/rrps.dt.integrator.talendtimdocument/data/
+        rrps/python/rrps.dt.integrator.talendtimdocument/static_tests.cmd
+        rrps/python/rrps.dt.integrator.talendtimdocument/venv/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-14195)
+$

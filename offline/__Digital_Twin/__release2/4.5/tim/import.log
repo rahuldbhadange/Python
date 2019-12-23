@@ -1,0 +1,34 @@
+
+
+I guess this one is fixed by importing the WeatherInfoSet event
+
+
+would send WeatherInfoSet event {
+    "time": "2019-03-21T21:00:00Z",
+    "FeelsLikeTemperature": 11.0,
+    "WindGust": 11.0,
+    "Humidity": 83.0,
+    "Temperature": 12.0,
+    "Visibility": "GO",
+    "WindDirection": "SSW",
+    "WindSpeed": 4.0,
+    "MaxUVIndex": 0.0,
+    "WeatherType": "metoffice forecast",
+    "PrecipitationProbability": "8",
+    "WeatherTime": "2019-03-21 19:42:01.150362",
+    "WeatherName": "EYE (PETERBOROUGH), ENGLAND"
+}
+Traceback (most recent call last):
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/venv/bin/rrps.dt.synthesiser.weather", line 11, in <module>
+    load_entry_point('rrps.dt.synthesiser.weather', 'console_scripts', 'rrps.dt.synthesiser.weather')()
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/__main__.py", line 71, in main
+    follower.run()
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/venv/lib/python3.6/site-packages/IoticAgent/ThingRunner.py", line 83, in run
+    self.__run()
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/venv/lib/python3.6/site-packages/IoticAgent/ThingRunner.py", line 104, in __run
+    if self.__handle_exception(ctx):
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/venv/lib/python3.6/site-packages/IoticAgent/ThingRunner.py", line 98, in __run
+    self.main()
+  File "/home/tc/tac/work/rrps/digital_twin_iotic.git/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py", line 60, in main
+    self.__integrator.publish_event(WeatherInfoSet(asset, time=Time, data=__event_object))
+NameError: name 'WeatherInfoSet' is not defined

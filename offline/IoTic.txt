@@ -1,0 +1,19 @@
+def wait_for_shutdown(self, timeout=None):
+    """Blocks until shutdown has been requested (or the timeout has been reached, if specified). False is returned
+    for the latter, True otherwise."""
+    return self.__shutdown.wait(timeout)
+
+
+
+
+def main(self):  # pylint: disable=no-self-use
+    """Application logic goes here. Should return (or raise exception) to end program run. Should check whether the
+    `shutdown_requested` property is True an return if this is the case."""
+    pass
+	
+	
+	
+
+        while 	# 
+			not 	# don't do
+				"self.wait_for_shutdown(loop_time):" 		# blocks/holds until shutdown

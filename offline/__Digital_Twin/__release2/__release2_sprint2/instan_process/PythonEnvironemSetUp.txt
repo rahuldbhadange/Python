@@ -1,0 +1,49 @@
+1. Directorr:
+------------------
+	HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata
+
+
+2. Create virtualenvironement
+-----------------------------
+ 	python -m venv venv
+
+
+3. Activate venv
+-----------------
+ 	C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata> venv\Scripts\activate
+
+4. Pip install User
+--------------------
+ 	pip install -U pip
+
+
+5.Install setuptools using this command
+-----------------------------------------
+ 	python -m pip install -U pip setuptools
+
+
+6.Install docutils wheel command
+-----------------------------------
+	pip install docutils wheel
+
+7.Get back to directory folder
+-------------------------------
+	cd ..
+
+8.Check the directory list of all files
+----------------------------------------
+	dir
+
+9.In list of all file open file cd rrps.dt.events
+--------------------------------------------------
+	cd rrps.dt.events
+
+10. Install .sh file like(cat build_deps.sh)
+---------------------------------------------------
+	(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>pip install -e .
+
+	(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>pip install -e . -f ..\..\..\deps
+
+11.Last command
+----------------
+	(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>pip install -e . -f ..\..\..\deps

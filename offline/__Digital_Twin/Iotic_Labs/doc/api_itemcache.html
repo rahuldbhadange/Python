@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>item_cache API &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="T2 API" href="api_t2.html" />
+    <link rel="prev" title="NestedConfig API" href="api_nestedconfig.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html">Developer Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api_index.html">API index</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api_events.html">Events API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_follower.html">Follower API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_integrator.html">Integrator API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_nestedconfig.html">NestedConfig API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">item_cache API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-ioticlabs.dt.common.item_cache">API reference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_t2.html">T2 API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="api_index.html">API index</a> &raquo;</li>
+        
+      <li>item_cache API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api_itemcache.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="item-cache-api">
+<span id="api-item-cache"></span><h1>item_cache API<a class="headerlink" href="#item-cache-api" title="Permalink to this headline">¶</a></h1>
+<p>Simple key-value abstraction used to e.g. track known assets.</p>
+<div class="section" id="module-ioticlabs.dt.common.item_cache">
+<span id="api-reference"></span><h2>API reference<a class="headerlink" href="#module-ioticlabs.dt.common.item_cache" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.common.item_cache.</code><code class="descname">CacheBase</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple key-value abstraction used to e.g. track known assets locally. By default no other information is stored
+with the item other than its id, but it is possible to save additional attributes. Note: Attribute names nor types
+are validated, but implementations should aim support primitive types only, including bytes.</p>
+<p>NOTE: Only methods which explicitly state so are thread safe.</p>
+<dl class="class">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.Batch">
+<em class="property">class </em><code class="descname">Batch</code><span class="sig-paren">(</span><em>ops</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.Batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operations which can be performed in a batch. Arguments are the same as for non-batched methods.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.batched">
+<code class="descname">batched</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.batched" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows for methods defined in the Batch subclass to be combined into fewer requests for potentially better
+performance. Since the supported operations either completely replace or delete an item, operations are
+de-duplicated, i.e. only the last one specified for each item will be performed. If no calls have been made
+within the context, this will be a no-op.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unmark all known items. Should be idempotent (i.e. if already cleared this is a no-op). Must be thread safe.</p>
+<p>Returns True if managed to persist to backing store (or will do so in background)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.count">
+<code class="descname">count</code><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of items in cache currently</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.del_attr">
+<code class="descname">del_attr</code><span class="sig-paren">(</span><em>item</em>, <em>*attr_names</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.del_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the given attributes for an item. Non-existing attributes are ignored.</p>
+<p>attrs - one or more attributes to delete</p>
+<dl class="docutils">
+<dt>Raises</dt>
+<dd><ul class="first last simple">
+<li>ValueError if no attributes are supplied</li>
+<li>KeyError if item is unknown</li>
+</ul>
+</dd>
+</dl>
+<p>Returns mapping of attributes for the item. This can be empty if none of the attributes are set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.get_attr">
+<code class="descname">get_attr</code><span class="sig-paren">(</span><em>item</em>, <em>*attr_names</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.get_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the given attributes for an item.</p>
+<p>attr_names - one or more attributes to fetch. If none are specified, all will be retrieved.</p>
+<dl class="docutils">
+<dt>Raises</dt>
+<dd><ul class="first last simple">
+<li>KeyError if item is unknown</li>
+</ul>
+</dd>
+</dl>
+<p>Returns mapping of attributes for the item. This can be empty if none of the attributes are set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.is_known">
+<code class="descname">is_known</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.is_known" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the item is known locally. Must be thread safe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.mark_as_known">
+<code class="descname">mark_as_known</code><span class="sig-paren">(</span><em>item</em>, <em>**attrs</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.mark_as_known" title="Permalink to this definition">¶</a></dt>
+<dd><p>Marks an item as known. Should be idempotent (i.e. if already marked this is a no-op apart from attributes
+being potentially updated). Must be thread safe.</p>
+<p>attrs - Additional attributes to set for item. Existing values will be updated if item already known.</p>
+<p>Returns True if managed to persist to backing store (or will do so in background)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.put_attr">
+<code class="descname">put_attr</code><span class="sig-paren">(</span><em>item</em>, <em>**attrs</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.put_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like mark_as_known except the item is replaced completely (even if is unknown).</p>
+<p>attrs - Attributes to set for item. Any existing attributes will be discarded.</p>
+<p>Returns True if managed to persist to backing store (or will do so in background)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.set_attr">
+<code class="descname">set_attr</code><span class="sig-paren">(</span><em>item</em>, <em>**attrs</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.set_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the given attributes for an item.</p>
+<p>attrs - one or more attributes to set</p>
+<dl class="docutils">
+<dt>Raises</dt>
+<dd><ul class="first last simple">
+<li>ValueError if no attributes are supplied</li>
+<li>KeyError if item is unknown</li>
+</ul>
+</dd>
+</dl>
+<p>Returns True if managed to persist to backing store (or will do so in background)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override if require setup steps. Will be called before any other methods.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><em>timeout=10</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override if require shutdown steps. Will be called as final method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.common.item_cache.CacheBase.unmark">
+<code class="descname">unmark</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.common.item_cache.CacheBase.unmark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opposite of mark_as_known. All additional attributes are also lost. Should be idempotent (i.e. if already
+cleared this is a no-op). Must be thread safe.</p>
+<p>Returns True if managed to persist to backing store (or will do so in background)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api_t2.html" class="btn btn-neutral float-right" title="T2 API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api_nestedconfig.html" class="btn btn-neutral" title="NestedConfig API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

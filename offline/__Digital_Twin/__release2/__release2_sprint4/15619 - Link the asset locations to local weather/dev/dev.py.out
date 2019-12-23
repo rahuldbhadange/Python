@@ -1,0 +1,119 @@
+results {
+    "5fc26d3479d7d044394f0ebccfc30109": {
+        "long": -0.2804,
+        "points": {
+            "004351f1b222dc0695ea90e50cbd7ba3": {
+                "matches": 5.8079224,
+                "type": "Feed",
+                "label": "Current weather info",
+                "storesRecent": true
+            }
+        },
+        "matches": 5.8079224,
+        "owner": "d2273a3cbbd894cde0eeb5ac5ba79919",
+        "label": "Weather Forecast for: SAWTRY, ENGLAND",
+        "lat": 52.4339
+    }
+}
+thing_guid "5fc26d3479d7d044394f0ebccfc30109"
+thing_data {
+    "long": -0.2804,
+    "points": {
+        "004351f1b222dc0695ea90e50cbd7ba3": {
+            "matches": 5.8079224,
+            "type": "Feed",
+            "label": "Current weather info",
+            "storesRecent": true
+        }
+    },
+    "matches": 5.8079224,
+    "owner": "d2273a3cbbd894cde0eeb5ac5ba79919",
+    "label": "Weather Forecast for: SAWTRY, ENGLAND",
+    "lat": 52.4339
+}
+point_guid "004351f1b222dc0695ea90e50cbd7ba3"
+point_data {
+    "matches": 5.8079224,
+    "type": "Feed",
+    "label": "Current weather info",
+    "storesRecent": true
+}
+descr {
+    "type": "Point",
+    "meta": {
+        "storesRecent": true,
+        "comment": "Current weather info for SAWTRY",
+        "values": [
+            {
+                "unit": null,
+                "label": "feels",
+                "type": "decimal",
+                "comment": "temperature feels like"
+            },
+            {
+                "unit": null,
+                "label": "gust",
+                "type": "decimal",
+                "comment": "wind gust speed in kph"
+            },
+            {
+                "unit": null,
+                "label": "humid",
+                "type": "decimal",
+                "comment": "screen relative humidity"
+            },
+            {
+                "unit": null,
+                "label": "prob",
+                "type": "decimal",
+                "comment": "precipitation probability"
+            },
+            {
+                "unit": null,
+                "label": "temp",
+                "type": "decimal",
+                "comment": "temperature"
+            },
+            {
+                "unit": null,
+                "label": "time",
+                "type": "dateTime",
+                "comment": "time of forecast ISO format UTC"
+            },
+            {
+                "unit": null,
+                "label": "type",
+                "type": "string",
+                "comment": "metoffice API record type"
+            },
+            {
+                "unit": null,
+                "label": "uv",
+                "type": "decimal",
+                "comment": "UV index"
+            },
+            {
+                "unit": null,
+                "label": "visib",
+                "type": "string",
+                "comment": "visibility short code VG = very good, GO = good, MO = moderate"
+            },
+            {
+                "unit": null,
+                "label": "winddir",
+                "type": "string",
+                "comment": "wind direction compass points SW = south west"
+            },
+            {
+                "unit": null,
+                "label": "windspd",
+                "type": "decimal",
+                "comment": "wind speed in kph"
+            }
+        ],
+        "parent": "5fc26d3479d7d044394f0ebccfc30109",
+        "label": "Current weather info",
+        "type": "Feed",
+        "tags": []
+    }
+}

@@ -1,0 +1,146 @@
+{"start": "20161009T150920Z", "stop":"20181009T160920Z",
+"description":["SAP Equipment History", "Master Data Change",
+                "FSW Version", "BoM as built set", "Technical Document", BoM as IBaseChanges set]}
+
+
+{'$or': [{'Description': 'FSW Version'}, {'Description': 'BoM as built set'}], 'Ts': {'$gte': '2012-01-09', '$lte': '2019-06-09'}} => 416 & 435 & 429 & 427 ms
+
+
+{'Ts': {'$gte': '2012-01-09', '$lte': '2019-06-09'}, 'Description': {'$in': ['FSW Version', 'Master Data Change']}} =>  440 & 467 ms
+
+
+
+
+http://localhost:8080/ron/1000015{"start": "20161009T150920Z", "stop":"20181009T160920Z","description":["SAP Equipment History", "Master Data Change", "FSW Version", "BoM as built set"]}
+
+
+
+{'Ts': {'$gte': '2012-01-09', '$lte': '2019-06-09'}, '$or': [{'Description': ['FSW Version', 'Master Data Change']}]}
+
+
+
+{'$or': [{'Description': ['FSW Version', 'Master Data Change']}, {'Ts': {'$gte': '2012-01-09', '$lte': '2019-06-09'}}]} => 497 & 449 ms
+
+{'Ts': {'$gte': '2012-01-09', '$lte': '2019-06-09'}, 'Description': {'$in': ['FSW Version', 'Master Data Change']}} =>  440 & 467 ms
+
+{'$and': [{'Description': ['FSW Version', 'Master Data Change']}, {'Ts': {'$gte': '2012-01-09', '$lte': '2019-06-09'}}]}
+;
+
+
+
+{'$or': [{'Description': 'Master Data Change'}, {'Description': 'Master Data Change'}, {'Ts': {'$gte': '2012-01-09', '$lte': '2019-06-09'}}]}
+
+
+
+
+
+
+
+{'Ts': {'$gte': '2013-01-14', '$lte': '2019-03-30'}, '$or': [{'Description': 'SAP Master Data Set'}, {'Description': 'FSW Version'}]}
+
+
+
+
+
+
+
+
+"Description"
+"Source"
+"Type"
+
+
+     {
+        "Source": "sapmasterdata",
+        "Ts": "2019-07-07T18:30:00+00:00",
+        "Seq": 720,
+        "Type": "SapMasterDataSet",
+        "Details": [],
+        "ValidFrom": "2019-07-08T00:00:00+00:00",
+        "Attachments": [],
+        "Description": "Master Data Change",
+        "FieldName": "Material",
+        "FieldOldValue": "12V2000C10",
+        "FieldNewValue": "12V2000C20"
+    },
+    {
+        "Source": "SapBoM",
+        "Ts": "2019-06-05T16:52:54+00:00",
+        "Seq": 199,
+        "Type": "SapBomAsBuiltSet",
+        "Description": "BoM as built set",
+        "Attachments": [],
+        "Details": [
+            {
+                "Type": "IBASE as Built",
+                "CreationDate": "05.06.2019"
+            }
+        ]
+    },
+    {
+        "Description": "FSW Version",
+        "FieldName": "FSV",
+        "FieldOldValue": "5.4",
+        "FieldNewValue": "6.4",
+        "Source": "talendfirmware",
+        "Ts": "2019-06-05T12:22:22.267882+00:00",
+        "FormattedDate": "05.06.2019",
+        "Seq": 201,
+        "Type": "TalendFirmwareSet",
+        "Details": [],
+        "Attachments": []
+    },
+    {
+        "Source": "SapDOC",
+        "Ts": "2018-10-09T18:30:00+00:00",
+        "Seq": 80,
+        "Type": "SapEquipmentHistoryMaintenanceContractSet",
+        "Description": "SAP Equipment History",
+        "Details": [
+            {
+                "EventName": "Description",
+                "EventValue": ""
+            }
+        ],
+        "Attachments": [
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000377.txt"
+            },
+            {
+                "Name": "MITTEILUNG",
+                "Link": "document/1000015/FOL35000000000004EXT43000000000411.xls"
+            }
+        ]
+    },
+    {
+        "Source": "sapwarrantyrecall",
+        "Ts": "2019-06-24T11:41:51.276040+00:00",
+        "Seq": 425,
+        "AssetType": "AGG",
+        "Sernr": "",
+        "Type": "K I F",
+        "Details": [
+            {
+                "EventName": "Name of Modification",
+                "EventValue": "2018.02.16.0001"
+            },
+            {
+                "EventName": "Date of Update",
+                "EventValue": "2018-12-31"
+            },
+            {
+                "EventName": "Link to Document",
+                "EventValue": "HTTP://WWW.PRORATA-NOW.COM"
+            }
+        ]
+    },
+
+
+
+
+
+
+
+
+ "date":"20181009T160920Z"

@@ -1,0 +1,189 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\HBD2KOR>cd digital.git
+
+
+C:\Users\HBD2KOR\digital.git>cd rrps
+
+
+C:\Users\HBD2KOR\digital.git\rrps>cd python
+
+
+C:\Users\HBD2KOR\digital.git\rrps\python>cd rrps.dt.integrator.sapbomasbuilt
+
+
+C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt>python -m
+venv venv
+
+
+C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt>cd ..
+
+
+C:\Users\HBD2KOR\digital.git\rrps\python>cd rrps.dt.integrator.sapbomasbuilt
+
+
+C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt>venv\Scri
+pts\activate
+
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt>cd
+ ..
+
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python>cd rrps.dt.events
+
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>
+pip install -e . -f..\..\..\deps
+
+Looking in links: ..\..\..\deps
+Obtaining file:///C:/Users/HBD2KOR/digital.git/rrps/python/rrps.dt.events
+Collecting ioticlabs.dt.api<0.2,>=0.1.7 (from rrps.dt.events==0.1.7)
+Collecting py-lz4framed==0.13.0 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events=
+=0.1.7)
+Collecting py-IoticAgent<0.7.0,>=0.6.6 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.
+events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/fc/bf/28bf7f58055b693e90f8d2
+d568333718979f3a48525af9f99af16d69b314/py_IoticAgent-0.6.8-py2.py3-none-any.whl
+Collecting fastavro<0.22,>=0.21.9 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.event
+s==0.1.7)
+Collecting ioticlabs.dt.common<0.2,>=0.1.12 (from ioticlabs.dt.api<0.2,>=0.1.7->rrp
+s.dt.events==0.1.7) 
+Collecting py-ubjson>=0.8.5 (from py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2
+,>=0.1.7->rrps.dt.events==0.1.7)
+Collecting rdflib>=4.2.1 (from py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2,>=
+0.1.7->rrps.dt.events==0.1.7)
+Collecting PyYAML<4,>=3.12 (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.api
+<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/5c/ed/d6557f70daaaab6ee5cd2f
+8ccf7bedd63081e522e38679c03840e1acc114/PyYAML-3.13-cp37-cp37m-win32.whl
+Collecting regex==2018.11.22 (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.a
+pi<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/29/e5/71a9018236969f7622d659
+8778c04e8fa030fc50f6b4593e2649ab3077fb/regex-2018.11.22-cp37-none-win32.whl
+Collecting ioticlabs.common.logutil<0.2,>=0.1.0 (from ioticlabs.dt.common<0.2,>=0.1
+.12->ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+Collecting isodate (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.a
+pi<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/9b/9f/b36f7774ff5ea8e428fdcf
+c4bb332c39ee5b9362ddd3d40d9516a55221b2/isodate-0.6.0-py2.py3-none-any.whl
+Collecting pyparsing (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt
+.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/de/0a/001be530836743d8be6c2d
+85069f46fecf84ac6c18c7f5fb8125ee11d854/pyparsing-2.3.1-py2.py3-none-any.whl
+Collecting six (from isodate->rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs
+.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898
+238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Installing collected packages: py-lz4framed, py-ubjson, six, isodate, pyparsing, rd
+flib, py-IoticAgent, fastavro, PyYAML, regex, ioticlabs.common.logutil, ioticlabs.d
+t.common, ioticlabs.dt.api, rrps.dt.events
+  Running setup.py develop for rrps.dt.events
+Successfully installed PyYAML-3.13 fastavro-0.21.17 ioticlabs.common.logutil-0.1.0
+ioticlabs.dt.api-0.1.11 ioticlabs.dt.common-0.1.13 isodate-0.6.0 py-IoticAgent-0.6.
+8 py-lz4framed-0.13.0 py-ubjson-0.12.0 pyparsing-2.3.1 rdflib-4.2.2 regex-2018.11.2
+2 rrps.dt.events six-1.12.0
+You are using pip version 10.0.1, however version 19.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command
+.
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>cd ..
+
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python>cd rrps.dt.integrator.sapbomasbuilt
+
+
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt>pi
+p install -e . -f ..\..\..\deps
+
+
+Looking in links: ..\..\..\deps
+Obtaining file:///C:/Users/HBD2KOR/digital.git/rrps/python/rrps.dt.integrator.sapbo
+masbuilt
+Requirement already satisfied: ioticlabs.dt.common<0.2,>=0.1.3 in c:\users\hbd2kor\
+digital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (fr
+om rrps.dt.integrator.sapbomasbuilt==0.1.8) (0.1.13)
+Requirement already satisfied: ioticlabs.dt.api<0.2,>=0.1.7 in c:\users\hbd2kor\dig
+ital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from
+rrps.dt.integrator.sapbomasbuilt==0.1.8) (0.1.11)
+Requirement already satisfied: rrps.dt.events<0.2,>=0.1.7 in c:\users\hbd2kor\digit
+al.git\rrps\python\rrps.dt.events (from rrps.dt.integrator.sapbomasbuilt==0.1.8) (0
+.1.7)
+Collecting ioticlabs.common.storeutil<0.2,>=0.1.0 (from rrps.dt.integrator.sapbomas
+built==0.1.8)
+Collecting requests<3,>=2.19.1 (from rrps.dt.integrator.sapbomasbuilt==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/7d/e3/20f3d364d6c8e5d2353c72
+a67778eb189176f08e873c9900e10c0287b84b/requests-2.21.0-py2.py3-none-any.whl
+Requirement already satisfied: ioticlabs.common.logutil<0.2,>=0.1.0 in c:\users\hbd
+2kor\digital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-package
+s (from ioticlabs.dt.common<0.2,>=0.1.3->rrps.dt.integrator.sapbomasbuilt==0.1.8) (
+0.1.0)
+Requirement already satisfied: PyYAML<4,>=3.12 in c:\users\hbd2kor\digital.git\rrps
+\python\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from ioticlabs.dt.
+common<0.2,>=0.1.3->rrps.dt.integrator.sapbomasbuilt==0.1.8) (3.13)
+Requirement already satisfied: py-IoticAgent<0.7.0,>=0.6.7 in c:\users\hbd2kor\digi
+tal.git\rrps\python\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from i
+oticlabs.dt.common<0.2,>=0.1.3->rrps.dt.integrator.sapbomasbuilt==0.1.8) (0.6.8)
+Requirement already satisfied: py-ubjson<0.13,>=0.12.0 in c:\users\hbd2kor\digital.
+git\rrps\python\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from iotic
+labs.dt.common<0.2,>=0.1.3->rrps.dt.integrator.sapbomasbuilt==0.1.8) (0.12.0)
+Requirement already satisfied: regex==2018.11.22 in c:\users\hbd2kor\digital.git\rr
+ps\python\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from ioticlabs.d
+t.common<0.2,>=0.1.3->rrps.dt.integrator.sapbomasbuilt==0.1.8) (2018.11.22)
+Requirement already satisfied: py-lz4framed==0.13.0 in c:\users\hbd2kor\digital.git
+\rrps\python\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from ioticlab
+s.dt.api<0.2,>=0.1.7->rrps.dt.integrator.sapbomasbuilt==0.1.8) (0.13.0)
+Requirement already satisfied: fastavro<0.22,>=0.21.9 in c:\users\hbd2kor\digital.g
+it\rrps\python\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from ioticl
+abs.dt.api<0.2,>=0.1.7->rrps.dt.integrator.sapbomasbuilt==0.1.8) (0.21.17)
+Collecting idna<2.9,>=2.5 (from requests<3,>=2.19.1->rrps.dt.integrator.sapbomasbui
+lt==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/14/2c/cd551d81dbe15200be1cf4
+1cd03869a46fe7226e7450af7a6545bfc474c9/idna-2.8-py2.py3-none-any.whl
+Collecting urllib3<1.25,>=1.21.1 (from requests<3,>=2.19.1->rrps.dt.integrator.sapb
+omasbuilt==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/62/00/ee1d7de624db8ba7090d12
+26aebefab96a2c71cd5cfa7629d6ad3f61b79e/urllib3-1.24.1-py2.py3-none-any.whl
+Collecting chardet<3.1.0,>=3.0.2 (from requests<3,>=2.19.1->rrps.dt.integrator.sapb
+omasbuilt==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b
+4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl
+Collecting certifi>=2017.4.17 (from requests<3,>=2.19.1->rrps.dt.integrator.sapboma
+sbuilt==0.1.8)
+  Using cached https://files.pythonhosted.org/packages/9f/e0/accfc1b56b57e9750eba27
+2e24c4dddeac86852c2bebd1236674d7887e8a/certifi-2018.11.29-py2.py3-none-any.whl
+Requirement already satisfied: rdflib>=4.2.1 in c:\users\hbd2kor\digital.git\rrps\p
+ython\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from py-IoticAgent<0
+.7.0,>=0.6.7->ioticlabs.dt.common<0.2,>=0.1.3->rrps.dt.integrator.sapbomasbuilt==0.
+1.8) (4.2.2)
+Requirement already satisfied: pyparsing in c:\users\hbd2kor\digital.git\rrps\pytho
+n\rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from rdflib>=4.2.1->py-I
+oticAgent<0.7.0,>=0.6.7->ioticlabs.dt.common<0.2,>=0.1.3->rrps.dt.integrator.sapbom
+asbuilt==0.1.8) (2.3.1)
+Requirement already satisfied: isodate in c:\users\hbd2kor\digital.git\rrps\python\
+rrps.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from rdflib>=4.2.1->py-Iot
+icAgent<0.7.0,>=0.6.7->ioticlabs.dt.common<0.2,>=0.1.3->rrps.dt.integrator.sapbomas
+built==0.1.8) (0.6.0)
+Requirement already satisfied: six in c:\users\hbd2kor\digital.git\rrps\python\rrps
+.dt.integrator.sapbomasbuilt\venv\lib\site-packages (from isodate->rdflib>=4.2.1->p
+y-IoticAgent<0.7.0,>=0.6.7->ioticlabs.dt.common<0.2,>=0.1.3->rrps.dt.integrator.sap
+bomasbuilt==0.1.8) (1.12.0)
+Installing collected packages: ioticlabs.common.storeutil, idna, urllib3, chardet,
+certifi, requests, rrps.dt.integrator.sapbomasbuilt
+  Running setup.py install for ioticlabs.common.storeutil ... done
+  Running setup.py develop for rrps.dt.integrator.sapbomasbuilt
+Successfully installed certifi-2018.11.29 chardet-3.0.4 idna-2.8 ioticlabs.common.s
+toreutil-0.1.5 requests-2.21.0 rrps.dt.integrator.sapbomasbuilt urllib3-1.24.1
+You are using pip version 10.0.1, however version 19.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command
+.
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt>
+
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapbomasbuilt>rr
+ps-dt-integrator-sapbomasbuilt cfg\integrator.cfg.yml cfg\agent.ini
+
+

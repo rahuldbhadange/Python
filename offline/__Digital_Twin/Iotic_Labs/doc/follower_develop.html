@@ -1,0 +1,419 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Develop your follower &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API index" href="api_index.html" />
+    <link rel="prev" title="Follower configuration" href="follower_configure.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="devguide.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="devguide.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="integrator_overview.html">Write an integrator</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="follower_overview.html">Write a follower</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="follower_overview.html#purpose">Purpose</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="follower_overview.html#how-to-steps">How-to steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_index.html">API index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="devguide.html">Developer Guide</a> &raquo;</li>
+        
+          <li><a href="follower_overview.html">Write a follower</a> &raquo;</li>
+        
+      <li>Develop your follower</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/follower_develop.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="develop-your-follower">
+<span id="follower-develop"></span><h1>Develop your follower<a class="headerlink" href="#develop-your-follower" title="Permalink to this headline">¶</a></h1>
+<p>A <a class="reference internal" href="glossary.html#term-follower"><span class="xref std std-term">Follower</span></a> is an instance of a <a class="reference internal" href="glossary.html#term-thingrunner"><span class="xref std std-term">ThingRunner</span></a> so it has the standard “lifecycle” methods of any ThingRunner:</p>
+<ol class="arabic">
+<li><p class="first"><em>on_startup()</em> - called on initialisation. Call self.__follower.start() here.</p>
+</li>
+<li><p class="first"><em>main()</em> - called after initialisation. Any loop code goes in here, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">wait_for_shutdown</span><span class="p">(</span><span class="o">&lt;</span><span class="n">loop_time</span><span class="o">&gt;</span><span class="p">):</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em>on_shutdown()</em> called after the main has returned. Perform any cleanup and shutdown task in here.</p>
+</li>
+</ol>
+<p>Followers also inherit from FollowerCallbacks and have to implement that interface. See
+<a class="reference internal" href="#follower-callbacks"><span class="std std-ref">Implementing the Callbacks</span></a> below.</p>
+<p>To process individual events, Followers also inherit from <cite>NamedEventMixin</cite>. This inheritance allows the Follower
+to have callback functions with names that match the event names. These named callbacks will called automatically whenever an
+event of the same name is received.</p>
+<p>The full class definition is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FollowerExample</span><span class="p">(</span><span class="n">NamedEventMixin</span><span class="p">,</span> <span class="n">FollowerCallbacks</span><span class="p">,</span> <span class="n">ThingRunner</span><span class="p">):</span>
+</pre></div>
+</div>
+<div class="section" id="follower-api">
+<h2>Follower API<a class="headerlink" href="#follower-api" title="Permalink to this headline">¶</a></h2>
+<p>The follower API is described <a class="reference internal" href="api_follower.html#api-follower"><span class="std std-ref">here</span></a></p>
+</div>
+<div class="section" id="api-object-and-methods">
+<h2>API object and methods<a class="headerlink" href="#api-object-and-methods" title="Permalink to this headline">¶</a></h2>
+<p>The Follower API object should be instantiated in your <cite>__init__()</cite> function. Pass it the follower config, your Iotic
+client and your self reference so that it can call your callbacks</p>
+<p>In the <em>__init__()</em> method, instantiate your API object, passing:</p>
+<ol class="arabic simple">
+<li>The integrator config</li>
+<li>Your Iotic Client</li>
+<li>Your self pointer - to allow it to call your callbacks</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">__follower</span> <span class="o">=</span> <span class="n">Follower</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;follower&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the <cite>on_startup()</cite> method, start the follower running.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__follower</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Finally, in your <em>on_shutdown()</em> method, call stop() on the Follower API object</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_info</span><span class="p">):</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Shutdown&#39;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__follower</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="implementing-the-callbacks">
+<span id="follower-callbacks"></span><h2>Implementing the Callbacks<a class="headerlink" href="#implementing-the-callbacks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="asset-creation-and-deletion">
+<h3>Asset creation and deletion<a class="headerlink" href="#asset-creation-and-deletion" title="Permalink to this headline">¶</a></h3>
+<p>Exactly the same as an Integrator, there are 2 callbacks for asset creation and asset deletion. They are</p>
+<ol class="arabic simple">
+<li><em>on_asset_created()</em></li>
+<li><em>on_asset_deleted()</em></li>
+</ol>
+<p><em>on_asset_created()</em> is called by the Follower API object on start up, once per asset that it has discovered and then once every time a new asset is created and discovered.
+In the method, save the assets known to you.</p>
+<p><em>on_asset_deleted()</em> is called by the Follower API object once per asset that it has discovered has been deleted.
+In the method, remove the asset from any lists of known assets that you have maintained.</p>
+</div>
+<div class="section" id="event-handling">
+<h3>Event Handling<a class="headerlink" href="#event-handling" title="Permalink to this headline">¶</a></h3>
+<p>Additionally to asset creation and deletion, a follower has to handle events from the <a class="reference internal" href="glossary.html#term-twin"><span class="xref std std-term">Twin</span></a>.  There are 2 callbacks</p>
+<ol class="arabic simple">
+<li><cite>on_event(event)</cite> : This is called whenever an Event has published by the twin. All events, of any type, are routed to here.
+if you use the NamedEventMixin, then there’s no need to implement this function as you’ll be dealing with events by name</li>
+<li>on_event_internal(event)
+Override to handle internal events (see api.event.internal).</li>
+</ol>
+</div>
+</div>
+<div class="section" id="dealing-with-named-events">
+<h2>Dealing with Named Events<a class="headerlink" href="#dealing-with-named-events" title="Permalink to this headline">¶</a></h2>
+<p>Most likely, your Follower will want to deal with different events using separate code. The way to do this is to
+inherit from <cite>NamedEventMixin</cite> and then implement callbacks with names of the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">do_</span><span class="o">&lt;</span><span class="n">EVENT_TYPE_LOWERCASE</span><span class="o">&gt;</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>In the callback, handle the event and then, once you have finished, call <cite>ack_event()</cite> on the Follower API object to
+tell it that you’ve finished with that event.</p>
+<p>For example, if you had a “new document has been created” event call <cite>newdocset</cite>, then your function would be</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">do_newdocset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+   <span class="c1"># handle the event</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">__handle_newdocset</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+   <span class="c1"># acknowledge that you&#39;ve handled it.</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">__follower</span><span class="o">.</span><span class="n">ack_event</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the cases where there’s not a callback that matches the event name, there’s a <cite>on_event_unmatched()</cite> function.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_event_unmatched</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="s1">&#39;[</span><span class="si">%s</span><span class="s1">] #</span><span class="si">%d</span><span class="s1"> </span><span class="si">%s</span><span class="s1"> (from </span><span class="si">%s</span><span class="s1">) @ </span><span class="si">%s</span><span class="s1"> (sys: </span><span class="si">%s</span><span class="s1">)</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">asset</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">event</span><span class="o">.</span><span class="n">source</span><span class="p">,</span>
+        <span class="n">event</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">systime</span><span class="p">,</span> <span class="n">pformat</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="c1"># Indicate that event has been processed. If asset has been deleted in the mean time, this will be a no-op.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__follower</span><span class="o">.</span><span class="n">ack_event</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="type-2-specifics">
+<h2>Type 2 specifics<a class="headerlink" href="#type-2-specifics" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">note:</th><td class="field-body">Type 2 requests have to be specifically enabled in your Follower config. See <a class="reference internal" href="follower_configure.html#t2-config-follower"><span class="std std-ref">here</span></a></td>
+</tr>
+</tbody>
+</table>
+<p>A <a class="reference internal" href="glossary.html#term-type2request"><span class="xref std std-term">Type 2 request</span></a> is a request for data sent by you as a Follower to the twin. The request may
+be handled in a streaming way, so you should expect to have returned to you a number of tuples of (mime, data). In the
+case of a small dataset, that might only be one, but you should code for the eventuality that there might be lots.</p>
+<p>The basic function is <cite>t2_request</cite>. In the example, it’s sending an <cite>AcmecorpExampleReq</cite> request for that asset
+with the data being the name of the pdf that it wants. It gets returned the tuples of mime and chunk.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">mime</span><span class="p">,</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__follower</span><span class="o">.</span><span class="n">t2_request</span><span class="p">(</span>
+        <span class="n">asset</span><span class="p">,</span> <span class="s1">&#39;AcmecorpExampleReq&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="s1">&#39;small.pdf&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">),</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">):</span>
+    <span class="c1"># handle the chunk.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__handle_chunk</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="type-2-exceptions">
+<h3>Type 2 exceptions<a class="headerlink" href="#type-2-exceptions" title="Permalink to this headline">¶</a></h3>
+<p>There are many exceptions that could be raised by a type 2 request, so it’s best to call the <cite>t2_request()</cite> function
+in a try/except block.</p>
+<p>The exceptions are documented <a class="reference internal" href="api_follower.html#t2-exceptions-follower"><span class="std std-ref">here</span></a></p>
+<div class="section" id="example">
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">mime</span><span class="p">,</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__follower</span><span class="o">.</span><span class="n">t2_request</span><span class="p">(</span>
+            <span class="n">asset</span><span class="p">,</span> <span class="s1">&#39;AcmecorpExampleReq&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="s1">&#39;small.pdf&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">),</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__handle_chunk</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">AssetUnknown</span><span class="p">:</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;T2 - Asset </span><span class="si">%s</span><span class="s1"> no longer known, ignoring&#39;</span><span class="p">,</span> <span class="n">asset</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">T2ResponseException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">ex</span><span class="o">.</span><span class="n">reason</span> <span class="o">==</span> <span class="n">T2ReqFailureReason</span><span class="o">.</span><span class="n">REQ_UNHANDLED</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;T2 request not handled by provider&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">ex</span><span class="o">.</span><span class="n">reason</span> <span class="o">==</span> <span class="n">T2ReqFailureReason</span><span class="o">.</span><span class="n">RESOURCE_UNKNOWN</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Data not available for given request and asset&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;T2 failed - reason: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">T2Unavailable</span><span class="p">:</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s1">&#39;T2 functionality not enabled in follower&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">T2Timeout</span><span class="p">:</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;T2 request timed out&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s1">&#39;Other T2 failure&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># it was ok</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__whatever</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="static-testing">
+<h2>Static testing<a class="headerlink" href="#static-testing" title="Permalink to this headline">¶</a></h2>
+<p>Your follower should be tested for static errors using, in the acme example case:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">example</span><span class="o">/</span><span class="n">dt</span><span class="o">/</span><span class="n">acmecorp</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">follower</span><span class="o">.</span><span class="n">example</span>
+
+<span class="c1"># For linux</span>
+<span class="o">./</span><span class="n">static_tests</span><span class="o">.</span><span class="n">sh</span>
+
+<span class="c1"># For windows</span>
+<span class="n">static_tests</span><span class="o">.</span><span class="n">cmd</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="working-on-the-package">
+<h2>Working on the package<a class="headerlink" href="#working-on-the-package" title="Permalink to this headline">¶</a></h2>
+<p>Do this if you are actively working on the AVRO schema a the moment package with -e so you can modify the source in your tree</p>
+<p>in example/dt/acmecorp.dt.events, run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span> <span class="o">-</span><span class="n">f</span> <span class="o">../../../</span><span class="n">deps</span>  <span class="c1"># &lt;= this to pick up the common packages from Iotic</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-the-package">
+<h2>Building the package<a class="headerlink" href="#building-the-package" title="Permalink to this headline">¶</a></h2>
+<p>For the integrator to include the package with your events:</p>
+<p>in example/dt/acmecorp.dt.events, run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">q</span> <span class="n">check</span> <span class="o">-</span><span class="n">mrs</span>
+<span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">q</span> <span class="n">sdist</span> <span class="o">-</span><span class="n">d</span> <span class="o">../</span><span class="n">dist</span>    <span class="c1"># Notice path to dist dir should exist.</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api_index.html" class="btn btn-neutral float-right" title="API index" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="follower_configure.html" class="btn btn-neutral" title="Follower configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

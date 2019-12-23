@@ -1,0 +1,29 @@
+.. _api_integrator:
+
+Integrator API
+==============
+
+This API is in 2 parts
+
+#. The API on the Integrator API *Object* that the integrator calls
+#. The Integrator Callback Interface that the integrator has to implement
+
+Integrator API reference
+------------------------
+
+.. py:module:: ioticlabs.dt.api.integrator
+
+Integrator
+**********
+
+.. autoclass:: Integrator
+   :members:
+
+Integrator Callbacks reference
+------------------------------
+
+IntegratorCallbacks
+*******************
+
+.. autoclass:: IntegratorCallbacks
+   :members:

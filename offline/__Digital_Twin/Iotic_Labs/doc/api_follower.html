@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Follower API &mdash; Iotic Digital Twin 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Integrator API" href="api_integrator.html" />
+    <link rel="prev" title="Events API" href="api_events.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Iotic Digital Twin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html">Developer Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api_index.html">API index</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api_events.html">Events API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Follower API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-ioticlabs.dt.api.follower">Follower API reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#follower">Follower</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#follower-callbacks-reference">Follower Callbacks reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#followercallbacks">FollowerCallbacks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#namedeventmixin-reference">NamedEventMixin reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namedeventmixin">NamedEventMixin</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#type-2-exceptions">Type 2 exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reasons">Reasons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_integrator.html">Integrator API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_nestedconfig.html">NestedConfig API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_itemcache.html">item_cache API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_t2.html">T2 API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Iotic Digital Twin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="api_index.html">API index</a> &raquo;</li>
+        
+      <li>Follower API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api_follower.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="follower-api">
+<span id="api-follower"></span><h1>Follower API<a class="headerlink" href="#follower-api" title="Permalink to this headline">¶</a></h1>
+<p>This API is in 2 parts</p>
+<ol class="arabic simple">
+<li>The API on the Follower API <em>Object</em> that the follower calls</li>
+<li>The Follower Callback Interface that the follower has to implement</li>
+</ol>
+<div class="section" id="module-ioticlabs.dt.api.follower">
+<span id="follower-api-reference"></span><h2>Follower API reference<a class="headerlink" href="#module-ioticlabs.dt.api.follower" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="follower">
+<h3>Follower<a class="headerlink" href="#follower" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ioticlabs.dt.api.follower.Follower">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.follower.</code><code class="descname">Follower</code><span class="sig-paren">(</span><em>config</em>, <em>client</em>, <em>callbacks</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.Follower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides asset and event notifications as well as event confirmation functionality.</p>
+<dl class="method">
+<dt id="ioticlabs.dt.api.follower.Follower.ack_event">
+<code class="descname">ack_event</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.Follower.ack_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Acknowledge that an event has been handled. Any events with a smaller offset are also implied to have been
+handled. Unknown assets events will be ignored.</p>
+<p>asset_id - Id of the asset
+event - Instance of AssetEvent implementing class</p>
+<dl class="docutils">
+<dt>Raises:</dt>
+<dd>TypeError - If the event is invalid</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.follower.Follower.assets">
+<code class="descname">assets</code><a class="headerlink" href="#ioticlabs.dt.api.follower.Follower.assets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence of assets (snapshot) known to follower internally. on_asset_* callbacks should be used to
+determine what assets exist rather than polling this.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.follower.Follower.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.Follower.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the follower. Other public methods herein must not be called beforehand. Should be called after
+starting Iotic agent. Alternatively use with keyword on the instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.follower.Follower.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><em>timeout=10</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.Follower.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the follower. Should be called before shutting down the Iotic agent.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.follower.Follower.t2_request">
+<code class="descname">t2_request</code><span class="sig-paren">(</span><em>asset_id</em>, <em>type_</em>, <em>data=None</em>, <em>timeout=10</em>, <em>chunk_timeout=10</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.Follower.t2_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a type 2 request for the given asset. Generates tuples of response mime type and raw data (bytes).</p>
+<p>asset_id - asset to which request applies
+<a href="#id1"><span class="problematic" id="id2">type_</span></a> - type of request (string)
+data - any additional arguments specific to the request (non-empty bytes or None)
+timeout - how long to wait (in seconds, fractional) before receive first response chunk
+chunk_timeout - how long to wait (in seconds, fractional) before next expected (but not first) chunk arrives</p>
+<dl class="docutils">
+<dt>Raises:</dt>
+<dd>AssetUnknown - if the asset is not known to this follower
+TypeError - if type is invalid
+ValueError - if data or timeout is invalid
+T2ResponseException - if request failed to due a provider-related issue</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="follower-callbacks-reference">
+<h2>Follower Callbacks reference<a class="headerlink" href="#follower-callbacks-reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="followercallbacks">
+<h3>FollowerCallbacks<a class="headerlink" href="#followercallbacks" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ioticlabs.dt.api.follower.FollowerCallbacks">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.follower.</code><code class="descname">FollowerCallbacks</code><a class="headerlink" href="#ioticlabs.dt.api.follower.FollowerCallbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of callbacks which follower implementations must provide.</p>
+<p>NOTE: Methods herein should not perform long-running tasks and instead delegate to make necessary changes.</p>
+<dl class="method">
+<dt id="ioticlabs.dt.api.follower.FollowerCallbacks.on_asset_created">
+<code class="descname">on_asset_created</code><span class="sig-paren">(</span><em>asset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.FollowerCallbacks.on_asset_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>A new asset has been created. Called once for each known asset on startup as well as whenever a new asset
+appears whilst the follower is running.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.follower.FollowerCallbacks.on_asset_deleted">
+<code class="descname">on_asset_deleted</code><span class="sig-paren">(</span><em>asset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.FollowerCallbacks.on_asset_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>An asset has been deleted. Called whenever an asset has been removed and should no longer be considered by
+the follower. Note: This is NOT called if an asset has been deleted whilst the follower is not running.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.follower.FollowerCallbacks.on_event">
+<code class="descname">on_event</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.FollowerCallbacks.on_event" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>A new event has been published for a particular asset. Does not include internal events apart from:</dt>
+<dd>IntTwinEventInvalid
+IntFollowerEventInvalid</dd>
+</dl>
+<p>event - instance of AssetEvent</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ioticlabs.dt.api.follower.FollowerCallbacks.on_event_internal">
+<code class="descname">on_event_internal</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.FollowerCallbacks.on_event_internal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override to handle internal events (see api.event.internal). This does NOT include internal events explicitly
+listed by on_event.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="namedeventmixin-reference">
+<h2>NamedEventMixin reference<a class="headerlink" href="#namedeventmixin-reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="namedeventmixin">
+<h3>NamedEventMixin<a class="headerlink" href="#namedeventmixin" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ioticlabs.dt.api.follower.NamedEventMixin">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.follower.</code><code class="descname">NamedEventMixin</code><a class="headerlink" href="#ioticlabs.dt.api.follower.NamedEventMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Routes on_event calls to functions named do_&lt;EVENT_TYPE_LOWERCASE&gt; (ignoring events for which no function has
+been defined. Note: With this mixin included, on_event is overridden. If one is interested in handling (almost) all
+events the same way, this mixin might not be applicable.</p>
+<dl class="docutils">
+<dt>E.g. for an event of type AssetEvent the method definition (can also be class/static) would be:</dt>
+<dd>def on_assetevent(self, event)</dd>
+</dl>
+<dl class="method">
+<dt id="ioticlabs.dt.api.follower.NamedEventMixin.on_event_unmatched">
+<code class="descname">on_event_unmatched</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.NamedEventMixin.on_event_unmatched" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called for any events which do not have a named “on_*” function. Should at least acknowledge events one is
+not interested in.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="type-2-exceptions">
+<span id="t2-exceptions-follower"></span><h2>Type 2 exceptions<a class="headerlink" href="#type-2-exceptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ioticlabs.dt.api.follower.T2Unavailable">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.follower.</code><code class="descname">T2Unavailable</code><a class="headerlink" href="#ioticlabs.dt.api.follower.T2Unavailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type2 functionality has not been enabled in this follower</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ioticlabs.dt.api.follower.T2Timeout">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.follower.</code><code class="descname">T2Timeout</code><a class="headerlink" href="#ioticlabs.dt.api.follower.T2Timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>The response for a type 2 request has timed out</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ioticlabs.dt.api.follower.T2ResponseException">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.follower.</code><code class="descname">T2ResponseException</code><span class="sig-paren">(</span><em>uref</em>, <em>reason</em><span class="sig-paren">)</span><a class="headerlink" href="#ioticlabs.dt.api.follower.T2ResponseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised for error responses for a type 2 request.</p>
+<p>Available attributes:</p>
+<p>uref - request reference
+reason - One of T2ReqFailureReason</p>
+</dd></dl>
+
+</div>
+<div class="section" id="reasons">
+<h3>Reasons<a class="headerlink" href="#reasons" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ioticlabs.dt.api.follower.T2ReqFailureReason">
+<em class="property">class </em><code class="descclassname">ioticlabs.dt.api.follower.</code><code class="descname">T2ReqFailureReason</code><a class="headerlink" href="#ioticlabs.dt.api.follower.T2ReqFailureReason" title="Permalink to this definition">¶</a></dt>
+<dd><p>Failure reasons for type 2 requests (prior to data transfer)</p>
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.follower.T2ReqFailureReason.PROVIDER_UNAVAILABLE">
+<code class="descname">PROVIDER_UNAVAILABLE</code><em class="property"> = 2</em><a class="headerlink" href="#ioticlabs.dt.api.follower.T2ReqFailureReason.PROVIDER_UNAVAILABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provider not reachable</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.follower.T2ReqFailureReason.PROVIDER_UNKNOWN">
+<code class="descname">PROVIDER_UNKNOWN</code><em class="property"> = 1</em><a class="headerlink" href="#ioticlabs.dt.api.follower.T2ReqFailureReason.PROVIDER_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>No provider for request</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.follower.T2ReqFailureReason.REQ_UNHANDLED">
+<code class="descname">REQ_UNHANDLED</code><em class="property"> = 3</em><a class="headerlink" href="#ioticlabs.dt.api.follower.T2ReqFailureReason.REQ_UNHANDLED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provider cannot handle request</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ioticlabs.dt.api.follower.T2ReqFailureReason.RESOURCE_UNKNOWN">
+<code class="descname">RESOURCE_UNKNOWN</code><em class="property"> = 4</em><a class="headerlink" href="#ioticlabs.dt.api.follower.T2ReqFailureReason.RESOURCE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provider cannot find information for this request, asset and parameters</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api_integrator.html" class="btn btn-neutral float-right" title="Integrator API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api_events.html" class="btn btn-neutral" title="Events API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Iotic Labs LTD
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

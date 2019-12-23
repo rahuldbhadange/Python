@@ -1,0 +1,860 @@
+[?3/?15/?2019 4:34 PM]  Tim Churchard:  
+Ah damn, I see no fielddata events either.  I'll check with Fabio 
+ 
+[?3/?15/?2019 4:35 PM]  
+yeah
+ 
+[?3/?15/?2019 4:39 PM]  Tim Churchard:  
+Hmm fabio says there are events in the DB for asset 1000015 & 1000021 -- he suggests changing the synthesiser to only print the FieldDataSuccessSet and then just waiting for them to turn up.  They should get published every 15mins.  But there are some in history too. 
+ 
+[?3/?15/?2019 4:44 PM]  
+then?
+ 
+[?3/?15/?2019 4:44 PM]  
+need to change in config?
+ 
+[?3/?15/?2019 4:47 PM]  Tim Churchard:  
+No need to change config, if you're seeing events then you are connected to the twin.  Change the follower code so that it only prints events from the fielddata integrator 
+ 
+[?3/?15/?2019 6:04 PM]  Tim Churchard:  
+Hi Rahul, I've spoken to Vilnis about how to merge a follower with integrator.  I'll go through the process myself and write some instructions.  Then I'll get VT to review it.  Then you should be able to have it at the start of next week 
+Did you see any fielddata events yet?  Fabio is confident they should be coming through 
+ 
+[?3/?15/?2019 6:13 PM]  
+Hi
+ 
+[?3/?15/?2019 6:13 PM]  
+Not yet
+ 
+[?3/?15/?2019 6:34 PM]  
+I'm running code for specific event, but not getting it (waited for 20 min)
+ 
+[?3/?15/?2019 6:36 PM]  Tim Churchard:  
+Hmm weird.  Can you push your 15617 branch with all the config I need to run it and I'll give it a try this afternoon while I write the synthesiser instructions 
+ 
+[?3/?15/?2019 6:40 PM]  
+done
+ 
+[?3/?15/?2019 6:43 PM]  Tim Churchard:  
+Cool thanks.  Have a nice weekend.  I'll do the synthesiser instructions and I'll try out the follower (y) -- will email 
+ 
+[?3/?15/?2019 6:43 PM]  
+Thanks Tim
+ 
+[?3/?18/?2019 2:15 PM]  
+Hi Tim
+ 
+[?3/?18/?2019 2:15 PM]  
+Are you in meeting?
+ 
+[?3/?18/?2019 2:15 PM]  Tim Churchard:  
+Morning, no, which meeting? 
+ 
+[?3/?18/?2019 2:16 PM]  
+Planning?
+ 
+[?3/?18/?2019 2:16 PM]  Tim Churchard:  
+Ah no, I don't normally join them.  Mark & Fabio are probably on the call though 
+They might invite me if I'm needed 
+How's it going? 
+ 
+[?3/?18/?2019 2:17 PM]  
+I will share mail regarding, weather info set
+ 
+[?3/?18/?2019 2:17 PM]  Tim Churchard:  
+Ok 
+ 
+[?3/?18/?2019 2:20 PM]  Tim Churchard:  
+Hi yes, it looks OK.  WeatherType should be 'string' not 'date' (using the 144_codes.txt I emailed before)  -- Also I think it would be nice to include 'WeatherStation' -> string -> name of the weather station using thing label.  And perhaps 'WeatherProvider' -> string -> metoffice_forecast, metoffice_observation and later it could be 'openweather' or 'airport weather' etc 
+Position?  You could use the LocationSetMixin to remember the location when the weather was found?  (This might be hard to match up later) 
+ 
+[?3/?18/?2019 2:21 PM]  
+Thank you
+ 
+[?3/?18/?2019 2:21 PM]  
+I will work on suggestions.
+ 
+[?3/?18/?2019 2:31 PM]  
+One quick que,
+
+our output is like this:
+Today's Forecast is :  {
+    "time": "2019-03-18T09:00:00Z",
+    "feels": 3.0,
+    "gust": 18.0,
+    "humid": 80.0,
+    "temp": 6.0,
+    "visib": "GO",
+    "winddir": "W",
+    "windspd": 11.0,
+    "uv": 1.0,
+    "type": "7",
+    "prob": "5" 
+
+Do we suppose to modify anything to get output in proper form?
+ 
+[?3/?18/?2019 2:33 PM]  Tim Churchard:  
+Yes you should replace type -> "number" with the looked up code from 144_codes.txt (if the source is metoffice_* )  -- And you should add fields for WeatherStation -> place name found in thing_label.  And add WeatherProvider -> "mettofice_forecast" 
+ 
+[?3/?18/?2019 2:33 PM]  Tim Churchard:  
+Then when the integrator gets this dictionary it has all the fields it needs to publish the event 
+ 
+[?3/?18/?2019 2:36 PM]  Tim Churchard:  
+Also you could add some lookup between the visibility code to a real string.  I think "GO" means "Good"  -- You might be able to find the lookup in the api docs https://www.metoffice.gov.uk/datapoint/support/api-reference 
+ 
+[?3/?18/?2019 2:40 PM]  
+One thing need to share Tim,
+
+I will be on leave for next week.
+So, Muthu and team is saying please plan accordingly so that we can complete before Friday. 
+ 
+[?3/?18/?2019 2:41 PM]  Tim Churchard:  
+Ok no problem.  I think they will be able to continue your work in progress.  Did you see the patch I emailed at the weekend? 
+ 
+[?3/?18/?2019 2:41 PM]  
+yes I went through it.
+ 
+[?3/?18/?2019 2:42 PM]  Tim Churchard:  
+Ok cool.  I realised later that the IntegratorHelper only needs to handle the callback.  You don't need the stop/start/publish_event functions there.  You can make self.__integrator = Integrator directly in the main class. 
+ 
+[?3/?18/?2019 2:43 PM]  Tim Churchard:  
+Will you do some handover to Muthu before you go so he can pick up your branch? 
+ 
+[?3/?18/?2019 2:45 PM]  
+I can do that. And we can get involve him in this for something so he will be in sync
+ 
+[?3/?18/?2019 2:46 PM]  Tim Churchard:  
+Ok cool.  If you let me know you push your branch I can give it a quick review, if that'd be helpful? 
+ 
+[?3/?18/?2019 2:47 PM]  Tim Churchard:  
+I have an appointment in 2h45m.  I will be offline for atleast 2 hours.  And then I will be travelling to Cambridge to interview a very senior dev. 
+ 
+[?3/?18/?2019 2:47 PM]  
+ok
+ 
+[?3/?18/?2019 2:48 PM]  
+Oky
+ 
+[?3/?18/?2019 2:48 PM]  
+Anything is pending from myside?
+ 
+[?3/?18/?2019 2:50 PM]  Tim Churchard:  
+Before you hand over I'd like you to add the integrator code to the synthesiser.  And the find_nearest_weather code.  And have the WeatherInfoSet event defined.  So its code complete.  It doesn't have to be working/tested fully since Muthu can finish it off while you're away. 
+ 
+[?3/?18/?2019 2:54 PM]  
+Before you hand over I'd like you to add the integrator code to the synthesiser.  And the find_nearest_weather code.  ==>> As you mailed on weekend.
+ 
+[?3/?18/?2019 2:55 PM]  Tim Churchard:  
+Yes kind of.  Obviously the classes should be in their own files.  And it needs some tidying up, it should not print anything and it should do logging.  It needs some error handling.  etc 
+I wanted to test the approach worked and as soon as it worked I made the patch and stopped :) 
+ 
+[?3/?18/?2019 2:58 PM]  
+ And have the WeatherInfoSet event defined ==>>
+
+As suggested above? 
+ 
+[?3/?18/?2019 2:59 PM]  Tim Churchard:  
+Yes as above with weatherstation and weatherprovider fields 
+ 
+[?3/?18/?2019 2:59 PM]  
+okay cool.
+thanks a lot.
+ 
+[?3/?18/?2019 3:50 PM]  Tim Churchard:  
+Hi Rahul.  There is one more thing you can do.  You could run:   git cherry-pick  c660da605d6fb5e302bd6d5beeaed332a984a7fb    -- This will give you a version bump to your events package.  You should be able to see the FD version 2 events containing location. 
+(Obv' you will have to stash or commit your code first) 
+ 
+[?3/?18/?2019 3:51 PM]  
+okay
+ 
+[?3/?18/?2019 4:25 PM]  Tim Churchard:  
+Hi Rahul, at the moment it looks like the dev branch will become the mvp1.1 release.  Unfortunately it has Ben's location change which is part of mvp2.  Fabio & I will have todo some git branching.  Most likely there will be a new weather-dev or mvp2-dev or something.  Don't raise any PRs for weather plz 
+ 
+[?3/?18/?2019 4:26 PM]  
+sure
+ 
+[?3/?18/?2019 4:26 PM]  
+Is it fine to push?
+ 
+[?3/?18/?2019 4:26 PM]  Tim Churchard:  
+Yes you can push to your own branch 
+ 
+[?3/?18/?2019 4:27 PM]  
+okayy
+ 
+[?3/?18/?2019 5:08 PM]  
+I have push the code
+ 
+[?3/?18/?2019 5:08 PM]  
+fatal: bad object c660da605d6fb5e302bd6d5beeaed332a984a7fb                                                 
+ 
+[?3/?18/?2019 5:13 PM]  Tim Churchard:  
+hmm can you show me more of the output? 
+I'm leaving in < 10mins btw 
+ 
+[?3/?18/?2019 5:13 PM]  
+of Git?
+ 
+[?3/?18/?2019 5:13 PM]  Tim Churchard:  
+Yep 
+Oh was that the output of a git cherry-pick?  Perhaps you had not fetched? 
+ 
+[?3/?18/?2019 5:14 PM]  
+That's all it says?
+ 
+[?3/?18/?2019 5:14 PM]  Tim Churchard:  
+Yes, run fetch first 
+ 
+[?3/?18/?2019 5:15 PM]  
+git fetch --prune  ??
+ 
+[?3/?18/?2019 5:15 PM]  Tim Churchard:  
+Yes can do 
+ 
+[?3/?18/?2019 5:15 PM]  
+ok
+ 
+[?3/?18/?2019 5:16 PM]  Tim Churchard:  
+Then your local git should know about that ref and you can cherry-pick it 
+ 
+[?3/?18/?2019 5:16 PM]  
+No Title 
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-15617)                                             
+$ git fetch --prune                                                                                       
+From https://mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic                          
+ - [deleted]         (none)     -> origin/issue-fc-post                                                   
+remote: Azure Repos                                                                                       
+remote: Found 83 objects to send. (16 ms)                                                                 
+Unpacking objects: 100% (83/83), done.                                                                    
+   d8f76b4..3240e27  dev                     -> origin/dev                                                
+ + 8a1bfc8...0516fd1 dev-lp-fielddataint-cache -> origin/dev-lp-fielddataint-cache  (forced update)       
+ + 65b4b0a...76b6271 dev-muthu-bugfixes      -> origin/dev-muthu-bugfixes  (forced update)                
+ * [new branch]      issue-fc-events-version -> origin/issue-fc-events-version                            
+ * [new branch]      issue-fc-q-hotpatch     -> origin/issue-fc-q-hotpatch                                 
+ 
+[?3/?18/?2019 5:17 PM]  
+$ git cherry-pick c660da605d6fb5e302bd6d5beeaed332a984a7fb                                                
+[dev-rahul-15617 64532dc] Bumped rrps.dt.events to 0.1.8, updated dependency only in rrps.dt.integrator.fi
+elddata                                                                                                   
+ Author: Fabio Corneti                                                      
+ Date: Sat Mar 16 05:51:02 2019 +0000                                                                     
+ 2 files changed, 2 insertions(+), 2 deletions(-)                                                         
+                                                                                                           
+ 
+[?3/?18/?2019 5:17 PM]  Tim Churchard:  
+Yep looks good.  Now git branch -vva should say you're ahead.  You can push again. 
+But I'm leaving in a second.  I'll check your branch when I get back 
+ 
+[?3/?18/?2019 5:18 PM]  
+* dev-rahul-15617                          64532dc [origin/dev-rahul-15617: ahead 1] Bumped rrps.dt.events
+ to 0.1.8, updated dependency only in rrps.dt.integrator.fielddata                                         
+ 
+[?3/?18/?2019 5:20 PM]  
+okay
+Tim Churchard can't receive IMs right now. Status is unavailable or offline. 
+[?3/?19/?2019 2:47 PM]  
+Good Morning Tim
+ 
+[?3/?19/?2019 2:47 PM]  Tim Churchard:  
+Hi Rahul, how's it going? 
+ 
+[?3/?19/?2019 2:47 PM]  
+All good
+ 
+[?3/?19/?2019 2:48 PM]  
+ Hope you seen the last push?
+ 
+[?3/?19/?2019 2:48 PM]  Tim Churchard:  
+Ah no, I'm sorry I haven't had time.  I can look now if you want 
+ 
+[?3/?19/?2019 2:50 PM]  
+I'm working on logging and error handling.
+Still if you can see, then I will be sure that I'm going in right direction.
+ 
+[?3/?19/?2019 2:50 PM]  Tim Churchard:  
+Ok 1 min 
+ 
+[?3/?19/?2019 2:50 PM]  
+Okay:)
+ 
+[?3/?19/?2019 2:52 PM]  Tim Churchard:  
+Ok the WeatherInfoSet events looks good.  The WeatherStation and WeatherProvider should be string and set by the find_nearest_weather 
+When you're ready the IntegratorHelper an NearestWeather classes should be in their own files next to impl.py and imported 
+^ I put them in the same file because laziness... but you can't :) 
+ 
+[?3/?19/?2019 3:02 PM]  Tim Churchard:  
+Looks like you're going in the right direction. 
+Did you talk to Muthu about handover? 
+Today I'm in London meeting with the iotic dev team.  We'll try todo some planning etc but I might be able to answer Skype chats for most of the day 
+ 
+[?3/?19/?2019 3:03 PM]  
+Yes, I have given handover to Muthu.
+I'm kind of not fully cleared about the things.
+ 
+[?3/?19/?2019 3:05 PM]  Tim Churchard:  
+Ok what things?  I can't do a call today but I could try to call sometime to explain the things 
+Or I can answer here 
+ 
+[?3/?19/?2019 3:06 PM]  
+Not an issue.
+ 
+[?3/?19/?2019 3:06 PM]  
+We can work it out here itself
+ 
+[?3/?19/?2019 3:07 PM]  
+What is exactly aim?
+ 
+[?3/?19/?2019 3:08 PM]  
+What we want from synthesiser exactly?
+ 
+ 
+[?3/?19/?2019 3:12 PM]  Tim Churchard:  
+Ok so the aim of the synthesiser to put things together.  We have integrators that integrate to a source of data and send events to the twin.  And we have followers that get events from the twin.  Now we have an event from the twin that contains location and we want to find weather info and combine it into the twin. 
+ 
+[?3/?19/?2019 3:13 PM]  
+Great I thought so
+ 
+[?3/?19/?2019 3:15 PM]  
+event especially "field data event" ?
+
+Now we have an event from the twin that contains location and we want to find weather info and combine it into the twin. 
+=>> event having location, from that location we need to find weather inf for nearest 
+ 
+[?3/?19/?2019 3:16 PM]  Tim Churchard:  
+Yes that is version 2 of the fielddata events.  But you cannot see them in your follower currently.  I will make a weather branch and a fix to show them 
+ 
+[?3/?19/?2019 3:18 PM]  
+continue...
+
+__thing and put it into twin ?? Like integrator storing event normally but now on (syntesiser) will have loaction too.
+ 
+[?3/?19/?2019 3:19 PM]  Tim Churchard:  
+Yes so the synthesiser will follow the events and look for location of the asset. This should happen every 15mins for every asset. The synthesiser should publish a new event to say at this time, in this place, there was weather of X 
+You have a position field in your event, that should be the location of the asset 
+ 
+[?3/?19/?2019 3:21 PM]  
+okay
+ 
+[?3/?19/?2019 3:23 PM]  
+what and how is the connection of rrps.dt.event/__init__ with our event which we saw after running synthesiser
+ 
+[?3/?19/?2019 3:24 PM]  Tim Churchard:  
+The synthesiser should publish_event the new WeatherInfoSet event.  You have access to it immediately because of the dev install.  For others to access it you should bump the version in events setup.py (and in your setup.py to require the new version) 
+ 
+[?3/?19/?2019 3:25 PM]  Tim Churchard:  
+But be aware if you publish an event in the env_m it will be there forever.  If you change the fields in your event later you will still have the bad/old ones in your history ;) 
+ 
+[?3/?19/?2019 3:28 PM]  Tim Churchard:  
+You would have to ask fabio very nicely to reset your twin history.   (And ofcourse this situation will not happen on the env_dev because the  event will be reviewed and perfect first etc) 
+ 
+[?3/?19/?2019 3:28 PM]  
+So "WeatherInfoSet event." is kind of format in which weather will be published?
+
+ 
+[?3/?19/?2019 3:29 PM]  
+You would have to ask fabio very nicely to reset your twin history.   (And ofcourse this situation will not happen on the env_dev because the  event will be reviewed and perfect first etc)  
+
+==>> okay
+ 
+[?3/?19/?2019 3:29 PM]  Tim Churchard:  
+Yes WeatherInfoSet is the format in which weather will be associated with the asset in the twin.  The synthesiser will put it together 
+ 
+[?3/?19/?2019 3:30 PM]  
+okay
+Today's Forecast is :  {
+    "time": "2019-03-14T15:00:00Z",
+    "feels": 7.0,
+    "gust": 40.0,
+    "humid": 56.0,
+    "temp": 11.0,
+    "visib": "VG",
+    "winddir": "WNW",
+    "windspd": 22.0,
+    "uv": 1.0,
+    "type": "3",
+    "prob": "1" 
+
+
+ But these are all in numbers, this is suppose to be like this only?
+ 
+[?3/?19/?2019 3:32 PM]  Tim Churchard:  
+To that dictionary you should add the weather station name and the weather station type.  And the synthesiser knows the location so that can go in the event position field. 
+ 
+[?3/?19/?2019 3:34 PM]  
+and will automatically fetch that (144_codes.txt) stuff ?
+ 
+[?3/?19/?2019 3:35 PM]  Tim Churchard:  
+Ah yes in that dict the type should be string from the 144_codes 
+I think the visib has a similar lookup "VG" = "Very Good" ? 
+ 
+[?3/?19/?2019 3:35 PM]  
+I have made the changes:
+
+1: {
+    {
+        'type': 'record',
+        'name': 'WeatherInfoSet',
+        'fields': [
+            field("WeatherType", "string"),
+            field("Position", "string"),
+            field("WindSpeed", "float"),
+            field("WindDirection", "float"),
+            field("WindGust", "float"),
+            field("Humidity", "float"),
+            field("Visibility", "string"),
+            field("Temperature", "float"),
+            field("FeelsLikeTemperature", "float"),
+            field("MaxUVIndex", "float"),
+            field("PrecipitationProbability", "string"),
+            field("WeatherStation", "string"),
+            field("WeatherProvider", "string"),
+            cls._location_field,  # from LocationSetMixin 
+ 
+[?3/?19/?2019 3:35 PM]  Tim Churchard:  
+Ok good 
+ 
+[?3/?19/?2019 3:36 PM]  
+position and location good?
+ 
+[?3/?19/?2019 3:36 PM]  Tim Churchard:  
+I don't know about the location mixin.  But I think its OK to follow this approach (and Vilnis might fix it later when he fixes Ben's code) 
+ 
+[?3/?19/?2019 3:36 PM]  
+okay
+ 
+[?3/?19/?2019 3:36 PM]  
+Thank you so much for this one Tim.
+ 
+[?3/?19/?2019 3:37 PM]  Tim Churchard:  
+No probs.  To make the search for weather slightly more reliable you could add one more argument.   unit=CELSIUS   (Which can be import like this:  from IoticAgent.Units import CELSIUS 
+ 
+[?3/?19/?2019 3:40 PM]  
+Sure
+ 
+[?3/?19/?2019 3:41 PM]  
+Thanks. will get back to you.
+ 
+[?3/?20/?2019 2:24 PM]  
+Hi Tim
+Good morning
+ 
+[?3/?20/?2019 2:24 PM]  Tim Churchard:  
+Hi, morning, how's it going? 
+ 
+[?3/?20/?2019 2:25 PM]  
+I have push the my thing, please have a look and suggest above task
+ 
+[?3/?20/?2019 2:25 PM]  Tim Churchard:  
+Ok 
+ 
+[?3/?20/?2019 2:25 PM]  
+thanks
+ 
+[?3/?20/?2019 2:33 PM]  Tim Churchard:  
+OK it's looking good.  I'm just writing some points to work on 2 mins 
+ 
+[?3/?20/?2019 2:36 PM]  
+Okay
+ 
+[?3/?20/?2019 2:40 PM]  Tim Churchard:  
+1. Move the IntegratorHelper class back to impl.py and name it like IntegratorCB
+2. Instantiate the new IntegratorCB class in the synthesiser init so the callbacks get handled
+3. on_FieldData should be lowercase
+4. on_fielddata move the ack_event to the top under the log.info (make it a log.debug too)
+5. on_fielddata remove the if event_version and just do find_nearest everytime with hardcoded location
+6. Write/Test the publish_event code
+NearestWeather
+7. Tidy up exception handling (don't catch bare except: ) 
+8. find_nearest_weather -- Consider adding a time param (datetime object)?  Then you could loop over the recent samples to find the nearest time?  And perhaps have some threshold where weather is not close enough in time (4 hours?)
+9. If not adding time parameter then make it get_recent(1) instead of get_recent(99)
+10. callback_recent (perhaps rename to process_data or something)
+11. Remove pretty_print when debugging is finished. 
+I pasted to Muthu by mistake :) 
+Anyway I think it is quite good 
+ 
+[?3/?20/?2019 3:44 PM]  
+    self.__client = Client(config=config)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\Ioti
+cAgent\IOT\Client.py", line 77, in __init__
+    % self.__config._file_loc())
+ValueError: Minimum configuration for IoticAgent is host, epid, passwd and token
+Create file "[agent]
+name = integrator
+host = broker-dev-rr.iotic-labs.com:5671
+epid = b0b6f6e0bbcc5613c2dfa38422327ceb
+passwd = FsDEigWOf1X5cXxxlpXImfQGb0spm7Qp
+token = 3ce64ae1d6fde0eb514c93e560aca2e112410d83a11f0960145346b4716e4af6" with contents
+[agent]
+host = w
+epid = x
+passwd = y
+token = z 
+
+
+
+getting this error?
+
+We couldn't reach Tim Churchard to send this message. 
+[?3/?20/?2019 3:48 PM]  
+Hi TIm,  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\Ioti
+cAgent\IOT\Client.py", line 77, in __init__
+    % self.__config._file_loc())
+ValueError: Minimum configuration for IoticAgent is host, epid, passwd and token
+Create file "[agent]
+name = integrator
+host = broker-dev-rr.iotic-labs.com:5671
+epid = b0b6f6e0bbcc5613c2dfa38422327ceb
+passwd = FsDEigWOf1X5cXxxlpXImfQGb0spm7Qp
+token = 3ce64ae1d6fde0eb514c93e560aca2e112410d83a11f0960145346b4716e4af6" with contents
+[agent]
+host = w
+epid = x
+passwd = y
+token = z 
+
+
+
+getting this error?
+
+ 
+[?3/?20/?2019 3:49 PM]  Tim Churchard:  
+Hmm, weird.  Wasn't it running before? 
+ 
+[?3/?20/?2019 3:50 PM]  Tim Churchard:  
+Anyway the problem is normally in __main__.py where it loads the config.  You see it has loaded the contents of the agent.ini and passed it as the filename 
+ 
+[?3/?20/?2019 3:51 PM]  
+I have not tried. Means after your cfg changes (integrator to synthesiser), not getting output no. So not tested
+ 
+[?3/?20/?2019 3:51 PM]  
+yes
+ 
+[?3/?20/?2019 3:51 PM]  Tim Churchard:  
+Ok can you push to your branch and I'll try to run it? 
+ 
+[?3/?20/?2019 3:52 PM]  
+okay
+ 
+[?3/?20/?2019 3:53 PM]  
+I have created instance under init,   self.__IntegratorCB = IntegratorCB 
+
+Anything need to change for callbacks (on_asset_created(self, asset_id): (integrator))
+ 
+[?3/?20/?2019 3:57 PM]  
+push done
+ 
+[?3/?20/?2019 4:32 PM]  
+Hi Tim
+ 
+[?3/?20/?2019 4:33 PM]  Tim Churchard:  
+Hi sorry something came up, I'll check it in a minute 
+ 
+[?3/?20/?2019 4:33 PM]  
+sure
+ 
+[?3/?20/?2019 4:48 PM]  Tim Churchard:  
+OK I've pushed a fix to your branch 
+The synthesiser cfg needs both follower and integraotr section so I've added that.  The main had a minor mistake.  And the IntegratorCB was not registered. 
+I've tested it starts but have not tested it beyond that 
+ 
+[?3/?20/?2019 4:50 PM]  
+okay
+ 
+[?3/?20/?2019 5:00 PM]  
+config issue resolve but there are multiple errors in init and main.
+
+Are we expecting field data output?
+ 
+[?3/?20/?2019 5:02 PM]  Tim Churchard:  
+There are old style fielddata events in history.  You can use on_fielddatasuccess to catch those incoming.  You won't get fielddata location at the moment. 
+ 
+[?3/?20/?2019 5:13 PM]  
+After this what is the next thing?
+ 
+[?3/?20/?2019 7:08 PM]  
+I think int...cb are running but failing at follower
+ 
+[?3/?20/?2019 7:08 PM]  Tim Churchard:  
+Ok, example/explain? 
+ 
+[?3/?20/?2019 7:08 PM]  
+can I show you output error?
+ 
+[?3/?20/?2019 7:10 PM]  Tim Churchard:  
+Ok can you email me a screenshot 
+ 
+[?3/?20/?2019 7:10 PM]  
+No Title 
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.synthesiser.weather>rrps-dt-synthesiser-weather
+cfg\synthesiser.cfg.yml cfg\agent.ini
+2019-03-20 18:52:05,369 WARNING [ioticlabs.dt.common.util] {MainThread} No logging configuration specifi
+ed
+2019-03-20 18:52:05,538 INFO [IoticAgent.IOT.Client] {MainThread} Core version: 0.6.8
+2019-03-20 18:52:05,539 INFO [IoticAgent.IOT.Client] {MainThread} IOT version: 0.6.8
+2019-03-20 18:52:05,540 INFO [IoticAgent.Core.Client] {MainThread} ubjson version: 0.12.0 (extension dis
+abled)
+Traceback (most recent call last):
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\ioti
+clabs\dt\api\event\registry.py", line 107, in __validate_type
+    versions = type_._known_versions()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.events\rrps\dt\events\__init__.py", line 713, i
+n _known_versions
+    cls._location_field,  # from LocationSetMixin
+TypeError: unhashable type: 'dict'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\Scripts\rrps-dt-synthe
+siser-weather-script.py", line 11, in <module>
+    load_entry_point('rrps.dt.synthesiser.weather', 'console_scripts', 'rrps-dt-synthesiser-weather')()
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\rrps\dt\synthesiser\weather
+\__main__.py", line 93, in main
+    follower = follower_via_args(args)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\rrps\dt\synthesiser\weather
+\__main__.py", line 61, in follower_via_args
+    return SynthesiserWeather(load_config(args.cfg), args.agent)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\rrps\dt\synthesiser\weather
+\impl.py", line 30, in __init__
+    self.__follower = Follower(config['follower'], self.client, self)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\ioti
+clabs\dt\api\follower\__init__.py", line 143, in __init__
+    check=lambda x: NestedConfig.Check.seq_non_empty_str(x, zero_items_allowed=True)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\ioti
+clabs\dt\api\event\registry.py", line 31, in load_event_registry
+    count = registry.populate_from_modules(modules)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\ioti
+clabs\dt\api\event\registry.py", line 366, in populate_from_modules
+    return self.__populate_from_modules(modules)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\ioti
+clabs\dt\api\event\registry.py", line 388, in __populate_from_modules
+    if register(cls):
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\ioti
+clabs\dt\api\event\registry.py", line 61, in register
+    name, versions = self.__validate_type(cls)
+  File "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.synthesiser.weather\venv\lib\site-packages\ioti
+clabs\dt\api\event\registry.py", line 109, in __validate_type
+    raise ValueError('Known versions method excepts') from ex
+ValueError: Known versions method excepts 
+ 
+[?3/?20/?2019 7:10 PM]  
+sure
+ 
+[?3/?20/?2019 7:11 PM]  
+done
+ 
+[?3/?20/?2019 7:13 PM]  Tim Churchard:  
+Ok cool, yes the version 2 event is broken at the moment.  I don't know how to fix that.  I'll have to ask VT about it 
+ 
+[?3/?20/?2019 7:13 PM]  Tim Churchard:  
+How much longer will you be at work today? 
+Does this happen on startup or when running? 
+ 
+[?3/?20/?2019 7:14 PM]  
+arround 1 hr
+ 
+[?3/?20/?2019 7:14 PM]  Tim Churchard:  
+Does pip list show rrps.dt.events installed or dev installed? 
+ 
+[?3/?20/?2019 7:14 PM]  
+checking
+ 
+[?3/?20/?2019 7:15 PM] Rahul Dilip Bhadange: 
+9BF201D4.PNG 85B88FC5.PNG
+
+ [?3/?20/?2019 7:16 PM]  
+rrps.dt.events installed  ==>> yes
+ 
+[?3/?20/?2019 7:16 PM]  Tim Churchard:  
+Yes, does it show the path in the final column? 
+ 
+[?3/?20/?2019 7:16 PM]  
+yes it shows
+yes the version 2 event is broken at the moment. ??? means ???
+ 
+[?3/?20/?2019 7:17 PM]  Tim Churchard:  
+Ok cool.  If you're feeling brave you cuold try a hack to unblock yourself.  But make sure your WIP is git committed first (doesn't have to be pushed) 
+ 
+[?3/?20/?2019 7:18 PM]  Tim Churchard:  
+OK so the magic is:   git revert b67b315   -- This will remove the broken location event.  -- Then try to run again 
+ 
+[?3/?20/?2019 7:19 PM]  
+ok
+ 
+[?3/?20/?2019 7:34 PM]  
+$ git revert b67b315                                                                                      
+error: could not revert b67b315... Merged PR 1009: Add location data to FieldData events                  
+hint: after resolving the conflicts, mark the corrected paths                                             
+hint: with 'git add ' or 'git rm '                                                          
+hint: and commit the result with 'git commit'                                                              
+failed
+I will wait
+ 
+[?3/?20/?2019 7:34 PM]  Tim Churchard:  
+Ok what does git status say?  You need to get out of the failed revert before you can continue 
+I can try to do the revert for you.  (But you need to exit revert and you need to push first) 
+ 
+[?3/?20/?2019 7:35 PM]  
+No Title 
+Changes to be committed:                                                                                  
+  (use "git reset HEAD ..." to unstage)                                                             
+                                                                                                          
+        new file:   rrps/python/rrps.dt.integrator.fielddata/cfg/integrator.ini                           
+        modified:   rrps/python/rrps.dt.integrator.fielddata/rrps/dt/integrator/fielddata/Asset.py        
+        modified:   rrps/python/rrps.dt.integrator.fielddata/rrps/dt/integrator/fielddata/impl.py         
+        modified:   rrps/python/rrps.dt.integrator.fielddata/setup.py                                     
+                                                                                                          
+Unmerged paths:                                                                                           
+  (use "git reset HEAD ..." to unstage)                                                             
+  (use "git add ..." to mark resolution)                                                            
+                                                                                                          
+        both modified:   rrps/python/rrps.dt.events/rrps/dt/events/__init__.py                            
+                                                                                                          
+Changes not staged for commit:                                                                            
+  (use "git add ..." to update what will be committed)                                              
+  (use "git checkout -- ..." to discard changes in working directory)                               
+                                                                                                          
+        modified:   README.md                                                                              
+ 
+[?3/?20/?2019 7:37 PM]  Tim Churchard:  
+OK you can exit the revert by running:  git reset --hard HEAD   -- This will return you to the git state before you ran revert (as long as you had everything committed) 
+ 
+[?3/?20/?2019 7:40 PM]  
+Changes to be committed:                                                                                  
+  (use "git reset HEAD ..." to unstage)                                                             
+                                                                                                          
+        deleted:    rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/test/nearestweather.py     
+this one also need to commit
+ 
+[?3/?20/?2019 7:41 PM]  Tim Churchard:  
+Hmm OK I don't understand that 
+What does git branch -vva say? 
+ 
+[?3/?20/?2019 7:41 PM]  
+* dev-rahul-15617                          136642d [origin/dev-rahul-15617] synthesiser                    
+ 
+[?3/?20/?2019 7:42 PM]  Tim Churchard:  
+Ok cool so don't worry about the deleted.  I'll try the revert.  1 min 
+ 
+[?3/?20/?2019 7:42 PM]  
+okay
+ 
+[?3/?20/?2019 7:45 PM]  Tim Churchard:  
+Ok I pushed the revert and a move file to your branch. 
+ 
+[?3/?20/?2019 7:50 PM]  
+Hi Tim
+ 
+[?3/?20/?2019 7:51 PM]  
+We suppose to run synthesier/impl only no?
+ 
+[?3/?20/?2019 7:51 PM]  Tim Churchard:  
+It's supposed to run with command like:  rrps-dt-synthesiser-weather -l cfg/synthesiser.cfg.yml cfg/synthesiser.cfg.yml cfg/agent_foll.ini 
+ 
+[?3/?20/?2019 7:52 PM]  Tim Churchard:  
+You can add whatever python files you need.   We chose __main__ -> impl but ofcourse some integrators/followers/synthesisers will have more code.  Like this one needs nearestweather 
+For deployment we use docker and the entrypoint will be rrps-dt-synthesiser-weather command 
+ 
+[?3/?20/?2019 7:55 PM]  
+ok I pushed the revert and a move file to your branch.   ==>> Need to make changes manually no?
+ 
+[?3/?20/?2019 7:56 PM]  
+all are in field data
+ 
+[?3/?20/?2019 7:56 PM]  Tim Churchard:  
+I think you can fetch and rebase.  You might want to edit/squash the commits to hide that I've changed your branch. 
+I think you need to edit the cfg/synth... to put the stuff for env_m in there.  You should be able to copy/diff from sapmasterdata integrator.cfg.yml 
+ 
+[?3/?20/?2019 7:57 PM]  
+I have commited important one
+ 
+[?3/?20/?2019 7:58 PM]  Tim Churchard:  
+Ok if you fetch, what does git branch -vva say? 
+ 
+[?3/?20/?2019 7:58 PM]  
+* dev-rahul-15617                          136642d [origin/dev-rahul-15617: behind 2] synthesiser          
+ 
+[?3/?20/?2019 7:58 PM]  
+  dev                                      1fa5da0 [origin/dev: behind 10] Integrators static_tests linked
+ to recommended flake8 and pylint config file                                                              
+ 
+[?3/?20/?2019 7:59 PM]  Tim Churchard:  
+Ok cool.  So its safe to run:  git fetch ; git rebase 
+ 
+[?3/?20/?2019 7:59 PM]  
+fetch done
+ 
+[?3/?20/?2019 8:00 PM]  
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-15617)                                             
+$ git rebase                                                                                              
+error: cannot rebase: Your index contains uncommitted changes.                                            
+error: Please commit or stash them.                                                                        
+ 
+[?3/?20/?2019 8:00 PM]  
+Changes to be committed:                                                                                  
+  (use "git reset HEAD ..." to unstage)                                                             
+                                                                                                          
+        deleted:    rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/test/nearestweather.py     
+ 
+[?3/?20/?2019 8:00 PM]  Tim Churchard:  
+Ok yes.  If thats the only file shown on git status then you can run:   git reset --hard HEAD or git reset --hard origin/dev-rahul-15617 
+ 
+[?3/?20/?2019 8:05 PM]  
+y 
+ 
+[?3/?20/?2019 8:05 PM]  
+No Title 
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-15617)                                             
+$ git rebase                                                                                              
+First, rewinding head to replay your work on top of it...                                                 
+Applying: rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/nearestweather.py           
+.git/rebase-apply/patch:97: new blank line at EOF.                                                        
++                                                                                                         
+warning: 1 line adds whitespace errors.                                                                   
+Using index info to reconstruct a base tree...                                                            
+Falling back to patching base and 3-way merge...                                                          
+No changes -- Patch already applied.                                                                      
+                                                                                                           
+ 
+[?3/?20/?2019 8:06 PM]  Tim Churchard:  
+Ok cool.  So git log should show my changes now?  And the rrps-dt... command might work.  But I think integrator discovery will fail but that just needs some env_m settings put into the cfg yml 
+ 
+[?3/?20/?2019 8:07 PM]  
+ So git log should show my changes now?  ==>> yes
+ 
+[?3/?20/?2019 8:09 PM]  
+is it ???
+
+thing: ['env_m_c']  ===>>  thing: ['env_m'] 
+ 
+[?3/?20/?2019 8:11 PM]  Tim Churchard:  
+So fabio made you an integrator.cfg.yml that works for like sapmasterdata?  It has some changes in that mean the integrator can connect to "env M" which is the digital twin we run for you & muthu.  I don't know what those changes are without research.  You might have to diff the integrator.cfg.yml fabio made you and the integrator section in the synthesiser.cfg.yml 
+ 
+[?3/?20/?2019 8:13 PM]  
+oaky
+ 
+[?3/?20/?2019 8:13 PM]  
+checking
+ 
+[?3/?20/?2019 8:14 PM]  
+It's commented in all integrator == # thing: [] 
+ 
+[?3/?20/?2019 8:14 PM]  Tim Churchard:  
+Ok 1 min I'll find the diff 
+ 
+[?3/?20/?2019 8:26 PM]  Tim Churchard:  
+OK I'm sorry I can't work it out.  I'll ask the rest of the iotic team 
+ 
+[?3/?20/?2019 8:26 PM]  
+okay
+ 
+[?3/?20/?2019 8:26 PM]  
+Shall I wait?
+ 
+[?3/?20/?2019 8:27 PM]  Tim Churchard:  
+No its OK.  I'll email when there is a solution.  I guess its late there 
+ 
+[?3/?20/?2019 8:28 PM]  
+Okay. 
+See you
+ 

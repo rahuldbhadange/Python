@@ -1,0 +1,133 @@
+f", callback=None) [lid=sapmasterdata]
+2019-06-14 14:18:21,546 INFO [ioticlabs.dt.api.integrator] {iworker_0} Added asset 1000015
+2019-06-14 14:18:21,547 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapmasterdata]
+2019-06-14 14:18:21,547 INFO [IoticAgent.IOT.Thing] {iworker_0} __sub(foc=control, gpid="4d08e152dcaa8aca5d623711ce10a0c
+3", callback=None) [lid=sapmasterdata]
+2019-06-14 14:18:21,548 INFO [ioticlabs.dt.api.integrator] {iworker_1} Added asset 1000020
+2019-06-14 14:18:21,712 INFO [ioticlabs.dt.api.integrator] {iworker_0} Added asset 1000021
+2019-06-14 14:18:25,855 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-14 14:18:25,856 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000015
+2019-06-14 14:18:25,857 WARNING [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Swapping asset_id 1000015 for test
+id 1000015
+2019-06-14 14:18:25,857 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000015
+2019-06-14 14:18:26,024 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-14 14:18:26,025 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-14 14:18:26,025 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-14 14:18:26,257 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-14 14:18:26,889 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000015
+
+aggregate_data
+
+{'Datab': 1552156200000,
+ 'Datbi': 1553970600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MatnrAgg': 'SYSTEM',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+2019-06-14 14:18:27,924 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ 4711-0006
+
+
+__get_the_engine_data::::event_data:
+
+{'Datab': 1552156200000,
+ 'Datbi': 1553970600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MatnrAgg': 'SYSTEM',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+
+
+
+
+after::::event_data:
+
+{'Datab': 1552156200000,
+ 'Datbi': 1553970600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+
+
+
+
+master_data
+
+{'Datab': 1552156200000,
+ 'Datbi': 1553970600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+
+
+
+2019-06-14 14:18:28,953 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000015
+2019-06-14 14:18:28,953 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Publish event for 1000015
+
+
+event
+
+{'Datab': 1552156200000,
+ 'Datbi': 1553970600000,
+ 'Eqart': 'SYS',
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Vkbur': '0100',
+ 'Yybau': 'SYS',
+ 'Yyerz': ''}
+
+

@@ -1,0 +1,22 @@
+requests.get(endpoint, auth=(usr, pwd), verify=False, timeout=timeout)
+
+
+
+
+
+
+
+Authorization
+
+
+Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+
+
+
+
+
+
+content-length ?7142
+content-type ?application/json
+date ?Fri, 22 Feb 2019 05:14:43 GMT
+server ?Werkzeug/0.14.1 Python/3.7.1

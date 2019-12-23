@@ -1,0 +1,70 @@
+ NOT FOUND for url: http://localhost:5000/sapmasterdata/master/None with engine_serial: None
+2019-06-20 17:23:03,079 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get Master Data for: 1000015
+2019-06-20 17:23:03,080 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Serial Number for asset
+_id: 1000015
+2019-06-20 17:23:04,109 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Aggregate Data for asset_id: 1
+000015
+event_data['Datbi']   0000-00-00
+event_data['Datab']   2019-11-20
+{'Datab': 1574188200000,
+ 'Datbi': None,
+ 'Eqart': 'SYS',
+ 'EquiPartSet': {'__deferred': {'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('
+000000000200000082')/EquiPartSet"}},
+ 'EqunrAgg': '000000000200000081',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MatnrAgg': '12V2000C10',
+ 'Name1': 'Land Badenwürtenberg',
+ 'SernrAgg': '1000015',
+ 'Vkbur': '0101',
+ 'Yybau': '030',
+ 'Yyerz': '10V1600A50',
+ '__metadata': {'id': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('00000000020000008
+2')",
+                'type': 'Y_DIGITAL_TWIN_SRV.EQUI01',
+                'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('0000000002000000
+82')"}}
+2019-06-20 17:23:05,141 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Get the Engine Data for engine_serial:
+ 4711-001
+engine_data['Datbi']   2019-10-21
+engine_data['Datab']   2019-10-21
+2019-06-20 17:23:06,154 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Checking asset cache for: 1000015
+2019-06-20 17:23:06,155 INFO [rrps.dt.integrator.sapmasterdata.impl] {MainThread} Publish event for 1000015
+{'Datab': 1571596200000,
+ 'Datbi': 1571596200000,
+ 'Eqart': 'SYS',
+ 'EquiPartSet': {'__deferred': {'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('
+000000000200000082')/EquiPartSet"}},
+ 'EqunrAgg': '000000000200000081',
+ 'EqunrEng': '000000000200000082',
+ 'Kunde': '0022111236',
+ 'MaktxAgg': 'AUFNAHMEKOERPER',
+ 'MaktxEng': 'R16V4000G83 REMAN ENGINE',
+ 'MatnrAgg': '12V2000C10',
+ 'MatnrEng': 'R16V4000G83',
+ 'Name1': 'Land Badenwürtenberg',
+ 'SernrAgg': '1000015',
+ 'SernrEng': '4711-001',
+ 'Vkbur': '0101',
+ 'Yybau': '030',
+ 'Yyerz': '10V1600A50',
+ '__metadata': {'id': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('00000000020000008
+2')",
+                'type': 'Y_DIGITAL_TWIN_SRV.EQUI01',
+                'uri': "https://sap-fes-i.org-intra.net/sap/opu/odata/sap/Y_DIGITAL_TWIN_SRV/EQUI01Set('0000000002000000
+82')"}}
+SapMasterDataSet('1000015', source=None, time=datetime.datetime(2019, 10, 20, 18, 30), systime=None, offset=-1, version=
+2, data=...)
+2019-06-20 17:23:06,162 INFO [IoticAgent.IOT.RemotePoint] {MainThread} tell(timeout=10) [subid=59c59aa461a6aabd61d73437c
+a14761f]
+2019-06-20 17:23:06,960 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=0, reduced=True)
+2019-06-20 17:23:07,111 INFO [IoticAgent.IOT.Client] {watcher} search(text="env_m_p", lang="None", location="None", unit
+="None", limit=50, offset=50, reduced=True)
+2019-06-20 17:23:07,112 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="17de73333545990bc951a510208a3638"]
+2019-06-20 17:23:07,112 INFO [IoticAgent.IOT.Client] {iworker_0} describe() [guid="30897d6f54e322d75a4fd19a60331735"]
+2019-06-20 17:23:07,273 INFO [IoticAgent.IOT.Client] {iworker_1} describe() [guid="58f3a785b5e8aaed99a6ffa0aa2df0f3"]
+2019-06-20 17:23:10,027 INFO [ioticlabs.dt.api.integrator] {watcher} Finished
+
+(rrpsdev) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata>

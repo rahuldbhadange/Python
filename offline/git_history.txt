@@ -1,0 +1,204 @@
+    1  pwd
+    2  cd Desktop/
+    3  cd Desktop/
+    4  clone HBD2KOR@ECGCN1031334D MINGW64 ~
+    5  $ cd Desktop/
+    6  HBD2KOR@ECGCN1031334D MINGW64 ~/Desktop
+    7  $ clone
+    8  Clone 
+    9  HBD2KOR@ECGCN1031334D MINGW64 ~
+   10  $ cd Desktop/
+   11  HBD2KOR@ECGCN1031334D MINGW64 ~/Desktop
+   12  $ clone
+   13  git clone 
+   14  HBD2KOR@ECGCN1031334D MINGW64 ~
+   15  $ cd Desktop/
+   16  HBD2KOR@ECGCN1031334D MINGW64 ~/Desktop
+   17  $ clone
+   18  git clone https://github.com/Iotic-Labs/py-IoticAgent
+   19  git bash https://github.com/Iotic-Labs/py-application-examples.git
+   20  git clone  git bash https://github.com/Iotic-Labs/py-applicaclonetion-examples.git
+   21  git clone https://github.com/Iotic-Labs/py-application-examples.git
+   22  #!/bin/bash
+   23  trap '[ "$?" -eq 0 ] || read -p "Looks like something went wrong in step ´$STEP´... Press any key to continue..."' EXIT
+   24  #Quick Hack: used to convert e.g. "C:\Program Files\Docker Toolbox" to "/c/Program Files/Docker Toolbox"
+   25  win_to_unix_path(){  	wd="$(pwd)"; 	cd "$1"; 		the_path="$(pwd)"; 	cd "$wd"; 	echo $the_path; }
+   26  # This is needed  to ensure that binaries provided
+   27  # by Docker Toolbox over-ride binaries provided by
+   28  # Docker for Windows when launching using the Quickstart.
+   29  export PATH="$(win_to_unix_path "${DOCKER_TOOLBOX_INSTALL_PATH}"):$PATH"
+   30  VM=${DOCKER_MACHINE_NAME-default}
+   31  DOCKER_MACHINE="${DOCKER_TOOLBOX_INSTALL_PATH}\docker-machine.exe"
+   32  STEP="Looking for vboxmanage.exe"
+   33  if [ ! -z "$VBOX_MSI_INSTALL_PATH" ]; then   VBOXMANAGE="${VBOX_MSI_INSTALL_PATH}VBoxManage.exe"; else   VBOXMANAGE="${VBOX_INSTALL_PATH}VBoxManage.exe"; fi
+   34  BLUE='\033[1;34m'
+   35  GREEN='\033[0;32m'
+   36  NC='\033[0m'
+   37  #clear all_proxy if not socks address
+   38  if  [[ $ALL_PROXY != socks* ]]; then   unset ALL_PROXY; fi
+   39  if  [[ $all_proxy != socks* ]]; then   unset all_proxy; fi
+   40  if [ ! -f "${DOCKER_MACHINE}" ]; then   echo "Docker Machine is not installed. Please re-run the Toolbox Installer and try again.";   exit 1; fi
+   41  if [ ! -f "${VBOXMANAGE}" ]; then   echo "VirtualBox is not installed. Please re-run the Toolbox Installer and try again.";   exit 1; fi
+   42  cd digital.git/
+   43  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0001-Map-engine-serial-number-instead-of-equipment-number.patch
+   44  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0002-rrps-Fix-Dockerfiles-and-READMEs-for-testing.patch
+   45  git checkout -b dev-temp
+   46  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0003-Allow-to-run-sapmasterdata-static-checks-on-Windows.patch
+   47  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0004
+   48  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0004-rrps.dt.integrator.sapequipmenthistory-General-impro.patch
+   49  git am --ignore-whitespace /c/Users/HBD2KOR/Downloads/task/0005-Development-quickstart.patch
+   50  git clone https://github.com/Iotic-Labs/py-IoticAgent.git
+   51  cd digital.git/
+   52  git status
+   53  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory
+   54  git commit -m "item_catche has been added in sapequipmenthistory"
+   55  git format-patch HEAD~2
+   56  git status
+   57  git log --stat -p
+   58  git status
+   59  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory
+   60  git commit --amend
+   61  git rm rrps\python\rrps.dt.integrator.sapequipmenthistory\data\assets.json
+   62  git rm rrps/python/rrps.dt.integrator.sapequipmenthistory/data/assets.json 
+   63  git rm -f rrps/python/rrps.dt.integrator.sapequipmenthistory/data/assets.json 
+   64  git -f rm rrps/python/rrps.dt.integrator.sapequipmenthistory/data/assets.json 
+   65  git status 
+   66  git log --stat -p
+   67  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory
+   68  git add -u -p rrps/python/rrps.dt.integrator.sapequipmenthistory
+   69  git commit
+   70  git stat
+   71  git log --stat -p
+   72  git format-patch HEAD~2
+   73  git add -u -p rrps/python/rrps.dt.integrator.sapbomasbuilt
+   74  git commit -m "sapbomasbuilt-item_cache-upgrade"
+   75  git format-patch HEAD~3
+   76  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall
+   77  git commit -m "sapwarrantyrecall-item_cache-upgrade"
+   78  git format-patch HEAD~4
+   79  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware
+   80  git commit -m "talendfirmware-item_cache-upgrade"
+   81  git format-patch HEAD~5
+   82  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument
+   83  git commit -m "talendtimdocument-item_cache-upgrade"
+   84  git format-patch HEAD~6
+   85  cd digital.git/
+   86  git remote add azure https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+   87  git remote fetch azure
+   88  git remote fetch azure https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+   89  git remote fetch azure https://z4laxneu2xqsro7dycdeyyxiqy7mvgbmsmtnungdhskcno6vvyqq@mtuds.visualstudio.com/Project%20Gemini/_git/Digital%20Twin%20Iotic
+   90  git remote fetch azure
+   91  git remote -v fetch azure
+   92  git fetch azure
+   93  git stash
+   94  git checkout dev
+   95  git checkout dev
+   96  git rm rrps/python/rrps.dt.integrator.sapequipmenthistory/cfg/mock-document-data.json
+   97  git checkout dev
+   98  git checkout dev
+   99  git reset --hard azure/dev
+  100  git checkout dev-rahul-14195
+  101  git checkout dev-rahul-#14195
+  102  git checkout dev rahul #14195
+  103  git checkout -b dev-rahul-14195
+  104  git stash pop
+  105  git push --set-upstream azure dev-rahul-14195
+  106  git branch -vva
+  107  git staus
+  108  git status
+  109  cd Desktop/
+  110  git clone https://github.com/rahuldbhadange/hello-world.git
+  111  git push hello-world rahuldbhadange-patch-1
+  112  pwd
+  113  exit
+  114  cd digital
+  115  #!/usr/bin/env bash
+  116  export PYTHONPATH=../../common/python:.
+  117  # Populate cfg/integrator.ini with agent credentials
+  118  # Docker-friendly run method
+  119  if [[ $1 == '--storeutil' ]]; then     export STOREUTIL_HOSTING=local;     export STOREUTIL_LOCALPATH=cfg;      export IOTIC_INTEGRATOR_CFG=integrator.cfg.yml;     export IOTIC_INTEGRATOR_LOG_CFG=integrator.log.yml;     export IOTIC_INTEGRATOR_AGENT_INI=integrator.ini;      ARGS=(--log-cfg IOTIC_INTEGRATOR_LOG_CFG IOTIC_INTEGRATOR_CFG IOTIC_INTEGRATOR_AGENT_INI) else     ARGS=(--log-cfg cfg/integrator.log.yml cfg/integrator.cfg.yml cfg/integrator.ini); fi
+  120  rrps-dt-integrator-sapequipmenthistory "${ARGS[@]}" "$@"
+  121  cd digital.git
+  122  git status
+  123  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument
+  124  git status
+  125  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware
+  126  git status
+  127  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall
+  128  git commit -m "sapwarrantyrecall, talendtimdocument, talendfirmware integrator_consistency"
+  129  git push origin dev-rahul-14195
+  130  cd digital.git
+  131  git status
+  132  git add -u -p 
+  133  git status
+  134  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument/static_tests.cmd
+  135  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware/static_tests.cmd
+  136  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall/static_tests.cmd
+  137  git commit -m "integrator consistancy talendtimdocument talendfirmware sapwarrantyrecall"
+  138  git push origin dev-rahul-14195 
+  139  cd digital.git
+  140  cd digital.git
+  141  git status
+  142  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument
+  143  git status
+  144  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware
+  145  git status
+  146  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall
+  147  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument
+  148  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall
+  149  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware
+  150  git commit -m "integrator_consistancy talendtimdocument talendfirmware sapwarrantyrecall / review resolve done"
+  151  git push origin dev-rahul-14195
+  152  git status
+  153  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall
+  154  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument
+  155  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware
+  156  git commit -m "integrator_consistancy talendtimdocument talendfirmware sapwarrantyrecall / review1 resolve done"
+  157  git push origin dev-rahul-14195
+  158  git status
+  159  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall
+  160  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument
+  161  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware
+  162  git commit -m "integrator_consistancy talendtimdocument talendfirmware sapwarrantyrecall / review1 resolve2 done"
+  163  git push origin dev-rahul-14195
+  164  git add -u -p rrps/python/rrps.dt.integrator.sapwarrantyrecall
+  165  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument
+  166  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware
+  167  git commit -m "integrator_consistancy talendtimdocument talendfirmware sapwarrantyrecall / review2 resolve3 done"
+  168  git push origin dev-rahul-14195
+  169  git status
+  170  git add -u -p rrps/python/rrps.dt.integrator.talendtimdocument/static_tests.cmd
+  171  git add -u -p rrps/python/rrps.dt.integrator.talendfirmware/static_tests.cmd
+  172  git commit -m "static_tests.cmd talendtimdocument talendfirmware"
+  173  git push origin dev-rahul-14195
+  174  git add -u -p rrps/python/README.md 
+  175  git add -u -p rrps/python/setup_venv.cmd 
+  176  git add -u -p rrps/python/static_tests_all.cmd 
+  177  git commit -m "python/static_tests_all.cmd"
+  178  git add -u -p rrps/python/static_tests_all.cmd
+  179  git add -u -p rrps/python/README.md
+  180  git commit -m "python/static_tests_all.cmd"
+  181  git push origin dev-rahul-14195
+  182  cd rrps\python
+  183  cd rrps
+  184  cd python/
+  185  git fetch
+  186  git checkout fa2cdae3b2bd36f0fc70c13ad142a09bee827d6f -- rrps.dt.integrator.sapequipmenthistory/rrps/dt/integrator/sapequipmenthistory/impl.py
+  187  git status
+  188  git reset fa2cdae3b2bd36f0fc70c13ad142a09bee827d6f rahul_int
+  189  git status
+  190  git checkout -- .
+  191  git status
+  192  git status
+  193  git status
+  194  git commit --amend "removed useless changes"
+  195  git commit --amend -m "removed useless changes"
+  196  git push origin dev-rahul-14195
+  197  git push -f origin dev-rahul-14195
+  198  cd..\..\..cd ..\..\..exit
+  199  cd..
+  200  cd ..
+  201  cd ..
+  202  cd ..
+  203  cd Desktop/
+  204  history > git_history.txt

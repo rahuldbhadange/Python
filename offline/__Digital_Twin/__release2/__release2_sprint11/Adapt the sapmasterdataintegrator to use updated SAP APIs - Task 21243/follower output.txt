@@ -1,0 +1,118 @@
+2019-06-13 13:53:05,317 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Event f
+or 1000015 (SapMasterDataSet)
+2019-06-13 13:53:05,319 INFO [rrps.dt.follower.rest_follower.views.BasicDataView] {ioticlabs.dt.api.follower.__do_callba
+ck} BasicDataView on_event called
+
+
+
+
+
+{'Datab': 1486665000000,
+ 'Datbi': 1514658600000,
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Yybau': 'SYS'}
+
+
+
+
+
+
+
+
+
+
+{'ConnectivityDeviceNum': 'No Data From Source',
+ 'Customer': '',
+ 'Engine': '4711-0006',
+ 'FSV': '1.2',
+ 'Material': 'SYSTEM',
+ 'Model': 'Reman engine 0002',
+ 'MotorMaterial': 'R-REM-0002',
+ 'Region': '',
+ 'System': '150001',
+ 'TrainName': 'No Data From Source',
+ 2019-06-13 13:53:05,333 INFO [IoticAgent.IOT.Client] {fworker_0} describe() [guid="aefb777db1f44bc1405ca40ae33dc07c"]
+'Ts': '2017-02-10T00:00:00+00:00',
+ '_id': ObjectId('5cf657f7a98a29cb5dea0db0'),
+ 'asset_id': '1000015',
+ 'offset': 207,
+ 'source': 'sapmasterdata'}
+
+
+
+
+
+2019-06-13 13:53:05,335 INFO [rrps.dt.follower.rest_follower.views.RiverOfNewsView] {ioticlabs.dt.api.follower.__do_call
+back} RiverOfNewsView on_event called
+2019-06-13 13:53:05,418 INFO [ioticlabs.dt.api.follower] {tp-0} Replay finished for 1000015 @ 207
+2019-06-13 13:53:05,419 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Interna
+l: <IntTwinEofReplay v1 ('1000015'@207)>
+2019-06-13 13:53:05,520 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Event f
+or 1000021 (SapMasterDataSet)
+2019-06-13 13:53:05,522 INFO [rrps.dt.follower.rest_follower.views.BasicDataView] {ioticlabs.dt.api.follower.__do_callba
+ck} BasicDataView on_event called
+
+
+
+
+
+{'Datab': 1486665000000,
+ 'Datbi': 1514658600000,
+ 'EqunrAgg': '000000000200000465',
+ 'EqunrEng': '000000000200000031',
+ 'Kunde': '',
+ 'MaktxAgg': 'SYSTEM',
+ 'MaktxEng': 'Reman engine 0002',
+ 'MatnrAgg': 'SYSTEM',
+ 'MatnrEng': 'R-REM-0002',
+ 'Name1': '',
+ 'SernrAgg': '150001',
+ 'SernrEng': '4711-0006',
+ 'Yybau': 'SYS'}
+
+
+
+
+
+
+
+
+
+
+{'ConnectivityDeviceNum': 'No Data From Source',
+ 'Customer': '',
+ 'Engine': '4711-0006',
+ 'Material': 'SYSTEM',
+ 'Model': 'Reman engine 0002',
+ 'MotorMaterial': 'R-REM-0002',
+ 'Region': '',
+ 'System': '150001',
+ 'TrainName': 'No Data From Source',
+ 'Ts': '2017-02-10T00:00:00+00:00',
+ '_id': ObjectId('5cf657f6a98a29cb5dea0dad'),
+ 'asset_id': '1000021',
+ 'offset': 792,
+ 'source': 'sapmasterdata'}
+
+
+
+
+
+2019-06-13 13:53:05,531 INFO [rrps.dt.follower.rest_follower.views.RiverOfNewsView] {ioticlabs.dt.api.follower.__do_call
+back} RiverOfNewsView on_event called
+2019-06-13 13:53:05,622 INFO [ioticlabs.dt.api.follower] {tp-1} Replay finished for 1000021 @ 792
+2019-06-13 13:53:05,623 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Interna
+l: <IntTwinEofReplay v1 ('1000021'@792)>
+2019-06-13 13:53:05,824 INFO [ioticlabs.dt.api.follower] {tp-0} Replay finished for 1000020 @ 328
+2019-06-13 13:53:05,825 INFO [rrps.dt.follower.rest_follower.follower] {ioticlabs.dt.api.follower.__do_callback} Interna
+l: <IntTwinEofReplay v1 ('1000020'@328)>
+2019-06-13 13:53:06,876 INFO [IoticAgent.IOT.Client] {finder} search(text="env_m_fd", lang="None", location="None", unit

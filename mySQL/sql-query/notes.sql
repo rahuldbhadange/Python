@@ -1,0 +1,7 @@
+-- joining table -- should have atleast 1 common column
+-- inner join
+-- outer join
+--- left outer join
+--- right 
+--- full outer join
+-- cross join

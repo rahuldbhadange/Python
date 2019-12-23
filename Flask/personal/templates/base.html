@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Savitribai Phule Pune University {% endblock %}</title>
+</head>
+
+<body>
+
+<h2> Savitribai Phule Pune University </h2>
+
+<img src="{{ url_for('static', filename= 'images/puneuniversity.jpg') }}">
+
+{% block content %}
+
+<form method="POST" action="/home">
+    <br><br><input type = "submit" value="Home"><br><br>
+</form>
+
+
+
+
+<h4> Copyright �2019 Savitribai Phule Pune University. All Rights Reserved. </h4>
+
+{% endblock %}
+
+</body>
+
+</html>

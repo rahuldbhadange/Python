@@ -1,0 +1,121 @@
+From 7a03604415f10bcf8aa7e524b855ddea4e2dd1b8 Mon Sep 17 00:00:00 2001
+From: Tim Churchard <tim.churchard@iotic-labs.com>
+Date: Thu, 21 Mar 2019 20:55:48 +0000
+Subject: [PATCH] __TC__
+
+---
+ .../rrps/dt/synthesiser/weather/impl.py       | 58 +++++++++++++++----
+ 1 file changed, 48 insertions(+), 10 deletions(-)
+
+diff --git a/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py b/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py
+index a36fa11..8388256 100644
+--- a/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py
++++ b/rrps/python/rrps.dt.synthesiser.weather/rrps/dt/synthesiser/weather/impl.py
+@@ -6,7 +6,9 @@ import logging
+ from ioticlabs.dt.api.follower import Follower, FollowerCallbacks, NamedEventMixin
+ from ioticlabs.dt.api.integrator import Integrator, IntegratorCallbacks, EventPublishFailure, AssetUnknown
+ from .nearestweather import NearestWeather
+-# from rrps.dt.events import WeatherInfoSet
++
++from rrps.dt.events import WeatherInfoSet
++
+ 
+ log = logging.getLogger(__name__)
+ 
+@@ -15,7 +17,34 @@ def pretty_print(msg, data):
+     print(msg, dumps(data, indent=4))
+ 
+ 
++class IntegratorHelper(IntegratorCallbacks):
++
++    def __init__(self, config, client):
++        self.__integrator = Integrator(config, client, self)
++        self.__assets = set()
++
++    def start(self):
++        self.__integrator.start()
++
++    def stop(self):
++        self.__integrator.stop()
++
++    def publish_event(self, event):
++        self.__integrator.publish_event(event)
++
++    def on_asset_created(self, asset_id):
++        log.critical('IntegratorCallbacks Asset created: %s', asset_id)
++        self.__assets.add(asset_id)
++
++    def on_asset_deleted(self, asset_id):
++        log.critical('IntegratorCallbacks Asset deleted: %s', asset_id)
++        self.__assets.remove(asset_id)
++
++    def on_t2_request(self, request):
++        pass
++
+ class IntegratorCB(IntegratorCallbacks):
++
+     # for IntegratorCallbacks
+     def on_asset_created(self, asset_id):
+         log.debug('IntegratorCallbacks Asset created: %s', asset_id)
+@@ -37,8 +66,9 @@ class SynthesiserWeather(NamedEventMixin, FollowerCallbacks, ThingRunner):
+         self.__follower = Follower(config['follower'], self.client, self)
+         self.__assets = set()
+ 
+-        self.__int_cb = IntegratorCB()
+-        self.__integrator = Integrator(config['integrator'], self.client, self.__int_cb)
++        #self.__int_cb = IntegratorCB()
++        #self.__integrator = Integrator(config['integrator'], self.client, self.__int_cb)
++        self.__integrator = IntegratorHelper(config['integrator'], self.client)
+ 
+     def on_startup(self):
+         log.debug('Startup')
+@@ -46,19 +76,26 @@ class SynthesiserWeather(NamedEventMixin, FollowerCallbacks, ThingRunner):
+         self.__integrator.start()
+ 
+     def main(self):
++
++        # Wait for an asset to exist
++        from time import sleep
++        while True:
++            try:
++                self.__assets.pop()
++            except KeyError:
++                pass
++            else:
++                break
++
+         try:
+             __nea_wea = NearestWeather(self.client)
+             __event_object = __nea_wea.find_nearest_weather()
+             pretty_print("would send WeatherInfoSet event", __event_object)
+ 
+             Time = datetime.now()
+-            asset = "1000020"
+-            # event = WeatherInfoSet(asset)
+-            # WeatherInfoSet = nw.find_nearest_weather()
++            asset = self.__assets.pop()
+ 
+-            # self.__integrator.publish_event(asset, time=Time, data=__event_object)
+             self.__integrator.publish_event(WeatherInfoSet(asset, time=Time, data=__event_object))
+-            # self.__integrator.publish_event(event)
+ 
+             while not self.wait_for_shutdown(100):
+                 log.debug('Running')
+@@ -90,11 +127,12 @@ class SynthesiserWeather(NamedEventMixin, FollowerCallbacks, ThingRunner):
+     # for FollowerCallbacks
+     def on_asset_created(self, asset_id):
+         log.info('Follower Callbacks Asset created: %s', asset_id)
+-        self.__assets.remove(asset_id)
++        self.__assets.add(asset_id)
+ 
+     # for FollowerCallbacks
+     def on_asset_deleted(self, asset_id):
+-        pass
++        log.info('Follower Callbacks Asset deleted: %s', asset_id)
++        self.__assets.remove(asset_id)
+ 
+     # For NamedEventMixin (specific event)
+     def do_bombuiltset(self, event):
+-- 
+2.17.1
+

@@ -1,0 +1,297 @@
+ -m venv venv
+
+
+C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata> venv\
+Scripts\activate
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata
+>pip install -U setuptools pip
+ERROR: To modify pip, please run the following command:
+c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\venv\s
+cripts\python.exe -m pip install -U setuptools pip
+You are using pip version 10.0.1, however version 19.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' comm
+and.
+
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata
+>pip install -U pip
+ERROR: To modify pip, please run the following command:
+c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\venv\s
+cripts\python.exe -m pip install -U pip
+You are using pip version 10.0.1, however version 19.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' comm
+and.
+
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata
+>python -m pip install -U pip setuptools
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/46/dc/7fd5df840efb3e56c8b
+4f768793a237ec4ee59891959d6a215d63f727023/pip-19.0.1-py2.py3-none-any.whl
+Collecting setuptools
+  Downloading https://files.pythonhosted.org/packages/5b/ac/90c7617bfc48ae1265d2
+c0cc46aeb0a0d482e00577008d21b64efe9a2006/setuptools-40.7.0-py2.py3-none-any.whl
+(573kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 583kB 6.4MB/s
+Installing collected packages: pip, setuptools
+  Found existing installation: pip 10.0.1
+    Uninstalling pip-10.0.1:
+      Successfully uninstalled pip-10.0.1
+  Found existing installation: setuptools 39.0.1
+    Uninstalling setuptools-39.0.1:
+      Successfully uninstalled setuptools-39.0.1
+Successfully installed pip-19.0.1 setuptools-40.7.0
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata
+>pip install docutils wheel
+Collecting docutils
+  Downloading https://files.pythonhosted.org/packages/36/fa/08e9e6e0e3cbd1d362c3
+bbee8d01d0aedb2155c4ac112b19ef3cae8eed8d/docutils-0.14-py3-none-any.whl (543kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 552kB 225kB/s
+Collecting wheel
+  Downloading https://files.pythonhosted.org/packages/ff/47/1dfa4795e24fd6f93d5d
+58602dd716c3f101cfd5a77cd9acbe519b44a0a9/wheel-0.32.3-py2.py3-none-any.whl
+Installing collected packages: docutils, wheel
+Successfully installed docutils-0.14 wheel-0.32.3
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata
+>cd ..
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 6E60-648F
+
+ Directory of C:\Users\HBD2KOR\digital.git\rrps\python
+
+01/28/2019  04:16 PM    <DIR>          .
+01/28/2019  04:16 PM    <DIR>          ..
+01/28/2019  04:16 PM               548 build_deps.sh
+01/28/2019  04:16 PM             2,742 make_pex.README.md
+01/28/2019  04:16 PM             1,028 make_pex.sh
+01/28/2019  04:16 PM    <DIR>          rrps.dt.api.fielddata
+01/28/2019  04:16 PM    <DIR>          rrps.dt.events
+01/28/2019  04:16 PM    <DIR>          rrps.dt.follower.rest_follower
+01/28/2019  04:16 PM    <DIR>          rrps.dt.integrator.fielddata
+01/28/2019  04:16 PM    <DIR>          rrps.dt.integrator.sapbomasbuilt
+01/28/2019  04:16 PM    <DIR>          rrps.dt.integrator.sapequipmenthistory
+01/28/2019  04:34 PM    <DIR>          rrps.dt.integrator.sapmasterdata
+01/28/2019  04:16 PM    <DIR>          rrps.dt.integrator.sapsupersession
+01/28/2019  04:16 PM    <DIR>          rrps.dt.integrator.sapwarrantyrecall
+01/28/2019  04:16 PM    <DIR>          rrps.dt.integrator.talendfirmware
+01/28/2019  04:16 PM    <DIR>          rrps.dt.integrator.talendtimdocument
+               3 File(s)          4,318 bytes
+              13 Dir(s)  437,695,107,072 bytes free
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python>cat build_deps.sh
+'cat' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python>cd rrps.dt.events
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 6E60-648F
+
+ Directory of C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events
+
+01/28/2019  04:16 PM    <DIR>          .
+01/28/2019  04:16 PM    <DIR>          ..
+01/28/2019  04:16 PM                57 flake8.cfg
+01/28/2019  04:16 PM                56 pylint.rc
+01/28/2019  04:16 PM               611 README.md
+01/28/2019  04:16 PM    <DIR>          rrps
+01/28/2019  04:16 PM               474 setup.py
+01/28/2019  04:16 PM               222 static_tests.sh
+               5 File(s)          1,420 bytes
+               3 Dir(s)  437,691,674,624 bytes free
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>pip install -e .
+
+Obtaining file:///C:/Users/HBD2KOR/digital.git/rrps/python/rrps.dt.events
+Collecting ioticlabs.dt.api<0.2,>=0.1.7 (from rrps.dt.events==0.1.7)
+  Could not find a version that satisfies the requirement ioticlabs.dt.api<0.2,>
+=0.1.7 (from rrps.dt.events==0.1.7) (from versions: )
+No matching distribution found for ioticlabs.dt.api<0.2,>=0.1.7 (from rrps.dt.ev
+ents==0.1.7)
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>pip install -e .
+ -f ..\..\..\deps
+Looking in links: ..\..\..\deps
+Obtaining file:///C:/Users/HBD2KOR/digital.git/rrps/python/rrps.dt.events
+Collecting ioticlabs.dt.api<0.2,>=0.1.7 (from rrps.dt.events==0.1.7)
+Collecting py-lz4framed==0.13.0 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.even
+ts==0.1.7)
+Collecting py-IoticAgent<0.7.0,>=0.6.6 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.
+dt.events==0.1.7)
+  Downloading https://files.pythonhosted.org/packages/fc/bf/28bf7f58055b693e90f8
+d2d568333718979f3a48525af9f99af16d69b314/py_IoticAgent-0.6.8-py2.py3-none-any.wh
+l (165kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 174kB 1.6MB/s
+Collecting fastavro<0.22,>=0.21.9 (from ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.ev
+ents==0.1.7)
+  Downloading https://files.pythonhosted.org/packages/33/6b/0a2ce53fd404170fc296
+a2956bff759324c3ae39545b1dcdec81bc875afa/fastavro-0.21.17.tar.gz (473kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 481kB 6.8MB/s
+Collecting ioticlabs.dt.common<0.2,>=0.1.12 (from ioticlabs.dt.api<0.2,>=0.1.7->
+rrps.dt.events==0.1.7)
+Collecting rdflib>=4.2.1 (from py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<0.2
+,>=0.1.7->rrps.dt.events==0.1.7)
+Collecting py-ubjson>=0.8.5 (from py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.dt.api<
+0.2,>=0.1.7->rrps.dt.events==0.1.7)
+Collecting ioticlabs.common.logutil<0.2,>=0.1.0 (from ioticlabs.dt.common<0.2,>=
+0.1.12->ioticlabs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+Collecting PyYAML<4,>=3.12 (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.dt.
+api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Downloading https://files.pythonhosted.org/packages/5c/ed/d6557f70daaaab6ee5cd
+2f8ccf7bedd63081e522e38679c03840e1acc114/PyYAML-3.13-cp37-cp37m-win32.whl (188kB
+)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 194kB 9.3MB/s
+Collecting regex==2018.11.22 (from ioticlabs.dt.common<0.2,>=0.1.12->ioticlabs.d
+t.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Downloading https://files.pythonhosted.org/packages/29/e5/71a9018236969f7622d6
+598778c04e8fa030fc50f6b4593e2649ab3077fb/regex-2018.11.22-cp37-none-win32.whl (2
+65kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 266kB 7.9MB/s
+Collecting pyparsing (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs
+.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Downloading https://files.pythonhosted.org/packages/de/0a/001be530836743d8be6c
+2d85069f46fecf84ac6c18c7f5fb8125ee11d854/pyparsing-2.3.1-py2.py3-none-any.whl (6
+1kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 71kB 4.5MB/s
+Collecting isodate (from rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticlabs.d
+t.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/9b/9f/b36f7774ff5ea8e428f
+dcfc4bb332c39ee5b9362ddd3d40d9516a55221b2/isodate-0.6.0-py2.py3-none-any.whl
+Collecting six (from isodate->rdflib>=4.2.1->py-IoticAgent<0.7.0,>=0.6.6->ioticl
+abs.dt.api<0.2,>=0.1.7->rrps.dt.events==0.1.7)
+  Using cached https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe
+898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Building wheels for collected packages: ioticlabs.dt.api, py-lz4framed, fastavro
+, ioticlabs.dt.common, py-ubjson, ioticlabs.common.logutil
+  Building wheel for ioticlabs.dt.api (setup.py) ... done
+  Stored in directory: C:\Users\HBD2KOR\AppData\Local\pip\Cache\wheels\86\5c\18\
+b43d17bf2b9fa4ff7497954aa15f97b212d6c7b8430b0100ed
+  Building wheel for py-lz4framed (setup.py) ... error
+  Complete output from command c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.
+integrator.sapmasterdata\venv\scripts\python.exe -u -c "import setuptools, token
+ize;__file__='C:\\Users\\HBD2KOR\\AppData\\Local\\Temp\\pip-install-5_w208wi\\py
+-lz4framed\\setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().
+replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" bdist_whe
+el -d C:\Users\HBD2KOR\AppData\Local\Temp\pip-wheel-yt9oujw_ --python-tag cp37:
+  Warning: pypandoc module not found, will not convert Markdown to RST
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build\lib.win32-3.7
+  creating build\lib.win32-3.7\lz4framed
+  copying lz4framed\compat.py -> build\lib.win32-3.7\lz4framed
+  copying lz4framed\__init__.py -> build\lib.win32-3.7\lz4framed
+  copying lz4framed\__main__.py -> build\lib.win32-3.7\lz4framed
+  running build_ext
+  building '_lz4framed' extension
+  error: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C+
++ Build Tools": https://visualstudio.microsoft.com/downloads/
+
+  ----------------------------------------
+  Failed building wheel for py-lz4framed
+  Running setup.py clean for py-lz4framed
+  Building wheel for fastavro (setup.py) ... error
+  Complete output from command c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.
+integrator.sapmasterdata\venv\scripts\python.exe -u -c "import setuptools, token
+ize;__file__='C:\\Users\\HBD2KOR\\AppData\\Local\\Temp\\pip-install-5_w208wi\\fa
+stavro\\setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().repl
+ace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" bdist_wheel -
+d C:\Users\HBD2KOR\AppData\Local\Temp\pip-wheel-s7lzjcqi --python-tag cp37:
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build\lib.win32-3.7
+  creating build\lib.win32-3.7\fastavro
+  copying fastavro\const.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\read.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\schema.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\six.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\validation.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\write.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\_read_common.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\_read_py.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\_schema_common.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\_schema_py.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\_timezone.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\_validate_common.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\_validation_py.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\_write_py.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\__init__.py -> build\lib.win32-3.7\fastavro
+  copying fastavro\__main__.py -> build\lib.win32-3.7\fastavro
+  running build_ext
+  building 'fastavro._read' extension
+  error: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C+
++ Build Tools": https://visualstudio.microsoft.com/downloads/
+
+  ----------------------------------------
+  Failed building wheel for fastavro
+  Running setup.py clean for fastavro
+  Building wheel for ioticlabs.dt.common (setup.py) ... done
+  Stored in directory: C:\Users\HBD2KOR\AppData\Local\pip\Cache\wheels\41\cb\a4\
+c57a82d59a444d673d09ffbbe8f43be5590dfb052b541b32e9
+  Building wheel for py-ubjson (setup.py) ... done
+  Stored in directory: C:\Users\HBD2KOR\AppData\Local\pip\Cache\wheels\37\94\85\
+7bac7f07447ac97e7e438af1e63905cfff1d8dab666bbfe951
+  Building wheel for ioticlabs.common.logutil (setup.py) ... done
+  Stored in directory: C:\Users\HBD2KOR\AppData\Local\pip\Cache\wheels\43\2f\fe\
+80653e819ddc1c5e5e26bc0a2d0ab7b3b9a0f8c8ae112a2f85
+Successfully built ioticlabs.dt.api ioticlabs.dt.common py-ubjson ioticlabs.comm
+on.logutil
+Failed to build py-lz4framed fastavro
+Installing collected packages: py-lz4framed, pyparsing, six, isodate, rdflib, py
+-ubjson, py-IoticAgent, fastavro, PyYAML, ioticlabs.common.logutil, regex, iotic
+labs.dt.common, ioticlabs.dt.api, rrps.dt.events
+  Running setup.py install for py-lz4framed ... error
+    Complete output from command c:\users\hbd2kor\digital.git\rrps\python\rrps.d
+t.integrator.sapmasterdata\venv\scripts\python.exe -u -c "import setuptools, tok
+enize;__file__='C:\\Users\\HBD2KOR\\AppData\\Local\\Temp\\pip-install-5_w208wi\\
+py-lz4framed\\setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read(
+).replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" install
+ --record C:\Users\HBD2KOR\AppData\Local\Temp\pip-record-_myqrxep\install-record
+.txt --single-version-externally-managed --compile --install-headers c:\users\hb
+d2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterdata\venv\include\site
+\python3.7\py-lz4framed:
+    Warning: pypandoc module not found, will not convert Markdown to RST
+    running install
+    running build
+    running build_py
+    creating build
+    creating build\lib.win32-3.7
+    creating build\lib.win32-3.7\lz4framed
+    copying lz4framed\compat.py -> build\lib.win32-3.7\lz4framed
+    copying lz4framed\__init__.py -> build\lib.win32-3.7\lz4framed
+    copying lz4framed\__main__.py -> build\lib.win32-3.7\lz4framed
+    running build_ext
+    building '_lz4framed' extension
+    error: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual
+C++ Build Tools": https://visualstudio.microsoft.com/downloads/
+
+    ----------------------------------------
+Command "c:\users\hbd2kor\digital.git\rrps\python\rrps.dt.integrator.sapmasterda
+ta\venv\scripts\python.exe -u -c "import setuptools, tokenize;__file__='C:\\User
+s\\HBD2KOR\\AppData\\Local\\Temp\\pip-install-5_w208wi\\py-lz4framed\\setup.py';
+f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');
+f.close();exec(compile(code, __file__, 'exec'))" install --record C:\Users\HBD2K
+OR\AppData\Local\Temp\pip-record-_myqrxep\install-record.txt --single-version-ex
+ternally-managed --compile --install-headers c:\users\hbd2kor\digital.git\rrps\p
+ython\rrps.dt.integrator.sapmasterdata\venv\include\site\python3.7\py-lz4framed"
+ failed with error code 1 in C:\Users\HBD2KOR\AppData\Local\Temp\pip-install-5_w
+208wi\py-lz4framed\
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>pip list
+Package    Version
+---------- -------
+docutils   0.14
+pip        19.0.1
+setuptools 40.7.0
+wheel      0.32.3
+
+(venv) C:\Users\HBD2KOR\digital.git\rrps\python\rrps.dt.events>pip install -e . -f ..\..\..\deps

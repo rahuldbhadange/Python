@@ -1,0 +1,297 @@
+[?8/?8/?2019 1:22 PM]  
+Good Morning Fabio
+ 
+[?8/?8/?2019 1:25 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+hi Rahul 
+ 
+[?8/?8/?2019 1:28 PM]  
+Any comments regarding PR - BOM events ?
+ 
+[?8/?8/?2019 1:29 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+you should remove the .ini files from the pull request and resolve the conflicts in the branch 
+if you can remove the .ini files I can look at the conflicts myself before the Digital Twin standup 
+ 
+[?8/?8/?2019 1:29 PM]  
+okay
+ 
+[?8/?8/?2019 1:30 PM]  
+Actually I have removed it yesterday 
+ 
+[?8/?8/?2019 1:31 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+I see a couple in the pull request, let me attach a screenshot 
+ 
+
+[?8/?8/?2019 1:31 PM]  
+I might have deleted in other brancg
+ 
+[?8/?8/?2019 1:31 PM]  
+branch
+ 
+[?8/?8/?2019 1:32 PM]  
+git reset HEAD rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/rahul-int-1.ini 
+
+
+Will work no ??
+
+ 
+[?8/?8/?2019 1:32 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+since the files have been added in a previous commit, you will need to:
+
+git rm <path to the ini file> 
+then
+
+git commit -m "Removed ini files" 
+ 
+[?8/?8/?2019 1:33 PM]  
+I will give a trt
+ 
+[?8/?8/?2019 1:34 PM]  
+I not able to see path\location for the ini file any where
+ 
+
+
+[?8/?8/?2019 1:36 PM]  
+This is a status... I could not find it ??
+ 
+[?8/?8/?2019 1:37 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+the files which have been already committed will not appear in the status, only in the history 
+ 
+[?8/?8/?2019 1:38 PM]  
+ohh yes
+ 
+We saved this conversation. You'll see it soon in the Conversations tab in Skype for Business and in the Conversation History folder in Outlook. 
+[?8/?8/?2019 2:09 PM]  
+Hello Fabio,
+I’m facing issue with the sapbomasmaintained T2 response.
+Follower is failing to request bom.
+Response = {"code":"failed requesting BOM","description":""}
+I’m not getting response for the T2 request - engine-bom-as-maintained endpoint. (still not made any changes as per US-25022)
+ 
+[?8/?8/?2019 2:20 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+I'll have a look at that in a few minutes, do you get the error while the sapbomasbuilt integrator is running? 
+ 
+[?8/?8/?2019 2:21 PM]  
+No actually 
+ 
+[?8/?8/?2019 2:21 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+the T2 request is sent to the integrator, so for it to work you will need to have the sapbomasbuilt integrator running alongside the rest follower 
+ 
+[?8/?8/?2019 2:22 PM]  
+Yes of course I'm running both
+ 
+[?8/?8/?2019 2:24 PM]  
+The thing is request is not reaching to integrator__process_t2  function, but I'm getting follower.py response for rqst_data = {"Valfr": formatted_time} 
+ 
+
+[?8/?8/?2019 2:25 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+I see, I need to check on my machine 
+ 
+[?8/?8/?2019 2:25 PM]  
+sure
+ 
+We saved this conversation. You'll see it soon in the Conversations tab in Skype for Business and in the Conversation History folder in Outlook. 
+[?8/?8/?2019 2:42 PM]  
+Hi Fabio
+Is conflict resolved ??
+ 
+[?8/?8/?2019 2:43 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+no, I was doing the standup call 
+ 
+[?8/?8/?2019 2:43 PM]  
+ohh okay
+ 
+[?8/?8/?2019 2:49 PM]  
+I have tried this one :
+
+
+git rm rrps/python/rrps.dt.integrator.sapbomasbuilt/cfg/rahul-int-1.ini 
+git rm rrps/python/rrps.dt.follower.rest_follower/cfg/rahul-fol.ini  
+ 
+[?8/?8/?2019 2:50 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+ok, now if run git status you should see that the two files have been staged for deletion 
+then you can git commit 
+ 
+[?8/?8/?2019 2:50 PM]  
+yeah,  it is deleted and in green color
+ 
+[?8/?8/?2019 2:57 PM]  
+I have push the code
+If you can direct, I would like to resolve the conflict... 
+ 
+[?8/?8/?2019 2:58 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+sure, if you want to give it a go the procedure would be as follows 
+ 
+[?8/?8/?2019 2:59 PM]  
+yes
+ 
+
+
+[?8/?8/?2019 2:59 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+git checkout dev
+
+git pull azure dev
+
+git checkout dev-rahul-bom_events
+
+git rebase dev 
+ 
+[?8/?8/?2019 3:01 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+then when you run the rebase, you should get to a state where there will be conflicts; when that happens, you need to go to Pycharm and click on VCS -> Git -> Resolve conflicts 
+once the conflicts are resolved:
+
+git rebase continue 
+ 
+[?8/?8/?2019 3:05 PM]  
+for me git pull azure dev not coming, git pull origin dev is coming
+ 
+[?8/?8/?2019 3:06 PM]  
+will it be fine ??
+
+ 
+[?8/?8/?2019 3:10 PM]  
+??
+ 
+[?8/?8/?2019 3:10 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+ah yes, I thought your origin was set to azure 
+ 
+[?8/?8/?2019 3:10 PM]  
+okay
+ 
+[?8/?8/?2019 3:11 PM]  
+there is one modified file, I will have to stash it 
+ 
+[?8/?8/?2019 3:12 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+yes you can stash it 
+ 
+[?8/?8/?2019 3:12 PM]  
+yeah
+ 
+[?8/?8/?2019 3:16 PM]  
+I found the conflict in follower, one small window appeared called 'Conflict' -- need to merge ??
+ 
+[?8/?8/?2019 3:17 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+you need to resolve the conflicts by picking parts of code into the central pane after you click on merge next to the file name 
+
+[?8/?8/?2019 3:24 PM]  
+I can see the window, left all right stuff, but got hanged. I'm waiting
+ 
+[?8/?8/?2019 3:53 PM]  
+I have resolved the conflicts 
+ 
+[?8/?8/?2019 3:53 PM]  
+Can you verify it ??
+ 
+[?8/?8/?2019 3:54 PM]  
+There is multiple files came under, modified 
+ 
+We saved this conversation. You'll see it soon in the Conversations tab in Skype for Business and in the Conversation History folder in Outlook. 
+[?8/?8/?2019 3:58 PM]  
+???
+ 
+[?8/?8/?2019 4:00 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+could you push them to another branch? I can't see them from here 
+git branch -m rahul-rebase 
+git push origin rahul-rebase 
+ 
+[?8/?8/?2019 4:01 PM]  
+Invalid branch name
+ 
+[?8/?8/?2019 4:02 PM]  
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-bom_events|REBASE 1/16)
+$ git branch -m rahul-rebase
+fatal: Invalid branch name: 'HEAD' 
+ 
+[?8/?8/?2019 4:03 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+have you completed the rebase 
+? 
+ 
+[?8/?8/?2019 4:05 PM]  
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-bom_events|REBASE 1/16)
+$ git rebase continue
+fatal: It seems that there is already a rebase-apply directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-apply"
+and run me again.  I am stopping in case you still have something
+valuable there. 
+This command not working
+
+ 
+[?8/?8/?2019 4:07 PM]  
+shall I try : git rebase --continue  ??
+ 
+[?8/?8/?2019 4:07 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+yes 
+ 
+[?8/?8/?2019 4:08 PM]  
+HBD2KOR@ECGCN1031334D MINGW64 ~/digital.git (dev-rahul-bom_events|REBASE 1/16)
+$ git rebase --continue
+You must edit all merge conflicts and then
+mark them as resolved using git add 
+ 
+[?8/?8/?2019 4:08 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+I think they were not resolved in Pycharm 
+ 
+[?8/?8/?2019 4:08 PM]  
+ohhh
+ 
+[?8/?8/?2019 4:08 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+I have to complete the deployment, I will do the rebase from here then maybe we can check another day 
+if you run git rebase --abort it should go back to the initial state 
+ 
+[?8/?8/?2019 4:09 PM]  
+But I have merge all
+ 
+[?8/?8/?2019 4:10 PM]  
+I came out of rebase state I guess
+ 
+[?8/?8/?2019 4:12 PM]  
+Please proceed with the conflict stuff from your side, we can try it some other day
+ 
+
+ [?8/?8/?2019 4:12 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+ok 
+ 
+[?8/?8/?2019 4:12 PM]  
+Thanks
+Have you tried T2 request stuff ??
+
+ 
+[?8/?8/?2019 4:15 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+now I'm completing Arun's deployment, once it is finished I'll check the T2 stuff 
+ 
+[?8/?8/?2019 4:15 PM]  
+Sure, thanks
+ 
+We saved this conversation. You'll see it soon in the Conversations tab in Skype for Business and in the Conversation History folder in Outlook. 
+[?8/?8/?2019 4:46 PM]  
+Hello Fabio
+ 
+[?8/?8/?2019 4:48 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+hello 
+ 
+[?8/?8/?2019 4:49 PM]  
+Do you suspect anything for T2stuff ??
+ 
+[?8/?8/?2019 4:49 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+I'll work on it as soon as I'm done with the other tasks 
+but don't worry about it, I will fix it myself 
+I think it is a misconfiguration, but I really have to finish other tasks before getting to it 
+ 
+[?8/?8/?2019 4:51 PM]  
+Actually, I'm curious to know what the issue is.
+ 
+[?8/?8/?2019 4:51 PM]  Fabio Corneti <fabio.corneti@iotic-labs.com>:  
+when I get to that I'll let you know 
+ 
+[?8/?8/?2019 4:51 PM]  
+I can understand, no issues.
+ 
+[?8/?8/?2019 7:35 PM]  
+Hello Fabio
+ 
+[?8/?8/?2019 7:40 PM]  
+Is deployment thing and T2 request stuff worked ??
+  

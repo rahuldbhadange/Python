@@ -1,0 +1,98 @@
+---
+# Copyright (c) 2018 Iotic Labs Ltd. All rights reserved.
+
+# Example follower (core) configuration.
+
+follower:
+
+  # How many threads to reserve for performing asynchronous tasks such as asset updates & replay requests.
+  workers: 1
+
+
+  # Metadata applicable to follower Iotic Thing (all optional apart from lid)
+  thing:
+    lid: follower
+    # label:
+    # description:
+    # tags: []
+
+
+  asset:
+
+    event:
+      # List of modules to load event definitions from. Only event types registered this way can be received. Each name
+      # must be an absolute module name in Python search path. Note: Internal built-in/virtual event types are always
+      # loaded.
+      modules:
+        - rrps.dt.events
+
+      # How long to wait (in seconds) for acknowledgement that replay request has been received. Must be high enough to
+      # allow for asynchronous nature of asset communication. (default will be used if not specified)
+      replay:
+        # timeout: 10
+
+    # Search criteria for finding assets (required)
+    discovery:
+      # One or more space-separated terms, interpreted as tags and/or text (default will be used if not specified)
+      text: env_m_c
+      # One of public, local or localOwn (default). Public is NOT recommended as one could, despite specified filter,
+      # end up pushing events to a completely unknown thing/point!
+      scope: local
+      # How often to poll for new assets, in seconds
+      interval: 5
+
+      filter:
+        label:
+          # Expected asset thing label. This is a standard Python regular expression and should be contained within
+          # '^' and '$'. Defined groups are ignored and this parameter is optional.
+          # thing_regex:
+          # Expected labels for event production related points. Feed is for live events and control for replay
+          # requests (defaults will be used if not specified).
+          # feed:
+          # control:
+
+        tags:
+          # Expected unique tag containing asset id. This is a standard Python regular expression and should be
+          # contained within '^' and '$' and define one group (containing asset id). (default will be used if not
+          # specified)
+          unique_regex: '^m_(.+)$'
+          # Expected static tags for each asset
+          thing: ['env_m_c']
+
+
+    # Keep track consume asset event offsets
+    tracker:
+      # How to persist. If none are specified, an in-memory only tracker will be used
+      method:
+
+        # memory: {}
+
+        json:
+          path: ./tmp_assets.json
+          # How often (in seconds) to write to output file
+          write_interval: 10
+
+        # mongodb:
+
+          # How often (in seconds, fractional) to write pending changes to the database.
+          # write_interval: 10
+
+          # conn:
+            # MongoDB connection string
+            # uri:
+            # Database under which to store tracker
+            # db:
+            # Collection in which to store tracker. Will be created if does not exist
+            # collection:
+            # For client identification purposes e.g. in DB server logs (optional)
+            # appname: follower_asset_tracker
+            # Extra configuration options for pymongo.MongoClient. Some potentially relevant options which might be
+            # worth setting are detailed below. See also
+            # http://api.mongodb.com/python/current/api/pymongo/mongo_client.html#pymongo.mongo_client.MongoClient)
+            # cfg:
+              # connectTimeoutMS: 10000
+              # socketTimeoutMS: 10000
+              # readConcernLevel: majority
+              # Write concern. Note that 'majority' level is only usable with WiredTiger storage engine (currently not
+              # supported by Azure CosmosDB with MongoDB v3.2)
+              # w: majority

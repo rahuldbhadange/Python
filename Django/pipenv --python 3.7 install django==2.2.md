@@ -1,0 +1,1 @@
+pipenv --python 3.7 install django==2.2
